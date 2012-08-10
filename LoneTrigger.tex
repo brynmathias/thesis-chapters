@@ -176,21 +176,48 @@ where the number refers to the requested \ET threshold.
 
 The performance is measured under two different pile up conditions, the first
 is where the mean number of intereactions per bunch crossing ($<PU>$) is less 
-than 16. The events studied are taken with a single Mu HLT trigger, this removes
-any biases on the turn on from pre selecting with a hadronic trigger.
-To test the performance of the trigger system under high pile up conditions 
-($<PU> \leq 32$) a dedicated high pile up fill of the LHC was performed.
-The high pile up fill is studied from two points of view, the first is with
-regard to standard AK5 calorimeter jets. Secondly the performance is measured
-against Ak5 calorimeter jets that are corrected for pile up.
+than 16. The events studied are taken with a single $\mu$ HLT trigger namely
+HLT$\_$IsoMu24, this removes any biases on the turn on from pre selecting with 
+a hadronic trigger. To test the performance of the trigger system under high 
+pile up conditions ($<PU> ~ \leq ~ 32$) a dedicated high pile up fill of the 
+LHC was performed.The high pile up fill is studied from two points of view, the 
+first is with regard to standard AK5 calorimeter jets. Secondly the performance 
+is measured against AK5 calorimeter jets that are corrected for pile up.
+\textbf{FIXME: there will be an explanation of L1FastJet corrections somewhere, 
+point this section to it}
+\begin{figure}[ht]
+  \centering
+    \includegraphics[width=\textwidth]{figures/LoneTrigger/SingleMu_JetTurnOns.pdf}
+  \caption{Turn on curves for three \Lone single jet triggers, in terms of 
+  offline corrected AK5 calorimeter jet \ET.}
+  \label{fig:figures_LoneTrigger_SingleMu_JetTurnOns}
+\end{figure}
+
+\begin{figure}[ht]
+  \centering
+    \includegraphics[width=\textwidth]{figures/LoneTrigger/L1MuHPF_FastJet_JetTurnOns.pdf}
+  \caption{Turn on curves for the three \Lone single jet triggers in terms of 
+  offline corrected AK5 calorimeter jet \ET in high pile up conditions.}
+  \label{fig:figures_LoneTrigger_L1MuHPF_FastJet_JetTurnOns}
+\end{figure}
 
 
+\begin{figure}[ht]
+  \centering
+    \includegraphics[width=\textwidth]{figures/LoneTrigger/L1MuHPF_NoFastJet_JetTurnOns.pdf}
+  \caption{Turn on curves for the three \Lone single jet triggers in terms of 
+  offline AK5 calorimeter jets where the energies are corrected for energy from 
+  the pile up interactions using the FastJet correction method.}
+  \label{fig:figures_LoneTrigger_L1MuHPF_NoFastJet_JetTurnOns}
+\end{figure}
 
 \textbf{FIXME: put in the run no of the HPF in here} 
 
 
 \begin{equation}
-    fit = \frac{\epsilon}{2} \times (1 + \frac{2}{\sqrt{\pi}}\int^{x}_{0}e^{-t^{2}}dt)/\sqrt{2}\sigma. ~ where~ t = \epsilon - \mu
+    fit = \frac{\epsilon}{2} \times (1 + 
+    \frac{2}{\sqrt{\pi}}\int^{x}_{0}e^{-t^{2}}dt)/\sqrt{2}\sigma. ~ where~ t = 
+    \epsilon - \mu
 \label{eqn:erf}
 \end{equation}
 \textbf{FIXME: is this even right?}
@@ -230,7 +257,7 @@ L1$\_$SingleJet52 & 6.649299 & 57.481793 \\
 \caption{Results of an error function fit to the turn on curves for \Lone 
 single jet triggers in the run 2011B high pile up fill Where offline hadronic 
 objects are corrected for pile up using the FastJet calculation. Preselected on 
-an Isolated Muon trigger.}
+a zero bias trigger.}
 \label{tab:2011B_HighPU_FastJet}
 \end{table}
 
@@ -248,8 +275,8 @@ L1$\_$SingleJet52 & 6.744601 & 63.676276 \\
 \hline
 \end{tabular}
 \caption{Results of an error function fit to the turn on curves for \Lone 
-single jet triggers in the run 2011B high pile up fill. Preselected on an 
-Isolated Muon trigger.}
+single jet triggers in the run 2011B high pile up fill. Preselected on a zero
+bias trigger.}
 \label{tab:2011B_HighPU_NoFastJet}
 \end{table}
 
