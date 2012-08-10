@@ -146,14 +146,135 @@ cluster. Finally the four highest ranked jets are corrected and passed to the
 GT.
 % section leve_1_trigger_jet_algorithm (end)
 
-
-
-
 \section{\Lone Trigger Performance} % (fold)
 \label{sec:lone_trigger_performance}
 \textbf{FIXME: Can i just copy the stuff out of the L1 performance note here 
 for the corrections? I will need to re-make a bunch of the plots though :( Jobs 
-set running as of 24th july.}
+set running as of 24th july -- jobs are finaly complete.}
+
+
+Each offline jet is matched to a \Lone trigger jet with the smallest $\delta 
+R$, for a match to be considered good $\delta R < 0.5$ is required. The $\delta 
+R$ distribution is show in Figure~\ref{fig:figures_LoneTrigger_SingleMu_DeltaR}.
+The energy of the leading offline matched jet is then recorded to form the 
+denominator. To form the numerator the \Lone jet that the offline jet is 
+matched to is required to have an energy above some desired threshold.
+
+\begin{figure}[ht!]
+  \centering
+    \includegraphics[width=0.5\textwidth]{figures/LoneTrigger/SingleMu_DeltaR.pdf}
+  \caption{$\delta R$ distribution before any selection cut, matching \Lone 
+  jets to offline jets.}
+  \label{fig:figures_LoneTrigger_SingleMu_DeltaR}
+\end{figure}
+
+
+To compare the performance of each of the triggers each of the turn on curves
+are fitted with an error function. Three example single object triggers are 
+tested these are; L1$\_$SingleJet16, L1$\_$SingleJet36 and L1$\_$SingleJet52, 
+where the number refers to the requested \ET threshold.
+
+The performance is measured under two different pile up conditions, the first
+is where the mean number of intereactions per bunch crossing ($<PU>$) is less 
+than 16. The events studied are taken with a single Mu HLT trigger, this removes
+any biases on the turn on from pre selecting with a hadronic trigger.
+To test the performance of the trigger system under high pile up conditions 
+($<PU> \leq 32$) a dedicated high pile up fill of the LHC was performed.
+The high pile up fill is studied from two points of view, the first is with
+regard to standard AK5 calorimeter jets. Secondly the performance is measured
+against Ak5 calorimeter jets that are corrected for pile up.
+
+
+
+\textbf{FIXME: put in the run no of the HPF in here} 
+
+
+\begin{equation}
+    fit = \frac{\epsilon}{2} \times (1 + \frac{2}{\sqrt{\pi}}\int^{x}_{0}e^{-t^{2}}dt)/\sqrt{2}\sigma. ~ where~ t = \epsilon - \mu
+\label{eqn:erf}
+\end{equation}
+\textbf{FIXME: is this even right?}
+where $\sigma$ describes the resolution, $\epsilon$ gives the maximum 
+efficiency and $\mu$ refers to the point at which the efficiency is $50\%$.
+
+\begin{table}[ht]
+\begin{tabular}{|c|c|c|}
+\hline
+Trigger & $\sigma$ & $\mu$\\
+\hline
+L1$\_$SingleJet16 & 7.482639 & 24.273190 \\
+\hline
+L1$\_$SingleJet36 & 6.078462 & 49.253546 \\
+\hline
+L1$\_$SingleJet52 & 6.751985 & 65.108612 \\
+\hline
+\end{tabular}
+\caption{Results of an error function fit to the turn on curves for \Lone 
+single jet triggers in run 2011B. Preselected on an Isolated Muon trigger.}
+\label{tab:2011B_performance}
+\end{table}
+
+
+\begin{table}[ht]
+\begin{tabular}{|c|c|c|}
+\hline
+Trigger & $\sigma$ & $\mu$\\
+\hline
+L1$\_$SingleJet16 & 6.367845 & 10.475396 \\
+\hline
+L1$\_$SingleJet36 & 6.345340 & 40.733543 \\
+\hline
+L1$\_$SingleJet52 & 6.649299 & 57.481793 \\
+\hline
+\end{tabular}
+\caption{Results of an error function fit to the turn on curves for \Lone 
+single jet triggers in the run 2011B high pile up fill Where offline hadronic 
+objects are corrected for pile up using the FastJet calculation. Preselected on 
+an Isolated Muon trigger.}
+\label{tab:2011B_HighPU_FastJet}
+\end{table}
+
+
+\begin{table}[ht]
+\begin{tabular}{|c|c|c|}
+\hline
+Trigger & $\sigma$ & $\mu$\\
+\hline
+L1$\_$SingleJet16 & 6.067393 & 15.193586 \\
+\hline
+L1$\_$SingleJet36 & 7.047272 & 47.770072 \\
+\hline
+L1$\_$SingleJet52 & 6.744601 & 63.676276 \\
+\hline
+\end{tabular}
+\caption{Results of an error function fit to the turn on curves for \Lone 
+single jet triggers in the run 2011B high pile up fill. Preselected on an 
+Isolated Muon trigger.}
+\label{tab:2011B_HighPU_NoFastJet}
+\end{table}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 % section lone_trigger_performance (end)
 
 \section{\Lone Trigger Pile-up Mitigation} % (fold)
