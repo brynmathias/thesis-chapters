@@ -177,19 +177,21 @@ where the number refers to the requested \ET threshold.
 The performance is measured under two different pile up conditions, the first
 is where the mean number of intereactions per bunch crossing ($<PU>$) is less 
 than 16. The events studied are taken with a single $\mu$ HLT trigger namely
-HLT$\_$IsoMu24, this removes any biases on the turn on from pre selecting with 
-a hadronic trigger. To test the performance of the trigger system under high 
-pile up conditions ($<PU> ~ \leq ~ 32$) a dedicated high pile up fill of the 
-LHC was performed.The high pile up fill is studied from two points of view, the 
-first is with regard to standard AK5 calorimeter jets. Secondly the performance 
-is measured against AK5 calorimeter jets that are corrected for pile up.
+HLT$\_$IsoMu24 which requires there to be at least one muon with \PT $\geq$ 24 
+\GeV passing loose isolation, this removes any biases on the turn on from pre 
+selecting with a hadronic trigger. To test the performance of the trigger 
+system under high pile up conditions ($<PU> ~ \leq ~ 32$) a dedicated high pile 
+up fill of the LHC was performed.The high pile up fill is studied from two 
+points of view, the first is with regard to standard \AK calorimeter jets. 
+Secondly the performance is measured against \AK calorimeter jets that are 
+corrected for pile up.
 \textbf{FIXME: there will be an explanation of L1FastJet corrections somewhere, 
 point this section to it}
 \begin{figure}[ht]
   \centering
     \includegraphics[width=\textwidth]{figures/LoneTrigger/SingleMu_JetTurnOns.pdf}
   \caption{Turn on curves for three \Lone single jet triggers, in terms of 
-  offline corrected AK5 calorimeter jet \ET.}
+  offline corrected \AK calorimeter jet \ET.}
   \label{fig:figures_LoneTrigger_SingleMu_JetTurnOns}
 \end{figure}
 
@@ -197,7 +199,7 @@ point this section to it}
   \centering
     \includegraphics[width=\textwidth]{figures/LoneTrigger/L1MuHPF_FastJet_JetTurnOns.pdf}
   \caption{Turn on curves for the three \Lone single jet triggers in terms of 
-  offline corrected AK5 calorimeter jet \ET in high pile up conditions.}
+  offline corrected \AK calorimeter jet \ET in high pile up conditions.}
   \label{fig:figures_LoneTrigger_L1MuHPF_FastJet_JetTurnOns}
 \end{figure}
 
@@ -206,7 +208,7 @@ point this section to it}
   \centering
     \includegraphics[width=\textwidth]{figures/LoneTrigger/L1MuHPF_NoFastJet_JetTurnOns.pdf}
   \caption{Turn on curves for the three \Lone single jet triggers in terms of 
-  offline AK5 calorimeter jets where the energies are corrected for energy from 
+  offline \AK calorimeter jets where the energies are corrected for energy from 
   the pile up interactions using the FastJet correction method.}
   \label{fig:figures_LoneTrigger_L1MuHPF_NoFastJet_JetTurnOns}
 \end{figure}
@@ -223,17 +225,17 @@ point this section to it}
 \textbf{FIXME: is this even right?}
 where $\sigma$ describes the resolution, $\epsilon$ gives the maximum 
 efficiency and $\mu$ refers to the point at which the efficiency is $50\%$.
-
+Throughout $\epsilon = 1.0 $ is assumed. 
 \begin{table}[ht]
 \begin{tabular}{|c|c|c|}
 \hline
 Trigger & $\sigma$ & $\mu$\\
 \hline
-L1$\_$SingleJet16 & 7.482639 & 24.273190 \\
+L1$\_$SingleJet16 & 7.48 & 24.27 \\
 \hline
-L1$\_$SingleJet36 & 6.078462 & 49.253546 \\
+L1$\_$SingleJet36 & 6.08 & 49.25 \\
 \hline
-L1$\_$SingleJet52 & 6.751985 & 65.108612 \\
+L1$\_$SingleJet52 & 6.75 & 65.11 \\
 \hline
 \end{tabular}
 \caption{Results of an error function fit to the turn on curves for \Lone 
@@ -247,11 +249,11 @@ single jet triggers in run 2011B. Preselected on an Isolated Muon trigger.}
 \hline
 Trigger & $\sigma$ & $\mu$\\
 \hline
-L1$\_$SingleJet16 & 6.367845 & 10.475396 \\
+L1$\_$SingleJet16 & 6.37 & 10.48 \\
 \hline
-L1$\_$SingleJet36 & 6.345340 & 40.733543 \\
+L1$\_$SingleJet36 & 6.35 & 40.73 \\
 \hline
-L1$\_$SingleJet52 & 6.649299 & 57.481793 \\
+L1$\_$SingleJet52 & 6.65 & 57.48 \\
 \hline
 \end{tabular}
 \caption{Results of an error function fit to the turn on curves for \Lone 
@@ -267,11 +269,11 @@ a zero bias trigger.}
 \hline
 Trigger & $\sigma$ & $\mu$\\
 \hline
-L1$\_$SingleJet16 & 6.067393 & 15.193586 \\
+L1$\_$SingleJet16 & 6.07 & 15.20 \\
 \hline
-L1$\_$SingleJet36 & 7.047272 & 47.770072 \\
+L1$\_$SingleJet36 & 7.05 & 47.77 \\
 \hline
-L1$\_$SingleJet52 & 6.744601 & 63.676276 \\
+L1$\_$SingleJet52 & 6.74 & 63.68 \\
 \hline
 \end{tabular}
 \caption{Results of an error function fit to the turn on curves for \Lone 
@@ -578,7 +580,6 @@ is of limited size, inferring a reasonably large statistical uncertainty.
 % subsection Efficiency of MultiJet Triggers (end)
 
 
-
 % section Effects of requiring a jet seed on offline efficiency (end)
 
 \subsection{Summary} % (fold)
@@ -608,4 +609,5 @@ threshold reduces the dependance on instantanious luminosity of the trigger
 cross section.
 
 % subsection lone_trigger_pile_up_mitigation (end)
+
 % chapter level_one_trigger (end)
