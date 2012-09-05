@@ -1,0 +1,78 @@
+\chapter{The $\alpha_{T}$ analysis} % (fold)
+\label{cha:the_t_analysis}
+In this chapter we discuss the main analysis performed as the subject of this 
+thesis. For the theoretical motivations of this search please see 
+Chapter~\ref{cha:theory}
+\section{The Problem} % (fold)
+\label{sec:the_problem}
+If Supersymmetry or some other beyond the standard model theory is to provide a 
+yet undiscovered dark matter candidate, it is predicted that this candidate 
+will interact via the weak nuclear force only. This gives a decay topology 
+involving missing energy in the form of the dark matter particle escaping the 
+detector. Due to the nature of interactions at the L.H.C, these particles would 
+be produced at the end of a decay chain of heavy particles that interact 
+strongly, giving a final topology involving hadronic objects which are 
+classified as jets for the purpose of analysis and missing energy.
+There are several standard model processes that mimic this final state.
+
+By far the largest of these backgrounds comes from QCD multi jet events where 
+fake missing energy is introduced either from failures in reconstruction, or 
+stochastic fluctuations in the calorimeter systems.
+\textbf{FIXME: expand on this - E /sqrt E has non gaussian tails. Figures of 
+jets falling below threshold, missed jets etc. probably from some jet-met 
+paper.}
+However due to the theoretical errors on the QCD production cross section 
+predicting the number QCD background events from Montecarlo simulation is not 
+possible.
+A secondary QCD background also exists, where due to the requirement of a jet 
+\ET threshold, multiple jets fall under threshold by 1-5 \GeV, this causes a 
+balanced event to look unbalanced as the jets under threshold are no longer 
+considered.
+The solution is then to devise a kinematic cut that removes these events from 
+the signal selection.
+
+The second major background comes from standard model electro-weak decays and 
+is irreducible. The electro-weak decays that form the back ground are 
+\HepProcess{\PW\to\Ptau\Pnu} + Jets, where the $\tau$ is reconstructed as a 
+jet, or the lepton fails the identification required for the dedicated lepton 
+vetoes, \HepProcess{\PZ\to\Pnu\APnu} + Jets is completely irreducible. These 
+are generally di-jet topologies. At higher jet multiplicities top quark 
+production followed by semi-leptonic top decay accounts of the largest 
+background.
+
+
+The final background source is that introduced by detector failure or 
+electronic noise induced by the movement of the L.H.C proton beam.
+Approximately 1$\%$ of the ECAL read out is not available in offline event 
+reconstruction, this provides a source of fake missing energy.
+% section the_problem (end)
+
+\section{The \alt variable.} % (fold)
+\label{sec:the_alpha___t_variable_}
+\alt is inspired by Ref~\cite{Randall:2008dk} and was expanded to transverse 
+multi jet topologies by members of the CMS collaboration in 
+Refs~\cite{cms-pas-sus-08005,cms-pas-sus-09001}. The purpose is to provide a 
+variable that can be cut on to eliminate QCD from the final selection. To do 
+this the inherent balance of the QCD system is exploited.
+
+For dijets \alt is defined as:
+
+\begin{equation}
+  \alt = \frac{\ET^{j_{2}}}{M_{T}}
+\end{equation}
+where \ET$^{j_{2}}$ is the transverse energy of least energetic of the two jets 
+and M$_{T}$ is defined as:
+
+\begin{equation}
+  M_{T} = \sqrt{\left(\sum^{2}_{i=1}\ET^{j_{i}}\right)^2 - \left(\sum^{2}_{i=1}p_{x}^{j_{i}}\right)^{2} - \left(\sum^{2}_{i=1}p_{y}^{j_{i}}\right)^{2}}
+\end{equation}
+
+
+
+
+
+% section the_alpha___t_variable_ (end)
+
+
+
+% chapter the_t_analysis (end)
