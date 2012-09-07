@@ -2,7 +2,7 @@
 \label{cha:the_t_analysis}
 In this chapter we discuss the main analysis performed as the subject of this 
 thesis. For the theoretical motivations of this search please see 
-Chapter~\ref{cha:theory}
+Chapter~\ref{cha:theory}. The analysis is based on the full 2011 data set which is made up of 5\fbinv of 7 \TeV data. However 5\fbinv of the 2012 8 \TeV is looked at to measure the performance of the upgraded \alt HLT paths.
 \section{The Problem} % (fold)
 \label{sec:the_problem}
 If Supersymmetry or some other beyond the standard model theory is to provide a 
@@ -27,9 +27,8 @@ possible.
 A secondary QCD background also exists, where due to the requirement of a jet 
 \ET threshold, multiple jets fall under threshold by 1-5 \GeV, this causes a 
 balanced event to look unbalanced as the jets under threshold are no longer 
-considered.
-The solution is then to devise a kinematic cut that removes these events from 
-the signal selection.
+considered. The solution is then to devise a kinematic cut that removes these 
+events from the signal selection.
 
 The second major background comes from standard model electro-weak decays and 
 is irreducible. The electro-weak decays that form the back ground are 
@@ -38,7 +37,9 @@ jet, or the lepton fails the identification required for the dedicated lepton
 vetoes, \HepProcess{\PZ\to\Pnu\APnu} + Jets is completely irreducible. These 
 are generally di-jet topologies. At higher jet multiplicities top quark 
 production followed by semi-leptonic top decay accounts of the largest 
-background.
+background. These backgrounds are predicted using a well understood control 
+sample this is fully explained in 
+Section~\ref{sec:electro_weak_background_prediction}.
 
 
 The final background source is that introduced by detector failure or 
@@ -55,7 +56,7 @@ Refs~\cite{cms-pas-sus-08005,cms-pas-sus-09001}. The purpose is to provide a
 variable that can be cut on to eliminate QCD from the final selection. To do 
 this the inherent balance of the QCD system is exploited.
 
-For dijets \alt is defined as:
+For di-jet systems \alt is defined as:
 
 \begin{equation}
   \alt = \frac{\ET^{j_{2}}}{M_{T}}
@@ -67,12 +68,67 @@ and M$_{T}$ is defined as:
   M_{T} = \sqrt{\left(\sum^{2}_{i=1}\ET^{j_{i}}\right)^2 - \left(\sum^{2}_{i=1}p_{x}^{j_{i}}\right)^{2} - \left(\sum^{2}_{i=1}p_{y}^{j_{i}}\right)^{2}}
 \end{equation}
 
+For a perfectly measured di-jet system with \ET$^{j_{1}} = $\ET$^{j_{2}}$, 
+where the jets are opposite in $\phi$ \alt = 0.5, for events with back to back 
+jets where one is miss-measured \alt $ < 0.5$.
+However the majority of signals predict many jets in the final state.
+\alt can be generalised to work with n-jets in the flowing way.
+The variables \HT, \HTm and $\Delta$\HT are constructed:
+\begin{equation}
+  \HT = \sum_{i = 0}^{n~jets}\ET^{jet_{i}} \\
+  \HTm = \left|\sum_{i = 0}^{n~jets}\bar{p}_{T}^{jet_{i}}\right|
+\end{equation}
+for jets above some predefined threshold \ET which is common for all jet based 
+quantities. The multi jet system is reduced to a pseudo di-jet system by 
+forming two large jets. The individual jet \ET's are summed, with the final 
+configuration being chosen to have the minimum difference in energy 
+($\Delta$\HT) between the pseudo jets. This simple clustering criteria provides 
+the best separation between miss-measured events and those with real \MET.
+
+\alt is then defined as:
+\begin{equation}
+  \alt = \frac{\HT - \Delta\HT}{2\sqrt{\HT^{2}-\HTm^{2}}}
+\end{equation}
 
 
-
+Figure~\ref{fig:figures_Analysis_AlphaT_all_375_upwards} shows the \alt 
+distribution for both data and simulated background samples. The QCD multi jet 
+background is negligible above an \alt value of 0.55, where as the standard 
+model processes which involve real \MET exist at all possible values of \alt.
+Values of \alt in the range $0.5 < \alt < 0.55$ arise in multi jet QCD due to 
+jets falling below threshold or large stochastic fluctuations.
+It is to be noted that the discrepancy between data and simulation for \alt 
+$\leq 0.55$ is due to no trigger emulation being applied to the simulated 
+background samples.
+\begin{figure}[ht!]
+  \centering  \includegraphics[width=0.8\textwidth]{figures/Analysis/AlphaT_all_375_upwards.pdf}
+  \caption{\alt distribution for background and data. Trigger emulation is not 
+  applied in the simulated background which leads to the discrepancy in the 
+  region \alt $\leq 0.55$. The QCD multi-jet background is reduced to less than 
+  one event.}
+  \label{fig:figures_Analysis_AlphaT_all_375_upwards}
+\end{figure}
 
 % section the_alpha___t_variable_ (end)
 
 
+
+\section{High Level triggers for the \alt analysis} % (fold)
+\label{sec:high_level_triggers_for_the_alt_analysis}
+The CMS trigger system has been discussed in detail in 
+Section~\ref{sec:the_high_level_trigger_system} and 
+Chapter~\ref{cha:level_one_trigger}, however details of analysis specific 
+trigger paths were not discussed. During 2011 the first \alt specific trigger 
+was designed and deployed online. The trigger was then upgraded for the higher 
+luminosity and energy conditions of the 2012 data taking period.
+
+
+% section high_level_triggers_for_the_alt_analysis (end)
+
+
+\section{Electro-Weak background prediction} % (fold)
+\label{sec:electro_weak_background_prediction}
+
+% section electro_weak_background_prediction (end)
 
 % chapter the_t_analysis (end)
