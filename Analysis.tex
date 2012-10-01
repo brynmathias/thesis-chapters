@@ -111,7 +111,10 @@ background samples.
 
 % section the_alpha___t_variable_ (end)
 
+\section{Event selection} % (fold)
+\label{sec:event_selection}
 
+% section event_selection (end)
 
 \section{High Level triggers for the \alt analysis} % (fold)
 \label{sec:high_level_triggers_for_the_alt_analysis}
@@ -121,6 +124,21 @@ Chapter~\ref{cha:level_one_trigger}, however details of analysis specific
 trigger paths were not discussed. During 2011 the first \alt specific trigger 
 was designed and deployed online. The trigger was then upgraded for the higher 
 luminosity and energy conditions of the 2012 data taking period.
+
+The trigger takes advantage of cutting on two variables, \HT and \alt at low 
+\HT a high \alt value cuts the trigger rate, where as at high \HT where the
+trigger rate is lower the \alt requirement can be loosened.
+
+Due to the scaling of jet thresholds in the lowest offline \HT bins as detailed 
+in Section~\ref{sec:event_selection} using a fixed jet threshold would cause inefficiency in the lowest offline \HT bins. To over come this the trigger level \alt calculation is performed iteratively for all jets above a predefined threshold. This raises the total number of accepted events whilst adding the benefit of being efficient for any offline jet threshold above the minimum trigger jet threshold. The algorithm is show in Figure~\ref{fig:figures_Analysis_flowChart}.
+
+\begin{figure}[ht!]
+  \centering
+    \includegraphics[width=0.75\textwidth]{figures/Analysis/flowChart.pdf}
+  \caption{Flow chart representing the steps taken to make a trigger decision using the \alt trigger algorithm.}
+  \label{fig:figures_Analysis_flowChart}
+\end{figure}
+
 
 
 % section high_level_triggers_for_the_alt_analysis (end)
