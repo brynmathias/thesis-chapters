@@ -25,7 +25,7 @@ However due to the theoretical errors on the QCD production cross section
 predicting the number QCD background events from Montecarlo simulation is not 
 possible.
 A secondary QCD background also exists, where due to the requirement of a jet 
-\ET threshold, multiple jets fall under threshold by 1-5 \GeV, this causes a 
+\ET threshold, multiple jets fall under threshold by a few \GeV, this causes a 
 balanced event to look unbalanced as the jets under threshold are no longer 
 considered. The solution is then to devise a kinematic cut that removes these 
 events from the signal selection.
@@ -125,6 +125,7 @@ trigger paths were not discussed. During 2011 the first \alt specific trigger
 was designed and deployed online. The trigger was then upgraded for the higher 
 luminosity and energy conditions of the 2012 data taking period.
 
+
 The trigger takes advantage of cutting on two variables, \HT and \alt at low 
 \HT a high \alt value cuts the trigger rate, where as at high \HT where the
 trigger rate is lower the \alt requirement can be loosened.
@@ -132,14 +133,55 @@ trigger rate is lower the \alt requirement can be loosened.
 Due to the scaling of jet thresholds in the lowest offline \HT bins as detailed 
 in Section~\ref{sec:event_selection} using a fixed jet threshold would cause inefficiency in the lowest offline \HT bins. To over come this the trigger level \alt calculation is performed iteratively for all jets above a predefined threshold. This raises the total number of accepted events whilst adding the benefit of being efficient for any offline jet threshold above the minimum trigger jet threshold. The algorithm is show in Figure~\ref{fig:figures_Analysis_flowChart}.
 
+
 \begin{figure}[ht!]
   \centering
     \includegraphics[width=0.75\textwidth]{figures/Analysis/flowChart.pdf}
-  \caption{Flow chart representing the steps taken to make a trigger decision using the \alt trigger algorithm.}
+  \caption{Flow chart representing the steps taken to make a trigger decision 
+  using the \alt trigger algorithm.}
   \label{fig:figures_Analysis_flowChart}
 \end{figure}
 
 
+\section{2011 Trigger} % (fold)
+\label{sec:2011_trigger}
+Due to concerns on the time taken to perform the \dHT minimisation at the trigger and time constraints enforced on trigger menu development, the first implementation calculates \alt for the first 3 jets. For higher jet multiplicities the variable \bt is calculated.
+\begin{equation}
+  \beta_{T} = \frac{\HT}{2\sqrt{\HT^{2} - \MHT^{2}}}
+  \label{eqn:betaT}
+\end{equation}
+this gives us the relation:
+\begin{equation}
+  \alt \leq \beta_{T}.
+\end{equation}
+The decision flow is shown in Figure~\ref{fig:figures_Analysis_flowChart} and explained in detail below.
+
+When a level one accept is issued the trigger bits that fired are checked, if the event fires a L1 muon trigger it is passed to the HLT muon triggers where only muon reconstruction is performed, reducing the reconstruction time. The \alt triggers are seeded on the lowest threshold unprescaled L1 \HT trigger, during 2011 this was L1$\_$HTT100. Any events issuing a L1 accept and passing L1$\_$HTT100 undergo calorimeter jet reconstruction, the reconstruction algorithm is detailed in Section~\ref{sec:hadronic_jets}.
+
+Once the jets have been formed the trigger filter is entered. Initially the first two jets ranked by \ET, are considered, \HT and \alt are calculated, if both pass the trigger thresholds the event is accepted and the full detector read out is performed. If either \HT or \alt is below threshold, the next jet in \ET order is added, if the jet collection contains more than 3 jets then the \bt approximation is used. All jets in the event are added until either the even is accepted, or there are no more jets to be added above 40 \GeV.
+
+The effect of switching to the \bt approximation is to accept events that have missing energy due to miss-measurement, when calculating \alt offline these events have values of \alt $< 0.5$. This introduces an impurity to the trigger and costs rate for events that will not be considered in the offline analysis.
+
+
+% section 2011_trigger (end)
+
+
+
+
+
+
+
+\subsection{Trigger efficiency measurement} % (fold)
+\label{sub:trigger_efficiency_measurement}
+
+
+
+
+
+The performance of the \alt trigger suit is measured with respect to a sample collected using the muon system. This allows the measurement of efficiency of both the level one seed trigger and the higher level trigger at the same time as different sub-systems are used to collect the reference and the signal triggers. This is due to the exclusive use of calorimeter jets in the \alt trigger, if more complicated reconstruction methods which produce an event hypothesis were used, muons would at HLT level only be considered as jets. Where as during calorimeter only reconstruction, muons are not considered and the \pt of any muons in an event is viewed as missing energy.
+
+
+% subsection trigger_efficiency_measurement (end)
 
 % section high_level_triggers_for_the_alt_analysis (end)
 
