@@ -60,11 +60,7 @@ want to steal less??}
 
 The CMS detector can be un-rolled in the $\phi$ direction to form a rectangular 
 grid of the 396 calorimeter regions, connected along the $\phi$ edge. The
-rectangle 18 $\phi$ divisions (from $-180^{\circ} < \phi \leq 180^{\circ}$) by 
-22 $\eta$ divisions ( from $-5 < \eta < 5$). Each $\phi$ division corresponds 
-to 20$^{\circ}$. The $\eta$ divisions correspond to $\Delta\eta$ $= 0.5$ in the 
-forward calorimeters and to $\Delta\eta \approx 0.348$ in the barrel.
-A pictorial representation of this can be seen in 
+rectangle is formed from 18 $\phi$ divisions (from $-180^{\circ} < \phi \leq 180^{\circ}$) and 22 $\eta$ divisions ( from $-5 < \eta < 5$). Each $\phi$ division corresponds to 20$^{\circ}$. The $\eta$ divisions correspond to $\Delta\eta$ $= 0.5$ in the forward calorimeters and to $\Delta\eta \approx 0.348$ in the barrel. A pictorial representation of this can be seen in 
 figure~\ref{fig:figures_LoneTrigger_jetfindermappings}.
 
 \begin{figure}[ht]
@@ -93,7 +89,7 @@ fraction of the regional \ET as shown in
 Figure~\ref{fig:figures_LoneTrigger_level1jetalgo}.
 
 It is possible to apply separate jet energy corrections to each of the sub 
-categories of GCT jets. These corrections are discussed in detail in 
+categories of GCT jets, however at current the same \ET and \ETA dependant corrections are used for all three jet types.  These corrections are discussed in detail in 
 Section~\ref{sec:lone_trigger_performance}
 
 \begin{figure}[ht]
@@ -267,15 +263,15 @@ where $\sigma$ describes the resolution, $\epsilon$ gives the maximum
 efficiency and $\mu$ refers to the point at which the efficiency is $50\%$.
 Throughout $\epsilon = 1.0 $ is assumed. 
 \begin{table}[ht]
-\begin{tabular}{|c|c|c|}
+\begin{tabular}{|c|c|c|c|}
 \hline
-Trigger & $\sigma$ & $\mu$\\
+Trigger & $\sigma$ & $\mu$ & $\chi^2/NDF$\\
 \hline
-L1$\_$SingleJet16 & 7.48 & 24.27 \\
+L1$\_$SingleJet16 & 7.94 & 24.12 & 2317. \\
 \hline
-L1$\_$SingleJet36 & 6.08 & 49.25 \\
+L1$\_$SingleJet36 & 6.08 & 49.25 & 689.1 \\
 \hline
-L1$\_$SingleJet52 & 6.75 & 65.11 \\
+L1$\_$SingleJet52 & 6.81 & 65.20 & 225.2  \\
 \hline
 \end{tabular}
 \caption{Results of an error function fit to the turn on curves for \Lone 
@@ -332,18 +328,18 @@ bias trigger.}
 
 \begin{table}[ht]
  \centering
-\begin{tabular}{|c|c|c|}
+\begin{tabular}{|c|c|c|c|}
 \hline
 \hline
-Trigger & $\sigma$ & $\mu$\\
+Trigger & $\sigma$ & $\mu$ & $\chi^2/NDF$\\
 \hline
-L1$\_$HTT50 & 24.73 & 105.13 \\
+L1$\_$HTT50 & 24.73 & 105.13  & 87.03 \\
 \hline
-L1$\_$HTT75 & 28.12 & 148.91 \\
+L1$\_$HTT75 & 28.12 & 148.91  & 17.8 \\
 \hline
-L1$\_$HTT100 & 31.20 & 189.04 \\
+L1$\_$HTT100 & 31.20 & 189.04 & 5.3 \\
 \hline
-L1$\_$HTT150 & 37.46 & 265.21 \\
+L1$\_$HTT150 & 37.46 & 265.21 & 2.3 \\
 \hline
 \hline
 \end{tabular}
@@ -365,14 +361,14 @@ hadronic energy sum (\HT) triggers in run 2011B. Preselected on an Isolated Muon
   
 \begin{table}[ht]
  \centering
-\begin{tabular}{|c|c|c|}
+\begin{tabular}{|c|c|c|c|}
 \hline
 \hline
-Trigger & $\sigma$ & $\mu$\\
+Trigger & $\sigma$ & $\mu$  & $\chi^2/NDF$\\
 \hline
-L1$\_$HTM30 & 20.45 & 70.02 \\
+L1$\_$HTM30 & 20.45 & 70.02 & 396.3 \\
 \hline
-L1$\_$HTM50 & 17.44 & 83.54 \\
+L1$\_$HTM50 & 17.44 & 83.54 & 96.2 \\
 \hline
 \hline
 \end{tabular}
@@ -393,16 +389,16 @@ hadronic energy sum (\HTm) triggers in run 2011B. Preselected on an Isolated Muo
 
 \begin{table}[ht]
  \centering
-\begin{tabular}{|c|c|c|}
+\begin{tabular}{|c|c|c|c|}
 \hline
 \hline
-Trigger & $\sigma$ & $\mu$\\
+Trigger & $\sigma$ & $\mu$  & $\chi^2/NDF$\\
 \hline
-L1$\_$MET30 & 13.53 & 57.65 \\
+L1$\_$MET30 & 13.53 & 57.65 & 213.9\\
 \hline
-L1$\_$MET50 & 14.09 & 76.02 \\
+L1$\_$MET50 & 14.09 & 76.02 & 57.4 \\
 \hline
-L1$\_$MET70 & 16.51 & 97.37 \\
+L1$\_$MET70 & 16.51 & 97.37 & 18.9 \\
 \hline
 \hline
 \end{tabular}
