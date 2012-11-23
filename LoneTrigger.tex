@@ -89,7 +89,7 @@ fraction of the regional \ET as shown in
 Figure~\ref{fig:figures_LoneTrigger_level1jetalgo}.
 
 It is possible to apply separate jet energy corrections to each of the sub 
-categories of GCT jets, however at current the same \ET and \ETA dependant corrections are used for all three jet types.  These corrections are discussed in detail in 
+categories of GCT jets, however at current the same \ET and $\eta$ dependant corrections are used for all three jet types.  These corrections are discussed in detail in 
 Section~\ref{sec:lone_trigger_performance}
 
 \begin{figure}[ht]
@@ -143,269 +143,90 @@ GT.
 % section leve_1_trigger_jet_algorithm (end)
 
 \section{\Lone Trigger Performance} % (fold)
-\label{sec:lone_trigger_performance}
-\textbf{FIXME: Can i just copy the stuff out of the L1 performance note here 
-for the corrections? I will need to re-make a bunch of the plots though :( Jobs 
-set running as of 24th july -- jobs are finally complete.}
 
+During the start of data taking in 2010, no Jet Energy Corrections (JEC's) were applied in the \Lone trigger. This gave a relatively slow turn on in therms of offline hadronic objects.
+During the winter shut down of the LHC between the 2010 and 2011 running periods a set of \Lone JEC's were developed. These corrections used a peicewise cubic form for the interpolation function used to correct the jet energy dependant on it's uncorrected \ET and $\eta$ values. However as can be seen in
+Figure~\ref{fig:figures_LoneTrigger_EnCorrelationNormalized} these corrections were only applied to jets with a raw energy below 130 \GeV.
 
-Each offline jet is matched to a \Lone trigger jet with the smallest $\delta 
-R$, for a match to be considered good $\delta R < 0.5$ is required. The $\delta 
-R$ distribution is show in Figure~\ref{fig:figures_LoneTrigger_SingleMu_DeltaR}.
-The energy of the leading offline matched jet is then recorded to form the 
-denominator. To form the numerator the \Lone jet that the offline jet is 
-matched to is required to have an energy above some desired threshold.
-
-\begin{figure}[ht!]
+\begin{figure}[htbp]
   \centering
-    \includegraphics[width=0.5\textwidth]{figures/LoneTrigger/SingleMu_DeltaR.pdf}
-  \caption{$\delta R$ distribution before any selection cut, matching \Lone 
-  jets to offline jets.}
-  \label{fig:figures_LoneTrigger_SingleMu_DeltaR}
+    \includegraphics[width=0.8\textwidth]{figures/LoneTrigger/EnCorrelationNormalized.pdf}
+  \caption{Correlation between offline corrected jet energy and \Lone corrected jet energy for matched jets. The discontinuity shows where the \Lone jet corrections do not alter the raw energy of the jet.}
+  \label{fig:figures_LoneTrigger_EnCorrelationNormalized}
 \end{figure}
 
+To overcome this a new set of corrections were derived using a well established tool for producing offline corrections, \textbf{REFERENCE TO tapper-001 here} using the same functional form that was derived for correcting particle flow jets. \textbf{REFERENCE TO PF HERE}
+In this section we discuss the performance of both sets of \Lone JEC's and the performance of the energy sum trigger \HT, \HTm, and \MET, the performance of which are not effected by the application of jet energy corrections at the \Lone trigger due to the quantities being built from the internal GCT jets before they pass though the corrections look up table.
+The performance is studied under both low pile up conditions where the mean peak pile up $<PU>$ is 16 primary vertices and under high pile up conditions where $<PU>$ is 36 primary vertices.
 
-To compare the performance of each of the triggers each of the turn on curves
-are fitted with an error function. Three example single object triggers are 
-tested these are; L1$\_$SingleJet16, L1$\_$SingleJet36 and L1$\_$SingleJet52, 
-where the number refers to the requested \ET threshold.
+To measure the performance of the \Lone single jet triggers we assume that the leading offline corrected \AK calorimeter jet is the jet that triggered the event. We then match this offline jet to the closest \Lone jet in $\Delta$R, where for there to be a match $\Delta$R $< 0.5$ is required. For this match central, $\tau$ and forward jets are considered. Events where the recorded \Lone energy is set to the overflow bit, meaning they have more than 254 \GeV of \ET measured at \Lone are ignored.
 
-The performance is measured under two different pile up conditions, the first
-is where the mean number of interactions per bunch crossing ($<PU>$) is less 
-than 16. The events studied are taken with a single $\mu$ HLT trigger namely
-HLT$\_$IsoMu24 which requires there to be at least one muon with \PT $\geq$ 24 
-\GeV passing loose isolation, this removes any biases on the turn on from pre 
-selecting with a hadronic trigger. To test the performance of the trigger 
-system under high pile up conditions ($<PU> ~ \leq ~ 32$) a dedicated high pile 
-up fill of the LHC was performed.The high pile up fill is studied from two 
-points of view, the first is with regard to standard \AK calorimeter jets. 
-Secondly the performance is measured against \AK calorimeter jets that are 
-corrected for pile up.
+To collected an unbiased sample in which to measure the performance, two methods are used; the first is to require a Minimum Bias trigger, which is triggered by beam induced activity in the CMS detector.
+However due to the nature of these events the number of interactions with high energy interactions is low and the prescale applied to this trigger further reduces the sample size. However this method does produce the least bias.
+The second method is to trigger an object that does not deposit signifiant energy in the calorimeter systems, in this case we choose the trigger with the lowest un prescaled \PT threshold. The muon trigger is chosen with some loose isolation requirements to make sure it does not overlap with a jet, causing a discrepancy in the measure of the calorimetric energy. The sample has a higher number of events due to the large amount of bandwidth given to the single object muon triggers in CMS. The use of a muon trigger also serves to increase the precision of the measurement of the \Lone missing energy trigger as the muons are not seen by the calorimeter system the \MET sample is enriched.
 
-Figure~\ref{fig:figures_LoneTrigger_SingleMu_JetTurnOns} shows the performance 
-of the three example \Lone single jet triggers with the fit results listed in 
-Table~\ref{tab:2011B_performance}.
-Figure~\ref{fig:figures_LoneTrigger_L1MuHPF_FastJet_JetTurnOns} shows the 
-performance of the same three triggers during high pile up conditions when 
-compared to pile up corrected \AK calorimeter jets. This should be compared with
-Figure~\ref{fig:figures_LoneTrigger_L1MuHPF_NoFastJet_JetTurnOns} where the \AK
-calorimeter jets are not corrected for pile up. The fit results for these two
-sets of offline conditions are listed in Table~\ref{tab:2011B_HighPU_FastJet} 
-and \ref{tab:2011B_HighPU_NoFastJet} respectively.
+\begin{figure}[htbp]
+  \centering
+    \includegraphics[width=0.8\textwidth]{figures/LoneTrigger/cf_correctionScheemes.pdf}
+  \caption{Comparison of the performance of L1$\_$SingleJet16, L1$\_$SingleJet36 and L1$\_$SingleJet92, when using the piecewise cubic corrections and using the new correction scheme. The performance of the two is negligible above 36\GeV.}
+  \label{fig:figures_LoneTrigger_cf_correctionScheemes}
+\end{figure}
 
+Figure~\ref{fig:figures_LoneTrigger_cf_correctionScheemes} shows the performance of the piecewise cubic corrections (PWC) and the performance of the new corrections. The data was taken with the PWC enabled in the GCT hardware. The updated corrections were emulated in the bitwise reproduction of the GCT. The made an event by event comparison possible. At low \ET the new corrections turn on before the PWC corrections, if the new corrections were applied on with no change to the trigger menu, the \Lone trigger rate would rise. At a threshold of 36 \GeV and higher the performance of the two correction schemes is very similar. Due to the small change in observed performance and the ability to correct raw energies above 130 \GeV, the new corrections were deployed online at the start of Run2011B and are still online at the end of data taking in 2012.
 
-Due to the small amount of data collected in the high pile up run there are 
-an insufficient number of events with high \MET,\HTm and \HT to measure the 
-high pile up performance. However the performance in low pile up conditions is 
-presented below, it is noted that as there are no HLT paths seeded by a \Lone 
-\ET trigger the performance is not measured.
-
-Figure~\ref{fig:figures_SingleMu_HT_Performance} shows the performance of four
-\Lone \HT triggers with thresholds of 50, 75, 100 and 150 \GeV, the fit results 
-to each of these performance curves is detailed in 
-Table~\ref{tab:2011B_HT_performance}. The shift in $\mu$ to larger values than 
-the online \Lone trigger threshold is due to \Lone \HT being formed from the 
-internal GCT jets before they have their energy corrected. The offline quantity 
-is constructed using corrected \AK calorimeter jets with the requirement that 
-jets contributing to \HT have \ET $\geq$ 40 \GeV as this definition is used when calculating HLT quantities.
-
-Figure~\ref{fig:figures_SingleMu_MHT_Performance} shows the performance of two 
-\Lone \HTm triggers with thresholds of 30 and 50 \GeV, with the fit results 
-listed in Table~\ref{tab:2011B_HTM_performance}. Due to \HTm being a vectorial 
-sum, it is important to use the same objects offline and online as the addition 
-or removal of an object from the sum has a non trivial effect on the length of 
-the final vector, however \Lone \HTm is formed from the same objects at \Lone 
-\HT, namely uncorrected \Lone jets with \ET $\geq$ 10 \GeV. The performance is 
-measured with respect to \HTm constructed from offline \AK calorimeter jets 
-with \ET $\geq$ 15 \GeV.
-
-
-
-\textbf{FIXME: there will be an explanation of L1FastJet corrections somewhere, 
-point this section to it}
-\begin{figure}[ht]
+\begin{figure}[htbp]
   \centering
     \includegraphics[width=0.8\textwidth]{figures/LoneTrigger/SingleMu_JetTurnOns.pdf}
-  \caption{Turn on curves for three \Lone single jet triggers, in terms of 
-  offline corrected \AK calorimeter jet \ET.}
+  \caption{Performance measurements of L1$\_$SingleJet16, L1$\_$SingleJet36 and L1$\_$SingleJet92, when using the new correction scheme deployed in the GCT hardware. The performance is slightly worse than that of the emulated triggers due to a change in pile up conditions between the two data taking periods.}
   \label{fig:figures_LoneTrigger_SingleMu_JetTurnOns}
 \end{figure}
 
-\begin{figure}[ht]
+The performance of the updated corrections was then measured with data taken with the corrections applied in the GCT hardware. The reference sample was taken with the  \verb|HLT_IsoMu24_v*| high level muon trigger.
+The performance of three example triggers is show in Figure~\ref{fig:figures_LoneTrigger_SingleMu_JetTurnOns}, these curves are fitted with an error function, which is not a perfect description of the turn on, but does give some guiding figures as to the performance of the triggers. The data collected and represented in Figure~\ref{fig:figures_LoneTrigger_SingleMu_JetTurnOns} has a peak mean pile up ($<PU>$) of 16 interactions, this is higher than the $<PU>$ of approximately 8-10 which were the running conditions in Run2011A, on which the previous comparison was performed.
+The observed difference in the performance of the \Lone single jet triggers as a function of pile up is a case of concern when data taking is underway at the LHC's design luminosity, where $<PU>$ is $>$36 at an instantaneous luminosity of 1$\times 10 ^{34} cm^{-27}s^{-1}$.
+
+The instantaneous luminosity in 2012 was predicted to be 5$\times 10 ^{33} cm^{-27}s^{-1}$, with $<PU> \approx$ 32. In order to study the effect on the trigger rate and efficiency a high pile up, low instantaneous luminosity, LHC fill was taken in 2011.
+
+The \Lone single jet performance was studied in this run in terms of two offline object definitions. The first was the standard \AK calorimeter jet reconstruction, the second was a set of \AK calorimeter jets which were corrected for pile up using the fastjet correction algorithm, \textbf{cite fast jet} which is further detailed in Section~\ref{cha:offline_object_deffinitions}.
+The fast-jet corrections remove the energy deposited in the secondary interactions from the objects which are expected to come from the primary hard interaction, thus removing energy from the offline jets.
+The effect of these pile up corrections on the \Lone trigger performance is first studied under conditions with $<PU>$ of 16, the performance of which has already been measured with respect to non pile up corrected offline objects, as a sanity check. The results are shown in Figure~\ref{fig:figures_LoneTrigger_LowPUFastCompare} , the performance is measured with respect to \verb|HLT_IsoMu24_v*|, in terms of both pile up corrected and standard offline objects. As expected the performance in the two cases is very similar. The same comparison is shown for \HT in Figure~\ref{fig:figures_LoneTrigger_LowPUFastCompareHT}, where the effect of the fastjet corrections is more pronounced due to the sum over jets.
+The difference between the turn on points for the two offline quantities is on the order of 10 \GeV under low pile up conditions.
+
+Due to the high pile up fill being a specialised fill with low instantaneous luminosity, the high level trigger paths were disabled, instead \Lone trigger pass though paths were utilised to take the data. The \Lone single muon pass though trigger is used to collect the reference sample. Otherwise the same analysis method is common between the two data sets.
+Figure~\ref{fig:figures_LoneTrigger_HighFastCompare} shows the difference in turn on for three example \Lone single jet triggers when using standard calorimeter jets and fastjet corrected calorimeter jets.
+In the high pile up conditions the switch to offline jets that are corrected for pile up shifts the turn on point to lower vales of \ET, the magnitude of this effect reduces as the \Lone trigger trigger threshold raises. This implies that the same offline performance as seen in the low pile up conditions can be achieved by using the pile up corrected offline objects and raising the \Lone single jet trigger thresholds.
+
+Figure~\ref{fig:figures_LoneTrigger_HighPUFastCompareHT} shows the same high pile up comparison, but for the \Lone \HT triggers. Due to the size of the sample the precision of this measurement is low. However the same trend of a shift to lower \HT values of the turn on point of the \Lone triggers when using pile up corrected offline objects is observed. This again implies that the \Lone \HT trigger thresholds can be raised whilst preserving the same offline performance as during the low pile up conditions.
+
+\begin{figure}[htbp]
   \centering
-    \includegraphics[width=0.8\textwidth]{figures/LoneTrigger/L1MuHPF_FastJet_JetTurnOns.pdf}
-  \caption{Turn on curves for the three \Lone single jet triggers in terms of 
-  offline corrected \AK calorimeter jet \ET in high pile up conditions.}
-  \label{fig:figures_LoneTrigger_L1MuHPF_FastJet_JetTurnOns}
+    \includegraphics[width=0.8\textwidth]{figures/LoneTrigger/LowPUFastCompare.pdf}
+  \caption{Comparison of the performance of  L1$\_$SingleJet16, L1$\_$SingleJet36 and  L1$\_$SingleJet92 triggers. Where $<PU>$ = 16. For two offline reconstruction methods, standard \AK calorimeter jets and pile up corrected \AK calorimeter jets.}
+  \label{fig:figures_LoneTrigger_LowPUFastCompare}
 \end{figure}
 
 
-\begin{figure}[ht]
+\begin{figure}[htbp]
   \centering
-    \includegraphics[width=0.8\textwidth]{figures/LoneTrigger/L1MuHPF_NoFastJet_JetTurnOns.pdf}
-  \caption{Turn on curves for the three \Lone single jet triggers in terms of 
-  offline \AK calorimeter jets where the energies are corrected for energy from 
-  the pile up interactions using the FastJet correction method.}
-  \label{fig:figures_LoneTrigger_L1MuHPF_NoFastJet_JetTurnOns}
-\end{figure}
-
-\textbf{FIXME: put in the run no of the HPF in here} 
-
-
-\begin{equation}
-    fit = \frac{\epsilon}{2} \times (1 + 
-    \frac{2}{\sqrt{\pi}}\int^{x}_{0}e^{-t^{2}}dt)/\sqrt{2}\sigma. ~ where~ t = 
-    \epsilon - \mu
-\label{eqn:erf}
-\end{equation}
-\textbf{FIXME: is this even right?}
-where $\sigma$ describes the resolution, $\epsilon$ gives the maximum 
-efficiency and $\mu$ refers to the point at which the efficiency is $50\%$.
-Throughout $\epsilon = 1.0 $ is assumed. 
-\begin{table}[ht]
-\begin{tabular}{|c|c|c|c|}
-\hline
-Trigger & $\sigma$ & $\mu$ & $\chi^2/NDF$\\
-\hline
-L1$\_$SingleJet16 & 7.94 & 24.12 & 2317. \\
-\hline
-L1$\_$SingleJet36 & 6.08 & 49.25 & 689.1 \\
-\hline
-L1$\_$SingleJet52 & 6.81 & 65.20 & 225.2  \\
-\hline
-\end{tabular}
-\caption{Results of an error function fit to the turn on curves for \Lone 
-single jet triggers in run 2011B. Preselected on an Isolated Muon trigger.}
-\label{tab:2011B_performance}
-\end{table}
-
-
-\begin{table}[ht]
-\begin{tabular}{|c|c|c|}
-\hline
-Trigger & $\sigma$ & $\mu$\\
-\hline
-L1$\_$SingleJet16 & 6.37 & 10.48 \\
-\hline
-L1$\_$SingleJet36 & 6.35 & 40.73 \\
-\hline
-L1$\_$SingleJet52 & 6.65 & 57.48 \\
-\hline
-\end{tabular}
-\caption{Results of an error function fit to the turn on curves for \Lone 
-single jet triggers in the run 2011B high pile up fill Where offline hadronic 
-objects are corrected for pile up using the FastJet calculation. Preselected on 
-a zero bias trigger.}
-\label{tab:2011B_HighPU_FastJet}
-\end{table}
-
-
-\begin{table}[ht]
-\begin{tabular}{|c|c|c|}
-\hline
-Trigger & $\sigma$ & $\mu$\\
-\hline
-L1$\_$SingleJet16 & 6.07 & 15.20 \\
-\hline
-L1$\_$SingleJet36 & 7.05 & 47.77 \\
-\hline
-L1$\_$SingleJet52 & 6.74 & 63.68 \\
-\hline
-\end{tabular}
-\caption{Results of an error function fit to the turn on curves for \Lone 
-single jet triggers in the run 2011B high pile up fill. Preselected on a zero
-bias trigger.}
-\label{tab:2011B_HighPU_NoFastJet}
-\end{table}
-
-
-\begin{figure}[ht]
-  \centering
-    \includegraphics[width=0.8\textwidth]{figures/LoneTrigger/SingleMu_HT_Performance.pdf}
-  \caption{Turn on curves for the \Lone \HT triggers. The fit results are listed in Table~\ref{tab:2011B_HT_performance}}
-  \label{fig:figures_SingleMu_HT_Performance}
-\end{figure}
-
-\begin{table}[ht]
- \centering
-\begin{tabular}{|c|c|c|c|}
-\hline
-\hline
-Trigger & $\sigma$ & $\mu$ & $\chi^2/NDF$\\
-\hline
-L1$\_$HTT50 & 24.73 & 105.13  & 87.03 \\
-\hline
-L1$\_$HTT75 & 28.12 & 148.91  & 17.8 \\
-\hline
-L1$\_$HTT100 & 31.20 & 189.04 & 5.3 \\
-\hline
-L1$\_$HTT150 & 37.46 & 265.21 & 2.3 \\
-\hline
-\hline
-\end{tabular}
-\caption{Results of an error function fit to the turn on curves for \Lone 
-hadronic energy sum (\HT) triggers in run 2011B. Preselected on an Isolated Muon trigger.}
-\label{tab:2011B_HT_performance}
-\end{table}
-
-
-\begin{figure}[ht]
-  \centering
-    \includegraphics[width=0.8\textwidth]{figures/LoneTrigger/SingleMu_MHT_Performance.pdf}
-  \caption{Performance of the \Lone \HTm triggers, preselecting on 
-  HLT$\_$IsoMu24. The fit results are listed in 
-  Table~\ref{tab:2011B_HTM_performance}. }
-  \label{fig:figures_SingleMu_MHT_Performance}
-\end{figure}
-
-  
-\begin{table}[ht]
- \centering
-\begin{tabular}{|c|c|c|c|}
-\hline
-\hline
-Trigger & $\sigma$ & $\mu$  & $\chi^2/NDF$\\
-\hline
-L1$\_$HTM30 & 20.45 & 70.02 & 396.3 \\
-\hline
-L1$\_$HTM50 & 17.44 & 83.54 & 96.2 \\
-\hline
-\hline
-\end{tabular}
-\caption{Results of an error function fit to the turn on curves for \Lone 
-hadronic energy sum (\HTm) triggers in run 2011B. Preselected on an Isolated Muon trigger.}
-\label{tab:2011B_HTM_performance}
-\end{table}
-
-\begin{figure}[ht]
-  \centering
-    \includegraphics[width=0.8\textwidth]{figures/LoneTrigger/SingleMu_MET_Performance.pdf}
-  \caption{Performance of the \Lone \MET triggers, preselecting on 
-  HLT$\_$IsoMu24. The fit results are listed in 
-  Table~\ref{tab:2011B_MET_performance}.}
-  \label{fig:figures_SingleMu_MET_Performance}
+    \includegraphics[width=0.8\textwidth]{figures/LoneTrigger/LowPUFastCompareHT.pdf}
+  \caption{Comparison of the performance of L1$\_$HTT75, L1$\_$HTT100 and  L1$\_$HTT150 triggers. Where $<PU>$ = 16. For two offline reconstruction methods, standard \AK calorimeter jets and pile up corrected \AK calorimeter jets.}
+  \label{fig:figures_LoneTrigger_LowPUFastCompareHT}
 \end{figure}
 
 
-\begin{table}[ht]
- \centering
-\begin{tabular}{|c|c|c|c|}
-\hline
-\hline
-Trigger & $\sigma$ & $\mu$  & $\chi^2/NDF$\\
-\hline
-L1$\_$MET30 & 13.53 & 57.65 & 213.9\\
-\hline
-L1$\_$MET50 & 14.09 & 76.02 & 57.4 \\
-\hline
-L1$\_$MET70 & 16.51 & 97.37 & 18.9 \\
-\hline
-\hline
-\end{tabular}
-\caption{Results of an error function fit to the turn on curves for \Lone 
-hadronic energy sum (\MET) triggers in run 2011B. Preselected on an Isolated Muon trigger.}
-\label{tab:2011B_MET_performance}
-\end{table}
+\begin{figure}[htbp]
+  \centering
+    \includegraphics[width=0.8\textwidth]{figures/LoneTrigger/HighFastCompare.pdf}
+  \caption{Comparison of the performance of L1$\_$SingleJet16, L1$\_$SingleJet36 and L1$\_$SingleJet92 triggers. Where $<PU>$ = 36. For two offline reconstruction methods, standard \AK calorimeter jets and pile up corrected \AK calorimeter jets.}
+  \label{fig:figures_LoneTrigger_HighFastCompare}
+\end{figure}
+
+\begin{figure}[htbp]
+  \centering
+    \includegraphics[width=0.8\textwidth]{figures/LoneTrigger/HighPUFastCompareHT.pdf}
+  \caption{Comparison of the performance of  L1$\_$HTT75, L1$\_$HTT100 and  L1$\_$HTT150 triggers. Where $<PU>$ = 36. For two offline reconstruction methods, standard \AK calorimeter jets and pile up corrected \AK calorimeter jets.}
+  \label{fig:figures_LoneTrigger_HighPUFastCompareHT}
+\end{figure}
 
 % section lone_trigger_performance (end)
 \clearpage
