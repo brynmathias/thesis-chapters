@@ -2,7 +2,7 @@
 \label{cha:the_t_analysis}
 In this chapter we discuss the main analysis performed as the subject of this 
 thesis. For the theoretical motivations of this search please see 
-Chapter~\ref{cha:theory}. The analysis is based on the full 2011 data set which is made up of 5\fbinv of 7 \TeV data. However 5\fbinv of the 2012 8 \TeV is looked at to measure the performance of the upgraded \alt HLT paths.
+Chapter~\ref{cha:theory}. The analysis is based on the full 2011 data set which is made up of \unit{5}{\invfb} of \unit{7}{\TeV} data. However \unit{5}{\invfb} of the 2012 \unit{8}{\TeV} is looked at to measure the performance of the upgraded \alt HLT paths.
 \section{The Problem} % (fold)
 \label{sec:the_problem}
 If Supersymmetry or some other beyond the standard model theory is to provide a 
@@ -27,11 +27,11 @@ possible.
 A secondary QCD background also exists, where due to the requirement of a jet 
 \ET threshold, multiple jets fall under threshold by a few \GeV, this causes a 
 balanced event to look unbalanced as the jets under threshold are no longer 
-considered. The solution is then to devise a kinematic cut that removes these 
-events from the signal selection.
+considered. It is these events that \alt is designed to remove.
 
 The second major background comes from standard model electro-weak decays and 
-is irreducible. The electro-weak decays that form the back ground are 
+is irreducible as the final states involve real missing energy, from 
+neutrinos. The electro-weak decays that form the back ground are 
 \HepProcess{\PW\to\Ptau\Pnu} + Jets, where the $\tau$ is reconstructed as a 
 jet, or the lepton fails the identification required for the dedicated lepton 
 vetoes, \HepProcess{\PZ\to\Pnu\APnu} + Jets is completely irreducible. These 
@@ -113,6 +113,88 @@ background samples.
 
 \section{Event selection} % (fold)
 \label{sec:event_selection}
+In order to select events for the hadronic signal sample and the muon and 
+photon control samples a common set of section cuts is defined. In this section 
+the objects are defined as are the flow of the analysis cuts and filters.
+
+\paragraph{Preselection of hadronic objects} % (fold)
+\label{par:Preselection_of_hadronic_objects}
+Jets are created by running the \AK jet clustering 
+algorithm\cite{Cacciari:2008ua} over the calorimeter towers. The jets have 
+their raw energies corrected based on their position and momentum to establish 
+a uniform relative response in $\eta$ and a calibrated absolute response in 
+transverse energy \ET, with an associated uncertainty of between 2$\%$ and 
+4$\%$ dependant on \ET and $\eta$\cite{Chatrchyan:2011ds}. Jets considered in 
+the analysis are required to have \ET $>$ \unit{50}{\GeV}, the highest \ET jet 
+in the events is required to be within tracker acceptance (|$\eta$| < 2.5) and 
+the sub leading jet is required to have \ET $>$ \unit{100}{\GeV}.
+The quantities \HT and \HTm are then formed from these jets.
+% paragraph definition_of_event_level_jets (end)
+
+
+
+
+The common selection cuts and filters consist of:
+
+\begin{itemize}
+\item \textbf{All detector subsystems on}, \ac{cms} in ``Physics Declared'' 
+mode and all physics object groups have certified the runs and luminosity 
+sections. This removes any events where the sub-detectors were in an error 
+state or events from before the tracker was switched to high voltage mode.
+\item \textbf{P.K.A.M (Previously Known As Monsters) filter}, these events are 
+caused by beam-gas interactions close to \ac{cms}, which cause a shower of 
+particles to enter the pixel detector along the beam line, resulting in a large 
+proportion of the pixel detector to record hits.
+\item \textbf{Vertex Selection} requires at least one non-fake vertex with at 
+least four associated tracks, within a cylinder of radius \unit{2}{\cm} and 
+length \unit{48}{\cm}, centred at Z = 0 of the \ac{cms} detector.
+\item \textbf{Hadronic barrel and end-cap noise filter}, this filter removes 
+events where strips of towers in the hadronic calorimeters record energy from 
+electrical noise, mimicking large, unbalanced energy deposits.
+% \item \textbf{Cleaned Rec hit filter}, removes events where the sum of cleaned energy from calorimeter towers is greater than \unit{30}{\GeV}.
+\item \textbf{Vertex \PT / \HT $>$ 0.1}, removes events where the sum of the 
+\PT of all tracks from all good vertices is less than 10$\%$ of the energy 
+deposited by jets in the calorimeters. This cut is designed to remove events 
+with tracking failure, which would otherwise pass the calorimeter only event 
+quality requirements.
+\item\textbf{Masked ECAL channel filter:} Approximately 1$\%$ of the ECAL 
+crystals are masked, or have read out failure. To avoid selecting events with 
+large energy miss measurement, a topological cut was devised. The first step is 
+to calculate $\Delta\phi^{*}$ for each jet ($\vec{j}$) in the event, where:
+\begin{equation}
+  \Delta\phi^{*} = \Delta\phi\left(\vec{\slashed{E}}_{T}+\vec{j},\vec{j} \right).
+  \label{eq:biasedDphi}
+\end{equation}
+Which gives a measure of the miss measurement of a jet, if $\Delta\phi^{*}$ is 
+small, the missing energy points along the jet in the $\phi$ direction. By 
+selecting the miss measured jet, full position information is preserved. If any 
+jet has $\Delta\phi^{*} <$ 0.5, the number of masked ECAL crystals with in 
+$\Delta R < $0.3 are summed, if there are more than 10 masked crystals adjacent 
+to the jet, the event is vetoed.
+\item \textbf{R$_{miss} <$ 1.25:} The total hadronic energy in an event is 
+required to be greater than \unit{275}{\GeV} which is well above the transverse 
+energy threshold of \unit{50}{\GeV} for each jet. However several jets falling 
+below this threshold can sum to a significant quantity of ignored energy. This 
+is shown in Figure~\ref{fig:figures_Analysis_BabyMHT50-10}, here the missing 
+energy calculated from jets in the range \unit{10}{\GeV} $<$ \ET $<$ 
+\unit{50}{\GeV} is shown, whilst requiring that \MET $<$ \unit{20}{\GeV}. This 
+shows that for a well balanced event the jets below threshold can carry greater 
+than \unit{100}{\GeV} of ignored energy. R$_{miss}$ is defined as $\HTm \slash 
+\MET$ and can be used to single out events where the inclusion of lower 
+momentum jets does significantly improve the balance of the event.
+\end{itemize}
+
+
+\begin{figure}[htbp]
+  \centering
+    \includegraphics[width=\textwidth]{figures/Analysis/BabyMHT50-10.pdf}
+  \caption{\HTm from jets with \unit{10}{\GeV} $<$ \ET $<$ \unit{50}{\GeV} in events with \HT $>$ \unit{350}{\GeV} and \MET $<$ \unit{20}{\GeV} in \unit{35}{\invpicobarn} of data.}
+  \label{fig:figures_Analysis_BabyMHT50-10}
+\end{figure}
+
+
+
+
 
 % section event_selection (end)
 
@@ -156,29 +238,43 @@ this gives us the relation:
 \end{equation}
 The decision flow is shown in Figure~\ref{fig:figures_Analysis_flowChart} and explained in detail below.
 
-When a level one accept is issued the trigger bits that fired are checked, if the event fires a L1 muon trigger it is passed to the HLT muon triggers where only muon reconstruction is performed, reducing the reconstruction time. The \alt triggers are seeded on the lowest threshold unprescaled L1 \HT trigger, during 2011 this was L1$\_$HTT100. Any events issuing a L1 accept and passing L1$\_$HTT100 undergo calorimeter jet reconstruction, the reconstruction algorithm is detailed in Section~\ref{sec:hadronic_jets}.
+When a level one accept is issued the trigger bits that fired are checked, if 
+the event fires a L1 muon trigger it is passed to the HLT muon triggers where 
+only muon reconstruction is performed, reducing the reconstruction time. The 
+\alt triggers are seeded on the lowest threshold unprescaled L1 \HT trigger, 
+during 2011 this was L1$\_$HTT100. Any events issuing a L1 accept and passing 
+L1$\_$HTT100 undergo calorimeter jet reconstruction, the reconstruction 
+algorithm is detailed in Section~\ref{sec:hadronic_jets}.
 
-Once the jets have been formed the trigger filter is entered. Initially the first two jets ranked by \ET, are considered, \HT and \alt are calculated, if both pass the trigger thresholds the event is accepted and the full detector read out is performed. If either \HT or \alt is below threshold, the next jet in \ET order is added, if the jet collection contains more than 3 jets then the \bt approximation is used. All jets in the event are added until either the even is accepted, or there are no more jets to be added above 40 \GeV.
+Once the jets have been formed the trigger filter is entered. Initially the 
+first two jets ranked by \ET, are considered, \HT and \alt are calculated, if 
+both pass the trigger thresholds the event is accepted and the full detector 
+read out is performed. If either \HT or \alt is below threshold, the next jet 
+in \ET order is added, if the jet collection contains more than 3 jets then the 
+\bt approximation is used. All jets in the event are added until either the 
+even is accepted, or there are no more jets to be added above \unit{40}{\GeV}.
 
-The effect of switching to the \bt approximation is to accept events that have missing energy due to miss-measurement, when calculating \alt offline these events have values of \alt $< 0.5$. This introduces an impurity to the trigger and costs rate for events that will not be considered in the offline analysis.
+The effect of switching to the \bt approximation is to accept events that have 
+missing energy due to miss-measurement, when calculating \alt offline these 
+events have values of \alt $< 0.5$. This introduces an impurity to the trigger 
+and costs rate for events that will not be considered in the offline analysis.
 
 
 % section 2011_trigger (end)
 
 
-
-
-
-
-
 \subsection{Trigger efficiency measurement} % (fold)
 \label{sub:trigger_efficiency_measurement}
 
-
-
-
-
-The performance of the \alt trigger suit is measured with respect to a sample collected using the muon system. This allows the measurement of efficiency of both the level one seed trigger and the higher level trigger at the same time as different sub-systems are used to collect the reference and the signal triggers. This is due to the exclusive use of calorimeter jets in the \alt trigger, if more complicated reconstruction methods which produce an event hypothesis were used, muons would at HLT level only be considered as jets. Where as during calorimeter only reconstruction, muons are not considered and the \pt of any muons in an event is viewed as missing energy.
+The performance of the \alt trigger suit is measured with respect to a sample 
+collected using the muon system. This allows the measurement of efficiency of 
+both the level one seed trigger and the higher level trigger at the same time 
+as different sub-systems are used to collect the reference and the signal 
+triggers. This is due to the exclusive use of calorimeter jets in the \alt 
+trigger, if more complicated reconstruction methods which produce an event 
+hypothesis were used, muons would at HLT level only be considered as jets. 
+Where as during calorimeter only reconstruction, muons are not considered and 
+the \pt of any muons in an event is viewed as missing energy.
 
 
 % subsection trigger_efficiency_measurement (end)
