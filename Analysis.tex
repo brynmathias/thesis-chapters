@@ -65,7 +65,7 @@ where \ET$^{j_{2}}$ is the transverse energy of least energetic of the two jets
 and M$_{T}$ is defined as:
 
 \begin{equation}
-  M_{T} = \sqrt{\left(\sum^{2}_{i=1}\ET^{j_{i}}\right)^2 - \left(\sum^{2}_{i=1}p_{x}^{j_{i}}\right)^{2} - \left(\sum^{2}_{i=1}p_{y}^{j_{i}}\right)^{2}}
+  M_{T} = \sqrt{\left(\sum^{2}_{i=1}\ET^{j_{i}}\right)^{2} - \left(\sum^{2}_{i=1}p_{x}^{j_{i}}\right)^{2} - \left(\sum^{2}_{i=1}p_{y}^{j_{i}}\right)^{2}}
 \end{equation}
 
 For a perfectly measured di-jet system with \ET$^{j_{1}} = $\ET$^{j_{2}}$, 
@@ -232,10 +232,10 @@ contamination is visible in the signal sample for R$_{miss} >$ 1.25.
 
 \begin{figure}[htbp]
   \centering
-  \subfigure[]{ \includegraphics[width=0.45\textwidth]{figures/Analysis/250_300GevcombinedMHTovMET_afterAlphaT_all.pdf}
+  \subfloat[]{ \includegraphics[width=0.45\textwidth]{figures/Analysis/250_300GevcombinedMHTovMET_afterAlphaT_all.pdf}
   \label{fig:figures_Analysis_250_300GevcombinedMHTovMET_afterAlphaT_all}
 }
- \subfigure[]{   \includegraphics[width=0.45\textwidth]{figures/Analysis/350Gev_afterDeadEcalcombinedMHTovMET_afterAlphaT_all.pdf}
+ \subfloat[]{   \includegraphics[width=0.45\textwidth]{figures/Analysis/350Gev_afterDeadEcalcombinedMHTovMET_afterAlphaT_all.pdf}
 \label{fig:figures_Analysis_350Gev_afterDeadEcalcombinedMHTovMET_afterAlphaT_all}
 }
 \caption{(a) R$_{miss}$ distribution for events in the \unit{250}{\GeV} 
@@ -490,56 +490,186 @@ Offline \HT bin &Signal Trigger & Reference Trigger\\
 
 \end{table}
 
-As an example, the efficiency of each trigger used in the \unit{275}{\GeV} $<$ \HT $<$ \unit{325}{\GeV} bin is measured and then combined to give the total efficiency.
+As an example, the efficiency of each trigger used in the \unit{275}{\GeV} $<$ \HT $<$ \unit{325}{\GeV} bin is measured and then combined to give the total efficiency. The cumulative efficiency curves for each trigger seeding the lowest bin is show in Figure~\ref{fig:HT275BinTriggers}. Note that some of the triggers are repeated, due to the reference trigger version incrementing and the signal trigger not.
 
-\begin{figure}[htbp]
-  % \centering
-   \subfigure[cap]{ \includegraphics[width=0.45\textwidth]{figures/Analysis/HT275_HLT_HT250_AlphaT0p55_v1_HLT_Mu5_HT200_v4.pdf}
-  \label{fig:figures_Analysis_HT275_HLT_HT250_AlphaT0p55_v1_HLT_Mu5_HT200_v4}
-}
+\begin{figure}[htp]
+  \centering
+   \subfloat[HLT$\_$HT250$\_$AlphaT0p55$\_$v1]{ \includegraphics[width=0.48\textwidth]{figures/Analysis/HT275_HLT_HT250_AlphaT0p55_v1_HLT_Mu5_HT200_v4.pdf}
+\label{fig:figures_Analysis_HT275_HLT_HT250_AlphaT0p55_v1_HLT_Mu5_HT200_v4}}
 
-\subfigure[cap]{   \includegraphics[width=0.45\textwidth]{figures/Analysis/HT275_HLT_HT250_AlphaT0p53_v2_HLT_Mu15_HT200_v2.pdf}
-  \label{fig:figures_Analysis_HT275_HLT_HT250_AlphaT0p53_v2_HLT_Mu15_HT200_v2}
-}
-\\
-\subfigure[cap]{\includegraphics[width=0.45\textwidth]{figures/Analysis/HT275_HLT_HT250_AlphaT0p53_v3_HLT_Mu15_HT200_v3.pdf}
-  \label{fig:figures_Analysis_HT275_HLT_HT250_AlphaT0p53_v3_HLT_Mu15_HT200_v3}
-}
+\subfloat[HLT$\_$HT250$\_$AlphaT0p53$\_$v2]{   \includegraphics[width=0.48\textwidth]{figures/Analysis/HT275_HLT_HT250_AlphaT0p53_v2_HLT_Mu15_HT200_v2.pdf}
+\label{fig:figures_Analysis_HT275_HLT_HT250_AlphaT0p53_v2_HLT_Mu15_HT200_v2}}
 
-\subfigure[cap]{ \includegraphics[width=0.45\textwidth]{figures/Analysis/HT275_HLT_HT250_AlphaT0p53_v4_HLT_Mu15_HT200_v4.pdf}
-  \label{fig:figures_Analysis_HT275_HLT_HT250_AlphaT0p53_v4_HLT_Mu15_HT200_v4}
-}
-\\
-\subfigure[cap]{ \includegraphics[width=0.45\textwidth]{figures/Analysis/HT275_HLT_HT250_AlphaT0p53_v5_HLT_Mu30_HT200_v1.pdf}
-  \label{fig:figures_Analysis_HT275_HLT_HT250_AlphaT0p53_v5_HLT_Mu30_HT200_v1}
-}
+\subfloat[HLT$\_$HT250$\_$AlphaT0p53$\_$v3]{\includegraphics[width=0.48\textwidth]{figures/Analysis/HT275_HLT_HT250_AlphaT0p53_v3_HLT_Mu15_HT200_v3.pdf}
+\label{fig:figures_Analysis_HT275_HLT_HT250_AlphaT0p53_v3_HLT_Mu15_HT200_v3}}
 
-\subfigure[cap]{ \includegraphics[width=0.45\textwidth]{figures/Analysis/DiMu_HT275_HLT_HT250_AlphaT0p58_v3_HLT_DoubleMu8_Mass8_HT200_v4.pdf}
-\label{fig:figures_Analysis_DiMu_HT275_HLT_HT250_AlphaT0p58_v3_HLT_DoubleMu8_Mass8_HT200_v4}
-}
-\\
-\subfigure[cap]{ \includegraphics[width=0.45\textwidth]{figures/Analysis/DiMu_HT275_HLT_HT250_AlphaT0p58_v3_HLT_DoubleMu8_Mass8_HT200_v5.pdf} \label{fig:figures_Analysis_DiMu_HT275_HLT_HT250_AlphaT0p58_v3_HLT_DoubleMu8_Mass8_HT200_v5}
-}
+\subfloat[HLT$\_$HT250$\_$AlphaT0p53$\_$v4]{ \includegraphics[width=0.48\textwidth]{figures/Analysis/HT275_HLT_HT250_AlphaT0p53_v4_HLT_Mu15_HT200_v4.pdf}
 
-\subfigure[cap]{ \includegraphics[width=0.45\textwidth]{figures/Analysis/DiMu_HT275_HLT_HT250_AlphaT0p60_v3_HLT_DoubleMu8_Mass8_HT200_v4.pdf} \label{fig:figures_Analysis_DiMu_HT275_HLT_HT250_AlphaT0p60_v3_HLT_DoubleMu8_Mass8_HT200_v4}
-}
-% \\
-% \subfigure[cap]{ \includegraphics[width=0.45\textwidth]{figures/Analysis/HT275_HLT_HT250_AlphaT0p55_v2_HLT_Mu40_HT200_v4.pdf}
-%   \label{fig:figures_Analysis_HT275_HLT_HT250_AlphaT0p55_v2_HLT_Mu40_HT200_v4}
-% }
-\caption{somewords}
+  \label{fig:figures_Analysis_HT275_HLT_HT250_AlphaT0p53_v4_HLT_Mu15_HT200_v4}}
+\subfloat[HLT$\_$HT250$\_$AlphaT0p53$\_$v5]{ \includegraphics[width=0.48\textwidth]{figures/Analysis/HT275_HLT_HT250_AlphaT0p53_v5_HLT_Mu30_HT200_v1.pdf}
+\label{fig:figures_Analysis_HT275_HLT_HT250_AlphaT0p53_v5_HLT_Mu30_HT200_v1}}
+  
+\subfloat[HLT$\_$HT250$\_$AlphaT0p58$\_$v3]{ \includegraphics[width=0.48\textwidth]{figures/Analysis/DiMu_HT275_HLT_HT250_AlphaT0p58_v3_HLT_DoubleMu8_Mass8_HT200_v4.pdf}
+\label{fig:figures_Analysis_DiMu_HT275_HLT_HT250_AlphaT0p58_v3_HLT_DoubleMu8_Mass8_HT200_v4}}
+
+\subfloat[HLT$\_$HT250$\_$AlphaT0p58$\_$v3]{ \includegraphics[width=0.48\textwidth]{figures/Analysis/DiMu_HT275_HLT_HT250_AlphaT0p58_v3_HLT_DoubleMu8_Mass8_HT200_v5.pdf} 
+\label{fig:figures_Analysis_DiMu_HT275_HLT_HT250_AlphaT0p58_v3_HLT_DoubleMu8_Mass8_HT200_v5}}
+
+\subfloat[HLT$\_$HT250$\_$AlphaT0p60$\_$v3]{ \includegraphics[width=0.48\textwidth]{figures/Analysis/DiMu_HT275_HLT_HT250_AlphaT0p60_v3_HLT_DoubleMu8_Mass8_HT200_v4.pdf} 
+
+\label{fig:figures_Analysis_DiMu_HT275_HLT_HT250_AlphaT0p60_v3_HLT_DoubleMu8_Mass8_HT200_v4}}
+
+\subfloat[HLT$\_$HT250$\_$AlphaT0p60$\_$v3]{ \includegraphics[width=0.48\textwidth]{figures/Analysis/HT275_HLT_HT250_AlphaT0p55_v2_HLT_Mu40_HT200_v4.pdf}
+\label{fig:figures_Analysis_HT275_HLT_HT250_AlphaT0p55_v2_HLT_Mu40_HT200_v4}}
+\caption{Turn on curves for the individual \alt triggers used to seed the 
+\unit{275}{\GeV} $< \HT <$ \unit{325}{\GeV} bin.}
 \label{fig:HT275BinTriggers}
 \end{figure}
 
+These are then combined to give 
+Figure~\ref{fig:figures_Analysis_TotalCumulativeTurnonforHT275AlphaT} the 
+efficiency at a cut of \alt $>$ 0.55 is 83.3$\%$ + 0.5$\%$ - 0.6$\%$. The loss 
+in efficiency comes from the disparity between the minimum thresholds for jets 
+to enter the \HT and \alt calculations at the HLT and those used in the 
+analysis. The trigger jet \ET threshold is \unit{40}{\GeV} where as 
+the analysis jet \ET threshold in this bin is 
+\unit{36.$\dot{6}$}{\GeV}. The triggers used to take data at the end of this 
+running period also have an \alt threshold above the analysis cut of \alt $>$ 
+0.55, which again causes an inefficiency. The list of efficiencies for each \HT 
+bin are shown in Table~\ref{tab:altEfficiencies7TeV}. The trigger efficiencies 
+are measured to better than one percent and this information is used in the 
+final likelihood model, to correct the expected numbers from simulation when 
+calculating the translation factors.
+
+
+\begin{figure}[ht]
+  \centering 
+\includegraphics[width=\textwidth]{figures/Analysis/TotalCumulativeTurnonforHT275AlphaT.pdf}
+  \caption{Combined cumulative efficiency for the triggers seeding the \unit{275}{\GeV} $< \HT <$ \unit{325}{\GeV} offline analysis bin.}
+  \label{fig:figures_Analysis_TotalCumulativeTurnonforHT275AlphaT}
+\end{figure}
+
+\begin{table}
+  \centering
+\begin{tabular}{ |c|c| }
+\hline
+\HT range (GeV) & Trigger efficiency ($\%$)  \\ [1.0ex]
+\hline
+275--325 & 83.3$^{+0.5}_{-0.6}$ \\ [1.0ex]
+\hline
+325--375 & 95.9$^{+0.7}_{-0.9}$ \\ [1.0ex] 
+\hline
+375--475 & 98.5$^{+0.5}_{-0.9}$ \\ [1.0ex]
+\hline
+475--$\infty$ & 100.0$^{+0.0}_{-4.8}$ \\ [1.0ex]
+\hline
+\end{tabular}
+
+\caption{Efficiencies of the \alt triggers used in the \unit{7}{\TeV} \alt 
+         analysis on \unit{5}{\invfb} of LHC data.}
+\label{tab:altEfficiencies7TeV}
+\end{table}
 
 % subsection trigger_efficiency_measurement (end)
 
 
+\section{2012 Trigger suite.} % (fold)
+\label{sec:2012_trigger_suite}
+The \alt triggers were upgraded for the increased instantaneous luminosity and 
+pile up conditions. The first stage was to implement the full \alt calculation 
+for each addition of a new jet, this change increases the purity of the 
+trigger, meaning that for the same threshold the rate taken is lower than that 
+of the previous algorithm. This allows the thresholds to be kept low, whilst 
+not increasing the overall trigger rate.
+
+The second upgrade was to switch to pile up corrected jets at the HLT, this 
+change keeps the trigger cross section liner as a function of instantaneous 
+luminosity.
+
+The third choice was to design a trigger suite that could run for the entire 
+2012 data taking period, with out changing the trigger thresholds, this was 
+done to make the measurement of the efficiency simpler.
+
+The trigger thresholds used are presented in 
+Table~\ref{tab:2012triggerThresholds}, due to the constant thresholds in 
+\HT and \alt though out the run, the versioning of the triggers is excluded 
+from this table.
+The efficiency of the triggers is measured for \unit{11.7}{\invfb} of LHC data 
+taken at a centre of mass energy of \unit{8}{\TeV}. A single muon trigger is 
+used to collect the reference sample, the threshold of this trigger was 
+unchanged during the data taking period, the path selected is 
+\verb|HLT_IsoMu24_v*| which requires at least one muon with \PT $>$ 
+\unit{24}{\GeV} that is not over lapping with any other object in the detector.
+The same method is used as for the 2011 trigger efficiency measurement. However 
+the offline jets are corrected for pile up using the fast jet corrections, to 
+stay inline with the HLT object definitions.
+
+
+\begin{table}
+\begin{tabular}{|c|c|}
+\hline
+\HT range & Trigger \\
+\hline
+\unit{275}{\GeV}--\unit{325}{\GeV} & \verb|HLT_HT250_AlphaT0p55_v*| \\
+\hline
+\unit{325}{\GeV}--\unit{375}{\GeV} & \verb|HLT_HT300_AlphaT0p53_v*| \\
+\hline
+\unit{375}{\GeV}--\unit{475}{\GeV} & \verb|HLT_HT350_AlphaT0p52_v*| \\
+\hline
+\unit{475}{\GeV}--\unit{8}{\TeV}   & \verb|HLT_HT400_AlphaT0p51_v*| \\
+\hline
+\end{tabular}
+\caption{Triggers used to seed the analysis \HT bins during 2012 data taking.}
+\label{tab:2012triggerThresholds}
+\end{table}
 
 
 
+\begin{figure}[htbp]
+  \subfloat[HLT$\_$HT250$\_$AlphaT0p55$\_$v1]{\includegraphics[width=0.48\textwidth]{figures/Analysis/8TeVTriggers/HT275_HLT_HT250_AlphaT0p55_v1_HLT_IsoMu24_eta2p1_v11.pdf} \label{fig:figures_Analysis_8TeVTriggers_HT275_HLT_HT250_AlphaT0p55_v1_HLT_IsoMu24_eta2p1_v11}}
+
+\subfloat[HLT$\_$HT250$\_$AlphaT0p55$\_$v2]{\includegraphics[width=0.48\textwidth]{figures/Analysis/8TeVTriggers/HT275_HLT_HT250_AlphaT0p55_v2_HLT_IsoMu24_eta2p1_v12.pdf}  \label{fig:figures_Analysis_8TeVTriggers_HT275_HLT_HT250_AlphaT0p55_v2_HLT_IsoMu24_eta2p1_v12}}
+    \subfloat[HLT$\_$HT250$\_$AlphaT0p55$\_$v3]{\includegraphics[width=0.48\textwidth]{figures/Analysis/8TeVTriggers/HT275_HLT_HT250_AlphaT0p55_v3_HLT_IsoMu24_eta2p1_v12.pdf}  
+\label{fig:figures_Analysis_8TeVTriggers_HT275_HLT_HT250_AlphaT0p55_v3_HLT_IsoMu24_eta2p1_v12}}
+\subfloat[HLT$\_$HT250$\_$AlphaT0p55$\_$v4]{ 
+\includegraphics[width=0.48\textwidth]{figures/Analysis/8TeVTriggers/HT275_HLT_HT250_AlphaT0p55_v4_HLT_IsoMu24_v15.pdf} 
+\label{fig:figures_Analysis_8TeVTriggers_HT275_HLT_HT250_AlphaT0p55_v4_HLT_IsoMu24_v15}}
 
 
+\caption{Turn on curves for the individual \alt triggers used to seed the 
+\unit{275}{\GeV} $< \HT <$ \unit{325}{\GeV} bin, during 2012 data taking.}
+\label{fig:2012TriggersHT275}
+\end{figure}
+
+
+\begin{table}
+\begin{tabular}{|c|c|}
+\hline
+\HT range (GeV) & Trigger efficiency ($\%$)  \\ 
+\hline
+\unit{275}{\GeV} -- \unit{325}{\GeV} & 89.6$^{+0.4}_{-0.4}$  \\
+\hline
+\unit{325}{\GeV} -- \unit{375}{\GeV} & 98.6$^{+0.2}_{-0.3}$  \\
+\hline
+\unit{375}{\GeV} -- \unit{475}{\GeV} & 99.4$^{+0.2}_{-0.3}$  \\
+\hline
+\unit{475}{\GeV} -- \unit{8}{\TeV}   & 100.0$^{+0.0}_{-0.5}$ \\
+\hline
+\end{tabular}
+\label{tab:2012Triggerefficencies}
+\caption{Efficiencies of the \alt triggers at a centre of mass energy of 
+         \unit{8}{\TeV} \alt measured in \unit{11.7}{\invfb} of LHC data.}
+\end{table}
+
+
+% section 2012_trigger_suite (end)
+\section{Comparison of trigger purity between the two trigger incarnations.} % (fold)
+\label{sec:comparison_of_trigger_purity_between_the_two_trigger_incarnations_}
+cf the purity of the two triggers!!!!
+
+
+
+% section comparison_of_trigger_purity_between_the_two_trigger_incarnations_ (end)
 
 % section high_level_triggers_for_the_alt_analysis (end)
 
