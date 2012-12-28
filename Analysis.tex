@@ -1,5 +1,10 @@
 \chapter{The $\alpha_{T}$ analysis} % (fold)
 \label{cha:the_t_analysis}
+\paragraph{Declaration} % (fold)
+\label{par:declaration}
+
+% paragraph declaration (end)
+
 In this chapter we discuss the main analysis performed as the subject of this 
 thesis. For the theoretical motivations of this search please see 
 Chapter~\ref{cha:theory}. The analysis is based on the full 2011 data set which is made up of \unit{5}{\invfb} of \unit{7}{\TeV} data. However \unit{5}{\invfb} of the 2012 \unit{8}{\TeV} is looked at to measure the performance of the upgraded \alt HLT paths.
@@ -100,7 +105,7 @@ jets falling below threshold or large stochastic fluctuations.
 It is to be noted that the discrepancy between data and simulation for \alt 
 $\leq 0.55$ is due to no trigger emulation being applied to the simulated 
 background samples.
-\begin{figure}[ht!]
+\begin{figure}[ht|]
   \centering  \includegraphics[width=0.8\textwidth]{figures/Analysis/AlphaT_all_375_upwards.pdf}
   \caption{\alt distribution for background and data for the region \HT $>$ 
   \unit{375}{\GeV}. Trigger emulation is not applied in the simulated 
@@ -206,7 +211,7 @@ selecting the miss measured jet, full position information is preserved. If any
 jet has $\Delta\phi^{*} <$ 0.5, the number of masked ECAL crystals with in 
 $\Delta R < $0.3 are summed, if there are more than 10 masked crystals adjacent 
 to the jet, the event is vetoed.
-\item \textbf{R$_{miss} <$ 1.25:} The total hadronic energy in an event is 
+\item \textbf{\Rmiss$ <$ 1.25:} The total hadronic energy in an event is 
 required to be greater than \unit{275}{\GeV} which is well above the transverse 
 energy threshold of \unit{50}{\GeV} for each jet. However several jets falling 
 below this threshold can sum to a significant quantity of ignored energy. This 
@@ -232,10 +237,10 @@ contamination is visible in the signal sample for R$_{miss} >$ 1.25.
 
 \begin{figure}[htbp]
   \centering
-  \subfloat[]{ \includegraphics[width=0.45\textwidth]{figures/Analysis/250_300GevcombinedMHTovMET_afterAlphaT_all.pdf}
+  \subfigure[]{ \includegraphics[width=0.45\textwidth]{figures/Analysis/250_300GevcombinedMHTovMET_afterAlphaT_all.pdf}
   \label{fig:figures_Analysis_250_300GevcombinedMHTovMET_afterAlphaT_all}
 }
- \subfloat[]{   \includegraphics[width=0.45\textwidth]{figures/Analysis/350Gev_afterDeadEcalcombinedMHTovMET_afterAlphaT_all.pdf}
+ \subfigure[]{   \includegraphics[width=0.45\textwidth]{figures/Analysis/350Gev_afterDeadEcalcombinedMHTovMET_afterAlphaT_all.pdf}
 \label{fig:figures_Analysis_350Gev_afterDeadEcalcombinedMHTovMET_afterAlphaT_all}
 }
 \caption{(a) R$_{miss}$ distribution for events in the \unit{250}{\GeV} 
@@ -303,7 +308,7 @@ this gives us the relation:
 The decision flow is shown in Figure~\ref{fig:figures_Analysis_flowChart} and 
 explained in detail below.
 
-\begin{figure}[ht!]
+\begin{figure}[ht|]
   \centering
     \includegraphics[width=0.75\textwidth]{figures/Analysis/flowChart.pdf}
   \caption{Flow chart representing the steps taken to make a trigger decision 
@@ -492,53 +497,65 @@ Offline \HT bin &Signal Trigger & Reference Trigger\\
 As an example, the efficiency of each trigger used in the \unit{275}{\GeV} $<$ 
 \HT $<$ \unit{325}{\GeV} bin is measured and then combined to give the total 
 efficiency. The cumulative efficiency curves for each trigger seeding the 
-lowest bin is show in Figure~\ref{fig:HT275BinTriggers}. Note that some of the 
+lowest bin is show in Figures~\ref{fig:HT275BinTriggers1}, \ref{fig:HT275BinTriggers2} $\&$ \ref{fig:HT275BinTriggers3}. Note that some of the 
 triggers are repeated, due to the reference trigger version incrementing and 
 the signal trigger not.
 
 \begin{figure}[ht]
   \centering
-   \subfloat[HLT$\_$HT250$\_$AlphaT0p55$\_$v1]{ \includegraphics[width=0.48\textwidth]{figures/Analysis/HT275_HLT_HT250_AlphaT0p55_v1_HLT_Mu5_HT200_v4.pdf}
+   \subfigure[HLT$\_$HT250$\_$AlphaT0p55$\_$v1]{ \includegraphics[width=0.4\textwidth]{figures/Analysis/HT275_HLT_HT250_AlphaT0p55_v1_HLT_Mu5_HT200_v4.pdf}
 \label{fig:figures_Analysis_HT275_HLT_HT250_AlphaT0p55_v1_HLT_Mu5_HT200_v4}}
-\subfloat[HLT$\_$HT250$\_$AlphaT0p53$\_$v2]{   \includegraphics[width=0.48\textwidth]{figures/Analysis/HT275_HLT_HT250_AlphaT0p53_v2_HLT_Mu15_HT200_v2.pdf}
+\subfigure[HLT$\_$HT250$\_$AlphaT0p53$\_$v2]{   \includegraphics[width=0.4\textwidth]{figures/Analysis/HT275_HLT_HT250_AlphaT0p53_v2_HLT_Mu15_HT200_v2.pdf}
 \label{fig:figures_Analysis_HT275_HLT_HT250_AlphaT0p53_v2_HLT_Mu15_HT200_v2}}
 
-\subfloat[HLT$\_$HT250$\_$AlphaT0p53$\_$v3]{\includegraphics[width=0.48\textwidth]{figures/Analysis/HT275_HLT_HT250_AlphaT0p53_v3_HLT_Mu15_HT200_v3.pdf}
+\subfigure[HLT$\_$HT250$\_$AlphaT0p53$\_$v3]{\includegraphics[width=0.4\textwidth]{figures/Analysis/HT275_HLT_HT250_AlphaT0p53_v3_HLT_Mu15_HT200_v3.pdf}
 \label{fig:figures_Analysis_HT275_HLT_HT250_AlphaT0p53_v3_HLT_Mu15_HT200_v3}}
 
-\subfloat[HLT$\_$HT250$\_$AlphaT0p53$\_$v4]{ \includegraphics[width=0.48\textwidth]{figures/Analysis/HT275_HLT_HT250_AlphaT0p53_v4_HLT_Mu15_HT200_v4.pdf}
+\subfigure[HLT$\_$HT250$\_$AlphaT0p53$\_$v4]{ \includegraphics[width=0.4\textwidth]{figures/Analysis/HT275_HLT_HT250_AlphaT0p53_v4_HLT_Mu15_HT200_v4.pdf}
 \label{fig:figures_Analysis_HT275_HLT_HT250_AlphaT0p53_v4_HLT_Mu15_HT200_v4}}
 
-\subfloat[HLT$\_$HT250$\_$AlphaT0p53$\_$v5]{ \includegraphics[width=0.48\textwidth]{figures/Analysis/HT275_HLT_HT250_AlphaT0p53_v5_HLT_Mu30_HT200_v1.pdf}
+\caption{Turn on curves for the individual \alt triggers used to seed the 
+\unit{275}{\GeV} $< \HT <$ \unit{325}{\GeV} bin.}
+\label{fig:HT275BinTriggers1}
+\end{figure}
+
+\begin{figure}[ht]
+  \centering
+\subfigure[HLT$\_$HT250$\_$AlphaT0p53$\_$v5]{ \includegraphics[width=0.4\textwidth]{figures/Analysis/HT275_HLT_HT250_AlphaT0p53_v5_HLT_Mu30_HT200_v1.pdf}
 \label{fig:figures_Analysis_HT275_HLT_HT250_AlphaT0p53_v5_HLT_Mu30_HT200_v1}}
   
-\subfloat[HLT$\_$HT250$\_$AlphaT0p58$\_$v3]{ \includegraphics[width=0.48\textwidth]{figures/Analysis/DiMu_HT275_HLT_HT250_AlphaT0p58_v3_HLT_DoubleMu8_Mass8_HT200_v4.pdf}
+\subfigure[HLT$\_$HT250$\_$AlphaT0p58$\_$v3]{ \includegraphics[width=0.4\textwidth]{figures/Analysis/DiMu_HT275_HLT_HT250_AlphaT0p58_v3_HLT_DoubleMu8_Mass8_HT200_v4.pdf}
 \label{fig:figures_Analysis_DiMu_HT275_HLT_HT250_AlphaT0p58_v3_HLT_DoubleMu8_Mass8_HT200_v4}}
 
-\subfloat[HLT$\_$HT250$\_$AlphaT0p58$\_$v3]{ \includegraphics[width=0.48\textwidth]{figures/Analysis/DiMu_HT275_HLT_HT250_AlphaT0p58_v3_HLT_DoubleMu8_Mass8_HT200_v5.pdf} 
+\subfigure[HLT$\_$HT250$\_$AlphaT0p58$\_$v3]{ \includegraphics[width=0.4\textwidth]{figures/Analysis/DiMu_HT275_HLT_HT250_AlphaT0p58_v3_HLT_DoubleMu8_Mass8_HT200_v5.pdf} 
 \label{fig:figures_Analysis_DiMu_HT275_HLT_HT250_AlphaT0p58_v3_HLT_DoubleMu8_Mass8_HT200_v5}}
 
-\subfloat[HLT$\_$HT250$\_$AlphaT0p60$\_$v3]{ \includegraphics[width=0.48\textwidth]{figures/Analysis/DiMu_HT275_HLT_HT250_AlphaT0p60_v3_HLT_DoubleMu8_Mass8_HT200_v4.pdf} 
+\subfigure[HLT$\_$HT250$\_$AlphaT0p60$\_$v3]{ \includegraphics[width=0.4\textwidth]{figures/Analysis/DiMu_HT275_HLT_HT250_AlphaT0p60_v3_HLT_DoubleMu8_Mass8_HT200_v4.pdf} 
 
 \label{fig:figures_Analysis_DiMu_HT275_HLT_HT250_AlphaT0p60_v3_HLT_DoubleMu8_Mass8_HT200_v4}}
+\caption{Turn on curves for the individual \alt triggers used to seed the 
+\unit{275}{\GeV} $< \HT <$ \unit{325}{\GeV} bin.}
+\label{fig:HT275BinTriggers2}
+\end{figure}
 
-\subfloat[HLT$\_$HT250$\_$AlphaT0p60$\_$v3]{ \includegraphics[width=0.48\textwidth]{figures/Analysis/HT275_HLT_HT250_AlphaT0p55_v2_HLT_Mu40_HT200_v4.pdf}
+\begin{figure}[ht]
+  \centering
+\subfigure[HLT$\_$HT250$\_$AlphaT0p60$\_$v3]{ \includegraphics[width=0.4\textwidth]{figures/Analysis/HT275_HLT_HT250_AlphaT0p55_v2_HLT_Mu40_HT200_v4.pdf}
 \label{fig:figures_Analysis_HT275_HLT_HT250_AlphaT0p55_v2_HLT_Mu40_HT200_v4}}
 \caption{Turn on curves for the individual \alt triggers used to seed the 
 \unit{275}{\GeV} $< \HT <$ \unit{325}{\GeV} bin.}
-\label{fig:HT275BinTriggers}
+\label{fig:HT275BinTriggers3}
 \end{figure}
 
 These are then combined to give 
 Figure~\ref{fig:figures_Analysis_TotalCumulativeTurnonforHT275AlphaT} the 
-efficiency at a cut of \alt $>$ 0.55 is 83.3$\%$ + 0.5$\%$ - 0.6$\%$. The loss 
+efficiency at a cut of \altg is 83.3$\%$ + 0.5$\%$ - 0.6$\%$. The loss 
 in efficiency comes from the disparity between the minimum thresholds for jets 
 to enter the \HT and \alt calculations at the HLT and those used in the 
 analysis. The trigger jet \ET threshold is \unit{40}{\GeV} where as 
 the analysis jet \ET threshold in this bin is 
 \unit{36.$\dot{6}$}{\GeV}. The triggers used to take data at the end of this 
-running period also have an \alt threshold above the analysis cut of \alt $>$ 
-0.55, which again causes an inefficiency. The list of efficiencies for each \HT 
+running period also have an \alt threshold above the analysis cut of \altg, which again causes an inefficiency. The list of efficiencies for each \HT 
 bin are shown in Table~\ref{tab:altEfficiencies7TeV}. The trigger efficiencies 
 are measured to better than one percent and this information is used in the 
 final likelihood model, to correct the expected numbers from simulation when 
@@ -632,13 +649,13 @@ cumulative efficiency of the 2012 trigger suite.
 
 
 \begin{figure}[ht]
- \subfloat[HLT$\_$HT250$\_$AlphaT0p55$\_$v1]{\includegraphics[width=0.48\textwidth]{figures/Analysis/8TeVTriggers/HT275_HLT_HT250_AlphaT0p55_v1_HLT_IsoMu24_eta2p1_v11.pdf} \label{fig:figures_Analysis_8TeVTriggers_HT275_HLT_HT250_AlphaT0p55_v1_HLT_IsoMu24_eta2p1_v11}}
+ \subfigure[HLT$\_$HT250$\_$AlphaT0p55$\_$v1]{\includegraphics[width=0.4\textwidth]{figures/Analysis/8TeVTriggers/HT275_HLT_HT250_AlphaT0p55_v1_HLT_IsoMu24_eta2p1_v11.pdf} \label{fig:figures_Analysis_8TeVTriggers_HT275_HLT_HT250_AlphaT0p55_v1_HLT_IsoMu24_eta2p1_v11}}
 
-\subfloat[HLT$\_$HT250$\_$AlphaT0p55$\_$v2]{\includegraphics[width=0.48\textwidth]{figures/Analysis/8TeVTriggers/HT275_HLT_HT250_AlphaT0p55_v2_HLT_IsoMu24_eta2p1_v12.pdf}  \label{fig:figures_Analysis_8TeVTriggers_HT275_HLT_HT250_AlphaT0p55_v2_HLT_IsoMu24_eta2p1_v12}}
-    \subfloat[HLT$\_$HT250$\_$AlphaT0p55$\_$v3]{\includegraphics[width=0.48\textwidth]{figures/Analysis/8TeVTriggers/HT275_HLT_HT250_AlphaT0p55_v3_HLT_IsoMu24_eta2p1_v12.pdf}  
+\subfigure[HLT$\_$HT250$\_$AlphaT0p55$\_$v2]{\includegraphics[width=0.4\textwidth]{figures/Analysis/8TeVTriggers/HT275_HLT_HT250_AlphaT0p55_v2_HLT_IsoMu24_eta2p1_v12.pdf}  \label{fig:figures_Analysis_8TeVTriggers_HT275_HLT_HT250_AlphaT0p55_v2_HLT_IsoMu24_eta2p1_v12}}
+    \subfigure[HLT$\_$HT250$\_$AlphaT0p55$\_$v3]{\includegraphics[width=0.4\textwidth]{figures/Analysis/8TeVTriggers/HT275_HLT_HT250_AlphaT0p55_v3_HLT_IsoMu24_eta2p1_v12.pdf}  
 \label{fig:figures_Analysis_8TeVTriggers_HT275_HLT_HT250_AlphaT0p55_v3_HLT_IsoMu24_eta2p1_v12}}
 
-\subfloat[HLT$\_$HT250$\_$AlphaT0p55$\_$v4]{\includegraphics[width=0.48\textwidth]{figures/Analysis/8TeVTriggers/HT275_HLT_HT250_AlphaT0p55_v4_HLT_IsoMu24_v15.pdf} 
+\subfigure[HLT$\_$HT250$\_$AlphaT0p55$\_$v4]{\includegraphics[width=0.4\textwidth]{figures/Analysis/8TeVTriggers/HT275_HLT_HT250_AlphaT0p55_v4_HLT_IsoMu24_v15.pdf} 
 \label{fig:figures_Analysis_8TeVTriggers_HT275_HLT_HT250_AlphaT0p55_v4_HLT_IsoMu24_v15}}
 
 \caption{Turn on curves for the individual \alt triggers used to seed the 
@@ -693,6 +710,16 @@ run as in the 2011 run.
 
 % section high_level_triggers_for_the_alt_analysis (end)
 
+\section{Extension to higher analysis dimensions.} % (fold)
+\label{sec:extension_to_higher_analysis_dimensions_}
+Whilst it should be noted that the author did not contribute towards the 
+extension of the analysis to include a dimension based on the measurement of 
+the number of jets containing \Pbottom quarks in the final state, the final 
+analysis does include this extension, hence the \Pbottom-tagging procedure is 
+explained in sufficient detail as to understand the process but not to elude to 
+all the nuances of the method in the following section.
+% section extension_to_higher_analysis_dimensions_ (end)
+
 \clearpage
 \section{Electro-Weak background prediction} % (fold)
 \label{sec:electro_weak_background_prediction}
@@ -700,8 +727,8 @@ The requirement of an \alt cut on the signal sample removes multi-jet QCD
 events where a balanced event is counted as signal due to miss-measurements, 
 the remaining background events in the signal region are due to electro-weak 
 processes which produce real missing energy. Primarily these events are 
-produced from \HepProcess{\PZ\to\Pnu\APnu}+Jets, 
-\HepProcess{\PW\to\Pl\APnu}+Jets and \HepProcess{\Ptop\APtop} decay, with 
+produced from \HepProcess{\PZ\to\Pnu\APnu}~+~Jets, 
+\HepProcess{\PW\to\Pl\APnu}~+~Jets and \HepProcess{\Ptop\APtop} decay, with 
 smaller contributions from Drell-Yan + Jets, single top production in the s,t 
 and tW channels and from di-boson + Jet events. To predict the number of these 
 events contribution to the number of signal events three control samples are 
@@ -726,7 +753,7 @@ hadronicly decays \Ptau ($\tau_{h}$) have a low \HT dependance, contributing
 $\approx$22$\%$ of the background at low \HT and $\approx$27$\%$ of the 
 background at high \HT. Those events arising from \Ptau particles which decay leptonically ($\tau_{l}$) and are missed by the lepton vetoes account for $\approx$10$\%$ of the standard model background.
 
-\begin{figure}[ht!]
+\begin{figure}[ht|]
   \centering
     \includegraphics[width=0.5\textwidth]{figures/Analysis/MCexpectation.pdf}
   \caption{Expectation from MC in all bins of the hadronic signal
@@ -737,7 +764,7 @@ background at high \HT. Those events arising from \Ptau particles which decay le
   \label{fig:figures_Analysis_MCexpectation}
 \end{figure}
 
-\begin{table}[th!]
+\begin{table}[th|]
   \caption{Relative background composition as given by MC simulation
     in all bins of the hadronic signal region (expressed as a
     percentage of the total SM background).} 
@@ -781,7 +808,9 @@ of \HepProcess{\PB} quarks in the event is studied. However the
 \end{equation}
 
 
-The three control samples used are a \HepProcess{\PW\to\Pmu\APnu}+Jets sample, a \HepProcess{\PZ\to\Pmu\Pmu}+Jets sample and a \HepProcess{\Pphoton}+Jets sample.
+The three control samples used are a \HepProcess{\PW\to\Pmu\APnu}~+~Jets 
+sample, a \HepProcess{\PZ\to\Pmu\Pmu}~+~Jets sample and a 
+\HepProcess{\Pphoton}~+~Jets sample.
 
 The selection criteria for each of these control samples is kept as similar to 
 the signal selection as possible, so as to not introduce systematic errors from 
@@ -791,12 +820,12 @@ is still assigned to each translation factor to account for theoretical
 uncertainties and acceptance and instrumental effects.
 
 Additional kinematic cuts are applied in the two muon control samples to enrich 
-the \HepProcess{\PW}+Jets \HepProcess{\Ptop\APtop} and \HepProcess{\PZ}+Jets 
-components in the control samples. The samples are defined to maximised 
-efficiency rather than purity, any impurities are accounted for in the transfer 
-factors as the yields from all montecarlo samples are used. This is valid under 
-the assumption that the standard model electro-weak and Drell-Yan processes are 
-well modelled by the simulation.
+the \HepProcess{\PW}~+~Jets \HepProcess{\Ptop\APtop} and 
+\HepProcess{\PZ}~+~Jets components in the control samples. The samples are 
+defined to maximised efficiency rather than purity, any impurities are 
+accounted for in the transfer factors as the yields from all montecarlo samples 
+are used. This is valid under the assumption that the standard model 
+electro-weak and Drell-Yan processes are well modelled by the simulation.
 The possibility of SUSY like signal contamination in the control samples is 
 accounted for in the final likelihood, after measuring the signal acceptance 
 for the control samples on simulated SUSY events.
@@ -811,13 +840,13 @@ the scale of the systematic error for each \HT bin.
 
 \paragraph{The $\mu$~+~Jets control sample} % (fold)
 \label{par:the_mu_jets_control_sample}
-The $\mu$+Jets control sample is designed to mimic the events appearing in the 
-signal region due to \HepProcess{\PW}+Jets and \HepProcess{\Ptop\APtop} decays 
-where the leptons are missed offline, either due to falling out of acceptance 
-or being missed by the reconstruction algorithms. Hadronic tau decays from high 
-\PT W bosons are also predicted from this sample.
+The $\mu$~+~Jets control sample is designed to mimic the events appearing in 
+the signal region due to \HepProcess{\PW}~+~Jets and \HepProcess{\Ptop\APtop} 
+decays where the leptons are missed offline, either due to falling out of 
+acceptance or being missed by the reconstruction algorithms. Hadronic tau 
+decays from high \PT W bosons are also predicted from this sample.
 The additional selection criteria for this sample are designed to select events 
-containing the decay \HepProcess{\PW\to\mu\nu}+Jets in the same kinematic 
+containing the decay \HepProcess{\PW\to\mu\nu}~+~Jets in the same kinematic 
 conditions as those events entering the signal selection. Offline the event 
 level discriminators, \HT and \alt, are calculated using only the hadronic 
 components of the event. In order to select the \HepProcess{\PW} exactly one 
@@ -846,13 +875,13 @@ with in $\pm$\unit{25}{\GeV} of the \PZ mass, to suppress
 \paragraph{The $\mu\mu$~+~Jets control sample} % (fold)
 \label{par:the_mumu_jets_control_sample}
 The $\mu\mu$~+~Jets control sample is used to measure the 
-\HepProcess{\PZ\to\nu\nu}+Jets irreducible background in the signal region. The 
-process \HepProcess{\PZ\to\mu\mu}+Jets is identical kinematically, however the 
-acceptance of the branching ratio is smaller and the \PT and identification 
-quality requirements on the muons alter the acceptance between the two 
-processes. The following selection criteria are applied on top of the common 
-selection: Exactly two tightly identified, isolated muons, with in \mETA $<$ 
-2.5 with \PT $>$ \unit{10}{\GeV} are required; The invariant mass of the 
+\HepProcess{\PZ\to\nu\nu}~+~Jets irreducible background in the signal region. 
+The process \HepProcess{\PZ\to\mu\mu}~+~Jets is identical kinematically, 
+however the acceptance of the branching ratio is smaller and the \PT and 
+identification quality requirements on the muons alter the acceptance between 
+the two processes. The following selection criteria are applied on top of the 
+common selection: Exactly two tightly identified, isolated muons, with in \mETA 
+$<$ 2.5 with \PT $>$ \unit{10}{\GeV} are required; The invariant mass of the 
 di-muon pair is required to be with in $\pm$\unit{25}{\GeV} of the \PZ mass; 
 Events are vetoed if for any muon and jet combination $\Delta 
 R(\mu,Jet) < 0.5$. As in the single muon control sample all event level 
@@ -863,7 +892,7 @@ can be used in all of the offline \HT bins.
 \paragraph{The \Pphoton~+~Jets control sample} % (fold)
 \label{par:the_pphoton_jets_control_sample}
 The \Pphoton~+~Jets control sample can also be used to measure the 
-\HepProcess{\PZ\to\nu\nu}+Jets background as the \Pphoton~+~Jets process is 
+\HepProcess{\PZ\to\nu\nu}~+~Jets background as the \Pphoton~+~Jets process is 
 kinematically similar when the \Pphoton \ET $>$ 
 $\approx$~\unit{100}{\GeV}\cite{PAS-SUS-08-002,Bern:2011pa}, again when 
 calculating the event level quantities only hadronic objects are considered.
@@ -877,14 +906,18 @@ threshold of $\approx$~\unit{350}{\GeV}, hence the \Pphoton~+~Jets control
 sample can only be used in the offline region where \HT $>$ \unit{375}{\GeV}.
 % paragraph the_pphoton_jets_control_sample (end)
 
+Table~\ref{tab:total-sm-pred-mu} gives the hadronic signal yields in each of 
+the offline \HT bins along with the simple background estimate from the single 
+muon plus jets control sample. The full background prediction is given from the 
+results of the simultaneous fit to the three separate background estimates.
 
-
-\begin{table}[!h]
+\begin{table}[|h]
   \caption{Total SM prediction using the \Pmu~+~Jets sample only. These
     are illustrative only, as the final prediction is provided by the
     final simultaneous fit.}
 \label{tab:total-sm-pred-mu}
 \centering
+\footnotesize
 \begin{tabular}{ |c|c|c|c|c| }
 \hline
 \alt bin                       & 0.55--$\infty$         & 0.55--$\infty$         & 0.55--$\infty$        & 0.55--$\infty$       \\ [0.5ex]
@@ -903,7 +936,7 @@ Hadronic yield data               & 3703                   & 1533               
 \hline
 Hadronic selection MC             & 142.37  $\pm$  7.61    & 55.47  $\pm$  3.51     & 18.68  $\pm$  1.45    & 13.18  $\pm$  1.15   \\ 
 $\mu +$ jets selection MC         & 70.84  $\pm$  4.36     & 22.64  $\pm$  1.82     & 7.54  $\pm$  0.80     & 5.19  $\pm$  0.67    \\ 
-Translation factor                & 2.01  $\pm$  0.16      & 2.45  $\pm$  0.25      & 2.48  $\pm$  0.33     & 2.54  $\pm$  0.40    \\ 
+Translation factor                & 2.01  $\pm$  0.16      & 2.45  $\pm$  0.25      & 2.4  $\pm$  0.33     & 2.54  $\pm$  0.40    \\ 
 $\mu +$ jets selection yield data & 52                     & 18                     & 8                     & 1                    \\ 
 Total SM prediction               & 104.50  $\pm$  16.81   & 44.09  $\pm$  11.33    & 19.83  $\pm$  7.41    & 2.54  $\pm$  3.47    \\ 
 Hadronic yield data               & 122                    & 44                     & 14                    & 6                    \\ 
@@ -911,6 +944,221 @@ Hadronic yield data               & 122                    & 44                 
 
 \end{tabular}
 \end{table}
+
+\paragraph{Muon control samples with out an \alt cut.} % (fold)
+\label{par:muon_control_samples_with_out_an_alt_cut_}
+  
+The requirement of an \alt value above 0.55 in the previous control samples 
+limits the even yield of each of the montecarlo samples, increasing the 
+statistical error of the prediction. This is especially evident when splitting 
+the analysis in to more dimensions than the \HT binning. The requirement of an 
+\alt cut on the control samples means that as the muon is not seen by the 
+calorimeter systems the signal trigger can also be used to collect the both the 
+single and di muon background samples.
+The translation factor method can be used to create a prediction from any 
+sample to any other sample if and only if the modelling of the even kinematics 
+and acceptances of any cuts introduces no large systematic errors. We now show 
+that the montecarlo simulation accurately reproduces the kinematics and 
+acceptance of the \alt cut when applied to electro-weak background samples, 
+enabling the removal of the \alt requirement for the muon control samples.
+
+
+The preselection of events in the two muon control samples ensures samples 
+with negligible QCD contamination, which are enriched with 
+\HepProcess{\Ptop\APtop}, \PW~+~Jets and \PZ~+~Jet events. This is shown for 
+the \Pmuon~+~Jets sample in Figure~\ref{fig:singleMuControl} and for the 
+\HepProcess{\Pmuon\APmuon}~+~Jets sample in Figure~\ref{fig:diMuControl}, in 
+both sets of plots the expected number of QCD events from montecarlo simulation 
+is less than one even at any \alt value for \unit{5}{\invfb} of integrated 
+luminosity. The requirement of tight isolation on each of the muons is largely 
+responsible for the purity of the sample, the transverse mass and di-muon mass 
+window cuts ensure the sample is rich in electro-weak events with visible muons.
+
+
+\begin{figure}[|h]
+  \centering
+  \subfigure[ \alt distribution (see main caption).]{
+    \label{fig:figures_AlphaT_all-mj}
+    \includegraphics[width=0.4\textwidth]{figures/Analysis/muon_plots/AlphaT_all_OneMuon_375_upwards.png}
+  } 
+  \subfigure[ Zoomed \alt distribution (see main caption).]{
+    \label{fig:figures_AlphaT_zoomed_all-mj}
+    \includegraphics[width=0.4\textwidth]{figures/Analysis/muon_plots/AlphaT_Zoomed_all_OneMuon_375_upwards.png}
+  } \\
+  \subfigure[\HT distribution.]{
+    \label{fig:figures_HT_all-mj}
+    \includegraphics[width=0.4\textwidth]{figures/Analysis/muon_plots/HT_after_alphaT_55_all_OneMuon_375_upwards.png}
+  } 
+  \subfigure[$N_{\textrm{jet}}$ distribution.]{
+    \label{fig:JetMultiplicityAfterAlphaT_all-mj}
+    \includegraphics[width=0.4\textwidth]{figures/Analysis/muon_plots/JetMultiplicityAfterAlphaT_55_all_OneMuon_375_upwards.png}
+  } 
+  \caption{Data--MC comparisons of key variables for the muon control
+    sample, for the region $\HT > 375\GeV$ and $\altg$. Bands represent the uncertainties due to the limited size
+    of MC samples. No requirement is made on the number of b-tagged
+    jets in an event. {\it The discrepancy in the \alt
+      distributions for values $\altg$ is due to the trigger
+      not being simulated in the MC simulation.}}
+      \label{fig:singleMuControl}
+\end{figure}
+
+
+\begin{figure}[|h]
+  \centering
+  \subfigure[ \alt distribution (see main caption).]{
+    \label{fig:figures_AlphaT_all-mmj}
+    \includegraphics[width=0.4\textwidth]{figures/Analysis/mumu_plots/AlphaT_all_DiMuon_375_upwards.png}
+  } 
+  \subfigure[ Zoomed \alt distribution (see main caption).]{
+    \label{fig:figures_AlphaT_zoomed_all-mmj}
+    \includegraphics[width=0.4\textwidth]{figures/Analysis/mumu_plots/AlphaT_Zoomed_all_DiMuon_375_upwards.png}
+  } \\
+  \subfigure[\HT distribution.]{
+    \label{fig:figures_HT_all-mmj}
+    \includegraphics[width=0.4\textwidth]{figures/Analysis/mumu_plots/HT_after_alphaT_55_all_DiMuon_375_upwards.png}
+  } 
+  \subfigure[$N_{\textrm{jet}}$ distribution.]{
+    \label{fig:JetMultiplicityAfterAlphaT_all-mmj}
+    \includegraphics[width=0.4\textwidth]{figures/Analysis/mumu_plots/JetMultiplicityAfterAlphaT_55_all_DiMuon_375_upwards.png}
+  } 
+  \caption{Data--MC comparisons of key variables for the di-muon control
+    sample, for the region $\HT > 375\GeV$ and $\altg$. Bands represent the uncertainties due to the limited size
+    of MC samples. No requirement is made on the number of b-tagged
+    jets in an event. {\it The discrepancy in the \alt
+      distributions for values $\altg$ is due to the trigger
+      not being simulated in the MC simulation.}}
+    \label{fig:diMuControl}
+\end{figure}
+
+
+Moving to a selection where there is no required \alt cut means that the \alt 
+trigger suite can not be used to collect the high event yield control samples. 
+Instead a trigger requiring \HT and a muon in the final state (\muht) is used, 
+due to the muon trigger threshold the \PT acceptance cut is raised to 
+\unit{45}{\GeV} in these control samples. The \HT requirement on these triggers 
+raises to \unit{300}{\GeV} so only the offline bins with \HT $>$ 
+\unit{375}{\GeV} are able to benefit from the increased background estimation 
+precision, due to the larger size of the predicting sample. The efficiency for 
+triggering on a single muon at \unit{45}{\GeV} is measured to be 
+91.3$\pm$0.1$\%$ though out the data taking period, measured for the 
+\HT~+~single muon triggers, the \HT component of the trigger is measured to be 
+100$\%$ efficient though out. In the case of the di-muon sample, as both muons 
+have to be above \unit{45}{\GeV} and either of them could have triggered the 
+event, the efficiency is found to be \HT-dependant in the range of 95-97$\%$.
+
+The muon control samples in the \HT bins where \HT $<$ \unit{375}{\GeV} are 
+collected with the \alt trigger suite and the measured efficiencies are the 
+same as those measured for the hadronic sample. The details of the triggers 
+used for each of the muon~+~Jets control samples are listed in 
+Table~\ref{tab:triggers-mu-mumu}.
+
+\begin{table}[ht!]
+  \caption{List of triggers used for the larger \mj and \mmj samples.}
+  \label{tab:triggers-mu-mumu}
+  \centering
+  \footnotesize
+  \begin{tabular}{ lcccccccc }
+    \hline
+    \HT bin (GeV) & 275--325 & 325--375 & 375--475 & 475--575 &
+    575--675 & 675--775 & 775--875 & $>$875 \\ [0.5ex]
+    \hline
+    \alt cut & 0.55 & 0.55 & None & None & None & None & None & None \\
+    Muon \pt cut & 10 & 10 & 45 & 45 & 45 & 45 & 45 & 45 \\
+    Trigger & \alt & \alt & \muht & \muht & \muht & \muht & \muht & \muht \\
+    Dataset & \verb|HT| & \verb|HT| & \verb|MuHad| & \verb|MuHad| & \verb|MuHad| & \verb|MuHad| & \verb|MuHad| & \verb|MuHad| \\
+    Thresholds & Table~\ref{tab:htalphat-triggers} & Table~\ref{tab:htalphat-triggers} & Table~\ref{tab:muht-triggers} & Table~\ref{tab:muht-triggers} & Table~\ref{tab:muht-triggers} & Table~\ref{tab:muht-triggers} & Table~\ref{tab:muht-triggers} & Table~\ref{tab:muht-triggers} \\
+    \hline
+  \end{tabular}
+\end{table}
+
+
+% paragraph muon_control_samples_with_out_an_alt_cut_ (end)
+
+
+\subsection{Estimating the residual QCD background 
+component.\cite{CMS-AN-11-517}} % (fold)
+\label{sub:estimating_the_residual_qcd_background_component_}
+The expected QCD contamination in the signal region where \HT $>$
+\unit{275}{\GeV} and \altg from simulated background samples is 
+negligible, residual events are removed via the application of the detector 
+failure and \Rmiss $<$ 1.25 filters. However due to the difficulty in 
+simulating QCD multi jet events accurately a conservative approach is taken 
+where a term is inserted in the likelihood to model any residual QCD 
+contamination.
+
+The term is based on the ratio of the number of events above and below the \alt 
+threshold of 0.55 in the individual \HT bins. The dependance of this ratio is 
+modelled as an exponentially falling quantity:
+\begin{equation}
+  R_{\alt}\left(\HT\right)=\mathcal{A}_{n_{b}}e^{-\kqcd\HT}
+\end{equation}
+Where $\mathcal{A}_{n_{b}}$ is the b-tag bin dependant normalisation factor and 
+\kqcd is the b-tag dependant decay constant.
+
+The exponential behaviour is due to several features, the first of which is the 
+improvement of the jet energy resolution with \HT due to the larger energies 
+deposited in the calorimeter systems. \textbf{FIXME: find CMS JET ENERGY 
+RESOLUTION PLOT JETMET PAS???} Secondly for the region \HT $>$ \unit{375}{\GeV} 
+the jet multiplicity rises slowly with \HT, which due to the combinatorics  
+used in the \alt calculation, results in a narrower \alt distribution peaked at 
+0.5. Due to the signal region definition and the exponentially falling nature 
+of the QCD background component is reduced to zero above 
+$\approx$~\unit{500}{\GeV}, thus the validity of the QCD background model above 
+\unit{575}{\GeV} is not of consequence to the final analysis, however the model 
+chosen is shown to be valid over the whole \HT region of the analysis as shown 
+below.
+
+\ac{ml} values for \kqcd and $\mathcal{A}_{n_{b}}$ are found by the final 
+likelihood fit, however \kqcd is first constrained by a measurement in a 
+background enriched side band regions where either the \alt cut is relaxed or 
+the \Rmiss cut is inverted. Figure~\ref{fig:figures_qcd_side-bands} depicts the 
+regions where \kqcd is measured, the signal region is as described before where 
+\altg and \Rmiss $<$ 1.25 are required. Region B is defined by the inversion of 
+the \alt cut. Region C is defined by inverting both the \alt requirement and 
+the \Rmiss requirement, this region is further divided in to three slices in 
+\alt of $0.52 < \alt < 0.53$, $0.53 < \alt < 0.54$ and $0.54 < \alt < 0.55$, as 
+the index of C$_{i}$ rises the expected amount of QCD in that control region 
+increases. Finally region D has only the \Rmiss requirement inverted, region D 
+is not used to constrain \kqcd, but instead to check the validity of the 
+exponential model.
+\begin{figure}[ht]
+  \centering
+    \includegraphics[width=0.5\textwidth]{figures/Analysis/qcd_plots/side-bands.pdf}
+  \caption{QCD side-band regions, used for determination of \kqcd.}
+  \label{fig:figures_qcd_side-bands}
+\end{figure}
+The fits to the individual side bands are shown in Figure~\ref{fig:side-band-fits-lin}
+
+
+% subsection estimating_the_residual_qcd_background_component_ (end)
+
+
+\subsection{Systematic uncertainties on the electro-weak background model.} 
+% (fold)
+\label{sub:systematic_uncertainties_on_the_electro_weak_background_model_}
+Figure~\ref{fig:figures_Analysis_transFac} shows a straight line fit to the 
+translation factors obtained for the single muon control sample, the errors are 
+statistical only, whilst the fit is consistent with one value for the entire 
+\HT range it can be argued that there is a systematic shift to a larger 
+translation factor at higher \HT. To quantify any systematic effects due to \HT 
+or \Pbottom multiplicity each of the control samples is used to the yields in 
+it's counter parts.
+
+\begin{figure}[ht]
+  \centering
+    \includegraphics[width=0.5\textwidth]{figures/Analysis/transFac.pdf}
+  \caption{Translation factors from simulation for the total background 
+  estimate from the \Pmu~+~jets control sample. Errors are statistical only.}
+  \label{fig:figures_Analysis_transFac}
+\end{figure}
+
+The inter samples translation factors are created in the same way as for the 
+visible object~+~Jets $\rightarrow$ invisible object~+~Jets translation factors 
+that predict the number of events in the signal region as shown in 
+Equation~\eqref{eqn:traslationfactor}.
+
+% subsection systematic_uncertainties_on_the_electro_weak_background_model_ (end)
+
 
 % section electro_weak_background_prediction (end)
 

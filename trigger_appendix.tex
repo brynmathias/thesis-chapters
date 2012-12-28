@@ -1,0 +1,157 @@
+\newpage
+\section{Additional  information on triggers} 
+\label{app:triggers}
+
+\begin{table}[!h]
+  \caption{List of \httrigger triggers used.}
+  \label{tab:ht-triggers}
+  \centering
+  \footnotesize
+  \begin{tabular}{ cl }
+    \hline
+    \HT bin (GeV) & Trigger \\ [0.5ex]
+    \hline
+    $275 < \HT < 325$ & \verb@HLT_HT250_v*@ \\
+    $325 < \HT < 375$ & \verb@HLT_HT300_v*@ \\
+    $375 < \HT < 475$ & \verb@HLT_HT350_v*@ \\
+    $\HT > 475$ & \verb@HLT_HT400_v*@ \\
+    \hline
+  \end{tabular}
+\end{table}
+
+\begin{table}[!h]
+  \caption{List of \alt triggers used.}
+  \label{tab:htalphat-triggers}
+  \centering
+  \footnotesize
+  \begin{tabular}{ cc }
+    \hline
+    $275 < \HT < 325GeV$ & $325 < \HT < 375GeV$ \\ [0.5ex]
+    \hline
+    \verb@HLT_HT250_AlphaT0p53_v*@ & \verb@HLT_HT300_AlphaT0p52_v*@ \\ 
+    \verb@HLT_HT250_AlphaT0p55_v*@ & \verb@HLT_HT300_AlphaT0p53_v*@ \\ 
+    \verb@HLT_HT250_AlphaT0p58_v*@ & \verb@HLT_HT300_AlphaT0p54_v*@ \\ 
+    \verb@HLT_HT250_AlphaT0p60_v*@ & \verb@HLT_HT300_AlphaT0p55_v*@ \\ 
+    \hline
+    \hline
+    $375 < \HT < 475GeV$ & $\HT > 475GeV$ \\ [0.5ex]
+    \hline
+    \verb@HLT_HT350_AlphaT0p51_v*@ & \verb@HLT_HT400_AlphaT0p51_v*@ \\ 
+    \verb@HLT_HT350_AlphaT0p52_v*@ & \verb@HLT_HT400_AlphaT0p52_v*@ \\ 
+    \verb@HLT_HT350_AlphaT0p52_v*@ & \\ 
+    \verb@HLT_HT350_AlphaT0p53_v*@ & \\ 
+    \hline
+  \end{tabular}
+\end{table}
+
+\begin{table}[!h]
+  \caption{List of \muht triggers used.}
+  \label{tab:muht-triggers}
+  \centering
+  \footnotesize
+  \begin{tabular}{ cc }
+    \hline
+    $\HT > 275GeV$ & $\HT > 375GeV$ \\ [0.5ex]
+    \hline
+    \verb@HLT_Mu5_HT200_v*@ & \verb@HLT_Mu5_HT200_v*@ \\
+    \verb@HLT_Mu8_HT200_v*@ & \verb@HLT_Mu8_HT200_v*@ \\
+    \verb@HLT_Mu15_HT200_v*@ & \verb@HLT_Mu15_HT200_v*@ \\
+    \verb@HLT_Mu30_HT200_v*@ & \verb@HLT_Mu30_HT200_v*@ \\
+    \verb@HLT_Mu40_HT200_v*@ & \verb@HLT_Mu40_HT200_v*@ \\
+    & \verb@HLT_Mu40_HT300_v*@ \\
+    \hline
+  \end{tabular}
+\end{table}
+
+\begin{table}[!h]
+  \caption{List of \photon triggers used.}
+  \label{tab:photon-triggers}
+  \centering
+  \footnotesize
+  \begin{tabular}{ l }
+    \hline
+    \multicolumn{1}{c}{$\HT > 375GeV$} \\ [0.5ex]
+    \hline
+    \verb@HLT_Photon75_CaloIdVL_v*@ \\
+    \verb@HLT_Photon75_CaloIdVL_IsoL_v*@ \\
+    \verb@HLT_Photon90_CaloIdVL_v*@ \\
+    \verb@HLT_Photon90_CaloIdVL_IsoL_v*@ \\
+    \verb@HLT_Photon125_v*@ \\
+    \verb@HLT_Photon135_v*@ \\
+    \hline
+  \end{tabular}
+\end{table}
+
+\newpage
+\begin{figure}[!h]
+  \begin{center}
+    \subfigure[Efficiency ($\%$)]{
+      \label{fig:alphat-eff}
+      \includegraphics[width=0.4\textwidth]{figures/Analysis/trigger_plots/eff-alphat-2d.pdf} 
+    } \\
+    \subfigure[Positive error ($\%$)]{
+      \label{fig:err-up}
+      \includegraphics[width=0.4\textwidth]{figures/Analysis/trigger_plots/err-up-alphat-2d.pdf}
+    } \\
+    \subfigure[Negative error ($\%$)]{
+      \label{fig:err-down}
+      \includegraphics[width=0.4\textwidth]{figures/Analysis/trigger_plots/err-down-alphat-2d.pdf} 
+    } \\
+    \caption{\label{fig:eff-alphat}Efficiency and associated errors of
+      the \alt trigger in offline bins of \HT and \alt.}
+  \end{center}
+\end{figure}
+
+\newpage
+\begin{figure}[!h]
+  \begin{center}
+    \subfigure[$275 < \HT < 325 GeV$]{
+      \includegraphics[width=0.4\textwidth]{figures/Analysis/trigger_plots/ClosedUpperBinEdges_HT275AlphaT.pdf}
+    }
+    \subfigure[$325 < \HT < 375 GeV$]{
+      \includegraphics[width=0.4\textwidth]{figures/Analysis/trigger_plots/ClosedUpperBinEdges_HT325AlphaT.pdf}
+    } \\
+    \subfigure[$375 < \HT < 475 GeV$]{
+      \includegraphics[width=0.4\textwidth]{figures/Analysis/trigger_plots/ClosedUpperBinEdges_HT375AlphaT.pdf}
+    }
+    \subfigure[$\HT > 475 GeV$]{
+      \includegraphics[width=0.4\textwidth]{figures/Analysis/trigger_plots/ClosedUpperBinEdges_HT475AlphaT.pdf}
+    }
+    \caption{\label{fig:eff-alphat-diff}Efficiency turn-on curves for the $\alpha_{T}$ triggers
+      used to collect events for four different HT regions.}
+  \end{center}
+\end{figure}
+
+\begin{figure}[!h]
+  \begin{center}
+    \includegraphics[width=0.4\textwidth]{figures/Analysis/trigger_plots/SignalTriggerEfficiency_320_520.pdf}
+    \caption{\label{fig:eff-alphat-sig}Efficiency turn-on curve for the representative model
+      RM1, with $m_0=320GeV$ and $m_{1/2}=520GeV$, using the
+      $\alpha_{T}$ trigger with thresholds $\HT > 250 GeV$ and
+      $\alt > 0.55$ and an offline signal region defined by
+      $\HT > 275 GeV$ and $\alt > 0.55$.}
+  \end{center}
+\end{figure}
+
+\newpage
+\begin{figure}[!h]
+  \begin{center}
+    \subfigure[$275 < \HT < 325 GeV$]{
+      \includegraphics[width=0.4\textwidth]{figures/Analysis/trigger_plots/HT250Try.pdf}
+    }
+    \subfigure[$325 < \HT < 375 GeV$]{
+      \includegraphics[width=0.4\textwidth]{figures/Analysis/trigger_plots/HT300Try.pdf}
+    } \\
+    \subfigure[$375 < \HT < 475 GeV$]{
+      \includegraphics[width=0.4\textwidth]{figures/Analysis/trigger_plots/ClosedUpperBinEdges_HT375.pdf}
+    }
+    \subfigure[$\HT > 475 GeV$]{
+      \includegraphics[width=0.4\textwidth]{figures/Analysis/trigger_plots/ClosedUpperBinEdges_AllFromHT400.pdf}
+    }
+    \caption{\label{fig:eff-ht-diff}Efficiency turn-on curves for the $\HT$ triggers
+      used to collect events for four different HT regions.}
+  \end{center}
+\end{figure}
+
+
+
