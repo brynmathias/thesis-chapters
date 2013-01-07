@@ -310,7 +310,7 @@ explained in detail below.
 
 \begin{figure}[ht|]
   \centering
-    \includegraphics[width=0.75\textwidth]{figures/Analysis/flowChart.pdf}
+    \includegraphics[width=0.7\textwidth]{figures/Analysis/flowChart.pdf}
   \caption{Flow chart representing the steps taken to make a trigger decision 
   using the \alt trigger algorithm.}
   \label{fig:figures_Analysis_flowChart}
@@ -877,16 +877,18 @@ with in $\pm$\unit{25}{\GeV} of the \PZ mass, to suppress
 The $\mu\mu$~+~Jets control sample is used to measure the 
 \HepProcess{\PZ\to\nu\nu}~+~Jets irreducible background in the signal region. 
 The process \HepProcess{\PZ\to\mu\mu}~+~Jets is identical kinematically, 
-however the acceptance of the branching ratio is smaller and the \PT and 
-identification quality requirements on the muons alter the acceptance between 
-the two processes. The following selection criteria are applied on top of the 
-common selection: Exactly two tightly identified, isolated muons, with in \mETA 
-$<$ 2.5 with \PT $>$ \unit{10}{\GeV} are required; The invariant mass of the 
-di-muon pair is required to be with in $\pm$\unit{25}{\GeV} of the \PZ mass; 
-Events are vetoed if for any muon and jet combination $\Delta 
-R(\mu,Jet) < 0.5$. As in the single muon control sample all event level 
-quantities are calculated from the hadronic objects alone. This control sample 
-can be used in all of the offline \HT bins.
+however the acceptance and the branching ratio are both smaller the branching 
+ratio due to the possible decay in to one of three neutrino flavour states 
+verses the requirement of a particular lepton flavour, the acceptance 
+difference is due to the \PT and identification quality requirements on the 
+muons alter the acceptance between the two processes. The following selection 
+criteria are applied on top of the common selection: Exactly two tightly 
+identified, isolated muons, with in \mETA $<$ 2.5 with \PT $>$ \unit{10}{\GeV} 
+are required; The invariant mass of the di-muon pair is required to be with in 
+$\pm$\unit{25}{\GeV} of the \PZ mass; Events are vetoed if for any muon and jet 
+combination $\Delta R(\mu,Jet) < 0.5$. As in the single muon control sample all 
+event level quantities are calculated from the hadronic objects alone. This 
+control sample can be used in all of the offline \HT bins.
 % paragraph the_mumu_jets_control_sample (end)
 
 \paragraph{The \Pphoton~+~Jets control sample} % (fold)
@@ -909,7 +911,7 @@ sample can only be used in the offline region where \HT $>$ \unit{375}{\GeV}.
 Table~\ref{tab:total-sm-pred-mu} gives the hadronic signal yields in each of 
 the offline \HT bins along with the simple background estimate from the single 
 muon plus jets control sample. The full background prediction is given from the 
-results of the simultaneous fit to the three separate background estimates.
+results of the simultaneous fit to the separate background estimates.
 
 \begin{table}[|h]
   \caption{Total SM prediction using the \Pmu~+~Jets sample only. These
@@ -1075,9 +1077,9 @@ Table~\ref{tab:triggers-mu-mumu}.
 % paragraph muon_control_samples_with_out_an_alt_cut_ (end)
 
 
-\subsection{Estimating the residual QCD background 
+\section{Estimating the residual QCD background 
 component.\cite{CMS-AN-11-517}} % (fold)
-\label{sub:estimating_the_residual_qcd_background_component_}
+\label{sec:estimating_the_residual_qcd_background_component_}
 The expected QCD contamination in the signal region where \HT $>$
 \unit{275}{\GeV} and \altg from simulated background samples is 
 negligible, residual events are removed via the application of the detector 
@@ -1090,7 +1092,7 @@ The term is based on the ratio of the number of events above and below the \alt
 threshold of 0.55 in the individual \HT bins. The dependance of this ratio is 
 modelled as an exponentially falling quantity:
 \begin{equation}
-  R_{\alt}\left(\HT\right)=\mathcal{A}_{n_{b}}e^{-\kqcd\HT}
+  R_{\alt}\left(\HT\right)=\mathcal{A}_{n_{b}}e^{\kqcd\HT}
 \end{equation}
 Where $\mathcal{A}_{n_{b}}$ is the b-tag bin dependant normalisation factor and 
 \kqcd is the b-tag dependant decay constant.
@@ -1127,15 +1129,63 @@ exponential model.
   \caption{QCD side-band regions, used for determination of \kqcd.}
   \label{fig:figures_qcd_side-bands}
 \end{figure}
-The fits to the individual side bands are shown in Figure~\ref{fig:side-band-fits-lin}
+The fits to the individual side bands are shown in 
+Appendix~\ref{sec:addition_information_on_background_estimation_methods}.
+The best fit value for \kqcd of \unit{2.96~$\pm$~0.64~$\times 
+10^{-2}$}{\GeV}$^{-1}$ obtained from region $B$ is used as the central value of the 
+constraint. The assumption that this method gives an unbiased estimate of \kqcd 
+stems from the similarity in event kinematics in the two \alt regions.
+The best fit values for the three $C_{i}$ regions are used to estimate the 
+systematic uncertainty on the central value obtained from region $B$. The fit 
+results show now dependance on the \alt region used to measure the number of 
+events, supporting the assumption that region $B$ provides an unbiased estimate 
+of \kqcd. The variation of the measured values for each $C_{i}$ slice are used 
+to calculate the error on the central value, the weighted mean and standard 
+deviation of the three slices in \alt are calculated to be 
+\unit{1.13~$\pm$~0.26~$\times~10^{-2}$}{\GeV}$^{-1}$, the relative error on this 
+value is 20$\%$ which is then applied to the central value to give an estimate 
+of the systematic uncertainty.
+
+The data side bands are used to provide a constrained value of \kqcd as an 
+input to the final likelihood model which describes the expected number of 
+background events in bins of \HT and the number of observed jets containing a 
+\Pbottom quark. The value measured for \kqcd is 
+\unit{-2.96~$\pm$~0.61(stat)~$\pm$~0.46(sys)~$\times~10^{-2}$}{\GeV}$^{-1}$. The 
+uncertainty values are used as penalty timers in the likelihood model which is 
+described in Section~\ref{sec:likelihood_model}
+
+\begin{table}[!h]
+  \caption{\label{tab:expo-qcd-fits} Best fit values for the
+    parameters $k$ as obtained from the regions $B$, $C_1$, $C_2$, and
+    $C_3$. The latter three measurements are used to calculate a
+    weighted mean (identified as region $C$). Also quoted is the
+    maximum likelihood value of the parameter $k$ given by the
+    simultaneous fit using the sample defined by region $D$. Quoted
+    errors are statistical only. From \cite{CMS-AN-11-517}.}
+  \centering
+  \footnotesize
+  \begin{tabular}{ ccc }
+    \hline
+    Side-band region     & \kqcd (\unit{$\times 10^{-2}$}{\GeV}$^{-1}$) & $p$-value \\ [0.5ex]
+    \hline                            
+    $B$                  & $2.96\pm0.64$                 & 0.24      \\ 
+    $C_1$                & $1.19\pm0.45$                 & 0.93      \\ 
+    $C_2$                & $1.47\pm0.37$                 & 0.42      \\ 
+    $C_3$                & $1.17\pm0.55$                 & 0.98      \\ 
+    \hline                            
+    $C$ (weighted mean)  & $1.31\pm0.26$                 & -         \\ 
+    $D$ (likelihood fit) & $1.31\pm0.09$                 & 0.57      \\
+    \hline
+  \end{tabular}
+\end{table}
 
 
 % subsection estimating_the_residual_qcd_background_component_ (end)
 
 
-\subsection{Systematic uncertainties on the electro-weak background model.} 
+\section{Systematic uncertainties on the electro-weak background model.} 
 % (fold)
-\label{sub:systematic_uncertainties_on_the_electro_weak_background_model_}
+\label{sec:systematic_uncertainties_on_the_electro_weak_background_model_}
 Figure~\ref{fig:figures_Analysis_transFac} shows a straight line fit to the 
 translation factors obtained for the single muon control sample, the errors are 
 statistical only, whilst the fit is consistent with one value for the entire 
