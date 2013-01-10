@@ -23,7 +23,7 @@ There are several standard model processes that mimic this final state.
 By far the largest of these backgrounds comes from QCD multi jet events where 
 fake missing energy is introduced either from failures in reconstruction, or 
 stochastic fluctuations in the calorimeter systems.
-\textbf{FIXME: expand on this - E /sqrt E has non gaussian tails. Figures of 
+\todo[inline]{expand on this - E /sqrt E has non gaussian tails. Figures of 
 jets falling below threshold, missed jets etc. probably from some jet-met 
 paper.}
 However due to the theoretical errors on the QCD production cross section 
@@ -169,7 +169,7 @@ $<$ 1.45 is made for the photon control sample.
 % paragraph photons (end)
 
 
-\textbf{PUT SOME STUFF IN ABOUT THE CROSS CLEANING}
+\todo[inline]{PUT SOME STUFF IN ABOUT THE CROSS CLEANING}
 
 The use of these control samples will be discussed in Section~\ref{sec:electro_weak_background_prediction}. 
 
@@ -740,7 +740,7 @@ signal region.
 Figure~\ref{fig:figures_Analysis_MCexpectation}\cite{CMS-AN-11-517} shows the 
 expectation from simulation in all bins of the hadronic signal region, for the 
 different background samples and an example CMSSM reference model RM1. 
-\textbf{FIXME: Expalin what RM1 is}
+\todo[inline]{Expalin what RM1 is}
 The expected composition of the the backgrounds in the hadronic signal region, 
 as a percentage of the total standard model background, are summarised in 
 Table~\ref{tab:bg-compositions}. \HepProcess{\PZ\to\nu\nu} contributes 
@@ -804,7 +804,7 @@ of \HepProcess{\PB} quarks in the event is studied. However the
 
 \begin{equation}
   N^{sig}_{prediction}\left(\HT\right) = N_{obs}^{control}\left(\HT\right) \times \frac{N_{MC}^{sig}\left(\HT\right)}{N_{MC}^{control}\left(\HT\right)}
-\label{eqn:traslationfactor}
+\label{eq:traslationfactor}
 \end{equation}
 
 
@@ -1092,14 +1092,14 @@ The term is based on the ratio of the number of events above and below the \alt
 threshold of 0.55 in the individual \HT bins. The dependance of this ratio is 
 modelled as an exponentially falling quantity:
 \begin{equation}
-  R_{\alt}\left(\HT\right)=\mathcal{A}_{n_{b}}e^{\kqcd\HT}
+  R_{\alt}\left(\HT\right)=\mathcal{A}_{n_{b}}e^{-\kqcd\HT}
 \end{equation}
 Where $\mathcal{A}_{n_{b}}$ is the b-tag bin dependant normalisation factor and 
 \kqcd is the b-tag dependant decay constant.
 
 The exponential behaviour is due to several features, the first of which is the 
 improvement of the jet energy resolution with \HT due to the larger energies 
-deposited in the calorimeter systems. \textbf{FIXME: find CMS JET ENERGY 
+deposited in the calorimeter systems. \todo[inline]{find CMS JET ENERGY 
 RESOLUTION PLOT JETMET PAS???} Secondly for the region \HT $>$ \unit{375}{\GeV} 
 the jet multiplicity rises slowly with \HT, which due to the combinatorics  
 used in the \alt calculation, results in a narrower \alt distribution peaked at 
@@ -1132,7 +1132,7 @@ exponential model.
 The fits to the individual side bands are shown in 
 Appendix~\ref{sec:addition_information_on_background_estimation_methods}.
 The best fit value for \kqcd of \unit{2.96~$\pm$~0.64~$\times 
-10^{-2}$}{\GeV}$^{-1}$ obtained from region $B$ is used as the central value of the 
+10^{-2}$}{\GinveV} obtained from region $B$ is used as the central value of the 
 constraint. The assumption that this method gives an unbiased estimate of \kqcd 
 stems from the similarity in event kinematics in the two \alt regions.
 The best fit values for the three $C_{i}$ regions are used to estimate the 
@@ -1142,7 +1142,7 @@ events, supporting the assumption that region $B$ provides an unbiased estimate
 of \kqcd. The variation of the measured values for each $C_{i}$ slice are used 
 to calculate the error on the central value, the weighted mean and standard 
 deviation of the three slices in \alt are calculated to be 
-\unit{1.13~$\pm$~0.26~$\times~10^{-2}$}{\GeV}$^{-1}$, the relative error on this 
+\unit{1.13~$\pm$~0.26~$\times~10^{-2}$}{\GinveV}, the relative error on this 
 value is 20$\%$ which is then applied to the central value to give an estimate 
 of the systematic uncertainty.
 
@@ -1150,7 +1150,7 @@ The data side bands are used to provide a constrained value of \kqcd as an
 input to the final likelihood model which describes the expected number of 
 background events in bins of \HT and the number of observed jets containing a 
 \Pbottom quark. The value measured for \kqcd is 
-\unit{-2.96~$\pm$~0.61(stat)~$\pm$~0.46(sys)~$\times~10^{-2}$}{\GeV}$^{-1}$. The 
+\unit{2.96~$\pm$~0.61(stat)~$\pm$~0.46(sys)~$\times~10^{-2}$}{\GinveV}. The 
 uncertainty values are used as penalty timers in the likelihood model which is 
 described in Section~\ref{sec:likelihood_model}
 
@@ -1179,6 +1179,38 @@ described in Section~\ref{sec:likelihood_model}
   \end{tabular}
 \end{table}
 
+A final check is performed using region $D$, which requires \altg but has no 
+\Rmiss cut, this introduces QCD background in to the signal region. The 
+likelihood fit is performed on this background enriched region and no 
+constraint is applied on \kqcd which is then determined by the fit only. The 
+fit is performed over the full \HT range used in the final analysis.
+Figure~\ref{fig:qcd-fit} shows the resulting fit, the \ac{ml} value obtained 
+for \kqcd is \unit{(1.31 $\pm$ 0.09)$\times 10^{-2}$}{\GinveV}, this value is 
+in excellent agreement with the value found from the weighed mean of the 
+regions $C_{i}$, secondly the fit shows that the choice of exponential function 
+used in the likelihood model is valid over the entire \HT range. This supports 
+the assumption that region $B$ provides an unbiased estimate of \kqcd in the 
+signal region \altg and \Rmiss $<$ 1.25.
+
+
+\begin{figure}[!h]
+  \begin{center}
+    \includegraphics[width=0.7\textwidth,angle=0]{figures/Analysis/qcd_plots/qcd-fit.pdf}
+    \caption{Comparison of the observed yields and SM expectations
+      given by the simultaneous fit in bins of \HT for the
+      side-band region $D$. No requirement on the number of b jets is
+      made. Shown are the observed event yields in data (black dots
+      with error bars representing the statistical uncertainties) and
+      the expectations given by the simultaneous fit for the
+      \HepProcess{\PZ\to\nu\nu}+jets process (orange dotted-dashed line); the 
+      sum of all processes with genuine \MET, which are primarily 
+      \HepProcess{\Ptop\APtop}, W+jets, and \HepProcess{\PZ\to\nu\nu}+jets
+      (dark blue long-dashed line); and the sum of QCD and all aforementioned 
+      SM processes (light blue solid line).\cite{CMS-AN-11-517}}
+    \label{fig:qcd-fit}
+  \end{center}
+\end{figure}
+
 
 % subsection estimating_the_residual_qcd_background_component_ (end)
 
@@ -1186,26 +1218,60 @@ described in Section~\ref{sec:likelihood_model}
 \section{Systematic uncertainties on the electro-weak background model.} 
 % (fold)
 \label{sec:systematic_uncertainties_on_the_electro_weak_background_model_}
-Figure~\ref{fig:figures_Analysis_transFac} shows a straight line fit to the 
-translation factors obtained for the single muon control sample, the errors are 
-statistical only, whilst the fit is consistent with one value for the entire 
-\HT range it can be argued that there is a systematic shift to a larger 
-translation factor at higher \HT. To quantify any systematic effects due to \HT 
-or \Pbottom multiplicity each of the control samples is used to the yields in 
-it's counter parts.
+As previously discussed in Section~\ref{sec:electro_weak_background_prediction} 
+the final background prediction is given by the simultaneous fit to the yields 
+in the signal and control samples and the translation factors obtained from MC. 
+The fit has some freedom via the statistical and systematic uncertainties 
+measured for each translation factor. This implies that the measurement of the 
+systematic uncertainties on the translation factors are vital for the fitting 
+procedure.
 
-\begin{figure}[ht]
-  \centering
-    \includegraphics[width=0.5\textwidth]{figures/Analysis/transFac.pdf}
-  \caption{Translation factors from simulation for the total background 
-  estimate from the \Pmu~+~jets control sample. Errors are statistical only.}
-  \label{fig:figures_Analysis_transFac}
-\end{figure}
+To obtain the systematic uncertainties a set of closure tests were preformed 
+with data in order to identify any possible sources of systematic uncertainty 
+in the background prediction method. The method uses the same translation 
+factor method as the background prediction (see 
+Equation~\eqref{eq:traslationfactor}), however the translation factors are 
+recomputed to predict between control samples. The agreement between the 
+prediction and the observed number of events is expressed as 
+$(N_{obs}-N_{pred})/N_{pred}$ per \HT bin. No systematic uncertainty is 
+assigned to the level of agreement, thus the level of closure is defined by the 
+statistical significance of the sample, in this way the closure tests give a 
+\HT dependant measure of systematic biases in the prediction method.
 
-The inter samples translation factors are created in the same way as for the 
-visible object~+~Jets $\rightarrow$ invisible object~+~Jets translation factors 
-that predict the number of events in the signal region as shown in 
-Equation~\eqref{eqn:traslationfactor}.
+The closure tests described in this section measure the closure after an \alt 
+cut, between samples where there is an \alt cut applied and those where there 
+is not an \alt requirement as well as predicting between the \Pbottom 
+multiplicity bins. As described in 
+Section~\ref{sec:extension_to_higher_analysis_dimensions_} the Montecarlo 
+simulation of the \Pbottom-Jet reconstruction is corrected to the data measured 
+values for tag and miss-tag rate. This allows the choice of a systematic 
+uncertainty stemming from improper simulation of the background processes, 
+detector in efficiencies and kinematic effects not considered in the Montecarlo 
+generation as well as effects from the theoretical uncertainties on the 
+relative production and decay cross sections of each of the considered 
+processes.
+
+% 
+% Figure~\ref{fig:figures_Analysis_transFac} shows a straight line fit to the 
+% translation factors obtained for the single muon control sample, the errors are 
+% statistical only, whilst the fit is consistent with one value for the entire 
+% \HT range it can be argued that there is a systematic shift to a larger 
+% translation factor at higher \HT. To quantify any systematic effects due to \HT 
+% or \Pbottom multiplicity each of the control samples is used to the yields in 
+% it's counter parts.
+% 
+% \begin{figure}[ht]
+%   \centering
+%     \includegraphics[width=0.5\textwidth]{figures/Analysis/transFac.pdf}
+%   \caption{Translation factors from simulation for the total background 
+%   estimate from the \Pmu~+~jets control sample. Errors are statistical only.}
+%   \label{fig:figures_Analysis_transFac}
+% \end{figure}
+% 
+% The inter samples translation factors are created in the same way as for the 
+% visible object~+~Jets $\rightarrow$ invisible object~+~Jets translation factors 
+% that predict the number of events in the signal region as shown in 
+% Equation~\eqref{eqn:traslationfactor}.
 
 % subsection systematic_uncertainties_on_the_electro_weak_background_model_ (end)
 
