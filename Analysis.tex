@@ -10,7 +10,7 @@ thesis. For the theoretical motivations of this search please see
 Chapter~\ref{cha:theory}. The analysis is based on the full 2011 data set which is made up of \unit{5}{\invfb} of \unit{7}{\TeV} data. However \unit{5}{\invfb} of the 2012 \unit{8}{\TeV} is looked at to measure the performance of the upgraded \alt HLT paths.
 \section{The Problem} % (fold)
 \label{sec:the_problem}
-If Supersymmetry or some other beyond the standard model theory is to provide a 
+If Supersymmetry or some other beyond the \ac{sm} theory is to provide a 
 yet undiscovered dark matter candidate, it is predicted that this candidate 
 will interact via the weak nuclear force only. This gives a decay topology 
 involving missing energy in the form of the dark matter particle escaping the 
@@ -18,7 +18,7 @@ detector. Due to the nature of interactions at the L.H.C, these particles would
 be produced at the end of a decay chain of heavy particles that interact 
 strongly, giving a final topology involving hadronic objects which are 
 classified as jets for the purpose of analysis and missing energy.
-There are several standard model processes that mimic this final state.
+There are several \ac{sm} processes that mimic this final state.
 
 By far the largest of these backgrounds comes from QCD multi jet events where 
 fake missing energy is introduced either from failures in reconstruction, or 
@@ -34,7 +34,7 @@ A secondary QCD background also exists, where due to the requirement of a jet
 balanced event to look unbalanced as the jets under threshold are no longer 
 considered. It is these events that \alt is designed to remove.
 
-The second major background comes from standard model electro-weak decays and 
+The second major background comes from \ac{sm} electro-weak decays and 
 is irreducible as the final states involve real missing energy, from 
 neutrinos. The electro-weak decays that form the back ground are 
 \HepProcess{\PW\to\Ptau\Pnu} + Jets, where the $\tau$ is reconstructed as a 
@@ -260,10 +260,10 @@ bins, these are \unit{275}{\GeV} - \unit{325}{\GeV}, \unit{325}{\GeV} -
 However the raw number of events in the signal region is meaningless with out 
 an accurate back ground prediction, as discussed earlier taking the background 
 estimation from simulation is not viable due to the requirement of high order 
-theory calculations on the cross sections of standard model processes involving 
+theory calculations on the cross sections of \ac{sm} processes involving 
 jets, these have many divergencies due to the nature of QCD. Instead the 
 simulation is used to form a translation factor between two samples measured in 
-data, a control sample which closely mimics the standard model processes 
+data, a control sample which closely mimics the \ac{sm} processes 
 producing missing energy, but has a visible muon or photon in the final state. 
 The background estimation methods are described and the background predictions 
 stated in Section~\ref{sec:electro_weak_background_prediction}.
@@ -733,7 +733,7 @@ smaller contributions from Drell-Yan + Jets, single top production in the s,t
 and tW channels and from di-boson + Jet events. To predict the number of these 
 events contribution to the number of signal events three control samples are 
 defined and though the use of a montecarlo derived transfer factor the control 
-samples are used to predict the number of standard model events expected in the 
+samples are used to predict the number of \ac{sm} events expected in the 
 signal region.
 
 
@@ -742,16 +742,16 @@ expectation from simulation in all bins of the hadronic signal region, for the
 different background samples and an example CMSSM reference model RM1. 
 \todo[inline]{Expalin what RM1 is}
 The expected composition of the the backgrounds in the hadronic signal region, 
-as a percentage of the total standard model background, are summarised in 
+as a percentage of the total \ac{sm} background, are summarised in 
 Table~\ref{tab:bg-compositions}. \HepProcess{\PZ\to\nu\nu} contributes 
-$\approx$43$\%$ of the standard model background in the 
+$\approx$43$\%$ of the \ac{sm} background in the 
 \unit{275}{\GeV}--\unit{325}{\GeV} \HT bin, raising to $\approx$53$\%$ in the 
 \HT $>$ \unit{875}{\GeV} bin. Events entering the signal region due to \PZ or 
 \PW decays where the lepton is missed by the lepton vetoes account for 
 $\approx$25$\%$ at low \HT and $\approx$13$\%$ at high \HT. Events from 
 hadronicly decays \Ptau ($\tau_{h}$) have a low \HT dependance, contributing 
 $\approx$22$\%$ of the background at low \HT and $\approx$27$\%$ of the 
-background at high \HT. Those events arising from \Ptau particles which decay leptonically ($\tau_{l}$) and are missed by the lepton vetoes account for $\approx$10$\%$ of the standard model background.
+background at high \HT. Those events arising from \Ptau particles which decay leptonically ($\tau_{l}$) and are missed by the lepton vetoes account for $\approx$10$\%$ of the \ac{sm} background.
 
 \begin{figure}[ht|]
   \centering
@@ -824,7 +824,7 @@ the \HepProcess{\PW}~+~Jets \HepProcess{\Ptop\APtop} and
 \HepProcess{\PZ}~+~Jets components in the control samples. The samples are 
 defined to maximised efficiency rather than purity, any impurities are 
 accounted for in the transfer factors as the yields from all montecarlo samples 
-are used. This is valid under the assumption that the standard model 
+are used. This is valid under the assumption that the \ac{sm} 
 electro-weak and Drell-Yan processes are well modelled by the simulation.
 The possibility of SUSY like signal contamination in the control samples is 
 accounted for in the final likelihood, after measuring the signal acceptance 
@@ -1075,7 +1075,7 @@ Table~\ref{tab:triggers-mu-mumu}.
 
 
 % paragraph muon_control_samples_with_out_an_alt_cut_ (end)
-
+% section electro_weak_background_prediction (end)
 
 \section{Estimating the residual QCD background 
 component.\cite{CMS-AN-11-517}} % (fold)
@@ -1226,64 +1226,111 @@ measured for each translation factor. This implies that the measurement of the
 systematic uncertainties on the translation factors are vital for the fitting 
 procedure.
 
-To obtain the systematic uncertainties a set of closure tests were preformed 
-with data in order to identify any possible sources of systematic uncertainty 
-in the background prediction method. The method uses the same translation 
-factor method as the background prediction (see 
-Equation~\eqref{eq:traslationfactor}), however the translation factors are 
-recomputed to predict between control samples. The agreement between the 
-prediction and the observed number of events is expressed as 
-$(N_{obs}-N_{pred})/N_{pred}$ per \HT bin. No systematic uncertainty is 
-assigned to the level of agreement, thus the level of closure is defined by the 
-statistical significance of the sample, in this way the closure tests give a 
-\HT dependant measure of systematic biases in the prediction method.
+A set of closure tests were performed on data to identify any sources of 
+systematic biased introduced by the background prediction method.
+To do this the individual background samples are used to predict one another 
+using the same translation factor method as for the prediction of \ac{sm} 
+missing energy sources in the hadronic signal regions. The level of agreement 
+is quantified in terms of the ratio $\left(N_{obs} - N_{pred}\right)/N_pred$, 
+the statistical error from the translation factor, based on the available 
+Montecarlo statists is combined with the statistical error on the number of 
+events in the predicting sample to give the error on the closure, hence the 
+deviation of the ratio from zero gives the level of closure per analysis bin. 
+This gives a measure of any biases introduced by the background estimation 
+method.
 
-The closure tests described in this section measure the closure after an \alt 
-cut, between samples where there is an \alt cut applied and those where there 
-is not an \alt requirement as well as predicting between the \Pbottom 
-multiplicity bins. As described in 
-Section~\ref{sec:extension_to_higher_analysis_dimensions_} the Montecarlo 
-simulation of the \Pbottom-Jet reconstruction is corrected to the data measured 
-values for tag and miss-tag rate. This allows the choice of a systematic 
-uncertainty stemming from improper simulation of the background processes, 
-detector in efficiencies and kinematic effects not considered in the Montecarlo 
-generation as well as effects from the theoretical uncertainties on the 
-relative production and decay cross sections of each of the considered 
-processes.
+The closure tests between the background samples are designed to test the 
+Montecarlo's ability to model kinematic effects; such as the \alt acceptance; 
+\Pmuon acceptance and \Pphoton acceptance, instrumental effects such as; 
+reconstruction efficiencies and the effects of pile up on isolation and finally 
+the theoretical precision of the production and decay cross sections and their 
+relative contributions to the \ac{sm} background. These individual components 
+are not separable by the closure tests, which instead gives a total systematic 
+error estimation.
+
+As described in Section~\ref{par:muon_control_samples_with_out_an_alt_cut_} the 
+control samples which do not require an \alt cut use a \muht cross object 
+trigger to collect the data events. As shown in Table~\ref{tab:muht-triggers} 
+there was a period of data taking where due to the increased trigger thresholds 
+the \muht triggers are unsuitable for use in the region \HT $<$ 
+\unit{375}{\GeV}. Thusly in the closure tests between the control samples which 
+use an \alt cut and those that do not the integrated luminosity is limited to 
+\unit{3.9}{\invfb}. This causes a loss of some statistical power in these cases.
+
+The individual closure tests and fits to the \HT dependance of the ratio 
+$\left(N_{obs} - N_{pred}\right)/N_pred$ are shown in 
+Appendix~\ref{sec:Closure_tests_and_systematic_uncertainties}.
+The Figures~\ref{fig:closure-with-alphat1} show the closure of the prediction 
+between \mj(no \alt) $\rightarrow$ \mj(\altg) and \mmj(no \alt) $\rightarrow$ 
+\mmj(\altg) for two samples, one with no requirement on the number of \Pbottom 
+tagged jets ($n_{b}$), which increases the precision of the measurement, and 
+one requiring $n_{b} = 1$, the read line is the result of a one parameter fit. 
+The level of closure shows that the Montecarlo accurately models the \alt 
+acceptance, with no significant bias.
+
+Figure~\ref{fig:closure-with-alphat2} shows the closure between \mj 
+$\rightarrow$ \mmj and between \Pphoton+jets $\rightarrow$ \mmj over both the 
+full \HT range using only \unit{3.9}{\invfb} of integrated luminosity and for 
+\HT $>$ \unit{375}{\GeV} using the full data set. Again the red lines are the 
+result of fitting with a one parameter fit.
+
+Figure~\ref{fig:btag-multi-closure} tests the closure between samples with 
+differing $n_{b}$ the three tests are \mj($n_b = 0$)$\rightarrow$\mj($n_b = 
+1$,no \alt), \mj($n_b = 1$)$\rightarrow$\mj($n_b > 1$,no \alt) and \mj($n_b = 
+0$)$\rightarrow$\mj($n_b > 1$,no \alt). Figure~\ref{fig:btag-samples} also 
+tests the closure between samples with differing $n_{b}$, here the test is 
+between \mj($n_b = 0$)$\rightarrow$\mmj($n_b = 0$) and \mj($n_b =  
+1$)$\rightarrow$\mmj($n_b = 1$).
+
+Finally any dependance on pile up is measured by comparing a subset of the 
+individual closure tests between samples which have pile up subtracted jets and 
+those that do not. The example closures are \mj(no \alt)$\rightarrow$\mj(\altg),
+\mj(no \alt)$\rightarrow$\mmj(no \alt), and \mj($n_b = 0$)$\rightarrow$\mj($n_b 
+= 1$,no \alt).
+
+\subsection{Motivating the combined systematic on the translation factors}
+ % (fold)
+\label{sub:motivating_the_combined_systematic_on_the_translation_factors}
+The closure tests described in the previous section are combined to give a total systematic uncertainty. This uncertainty is binned in to three \HT regions \unit{275}{\GeV}$\rightarrow$\unit{575}{\GeV}, \unit{575}{\GeV}$\rightarrow$\unit{775}{\GeV} and \unit{775}{\GeV}+. In each of these regions all of the individual closure tests are used to calculate a weighted mean and variance. The systematic is defined as $3\sigma$ of this variance, which is conservative but necessary to cover any biases. The systematics are treated as fully uncorrelated between the three regions, again this is the conservative approach. Figure~\ref{fig:closure-summary} shows the key example closures, the grey shaded region shows the systematic error. The values obtained for the error are 6$\%$, 20$\%$ and 39$\%$, these are rounded to 10$\%$, 20$\%$ and 40$\%$ and then used in the final background simultaneous fit.
+
+\begin{figure}[!h]
+  \begin{center}
+    \includegraphics[width=0.75\textwidth,angle=0]{figures/Analysis/syst_plots/incl.pdf}
+    \caption{A set of closure tests (open symbols) overlaid on top of
+      grey bands that represent the systematic uncertainties used for
+      three \HT regions in the final simultaneous fit. The solid
+      circles and their errors represent the weighted mean and
+      standard deviation for the five closure tests of each individual
+      \HT bin.}
+    \label{fig:closure-summary}
+  \end{center}
+\end{figure}
+
+% subsection motivating_the_combined_systematic_on_the_translation_factors (end)
+
+% section systematic_uncertainties_on_the_electro_weak_background_model_ (end)
 
 
-\paragraph{Control samples with out an \alt cut.} % (fold)
-\label{par:control_samples_with_out_an_alt_cut_}
-It is to be noted that for the closure tests between the samples that do not require an \alt cut and those that do that due to the change in trigger thresholds throughout the run that it is only possible to perform the closure tests over the full \HT range on \unit{3.9}{\invfb} of data, during which the \HT leg of the \muht trigger is not higher then \unit{200}{\GeV}.
-% paragraph control_samples_with_out_an_alt_cut_ (end)
+\section{Signal Models} % (fold)
+\label{sec:signal_models}
+The level of agreement of the analysis with the \ac{sm} give a handle on the production cross sections and masses of particles predicted by new physics models. The final results are presented in terms of a specific \ac{susy} model and a selection of generic final state topologies, known as \ac{sms}.
+
+The \ac{susy} model considered is the \ac{cmssm}\cite{null} which is described in Section~\ref{sec:the_constrained_minimal_super_symmetric_model}, the parameters chosen are $\tan\beta =3, \mathcal{A}_{0} = , \mu = $ with the exclusion curve presented in the $m_{0}$, $m_{1/2}$ plane. This model combines many production and decay topologies and is common to results shown by previous and contemporary experiments \cite{} \todo[inline]{Reference ATLAS and Tevatron susy results}.
+The results are also presented in terms of \ac{sms}\cite{} models, these are models with single production methods and a specified decay topology. The \ac{cms} terminology for the production methods are as follows: T1 models are gluino-gluino production, which then decay to four \ac{sm} hadronic jets and two neutrilinos. T2 models are squark-squark production with decays to two \ac{sm} hadronic jets and two neutrilinos.
+These topologies can be further specialised by enforcing the squarks or gluinos to decay to heavy flavour \ac{sm} quarks, such as \Ptop, which promptly decay to jets containing \Pbottom quarks or direct decays to \Pbottom quarks. The limits on the \ac{sms} space are defined in terms of the mass splitting between the neutrilino and the pair produced \ac{susy} particle defining the model.
+\subsection{Signal Efficiency} % (fold)
+\label{sub:signal_efficiency}
+
+% subsection signal_efficiency (end)
+
+\subsection{Uncertainty on Signal Efficiency} % (fold)
+\label{sub:uncertainty_on_signal_efficiency}
+
+% subsection uncertainty_on_signal_efficiency (end)
 
 
- 
-% Figure~\ref{fig:figures_Analysis_transFac} shows a straight line fit to the 
-% translation factors obtained for the single muon control sample, the errors are 
-% statistical only, whilst the fit is consistent with one value for the entire 
-% \HT range it can be argued that there is a systematic shift to a larger 
-% translation factor at higher \HT. To quantify any systematic effects due to \HT 
-% or \Pbottom multiplicity each of the control samples is used to the yields in 
-% it's counter parts.
-% 
-% \begin{figure}[ht]
-%   \centering
-%     \includegraphics[width=0.5\textwidth]{figures/Analysis/transFac.pdf}
-%   \caption{Translation factors from simulation for the total background 
-%   estimate from the \Pmu~+~jets control sample. Errors are statistical only.}
-%   \label{fig:figures_Analysis_transFac}
-% \end{figure}
-% 
-% The inter samples translation factors are created in the same way as for the 
-% visible object~+~Jets $\rightarrow$ invisible object~+~Jets translation factors 
-% that predict the number of events in the signal region as shown in 
-% Equation~\eqref{eqn:traslationfactor}.
+% section signal_models (end)
 
-% subsection systematic_uncertainties_on_the_electro_weak_background_model_ (end)
-
-
-% section electro_weak_background_prediction (end)
 
 \section{Likelihood model} % (fold)
 \label{sec:likelihood_model}

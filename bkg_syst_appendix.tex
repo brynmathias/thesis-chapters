@@ -1,0 +1,232 @@
+\newpage
+\section{Closure tests and systematic uncertainties}
+\label{sec:Closure_tests_and_systematic_uncertainties}
+\subsection{Defining muon samples without an \texorpdfstring{\alt}{alphaT} requirement}
+\label{app:control-noalphat}
+
+% In this appendix, the \mj and \mmj control samples are defined by
+% selection criteria that do {\it not} include an \alphat cut, in order
+% to increase their acceptance and predictive power. In this case, the
+% samples are collected by the \muht triggers, which requires a higher
+% muon \pt threshold of 45\gev and means that the samples can only be
+% used to provide translation factors and predictions for the six
+% highest \HT bins, in the region $\HT > 375\gev$. For the two
+% lowest \HT bins, in the region $\HT < 375\gev$, the
+% predictions are given by \mj and \mmj samples for which a \htalphat
+% trigger is used to collect the data and an offline \alphat cut is
+% applied as usual in the event selection, as described in
+% Sec.~\ref{sec:def-control-samples}. The above information is
+% summarized in Table~\ref{tab:triggers-mu-mumu}. The procedure of
+% relaxing the \alphat cut is currently only used in the b-tag analysis.
+
+\begin{figure}[h!]
+  \begin{center}
+    \subfigure[\label{fig:munoat-to-muat-classic}\mj sample.]{
+      \includegraphics[width=0.4\textwidth,angle=0]{figures/Analysis/closure_plots/alphat/1.png}
+    } 
+    \subfigure[\label{fig:dimunoat-to-dimuat-classic}\mmj sample.]{
+      \includegraphics[width=0.4\textwidth,angle=0]{figures/Analysis/closure_plots/alphat/4.png}
+    } \\
+    \subfigure[\label{fig:munoat-to-muat-btag}\mj sample with 1 b-tag.]{
+      \includegraphics[width=0.4\textwidth,angle=0]{figures/Analysis/closure_plots/alphat/2.png}
+    } 
+    \subfigure[\label{fig:munoat-to-muat-btags}\mj sample with $>$1 b-tags.]{
+      \includegraphics[width=0.4\textwidth,angle=0]{figures/Analysis/closure_plots/alphat/3.png}
+    }
+    \caption{Closure tests that demonstrate the MC modelling of the
+      \alt acceptance. The closure tests are performed for both the
+      inclusive analysis with (a) the \mj sample and (b) the \mmj
+      control sample. Similar tests are performed for the b-tag
+      analysis using (a) the \mj sample and a requirement of exactly
+      one b-tag, and (b) the \mj sample and a requirement of at least
+      two b-tags. The red lines indicate the constant best fit value
+      across all \HT bins.\label{fig:closure-with-alphat1}}
+  \end{center}
+\end{figure}
+
+\newpage
+\subsection{Closure tests for inclusive analysis\label{app:closure-incl}}
+
+\begin{figure}[!h]
+  \begin{center}
+    \subfigure[\label{fig:mu-to-mumu-low}(Note the different y-axis scale.)]{\includegraphics[width=0.4\textwidth,angle=0]{figures/Analysis/closure_plots/Closure_D2a.png}}
+    \subfigure[\label{fig:mu-to-mumu-high}]{\includegraphics[width=0.4\textwidth,angle=0]{figures/Analysis/closure_plots/Closure_D2b.png}} \\
+    \subfigure[\label{fig:photon-to-mumu-low}]{\includegraphics[width=0.4\textwidth,angle=0]{figures/Analysis/closure_plots/Closure_D2c.png}}
+    \subfigure[\label{fig:photon-to-mumu-high}]{\includegraphics[width=0.4\textwidth,angle=0]{figures/Analysis/closure_plots/Closure_D2d.png}} 
+%     \subfigure[\label{fig:photon-to-mu-low}]{\includegraphics[width=0.4\textwidth,angle=0]{figures/Analysis/closure_plots/low/2.png}}
+%     \subfigure[\label{fig:photon-to-mu-high}]{\includegraphics[width=0.4\textwidth,angle=0]{figures/Analysis/closure_plots/high/2.png}} 
+    \caption{Closure tests using yields from one control to predict
+      yields in another sample. The two plots on the left show closure
+      tests which use ``low stats'' muon samples recorded with the
+      \htalphat triggers and defined by offline selection criteria
+      that include an \alt requirement: (a) \mj sample
+      $\rightarrow$ \mmj sample and (c) \gj sample $\rightarrow$ \mmj
+      sample. Similarly, the plots on the right show the same closure
+      tests but using ``high-stats'' muon samples recorded with \muht
+      triggers and defined with no offline \alt requirement. The
+      same tests are performed: (b) \mj sample $\rightarrow$ \mmj
+      sample and (d) \gj sample $\rightarrow$ \mmj sample. These
+      closure tests are only possible for the six highest \HT bins
+      due to the trigger conditions. The red lines indicate the
+      constant best fit value across all \HT bins.}
+    \label{fig:closure-with-alphat2}
+  \end{center}
+\end{figure}
+
+% \newpage
+% \begin{figure}[!h]
+%   \begin{center}
+%     \subfigure[\label{fig:mu-to-mumu-low}]{\includegraphics[width=0.4\textwidth,angle=0]{figures/Analysis/closure_plots/high/1.png}}
+%     \subfigure[\label{fig:mu-to-mumu-higher}]{\includegraphics[width=0.4\textwidth,angle=0]{figures/Analysis/closure_plots/high/4.png}}
+%     \caption{Closure tests which test the modelling of the \alphat acceptance
+%       in the \mj and \mmj control samples for both the inclusive (left) and b-tag analysis (right)
+%       The plots show the relative consistency
+%       between the predictions and observations, as a function of
+%       \HT. The red lines indicate a constant best fit value across
+%       all bins. In all plots, the constant and its uncertainty is
+%       consistent with a systematic uncertainty of 20\%, as indicated
+%       by the solid grey band.}
+%     \label{fig:closure-with-alphat}
+%   \end{center}
+% \end{figure}
+
+\newpage
+\subsection{Closure tests for b-tag analysis}
+
+\begin{figure}[!h]
+  \begin{center}
+    \subfigure[\label{fig:btag-0}0 b-tags predicting 1 b-tag.]{
+      \includegraphics[width=0.4\textwidth,angle=0]{figures/Analysis/closure_plots/btag/1.png}
+    } \\
+    \subfigure[\label{fig:btag-1}1 b-tag predicting $>$1 b-tags.]{
+      \includegraphics[width=0.4\textwidth,angle=0]{figures/Analysis/closure_plots/btag/2.png} 
+    } \\
+    \subfigure[\label{fig:btag-2}0 b-tags predicting $>$1 b-tags.]{
+      \includegraphics[width=0.4\textwidth,angle=0]{figures/Analysis/closure_plots/btag/3.png}
+    }
+    \caption{Closure tests with the \mj sample that demonstrate the MC
+      modelling of the b-tagging algorithm and of different sample
+      compositions by for different b-tag multiplicities: (a) 0 b-tags
+      $\rightarrow$ 1 b-tag, (b) 1 b-tags $\rightarrow$ $\geq$2
+      b-tags, (c) 0 b-tags $\rightarrow$ $\geq$2 b-tags.}
+  \label{fig:btag-multi-closure}
+  \end{center}
+\end{figure}
+
+\newpage
+\begin{figure}[!h]
+  \begin{center}
+    \subfigure[\label{fig:0btag-mu-to-mumu}0 b-tags.]{
+      \includegraphics[width=0.4\textwidth,angle=0]{figures/Analysis/closure_plots/high/4.png}
+    } \\
+    \subfigure[\label{fig:1btag-mu-to-mumu}1 b-tag.]{
+      \includegraphics[width=0.4\textwidth,angle=0]{figures/Analysis/closure_plots/btag/closure/1.png}
+    }
+    \caption{Closure tests using the \mj sample to predict the yields in
+      a \mmj sample, for events with (a) exactly 0-b-tags and (b)
+      exactly 1-b-tags.}
+    \label{fig:btag-samples}
+  \end{center}
+\end{figure}
+
+\newpage
+\subsection{Closure tests concerning pile-up\label{closure-pileup}}
+
+\begin{figure}[!h]
+  \begin{center}
+    \subfigure[\label{fig:alphat-without}]{
+      \includegraphics[width=0.4\textwidth,angle=0]{figures/Analysis/closure_plots/pileup/without/1.png}
+    } 
+    \subfigure[\label{fig:alphat-with}]{
+      \includegraphics[width=0.4\textwidth,angle=0]{figures/Analysis/closure_plots/pileup/with/1.png}
+    } \\
+    \subfigure[\label{fig:sample-without}]{
+      \includegraphics[width=0.4\textwidth,angle=0]{figures/Analysis/closure_plots/pileup/without/2.png}
+    } 
+    \subfigure[\label{fig:sample-with}]{
+      \includegraphics[width=0.4\textwidth,angle=0]{figures/Analysis/closure_plots/pileup/with/2.png}
+    } \\
+    \subfigure[\label{fig:composition-without}]{
+      \includegraphics[width=0.4\textwidth,angle=0]{figures/Analysis/closure_plots/pileup/without/3.png}
+    } 
+    \subfigure[\label{fig:composition-with}]{
+      \includegraphics[width=0.4\textwidth,angle=0]{figures/Analysis/closure_plots/pileup/with/3.png}
+    } 
+    \caption{Closure tests using yields from one control to predict
+      yields in another sample. The three plots on the left show
+      closure tests from the inclusive analysis, which uses jets that
+      are not corrected for the effects of pile-up. On the right, the
+      jets in the analysis {\it are} corrected for pile-up effects by
+      applying the \texttt{L1Offset} jet energy correction. The three
+      closure tests are: probing the MC modelling of the \alt
+      acceptance with the \mj sample (a) without and (b) with
+      \texttt{L1Offset} jet energy corrections; using the \mj sample
+      to predict yields in the \mmj sample (a) without and (b) with
+      \texttt{L1Offset} jet energy corrections; and using a 0 b-tagged
+      \mj sample to predict yields in a 1 b-tagged \mj sample (a)
+      without and (b) with \texttt{L1Offset} jet energy
+      corrections. The red lines indicate the constant best fit value
+      across all \HT bins.}
+    \label{fig:closure-pileup}
+  \end{center}
+\end{figure}
+
+% \newpage
+% \subsection{Systematics from closure tests (weighted option)}
+% \begin{figure}[!h]
+%   \begin{center}
+%     \subfigure[\label{fig:}Inclusive, with weights (6/20/39)]{
+%       \includegraphics[width=0.75\textwidth,angle=0]{figures/Analysis/syst_plots/incl.pdf}
+%     } \\
+%     \subfigure[\label{fig:}b-tag, with weights (8/29/53)]{
+%       \includegraphics[width=0.75\textwidth,angle=0]{figures/Analysis/syst_plots/btag.pdf}
+%     } 
+%     \caption{(Following text is for internal comsumption only.) Top
+%       plot: closure tests for inclusive analysis (open symbols), plus
+%       weighted means for each HT bin (solid circles), plus systematics
+%       (grey bands) for different HT regions, cooked up by combining
+%       all closure tests in given region. Weight is $1/e^2$ where $e$
+%       is stat error on each measurement. Systematic is defined by 3
+%       times the std. dev. of all the closure tests in a given region,
+%       independently for the 3 different HT regions. A choice of 3sigma
+%       is rather conservative, but necessary in order to adequately
+%       cover the small biases. Bottom plot: same as above, but for
+%       b-tag analysis. Numbers in parentheses below each plot are the
+%       values of the systematics per HT region, given in \%. Arguably,
+%       different HT regions could be defined (eg, two regions: bottom
+%       five bins, top three bins).}
+%     \label{fig:closure-summary}
+%   \end{center}
+% \end{figure}
+
+% \newpage
+% \subsection{Systematics from closure tests (unweighted option)}
+% \begin{figure}[!h]
+%   \begin{center}
+%     \subfigure[\label{fig:}Inclusive, no weights (11/33/50)]{
+%       \includegraphics[width=0.75\textwidth,angle=0]{figures/Analysis/syst_plots/incl-rms.pdf}
+%     } \\
+%     \subfigure[\label{fig:}b-tag, no weights (18/70/136)]{
+%       \includegraphics[width=0.75\textwidth,angle=0]{figures/Analysis/syst_plots/btag-rms.pdf}
+%     } 
+%     \caption{(Following text is for internal comsumption only.) Top
+%       plot: closure tests for inclusive analysis (open symbols), plus
+%       unweighted averages for each HT bin (solid circles), plus
+%       systematics (grey bands) for different HT regions, cooked up by
+%       combining all closure tests in given region. Stat error of each
+%       closure test is not considered. Instead, systematic is defined
+%       by the rms of the central values of all closure tests in a given
+%       HT region, independently for 3 different HT regions. Bottom
+%       plot: same as above, but for b-tag analysis. Numbers in
+%       parentheses below each plot are the values of the systematics
+%       per HT region, given in \%.Arguably, different HT regions could
+%       be defined (eg, two regions: bottom five bins, top three bins).}
+%     \label{fig:closure-summary}
+%   \end{center}
+% \end{figure}
+
+
+
+
+
+
