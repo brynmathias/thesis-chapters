@@ -1291,7 +1291,19 @@ those that do not. The example closures are \mj(no \alt)$\rightarrow$\mj(\altg),
 \subsection{Motivating the combined systematic on the translation factors}
  % (fold)
 \label{sub:motivating_the_combined_systematic_on_the_translation_factors}
-The closure tests described in the previous section are combined to give a total systematic uncertainty. This uncertainty is binned in to three \HT regions \unit{275}{\GeV}$\rightarrow$\unit{575}{\GeV}, \unit{575}{\GeV}$\rightarrow$\unit{775}{\GeV} and \unit{775}{\GeV}+. In each of these regions all of the individual closure tests are used to calculate a weighted mean and variance. The systematic is defined as $3\sigma$ of this variance, which is conservative but necessary to cover any biases. The systematics are treated as fully uncorrelated between the three regions, again this is the conservative approach. Figure~\ref{fig:closure-summary} shows the key example closures, the grey shaded region shows the systematic error. The values obtained for the error are 6$\%$, 20$\%$ and 39$\%$, these are rounded to 10$\%$, 20$\%$ and 40$\%$ and then used in the final background simultaneous fit.
+The closure tests described in the previous section are combined to give a 
+total systematic uncertainty. This uncertainty is binned in to three \HT 
+regions \unit{275}{\GeV}$\rightarrow$\unit{575}{\GeV}, 
+\unit{575}{\GeV}$\rightarrow$\unit{775}{\GeV} and \unit{775}{\GeV}+. In each of 
+these regions all of the individual closure tests are used to calculate a 
+weighted mean and variance. The systematic is defined as $3\sigma$ of this 
+variance, which is conservative but necessary to cover any biases. The 
+systematics are treated as fully uncorrelated between the three regions, again 
+this is the conservative approach. Figure~\ref{fig:closure-summary} shows the 
+key example closures, the grey shaded region shows the systematic error. The 
+values obtained for the error are 6$\%$, 20$\%$ and 39$\%$, these are rounded 
+to 10$\%$, 20$\%$ and 40$\%$ and then used in the final background simultaneous 
+fit.
 
 \begin{figure}[!h]
   \begin{center}
@@ -1313,19 +1325,134 @@ The closure tests described in the previous section are combined to give a total
 
 \section{Signal Models} % (fold)
 \label{sec:signal_models}
-The level of agreement of the analysis with the \ac{sm} give a handle on the production cross sections and masses of particles predicted by new physics models. The final results are presented in terms of a specific \ac{susy} model and a selection of generic final state topologies, known as \ac{sms}.
+The level of agreement of the analysis with the \ac{sm} give a handle on the 
+production cross sections and masses of particles predicted by new physics 
+models. The final results are presented in terms of a specific \ac{susy} model 
+and a selection of generic final state topologies, known as \ac{sms}.
 
-The \ac{susy} model considered is the \ac{cmssm}\cite{null} which is described in Section~\ref{sec:the_constrained_minimal_super_symmetric_model}, the parameters chosen are $\tan\beta =3, \mathcal{A}_{0} = , \mu = $ with the exclusion curve presented in the $m_{0}$, $m_{1/2}$ plane. This model combines many production and decay topologies and is common to results shown by previous and contemporary experiments \cite{} \todo[inline]{Reference ATLAS and Tevatron susy results}.
-The results are also presented in terms of \ac{sms}\cite{} models, these are models with single production methods and a specified decay topology. The \ac{cms} terminology for the production methods are as follows: T1 models are gluino-gluino production, which then decay to four \ac{sm} hadronic jets and two neutrilinos. T2 models are squark-squark production with decays to two \ac{sm} hadronic jets and two neutrilinos.
-These topologies can be further specialised by enforcing the squarks or gluinos to decay to heavy flavour \ac{sm} quarks, such as \Ptop, which promptly decay to jets containing \Pbottom quarks or direct decays to \Pbottom quarks. The limits on the \ac{sms} space are defined in terms of the mass splitting between the neutrilino and the pair produced \ac{susy} particle defining the model.
+The \ac{susy} model considered is the \ac{cmssm}\cite{null} which is described 
+in Section~\ref{sec:the_constrained_minimal_super_symmetric_model}, the 
+parameters chosen are $\tan\beta =3, \mathcal{A}_{0} = , \mu = $ with the 
+exclusion curve presented in the $m_{0}$, $m_{1/2}$ plane. This model combines 
+many production and decay topologies and is common to results shown by previous 
+and contemporary experiments \cite{} \todo[inline]{Reference ATLAS and Tevatron 
+susy results}.
+The results are also presented in terms of \ac{sms}\cite{} models, these are 
+models with single production methods and a specified decay topology. The 
+\ac{cms} terminology for the production methods are as follows: T1 models are 
+gluino-gluino production, which then decay to four \ac{sm} hadronic jets and 
+two neutrilinos. T2 models are squark-squark production with decays to two 
+\ac{sm} hadronic jets and two neutrilinos.
+These topologies can be further specialised by enforcing the squarks or gluinos 
+to decay to heavy flavour \ac{sm} quarks, such as \Ptop, which promptly decay 
+to jets containing \Pbottom quarks or direct decays to \Pbottom quarks. The 
+limits on the \ac{sms} space are defined in terms of the mass splitting between 
+the neutrilino and the pair produced \ac{susy} particle defining the model.
 \subsection{Signal Efficiency} % (fold)
 \label{sub:signal_efficiency}
+\paragraph{\ac{cmssm}} % (fold)
+\label{par:cmssm}
+The \ac{cmssm} signal scan is composed of eight sub-processes which define the 
+production and decay topologies. The dominant process varies with $m_{0}, 
+m_{1/2}$ and at next to leading order the cross section for each of theses 
+processes varies per point. The analysis is run over each sub process in turn 
+with the final efficiency given by the weighted sum of the subprocess 
+efficiencies. The yield per point is then given by 
+$\epsilon\time\sigma\times\mathcal{L}$ for \unit{5}{\invfb} the total yields 
+are show in the appendix in Figure~\ref{fig:sig-eff-cmssm} these yields are for 
+the sum of the \HT analysis bins.
+% paragraph cmssm (end)
 
+\paragraph{Simplified Models} % (fold)
+\label{par:simplified_models}
+The \ac{sms} models contain only one production process and a set decay 
+topology, making the interpretation in these models simpler, however the 
+individual models are not representative of some complete \ac{susy} model. 
+Instead these models allow the testing of specific facets of new physics 
+models, with out the ambiguity of the relative contributions of each sub 
+process at a point which is seen when testing full models. The efficiency is 
+measured for each of the models, with the yield per point given by 
+$\epsilon\times\sigma\times\mathcal{L}$ where $\sigma$ is given as a reference 
+cross section only. The efficiencies for which are shown in the appendix, 
+Table~\ref{tab:sms-eff} lists which figure corresponds to which model, it is to 
+be noted that the total efficiency summed over \HT bins is shown.
+
+
+
+\begin{table}[h!]
+  \caption{Production and decay modes for various simplified models.}
+  \label{tab:sms-eff}
+  \centering
+  \footnotesize
+  \begin{tabular}{ llc }
+    \hline
+    Model & Production and decay modes & Figure showing efficiency \\ [0.5ex]
+    \hline
+    \texttt{T1} & \HepProcess{\PSgluino\PSgluino\to\Pquark\APquark\PSneutralino\Pquark\APquark\PSneutralino} & \ref{fig:sig-eff-t1} \\
+    \texttt{T2} & \HepProcess{\Psquark\Psquark\to\Pquark\PSneutralino\APquark\PSneutralino} & \ref{fig:sig-eff-t2} \\
+    \texttt{T2tt} & \HepProcess{\PStop\PStop\to\Ptop\PSneutralino\APtop\PSneutralino}
+& \ref{fig:sig-eff-t2tt} \\
+    \texttt{T2bb} & \HepProcess{\PSbottom\PSbottom\to\Pbottom\PSneutralino\APbottom\PSneutralino} & \ref{fig:sig-eff-t2bb} \\
+    \texttt{T1tttt} & \HepProcess{\PSgluino\PSgluino\to\Ptop\APtop\PSneutralino\Ptop\APtop\PSneutralino} & \ref{fig:sig-eff-t1tttt} \\
+    \texttt{T1bbbb} & \HepProcess{\PSgluino\PSgluino\to\Pbottom\APbottom\PSneutralino\Pbottom\APbottom\PSneutralino} & \ref{fig:sig-eff-t1bbbb} \\
+    \hline
+  \end{tabular}
+\end{table}
+% paragraph simplified_models (end)
+
+
+\paragraph{Signal Efficiency for the Background Selection} % (fold)
+\label{par:signal_efficiency_for_the_background_selection}
+If the couplings of the \ac{susy} particles are analogous to the \ac{sm} 
+particles then the final states may involve muons which in the presence of 
+signal would infer an over estimation of the background from the control 
+samples.
+To measure this the background selection is applied to the signal models and 
+the yields are taken into account in the final limit setting procedure. On 
+average the background selection's efficiency on signal is $10\times$ lower 
+than the efficiency in the hadronic signal region. This is shown for the model 
+\texttt{T1tttt} in Figure~\ref{fig:sig-eff-contam} where the most muons of all 
+the signal models are expected in the final state, the contamination in the 
+$n_{b}$ bins that drive the limit is on the order of $10-20\%$.
+% paragraph signal_efficiency_for_the_background_selection (end)
 % subsection signal_efficiency (end)
 
 \subsection{Uncertainty on Signal Efficiency} % (fold)
 \label{sub:uncertainty_on_signal_efficiency}
+The  systematic uncertainty on the signal models is due to:\ac{pdf}, the 
+\ac{pdf} set used to generate the sample has effects on both the acceptance and 
+the cross section; The measurement of the integrated luminosity is accounted 
+for in the signal yield; Due to the signal models being created with \ac{cms} 
+FastSim\cite{} rather than \ac{cms} FullSim\cite{} the acceptance differs 
+between the signal and the background samples; The error on the jet energy 
+scale is accounted for on the signal yield; Systematic errors from the 
+cleanings cuts (\Rmiss and ECAL dead regions) and lepton/photon vetoes are also 
+taken in to account; Finally corrections to the \Pbottom-tagging efficiency 
+between the FullSim and the FastSim are applied as well as their errors.
 
+Each of these uncertainties is expressed as a percentage change in the 
+efficiency from the central value given by applying the full analysis to each 
+signal model, the total systematic is given by summing the components in 
+quadrature. In the following section the measurements of the error from each of 
+these sources is detailed and summarised per considered signal model at the end 
+of the section.
+
+The uncertainties for the \ac{cmssm} are considered in a band of 
+$\pm$\unit{60}{\GeV} in $m_{1/2}$ around the expected limit to confine the 
+errors to the relevant part of the plane, in the very high $m_{0},m_{1/2}$ area 
+the jet energy scale causes large fluctuations due to the small mass splitting 
+between the \ac{susy} particles.
+For the \ac{sms} models two regions are defined, one ``close'' to the diagonal, 
+which has small mass splitting and thus the effects of jet energy scale and 
+\ac{pdf} acceptance have a large impact on the analysis efficiency. A second 
+``far'' region is defined with large mass splitting and thus a small change on 
+the analysis efficiency due to jet energy scale and \ac{pdf} variations. The 
+near and far regions are defined by:
+\begin{equation}
+  m_{sq}(m_{gl}) - m_{lsp} > \unit{350}{\GeV} \&\& m_{sq}(m_{gl}) > \unit{475}{\GeV}
+\end{equation}
+events passing these conditions are classified as being in the ``far'' region, 
+those failing in the ``close'' region.
 % subsection uncertainty_on_signal_efficiency (end)
 
 
