@@ -1,4 +1,4 @@
-\chapter{The $\alpha_{T}$ analysis} % (fold)
+\chapter{The \texorpdfstring{$\alpha_{T}$} analysis} % (fold)
 \label{cha:the_t_analysis}
 \paragraph{Declaration} % (fold)
 \label{par:declaration}
@@ -64,23 +64,23 @@ this the inherent balance of the QCD system is exploited.
 For di-jet systems \alt is defined as:
 
 \begin{equation}
-  \alt = \frac{\ET^{j_{2}}}{M_{T}}
+  \alt = \frac{E_{T}^{j_{2}}}{M_{T}}
 \end{equation}
-where \ET$^{j_{2}}$ is the transverse energy of least energetic of the two jets 
+where $E_{T}^{j_{2}}$ is the transverse energy of least energetic of the two jets 
 and M$_{T}$ is defined as:
 
 \begin{equation}
-  M_{T} = \sqrt{\left(\sum^{2}_{i=1}\ET^{j_{i}}\right)^{2} - \left(\sum^{2}_{i=1}p_{x}^{j_{i}}\right)^{2} - \left(\sum^{2}_{i=1}p_{y}^{j_{i}}\right)^{2}}
+  M_{T} = \sqrt{\left(\sum^{2}_{i=1}E_{T}^{j_{i}}\right)^{2} - \left(\sum^{2}_{i=1}p_{x}^{j_{i}}\right)^{2} - \left(\sum^{2}_{i=1}p_{y}^{j_{i}}\right)^{2}}
 \end{equation}
 
-For a perfectly measured di-jet system with \ET$^{j_{1}} = $\ET$^{j_{2}}$, 
+For a perfectly measured di-jet system with $E_{T}^{j_{1}} = E_{T}^{j_{2}}$, 
 where the jets are opposite in $\phi$ \alt = 0.5, for events with back to back 
 jets where one is miss-measured \alt $ < 0.5$.
 However the majority of signals predict many jets in the final state.
 \alt can be generalised to work with n-jets in the flowing way.
 The variables \HT, \HTm and $\Delta$\HT are constructed:
 \begin{equation}
-  \HT = \sum_{i = 0}^{n~jets}\ET^{jet_{i}} \\
+  \HT = \sum_{i = 0}^{n~jets}E_{T}^{jet_{i}} \\
   \HTm = \left|\sum_{i = 0}^{n~jets}\bar{p}_{T}^{jet_{i}}\right|
 \end{equation}
 for jets above some predefined threshold \ET which is common for all jet based 
@@ -270,7 +270,7 @@ stated in Section~\ref{sec:electro_weak_background_prediction}.
 
 % section event_selection (end)
 
-\section{High Level triggers for the \alt analysis} % (fold)
+\section{High Level triggers for the \texorpdfstring{\alt} analysis} % (fold)
 \label{sec:high_level_triggers_for_the_alt_analysis}
 The CMS trigger system has been discussed in detail in 
 Section~\ref{sec:the_high_level_trigger_system} and 
@@ -1330,7 +1330,7 @@ production cross sections and masses of particles predicted by new physics
 models. The final results are presented in terms of a specific \ac{susy} model 
 and a selection of generic final state topologies, known as \ac{sms}.
 
-The \ac{susy} model considered is the \ac{cmssm}\cite{null} which is described 
+The \ac{susy} model considered is the \ac{cmssm}\cite{} which is described 
 in Section~\ref{sec:the_constrained_minimal_super_symmetric_model}, the 
 parameters chosen are $\tan\beta =3, \mathcal{A}_{0} = , \mu = $ with the 
 exclusion curve presented in the $m_{0}$, $m_{1/2}$ plane. This model combines 
@@ -1419,16 +1419,17 @@ $n_{b}$ bins that drive the limit is on the order of $10-20\%$.
 
 \subsection{Uncertainty on Signal Efficiency} % (fold)
 \label{sub:uncertainty_on_signal_efficiency}
-The  systematic uncertainty on the signal models is due to:\ac{pdf}, the 
-\ac{pdf} set used to generate the sample has effects on both the acceptance and 
-the cross section; The measurement of the integrated luminosity is accounted 
-for in the signal yield; Due to the signal models being created with \ac{cms} 
-FastSim\cite{} rather than \ac{cms} FullSim\cite{} the acceptance differs 
-between the signal and the background samples; The error on the jet energy 
-scale is accounted for on the signal yield; Systematic errors from the 
-cleanings cuts (\Rmiss and ECAL dead regions) and lepton/photon vetoes are also 
-taken in to account; Finally corrections to the \Pbottom-tagging efficiency 
-between the FullSim and the FastSim are applied as well as their errors.
+The systematic uncertainty on the signal models is due to: Choice of \ac{pdf} 
+at generator level, the \ac{pdf} set used to generate the sample has effects on 
+both the acceptance and the cross section; The measurement of the integrated 
+luminosity is accounted for in the signal yield; Due to the signal models being 
+created with \ac{cms} FastSim\cite{} rather than \ac{cms} FullSim\cite{} the 
+acceptance differs between the signal and the background samples; The error on 
+the jet energy scale is accounted for on the signal yield; Systematic errors 
+from the cleanings cuts (\Rmiss and ECAL dead regions) and lepton/photon vetoes 
+are also taken in to account; Finally corrections to the \Pbottom-tagging 
+efficiency between the FullSim and the FastSim are applied as well as their 
+errors.
 
 Each of these uncertainties is expressed as a percentage change in the 
 efficiency from the central value given by applying the full analysis to each 
@@ -1453,6 +1454,85 @@ near and far regions are defined by:
 \end{equation}
 events passing these conditions are classified as being in the ``far'' region, 
 those failing in the ``close'' region.
+
+ 
+\subsection{Choice of \ac{pdf} set at generator level.} % (fold)
+\label{sub:choice_of_pdf_set_at_generator_level_}
+The \ac{pdf} set contains information on the interaction probabilities of the 
+quark and gluons in the proton at different energies, the model used in the 
+production of the Montecarlo simulation has direct impact on the kinematics of 
+the final states, since the \ac{pdf}s have been measured at lower energies than 
+those found at the \ac{lhc} the quark and gluon distributions have been 
+extrapolated from the low energy regime, the uncertainty at high energy is thus 
+significant.
+The uncertainties on acceptance due to the choice of \ac{pdf} set used to 
+generate the signal Montecarlo are calculated in line with the 
+\texttt{PDF4LHC}\cite{pdf4lhc} working group recommendations. On the event 
+level the individual weights are re-calculated by moving between \ac{pdf} set, 
+the weight is based on the energy at which the quarks or gluons interaction and 
+the form given by the \ac{pdf}. This is done for the central value of the three 
+considered \ac{pdf} sets (CTEQ6.1\cite{cteq6.1}, MSTW2008nlo68cl\cite{MSTW} and 
+NNPDF2.0\cite{NNPDF}) and for the variations of each of their errors. The 
+change in analysis efficiency is measured per \HT bin, 
+Figure~\ref{fig:pdfSummary} shows the deviation in efficiency per bin for three 
+examples points in the \ac{cmssm} plane, the error bars represent the \ac{rms} 
+of the spread of the efficiency inside each \ac{pdf} set. It is to be noted 
+that some bins show a large change in efficiency due to the choice of \ac{pdf} 
+set, however these are low efficiency bins where changes in yield of a few 
+events has a large effect, the final result however is driven by the high 
+efficiency bins, hence these large fluctuations can be ignored. The effects on 
+the cross section are studied by re-calculating the \ac{nlo} cross sections of 
+each of the sub processes for each choice of \ac{pdf} set, this is done 
+centrally by \ac{cms}, these changes in cross section are accounted for in the 
+error band on the expected limit.
+
+\begin{figure}[!h]
+  \begin{center}
+    \subfigure[\label{fig:pdf-var-200-500}$m_{0} = 200~GeV, m_{1/2} = 500~GeV $]{ 
+        \includegraphics[width=0.4\textwidth]{figures/Analysis/syst_plots/pdfVars/PDFVarComp_200_500.pdf}
+    }
+    \subfigure[\label{fig:pdf-var-500-500}$m_{0} = 500~GeV, m_{1/2} = 500~GeV $]{ 
+        \includegraphics[width=0.4\textwidth]{figures/Analysis/syst_plots/pdfVars/PDFVarComp_500_500.pdf}
+    }
+    \subfigure[\label{fig:pdf-var-200-1800}$m_{0} = 200~GeV, m_{1/2} = 1800~GeV $]{ 
+        \includegraphics[width=0.4\textwidth]{figures/Analysis/syst_plots/pdfVars/PDFVarComp_200_1800.pdf}
+    }
+    \subfigure[\label{fig:pdf-var-ratio-200-500}$m_{0} = 200~GeV, m_{1/2} =1800~GeV $]{ 
+        \includegraphics[width=0.4\textwidth]{figures/Analysis/syst_plots/pdfVars/CteqOvMSTW_200_500.pdf}
+    }
+    \subfigure[\label{fig:pdf-var-ratio-500-500}$m_{0} = 500~GeV, m_{1/2} = 500~GeV $]{ 
+        \includegraphics[width=0.4\textwidth]{figures/Analysis/syst_plots/pdfVars/CteqOvMSTW_500_500.pdf}
+    }
+    \subfigure[\label{fig:pdf-var-ratio-200-1800}$m_{0} = 200~GeV, m_{1/2} = 1800~GeV $]{ 
+        \includegraphics[width=0.4\textwidth]{figures/Analysis/syst_plots/pdfVars/CteqOvMSTW_200_1800.pdf}
+    }
+    \caption{Figures~\ref{fig:pdf-var-200-500}, \ref{fig:pdf-var-500-500} and 
+    \ref{fig:pdf-var-200-1800} show the efficiency per \HT bin for the 
+    inclusive selection. The three coloured lines represent the analysis 
+    efficiency for a choice of \ac{pdf} set, the error bars are the \ac{rms} of 
+    the change in efficiency per \ac{pdf} set from varying the internal 
+    components by 1$\sigma$ of their error. 
+    Figures~\ref{fig:pdf-var-ratio-200-500}, \ref{fig:pdf-var-ratio-500-500} 
+    and \ref{fig:pdf-var-ratio-200-1800} show the ratio of the change in 
+    efficiency from the default \ac{pdf} set (CTEQ6.1) for three illustrative 
+    points in the $m_{0}, m_{1/2}$ plane of the \ac{cmssm}. The change in 
+    efficiency in the high efficiency bins is on the order of $10\%$ for all 
+    points.}
+    \label{fig:pdfSummary}
+  \end{center}
+\end{figure}
+
+% subsection choice_of_pdf_set_at_generator_level_ (end)
+
+\subsection{Effects of Jet Energy Scale on Signal Efficiency} % (fold)
+\label{sub:effects_of_jet_energy_scale_on_signal_efficiency}
+
+
+
+
+% subsection effects_of_jet_energy_scale_on_signal_efficiency (end)
+
+
 % subsection uncertainty_on_signal_efficiency (end)
 
 
@@ -1464,4 +1544,4 @@ those failing in the ``close'' region.
 
 % section likelihood_model (end)
 
-% chapter the_t_analysis (end)
+% chapter the_t_analysis (end)\
