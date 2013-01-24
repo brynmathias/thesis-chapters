@@ -1,4 +1,4 @@
-\chapter{The \texorpdfstring{$\alpha_{T}$} analysis} % (fold)
+\chapter{The $\alpha_{T}$ analysis} % (fold)
 \label{cha:the_t_analysis}
 \paragraph{Declaration} % (fold)
 \label{par:declaration}
@@ -7,16 +7,16 @@
 
 In this chapter we discuss the main analysis performed as the subject of this 
 thesis. For the theoretical motivations of this search please see 
-Chapter~\ref{cha:theory}. The analysis is based on the full 2011 data set which is made up of \unit{5}{\invfb} of \unit{7}{\TeV} data. However \unit{5}{\invfb} of the 2012 \unit{8}{\TeV} is looked at to measure the performance of the upgraded \alt HLT paths.
+Chapter~\ref{cha:theory}. The analysis is based on the full 2011 data set which is made up of \unit{5}{\invfb} of \unit{7}{\TeV} data. However \unit{11.7}{\invfb} of the 2012 \unit{8}{\TeV} is looked at to measure the performance of the upgraded \alt HLT paths.
 \section{The Problem} % (fold)
 \label{sec:the_problem}
 If Supersymmetry or some other beyond the \ac{sm} theory is to provide a 
-yet undiscovered dark matter candidate, it is predicted that this candidate 
-will interact via the weak nuclear force only. This gives a decay topology 
-involving missing energy in the form of the dark matter particle escaping the 
-detector. Due to the nature of interactions at the L.H.C, these particles would 
-be produced at the end of a decay chain of heavy particles that interact 
-strongly, giving a final topology involving hadronic objects which are 
+yet undiscovered dark matter candidate the \ac{lsp}, it is predicted that this 
+candidate will interact via the weak nuclear force only. This gives a decay 
+topology involving missing energy in the form of the dark matter particle 
+escaping the detector. Due to the nature of interactions at the L.H.C, these 
+particles would be produced at the end of a decay chain of heavy particles that 
+interact strongly, giving a final topology involving hadronic objects which are 
 classified as jets for the purpose of analysis and missing energy.
 There are several \ac{sm} processes that mimic this final state.
 
@@ -32,7 +32,7 @@ possible.
 A secondary QCD background also exists, where due to the requirement of a jet 
 \ET threshold, multiple jets fall under threshold by a few \GeV, this causes a 
 balanced event to look unbalanced as the jets under threshold are no longer 
-considered. It is these events that \alt is designed to remove.
+considered. It is these sources of QCD background that \alt is designed to remove.
 
 The second major background comes from \ac{sm} electro-weak decays and 
 is irreducible as the final states involve real missing energy, from 
@@ -78,10 +78,10 @@ where the jets are opposite in $\phi$ \alt = 0.5, for events with back to back
 jets where one is miss-measured \alt $ < 0.5$.
 However the majority of signals predict many jets in the final state.
 \alt can be generalised to work with n-jets in the flowing way.
-The variables \HT, \HTm and $\Delta$\HT are constructed:
+The variables \HT, \HTm and $\Delta$\HT are constructed,
 \begin{equation}
-  \HT = \sum_{i = 0}^{n~jets}E_{T}^{jet_{i}} \\
-  \HTm = \left|\sum_{i = 0}^{n~jets}\bar{p}_{T}^{jet_{i}}\right|
+  \HT = \sum_{i = 0}^{n~jets}E_{T}^{jet_{i}}, \\
+  \HTm = \left|\sum_{i = 0}^{n~jets}\bar{p}_{T}^{jet_{i}}\right|,
 \end{equation}
 for jets above some predefined threshold \ET which is common for all jet based 
 quantities. The multi jet system is reduced to a pseudo di-jet system by 
@@ -134,7 +134,7 @@ response in transverse energy \ET, with an associated uncertainty of between
 considered in the analysis are required to have \ET $>$ \unit{50}{\GeV}, the 
 highest \ET jet in the events is required to be within tracker acceptance 
 ($|\eta| <$ 2.5) and the sub leading jet is required to have \ET $>$ 
-\unit{100}{\GeV}. In the lowest two offline \HT bins the jet thresholds are scaled to preserve the jet multiplicity, for the bin \unit{275}{\GeV} $<$ \HT < \unit{325}{\GeV}, the jet threshold is \unit{36.$\dot{6}$}{\GeV} and the sub leading jet threshold is \unit{73.$\dot{3}$}{\GeV}. In the bin \unit{325}{\GeV} $<$ \HT < \unit{375}{\GeV}, the jet threshold is \unit{43.$\dot{3}$}{\GeV} and the sub leading jet threshold is \unit{86.$\dot{6}$}{\GeV}.
+\unit{100}{\GeV}. In the lowest two offline \HT bins the jet thresholds are scaled to preserve the jet multiplicity, for the bin \unit{275}{\GeV} $<$ \HT $<$ \unit{325}{\GeV}, the jet threshold is \unit{36.$\dot{6}$}{\GeV} and the sub leading jet threshold is \unit{73.$\dot{3}$}{\GeV}. In the bin \unit{325}{\GeV} $<$ \HT $<$ \unit{375}{\GeV}, the jet threshold is \unit{43.$\dot{3}$}{\GeV} and the sub leading jet threshold is \unit{86.$\dot{6}$}{\GeV}.
 
 The quantities \HT and \HTm are then formed from these jets.
 % paragraph definition_of_event_level_jets (end)
@@ -169,7 +169,6 @@ $<$ 1.45 is made for the photon control sample.
 % paragraph photons (end)
 
 
-\todo[inline]{PUT SOME STUFF IN ABOUT THE CROSS CLEANING}
 
 The use of these control samples will be discussed in Section~\ref{sec:electro_weak_background_prediction}. 
 
@@ -267,7 +266,7 @@ data, a control sample which closely mimics the \ac{sm} processes
 producing missing energy, but has a visible muon or photon in the final state. 
 The background estimation methods are described and the background predictions 
 stated in Section~\ref{sec:electro_weak_background_prediction}.
-
+The next section describes the triggerd used to collect the data samples
 % section event_selection (end)
 
 \section{High Level triggers for the \texorpdfstring{\alt} analysis} % (fold)
@@ -331,7 +330,7 @@ both pass the trigger thresholds the event is accepted and the full detector
 read out is performed. If either \HT or \alt is below threshold, the next jet 
 in \ET order is added, if the jet collection contains more than 3 jets then the 
 \bt approximation is used. All jets in the event are added until either the 
-even is accepted, or there are no more jets to be added above \unit{40}{\GeV}.
+event is accepted, or there are no more jets to be added above \unit{40}{\GeV}.
 
 The effect of switching to the \bt approximation is to accept events that have 
 missing energy due to miss-measurement, when calculating \alt offline these 
@@ -369,9 +368,7 @@ the total efficiency for each \HT bin is then calculated by combining the
 individual efficiencies using a weighted sum based on the fraction of 
 the total luminosity of the sample that each version carries. This accounts for 
 the change in running conditions during the data taking period and the criteria 
-that the trigger suite takes constant rate over the length of then, the higher 
-trigger versions and thresholds generally represent more integrated luminosity 
-due to this.
+that the trigger suite takes constant rate. The higher trigger versions and thresholds generally represent more integrated luminosity due to the evolution of running conditions with time.
 
 The efficiency is measured as a function of the cumulative number of events, ie the efficiency at each point on the x axis is the measured efficiency if a cut were applied offline at that cut value.
 
@@ -554,7 +551,7 @@ in efficiency comes from the disparity between the minimum thresholds for jets
 to enter the \HT and \alt calculations at the HLT and those used in the 
 analysis. The trigger jet \ET threshold is \unit{40}{\GeV} where as 
 the analysis jet \ET threshold in this bin is 
-\unit{36.$\dot{6}$}{\GeV}. The triggers used to take data at the end of this 
+\unit{36.$\cdot {6}$}{\GeV}. The triggers used to take data at the end of this 
 running period also have an \alt threshold above the analysis cut of \altg, which again causes an inefficiency. The list of efficiencies for each \HT 
 bin are shown in Table~\ref{tab:altEfficiencies7TeV}. The trigger efficiencies 
 are measured to better than one percent and this information is used in the 
@@ -731,16 +728,16 @@ produced from \HepProcess{\PZ\to\Pnu\APnu}~+~Jets,
 \HepProcess{\PW\to\Pl\APnu}~+~Jets and \HepProcess{\Ptop\APtop} decay, with 
 smaller contributions from Drell-Yan + Jets, single top production in the s,t 
 and tW channels and from di-boson + Jet events. To predict the number of these 
-events contribution to the number of signal events three control samples are 
-defined and though the use of a montecarlo derived transfer factor the control 
-samples are used to predict the number of \ac{sm} events expected in the 
-signal region.
+events contributing to the number of signal like events three control samples 
+are defined and though the use of a Montecarlo derived transfer factor the 
+control samples are used to predict the number of \ac{sm} events expected in 
+the signal region.
 
 
 Figure~\ref{fig:figures_Analysis_MCexpectation}\cite{CMS-AN-11-517} shows the 
 expectation from simulation in all bins of the hadronic signal region, for the 
 different background samples and an example CMSSM reference model RM1. 
-\todo[inline]{Expalin what RM1 is}
+\todo[inline]{Explain what RM1 is}
 The expected composition of the the backgrounds in the hadronic signal region, 
 as a percentage of the total \ac{sm} background, are summarised in 
 Table~\ref{tab:bg-compositions}. \HepProcess{\PZ\to\nu\nu} contributes 
@@ -951,14 +948,14 @@ Hadronic yield data               & 122                    & 44                 
 \label{par:muon_control_samples_with_out_an_alt_cut_}
   
 The requirement of an \alt value above 0.55 in the previous control samples 
-limits the even yield of each of the montecarlo samples, increasing the 
+limits the event yield of each of the montecarlo samples, increasing the 
 statistical error of the prediction. This is especially evident when splitting 
 the analysis in to more dimensions than the \HT binning. The requirement of an 
 \alt cut on the control samples means that as the muon is not seen by the 
 calorimeter systems the signal trigger can also be used to collect the both the 
 single and di muon background samples.
 The translation factor method can be used to create a prediction from any 
-sample to any other sample if and only if the modelling of the even kinematics 
+sample to any other sample if and only if the modelling of the event kinematics 
 and acceptances of any cuts introduces no large systematic errors. We now show 
 that the montecarlo simulation accurately reproduces the kinematics and 
 acceptance of the \alt cut when applied to electro-weak background samples, 
@@ -968,13 +965,14 @@ enabling the removal of the \alt requirement for the muon control samples.
 The preselection of events in the two muon control samples ensures samples 
 with negligible QCD contamination, which are enriched with 
 \HepProcess{\Ptop\APtop}, \PW~+~Jets and \PZ~+~Jet events. This is shown for 
-the \Pmuon~+~Jets sample in Figure~\ref{fig:singleMuControl} and for the 
-\HepProcess{\Pmuon\APmuon}~+~Jets sample in Figure~\ref{fig:diMuControl}, in 
+the \Pmu~+~Jets sample in Figure~\ref{fig:singleMuControl} and for the 
+\HepProcess{\Pmu\Pmu}~+~Jets sample in Figure~\ref{fig:diMuControl}, in 
 both sets of plots the expected number of QCD events from montecarlo simulation 
-is less than one even at any \alt value for \unit{5}{\invfb} of integrated 
+is less than one event at any \alt value for \unit{5}{\invfb} of integrated 
 luminosity. The requirement of tight isolation on each of the muons is largely 
 responsible for the purity of the sample, the transverse mass and di-muon mass 
 window cuts ensure the sample is rich in electro-weak events with visible muons.
+The agreement between data and montecarlo in these plots is good and the simulation models the \alt acceptance well, the systematic assigned to this acceptance is detailed in Section~\ref{sec:systematic_uncertainties_on_the_electro_weak_background_model_}.
 
 
 \begin{figure}[|h]
@@ -1055,7 +1053,7 @@ used for each of the muon~+~Jets control samples are listed in
 Table~\ref{tab:triggers-mu-mumu}.
 
 \begin{table}[ht!]
-  \caption{List of triggers used for the larger \mj and \mmj samples.}
+  \caption{List of triggers used for the larger \Pmu~+~Jets and $\mu\mu$~+~Jets samples.}
   \label{tab:triggers-mu-mumu}
   \centering
   \footnotesize
@@ -1099,16 +1097,15 @@ Where $\mathcal{A}_{n_{b}}$ is the b-tag bin dependant normalisation factor and
 
 The exponential behaviour is due to several features, the first of which is the 
 improvement of the jet energy resolution with \HT due to the larger energies 
-deposited in the calorimeter systems. \todo[inline]{find CMS JET ENERGY 
-RESOLUTION PLOT JETMET PAS???} Secondly for the region \HT $>$ \unit{375}{\GeV} 
-the jet multiplicity rises slowly with \HT, which due to the combinatorics  
-used in the \alt calculation, results in a narrower \alt distribution peaked at 
-0.5. Due to the signal region definition and the exponentially falling nature 
-of the QCD background component is reduced to zero above 
-$\approx$~\unit{500}{\GeV}, thus the validity of the QCD background model above 
-\unit{575}{\GeV} is not of consequence to the final analysis, however the model 
-chosen is shown to be valid over the whole \HT region of the analysis as shown 
-below.
+deposited in the calorimeter systems. Secondly for the region \HT $>$ 
+\unit{375}{\GeV} the jet multiplicity rises slowly with \HT, which due to the 
+combinatorics  used in the \alt calculation, results in a narrower \alt 
+distribution peaked at 0.5. Due to the signal region definition and the 
+exponentially falling nature of the QCD background component is reduced to zero 
+above $\approx$~\unit{500}{\GeV}, thus the validity of the QCD background model 
+above \unit{575}{\GeV} is not of consequence to the final analysis, however the 
+model chosen is shown to be valid over the whole \HT region of the analysis as 
+shown below.
 
 \ac{ml} values for \kqcd and $\mathcal{A}_{n_{b}}$ are found by the final 
 likelihood fit, however \kqcd is first constrained by a measurement in a 
@@ -1241,7 +1238,7 @@ method.
 
 The closure tests between the background samples are designed to test the 
 Montecarlo's ability to model kinematic effects; such as the \alt acceptance; 
-\Pmuon acceptance and \Pphoton acceptance, instrumental effects such as; 
+\Pmu acceptance and \Pphoton acceptance, instrumental effects such as; 
 reconstruction efficiencies and the effects of pile up on isolation and finally 
 the theoretical precision of the production and decay cross sections and their 
 relative contributions to the \ac{sm} background. These individual components 
@@ -1261,31 +1258,31 @@ The individual closure tests and fits to the \HT dependance of the ratio
 $\left(N_{obs} - N_{pred}\right)/N_pred$ are shown in 
 Appendix~\ref{sec:Closure_tests_and_systematic_uncertainties}.
 The Figures~\ref{fig:closure-with-alphat1} show the closure of the prediction 
-between \mj(no \alt) $\rightarrow$ \mj(\altg) and \mmj(no \alt) $\rightarrow$ 
-\mmj(\altg) for two samples, one with no requirement on the number of \Pbottom 
+between \Pmu~+~Jets(no \alt) $\rightarrow$ \Pmu~+~Jets(\altg) and $\mu\mu$~+~Jets(no \alt) $\rightarrow$ 
+$\mu\mu$~+~Jets(\altg) for two samples, one with no requirement on the number of \Pbottom 
 tagged jets ($n_{b}$), which increases the precision of the measurement, and 
 one requiring $n_{b} = 1$, the read line is the result of a one parameter fit. 
 The level of closure shows that the Montecarlo accurately models the \alt 
 acceptance, with no significant bias.
 
-Figure~\ref{fig:closure-with-alphat2} shows the closure between \mj 
-$\rightarrow$ \mmj and between \Pphoton+jets $\rightarrow$ \mmj over both the 
+Figure~\ref{fig:closure-with-alphat2} shows the closure between \Pmu~+~Jets 
+$\rightarrow$ $\mu\mu$~+~Jets and between \Pphoton+jets $\rightarrow$ $\mu\mu$~+~Jets over both the 
 full \HT range using only \unit{3.9}{\invfb} of integrated luminosity and for 
 \HT $>$ \unit{375}{\GeV} using the full data set. Again the red lines are the 
 result of fitting with a one parameter fit.
 
 Figure~\ref{fig:btag-multi-closure} tests the closure between samples with 
-differing $n_{b}$ the three tests are \mj($n_b = 0$)$\rightarrow$\mj($n_b = 
-1$,no \alt), \mj($n_b = 1$)$\rightarrow$\mj($n_b > 1$,no \alt) and \mj($n_b = 
-0$)$\rightarrow$\mj($n_b > 1$,no \alt). Figure~\ref{fig:btag-samples} also 
+differing $n_{b}$ the three tests are \Pmu~+~Jets($n_b = 0$)$\rightarrow$\Pmu~+~Jets($n_b = 
+1$,no \alt), \Pmu~+~Jets($n_b = 1$)$\rightarrow$\Pmu~+~Jets($n_b > 1$,no \alt) and \Pmu~+~Jets($n_b = 
+0$)$\rightarrow$\Pmu~+~Jets($n_b > 1$,no \alt). Figure~\ref{fig:btag-samples} also 
 tests the closure between samples with differing $n_{b}$, here the test is 
-between \mj($n_b = 0$)$\rightarrow$\mmj($n_b = 0$) and \mj($n_b =  
-1$)$\rightarrow$\mmj($n_b = 1$).
+between \Pmu~+~Jets($n_b = 0$)$\rightarrow$$\mu\mu$~+~Jets($n_b = 0$) and \Pmu~+~Jets($n_b =  
+1$)$\rightarrow$$\mu\mu$~+~Jets($n_b = 1$).
 
 Finally any dependance on pile up is measured by comparing a subset of the 
 individual closure tests between samples which have pile up subtracted jets and 
-those that do not. The example closures are \mj(no \alt)$\rightarrow$\mj(\altg),
-\mj(no \alt)$\rightarrow$\mmj(no \alt), and \mj($n_b = 0$)$\rightarrow$\mj($n_b 
+those that do not. The example closures are \Pmu~+~Jets(no \alt)$\rightarrow$\Pmu~+~Jets(\altg),
+\Pmu~+~Jets(no \alt)$\rightarrow$$\mu\mu$~+~Jets(no \alt), and \Pmu~+~Jets($n_b = 0$)$\rightarrow$\Pmu~+~Jets($n_b 
 = 1$,no \alt).
 
 \subsection{Motivating the combined systematic on the translation factors}
@@ -1450,7 +1447,7 @@ which has small mass splitting and thus the effects of jet energy scale and
 the analysis efficiency due to jet energy scale and \ac{pdf} variations. The 
 near and far regions are defined by:
 \begin{equation}
-  m_{sq}(m_{gl}) - m_{lsp} > \unit{350}{\GeV} \&\& m_{sq}(m_{gl}) > \unit{475}{\GeV}
+  m_{sq}(m_{gl}) - m_{lsp} > \unit{350}{\GeV}~and~m_{sq}(m_{gl}) > \unit{475}{\GeV}
 \end{equation}
 events passing these conditions are classified as being in the ``far'' region, 
 those failing in the ``close'' region.
@@ -1577,8 +1574,7 @@ Montecarlo and the accuracy of modelling the \texttt{DeadECAL} filter is
 measured, the ratio of the normalised cut efficiency on data and simulation 
 shows a miss modelling at the level of 1.8$\%$, this is taken as the 
 uncertainty on the Montecarlo model of the detector failures. 
-Figures~\ref{fig:cmssm-dead-ecal},~\ref{fig:sms-dead-ecal-ineff}~and~\ref{fig:sm
-s-dead-ecal-near} show the relative change in efficiency due to the 
+Figures~\ref{fig:cmssm-dead-ecal},~\ref{fig:sms-dead-ecal-ineff}~and~\ref{fig:sms-dead-ecal-near} show the relative change in efficiency due to the 
 \texttt{DeadECAL} filter on the considered signal models.
 
 Again regions with compressed spectra and many jet topologies are more effected 
@@ -1603,11 +1599,405 @@ and are used directly as the systematic error.
 \label{sec:likelihood_model}
 \paragraph{Declaration} % (fold)
 \label{par:declaration}
-The likelihood model was implemented, developed, commissioned and deployed in anger by Edward Laird and is best described in his thesis\cite{ted}. However for completeness the likelihood model is described in this section.
+The likelihood model was implemented, developed, commissioned and deployed in 
+anger by Edward Laird and is best described in his thesis\cite{ted}. However 
+for completeness the likelihood model is described in this section.
 % paragraph declaration (end)
+The likelihood is used to gauge the agreement between the observed yields in 
+the hadronic signal region and the predicted yields obtained from the control 
+samples.
+For the hadronic sample the likelihood is as follows, for $N$ bins in \HT, let 
+$n_{i}$ represent the observed hadronic yield in \HT bin $i$, the likelihood 
+for observing $n_{i}$ events is then
+\begin{equation}
+  L_{had} = \prod_{i}Pois\left(n_{i}|b_{i}+s_{i}\right)
+\label{eqn:l_had}
+\end{equation}
+
+where $b_{i}$ is the number of expected background events and $s_{i}$ the 
+expected signal yield, which is dependant on the signal model being considered.
+Pois refers to the Poisson distribution of these values, $b_{i}$ is equal to 
+the sum of electro-weak events expected plus the number of QCD events ($b_{i} = 
+EWK_{i}+QCD_{i}$) expected per bin.
+
+In Section~\ref{sec:estimating_the_residual_qcd_background_component_} it was 
+shown that the QCD contribution can be modelled as an exponentially falling as 
+a function of \HT.
+\begin{equation}
+  R_{\alt}(\HT) = A_{qcd}e^{-\kqcd \HT}
+\end{equation}
+Where $A_{QCD}$ and \kqcd have been constrained by measurements in the control regions. $QCD_{I}$ is then given as:
+\begin{equation}
+  QCD_{i} = m_{i}A_{qcd}e^{-\kqcd \left<\HT\right>^{i}}.
+  \label{eqn:qcdi}
+\end{equation}
+Where $m_{i}$ is the number of events per \HT bin which fail \altg and $\left<\HT\right>^{i}$ is the mean \HT of the the bin.
 
 
+For the electro-weak background two components are considered, $f^{i}_{Zinv}$ represents the fraction of the total electro-weak background contributed by \HepProcess{\PZ\to\Pnu\Pnu}~+~Jets events. This is models as a liner component:
+\begin{equation}
+  f^{i}_{Zinv} = f^{0}_{Zinv}+\frac{\left<\HT\right>^{i}-\left<\HT\right>^{0}}{\left<\HT\right>^{N-1}-\left<\HT\right>^{0}}\left(f^{N-1}_{Zinv}-f^{i}_{Zinv}\right),
+\end{equation}
+where $f^{i}_{Zinv}$ and $f^{N-1}_{Zinv}$ are floating parameters who's final values are limited between zero and one. The total number of \HepProcess{\PZ\to\Pnu\Pnu}~+~Jets events per bin is then given by:
+\begin{equation}
+  Z^{i}_{inv} = f^{i}_{Zinv} \times EWK^{i}
+\end{equation}
+with the remaining background from other electro-weak processes given by:
+\begin{equation}
+  \slashed{Z}=\left(1-f^{i}_{Zinv}\right)\times EWK^{i}.
+\end{equation}
 
+In each \HT bin $i$ there are three background measurements, $n_{\Pphoton}^{i}, 
+n^{i}_{\mu}$ and $n^{i}_{\mu\mu}$, representing the event counts from the 
+photon, muon and di-muon control samples respectively, each of these yields has 
+a Montecarlo counter-part yield. From the Montecarlo it is also possible to 
+extract $MC^{i}_{Zinv}$ and $MC^{i}_{\slashed{Z}inv}$. After defining:
+\begin{equation}
+  r^{i}_{\Pphoton} = \frac{MC^{i}_{\Pphoton}}{MC^{i}_{Zinv}},~ r^{i}_{\mu\mu} = \frac{MC^{i}_{\mu\mu}}{MC^{i}_{Zinv}},~r^{i}_{\mu} = \frac{MC^{i}_{\mu}}{MC^{i}_{\slashed{Z}inv}}
+\end{equation}
+three likelihood functions are defined:
+\begin{equation}
+  L_{\Pphoton} = \prod_{i}Pois\left(n^{i}_\Pphoton|\rho^{j}_{\Pphoton\PZ} \cdot  r^{i}_{\Pphoton}\cdot  Z_{inv}^{i} \right),
+  \label{eqn:l_photon}
+\end{equation}
+\begin{equation}
+  L_{\mu\mu} = \prod_{i}Pois\left(n^{i}_{\mu\mu}|\rho^{j}_{\mu\mu\PZ}\cdot r^{i}_{\mu\mu}\cdot  Z^{i}_{inv}\right),
+  \label{eqn:l_mumu}
+\end{equation}
+\begin{equation}
+  L_{\mu} = \prod_{i}Pois\left(n^{i}_{\mu}|\rho^{j}_{\Pmu\slashed{\PZ}}\cdot  r^{i}_{\mu}\cdot  \slashed{Z}^{i}+s^{i}_{\mu}\right),
+  \label{eqn:l_mu}
+\end{equation}
+Equation~\eqref{eqn:l_photon} is used to estimate the \ac{ml} values for 
+$Z_{inv}$ which is the expectation of the number of 
+\HepProcess{\PZ\to\Pnu\Pnu}~+~Jets events in the hadronic signal region using 
+the observations $n_{\Pphoton}^{i}$ in the photon control sample and the ratio 
+$r^{i}_{\Pphoton}$, similarly the number of \HepProcess{\PZ\to\Pnu\Pnu}~+~Jets 
+events expected in the signal region predicted by the 
+\HepProcess{\PZ\to\Pmu\Pmu}~+~Jets are found using Equation~\eqref{eqn:l_mumu}. 
+The non \HepProcess{\PZ\to\Pnu\Pnu} backgrounds are estimated by the \ac{ml} 
+value for Equation~\eqref{eqn:l_mu} in a similar way with the addition of 
+$s^{i}_{\Pmu}$ which represents the signal contamination in the single muon 
+control sample. The measurements and ratios are considered simultaneously 
+though the relationships defined in \todo[inline]{read the note here and 
+reference the right equations.}
+The ratios $r^{i}_{\Pphoton}, r^{i}_{\mu\mu}$ and $r^{i}_{\mu}$ are the inverse 
+of the translation factors given by Equation~\eqref{eq:traslationfactor}. The 
+parameters $\rho_{\Pphoton\PZ}, \rho_{\mu\mu\PZ}$ and $\rho_{\mu\slashed{\PZ}}$ 
+are correction factors that account for the systematic uncertainty on each of 
+the ratios and $\sigma_{\Pphoton\PZ}, \sigma_{\mu\mu\PZ}$ and 
+$\sigma_{\mu\slashed{\PZ}}$ represent the relative systematic uncertainties for 
+the control sample constraints, these are accounted for in:
+\begin{equation}
+  L_{EWK~syst} = \prod_{j}Gaus\left(1.0|\rho_{\mu\slashed{\PZ}}^{j},\sigma_{\mu\slashed{\PZ}}^{j}\right)\times Gaus\left(1.0|\rho_{\mu\mu\PZ}^{j},\sigma_{\mu\mu\PZ}^{j}\right)\times Gaus\left(1.0|\rho_{\Pphoton\PZ}^{j},\sigma_{\Pphoton\PZ}^{j}\right)
+\end{equation}
+Three parameters per control sample are used to cover the eight \HT bins as 
+show in Table~\ref{tab:systMap}.
+\begin{table}\centering
+\caption{The systematic parameters used in \HT bins.}
+\label{tab:systMap}
+\begin{tabular}{|l|cccccccc|}
+\hline
+\HT bin ($i$)         & 0 & 1 & 2 & 3 & 4 & 5 & 6 & 7 \\
+\hline
+syst. parameter ($j$) & 0 & 0 & 0 & 0 & 1 & 1 & 2 & 2 \\
+\hline
+\end{tabular}
+\end{table}
+
+Alternatively the single muon control sample can be used to constrain the total 
+electro-weak background, we can define:
+\begin{equation}
+  r^{\prime i}_{\mu} = \frac{MC^{i}_{\mu}}{MC^{i}_{tot}}
+\end{equation}
+and
+\begin{equation}
+  L^{\prime}_{\mu} = \prod_{i}Pois\left(n^{i}_{\mu}|\rho_{\mu\slashed{\PZ}}\times r^{\prime i}_{\mu}\times EWK^{i} + s_{\mu}^{i}\right)
+\end{equation}
+
+\paragraph{Signal Contamination} % (fold)
+\label{par:signal_contamination}
+The cross section for each model is represented by $x$, $l$ represents the 
+total recorded luminosity considered by the analysis in the signal region. The 
+efficiency is defined as $\epsilon^{i}_{had}$ for the signal region and 
+$\epsilon^{i}_{\mu}$ for the single muon control sample, $\delta$ represents 
+the relative uncertainty on signal measured in the previous section, $\delta$ 
+is taken to be fully correlated though the \HT bins. $\rho_{sig}$ is the 
+correction factor to the signal yield which accommodates this uncertainty. 
+$\mathcal{f}$ represents an unknown multiplicative factor on the signal cross 
+section, for which an allowed interval is computed.
+The expected signal yield $s^{i}$ from Equation~\eqref{eqn:l_had} is defined as:
+\begin{equation}
+  s^{i}_{had} = \mathcal{f}\rho_{sig}xl\epsilon_{had}^{i},
+  \label{eqn:sihad}
+\end{equation}
+the signal contamination $s^{i}_{\mu}$ is given by:
+\begin{equation}
+  s^{i}_{\mu} = \mathcal{f}\rho_{\mu}xl\epsilon_{\mu}^{i}.
+  \label{eqn:simu}
+\end{equation}
+The systematic on signal uncertainty is included by in an additional term in 
+the likelihood:
+\begin{equation}
+  L_{sig} = Gaus\left(1.0|\rho_{sig},\delta \right).
+\end{equation}
+% paragraph signal_contamination (end)
+\paragraph{The total likelihood} % (fold)
+\label{par:the_total_likelihood}
+The total likelihood for a given signal selection $k(\HT,n_b)$ is given by:
+\begin{equation}
+  L^{k} = L^{k}_{had}\times L^{k}_{\mu} \times L_{\Pphoton}^{k} \times L_{\mu\mu}^{k},
+  \label{eqn:totallikelihood}
+\end{equation}
+each $k$ has $3+N$ nuisance parameters; $\mathcal{A}_{QCD}, f^{0}_{Zinv}, 
+f^{N-1}_{Zinv}, \left\{EWK^{i}\right\}^{N-1}_{i=0}$. The 11 parameters $\kqcd, 
+\rho_{sig}$, and $\rho_{\Pphoton\PZ}^{k}, \rho_{\mu\mu}^{k}, \rho_{\mu}^{k}$ 
+with $j = \left\{0,1,2 \right\}$ are shared between the selections, the total 
+likelihood is then given as:
+\begin{equation}
+  L = L_{sig} \times L_{EWK syst} \times \prod_{k} L^{k}_{had} \times L^{k}_{\mu} \times L^{k}_{\Pphoton} \times L^{k}_{\mu\mu}.
+\end{equation}
+% paragraph the_total_likelihood (end)
 % section likelihood_model (end)
 
-% chapter the_t_analysis (end)\
+\section{Final Results} % (fold)
+\label{sec:final_results}
+The yields obtained in the hadronic signal regions are tested for their 
+compatibility with the background predicted by the likelihood model both in 
+terms of agreement with the Standard Model and interpretations in the forms of 
+limits on new physics models.
+\subsection{Agreement with the Standard Model} % (fold)
+\label{sub:agreement_with_the_standard_model}
+To test the level of agreement with the standard model the signal terms are 
+dropped from the likelihood, which is then maximised over all parameters using 
+Roofit\cite{ROOSTATS} and MINUIT\cite{MINOS}. The individual yields and errors from the fits are shown in Appendix~\todo[inline]{put these tables in teh appendix}. The total background and data yields and their 
+errors as given by the \ac{ml} fit are show below in Table~\ref{tab:fit-summary}.
+
+\begin{table}[ht!]
+\caption{Comparison of the measured yields in the different \HT
+  and b jet multiplicity bins for the hadronic sample with the SM
+  expectations and combined statistical and systematic uncertainties
+  given by the simultaneous fit.}  
+\label{tab:fit-summary}
+\centering
+\begin{tabular}{ lllllllll }
+\hline
+\HT (GeV)        & 275--325             & 325--375             & 375--475             & 475--575             & 575--675             & 675--775             & 775--875             & 875--$\infty$       \\ [1.000000ex]
+\hline
+0 b jets SM          & $2933^{+56}_{-52}$   & $1139^{+17}_{-40}$   & $783^{+17}_{-27}$    & $261^{+14}_{-8}$     & $81.5^{+6.5}_{-6.5}$ & $34.2^{+4.0}_{-3.8}$ & $10.4^{+2.8}_{-1.8}$ & $5.3^{+1.7}_{-1.1}$ \\ 
+0 b jets Data        & $2919$               & $1166$               & $769$                & $255$                & $91$                 & $31$                 & $10$                 & $4$                 \\ 
+\hline
+1 b jet SM          & $630^{+26}_{-25}$    & $271^{+10}_{-16}$    & $202^{+10}_{-6}$     & $78.0^{+6.9}_{-1.9}$ & $24.2^{+2.9}_{-2.0}$ & $10.6^{+1.7}_{-1.3}$ & $2.9^{+0.9}_{-0.5}$  & $2.2^{+0.7}_{-0.4}$ \\ 
+1 b jet Data        & $614$                & $294$                & $214$                & $71$                 & $20$                 & $6$                  & $4$                  & $0$                 \\ 
+\hline
+2 b jets SM          & $162^{+13}_{-12}$    & $61.8^{+4.8}_{-6.3}$ & $58.8^{+4.8}_{-2.6}$ & $28.0^{+3.5}_{-1.1}$ & $9.0^{+1.4}_{-1.0}$  & $7.1^{+1.4}_{-1.0}$  & $0.6^{+0.3}_{-0.2}$  & $0.9^{+0.4}_{-0.2}$ \\ 
+2 b jets Data        & $160$                & $68$                 & $52$                 & $19$                 & $11$                 & $7$                  & $0$                  & $2$                 \\ 
+\hline
+$\geq$ 3 b jets SM   & $10.5^{+3.5}_{-2.2}$ & $7.1^{+2.2}_{-1.8}$  & $5.8^{+1.4}_{-0.9}$  & $3.1^{+1.0}_{-0.7}$  & $1.7^{+0.5}_{-0.4}$  & $0.7^{+0.5}_{-0.4}$  & $0.1^{+0.1}_{-0.1}$  & $0.2^{+0.1}_{-0.1}$ \\ 
+$\geq$ 3 b jets Data & $10$                 & $8$                  & $8$                  & $1$                  & $0$                  & $0$                  & $0$                  & $0$                 \\ 
+\hline
+\end{tabular}
+\end{table}
+
+
+
+Figures~\ref{fig:best-fit-0-btag},~\ref{fig:best-fit-1-btag},~\ref{fig:best-fit-2-btag}~and~\ref{fig:best-fit-3-btag} show comparisons of the observed yields 
+and the Standard Model only expectations given by the simultaneous fit for 0, 
+1, 2, $\ge3$ exclusive \Pbottom-tag bins. A good agreement with the standard 
+model is observed in all \HT and \Pbottom-tag categories. Given the lack of a 
+signal like observation limits are set on the production masses and cross 
+sections of beyond the standard model particles. 
+
+\begin{figure}[h!]
+  \begin{center}
+    \subfigure[Hadronic sample]{\includegraphics[width=0.48\textwidth]{figures/Analysis/stats_plots/v8/hadronic_signal_fit_logy55_0b}}
+    \subfigure[$\mu$ + jets sample]{\includegraphics[width=0.48\textwidth]{figures/Analysis/stats_plots/v8/muon_control_fit_logy55_0b}} \\
+    \subfigure[$\mu\mu$ + jets sample]{\includegraphics[width=0.48\textwidth]{figures/Analysis/stats_plots/v8/mumu_control_fit_logy55_0b}}
+    \subfigure[$\gamma$ + jets sample]{\includegraphics[width=0.48\textwidth]{figures/Analysis/stats_plots/v8/photon_control_fit_logy55_0b}} \\
+    \caption{\label{fig:best-fit-0-btag} Comparison of the observed
+      yields and SM expectations given by the simultaneous fit in bins
+      of \HT for the (a) hadronic, (b) \Pmu~+~Jets, (c)
+      $\mu\mu$~+~Jets and (d) \Pphoton~+~Jets
+      samples when requiring exactly zero reconstructed
+      b-jets. The observed event yields in data (black dots) and the
+      expectations and their uncertainties, as determined by the
+      simultaneous fit, for all SM processes (light blue solid line
+      with dark blue bands) are shown. For illustrative purposes only,
+      an example signal model is superimposed on the SM expectation
+      (magenta solid line). The expected signal contamination in the
+      control samples is negligible.} 
+  \end{center}
+\end{figure}
+
+\newpage
+\begin{figure}[h!]
+  \begin{center}
+    \subfigure[Hadronic sample]{\includegraphics[width=0.48\textwidth]{figures/Analysis/stats_plots/v8/hadronic_signal_fit_logy55_1b}}
+    \subfigure[$\mu$ + jets sample]{\includegraphics[width=0.48\textwidth]{figures/Analysis/stats_plots/v8/muon_control_fit_logy55_1b}} \\
+    \subfigure[$\mu\mu$ + jets sample]{\includegraphics[width=0.48\textwidth]{figures/Analysis/stats_plots/v8/mumu_control_fit_logy55_1b}}
+    \subfigure[$\gamma$ + jets sample]{\includegraphics[width=0.48\textwidth]{figures/Analysis/stats_plots/v8/photon_control_fit_logy55_1b}} \\
+    \caption{\label{fig:best-fit-1-btag} Comparison of the observed
+      yields and SM expectations given by the simultaneous fit in bins
+      of \HT for the (a) hadronic, (b) \Pmu~+~Jets, (c) $\mu\mu$~+~Jets and (d) \Pphoton~+~Jets
+      samples when requiring exactly one reconstructed
+      b-jet. The observed event yields in data (black dots) and the
+      expectations and their uncertainties, as determined by the
+      simultaneous fit, for all SM processes (light blue solid line
+      with dark blue bands) are shown. For illustrative purposes only,
+      an example signal model is superimposed on the SM expectation
+      (magenta solid line). The expected signal contamination in the
+      control samples is negligible.}
+  \end{center}
+\end{figure}
+
+\newpage
+\begin{figure}[h!]
+  \begin{center}
+    \subfigure[Hadronic sample]{\includegraphics[width=0.48\textwidth]{figures/Analysis/stats_plots/v8/hadronic_signal_fit_logy55_2b}}
+    \subfigure[$\mu$ + jets sample]{\includegraphics[width=0.48\textwidth]{figures/Analysis/stats_plots/v8/muon_control_fit_logy55_2b}} \\
+    \subfigure[$\mu\mu$ + jets sample]{\includegraphics[width=0.48\textwidth]{figures/Analysis/stats_plots/v8/mumu_control_fit_logy55_2b}}
+    \subfigure[$\gamma$ + jets sample]{\includegraphics[width=0.48\textwidth]{figures/Analysis/stats_plots/v8/photon_control_fit_logy55_2b}} \\
+    \caption{\label{fig:best-fit-2-btag} Comparison of the observed
+      yields and SM expectations given by the simultaneous fit in bins
+      of \HT for the (a) hadronic, (b) \Pmu~+~Jets, (c) $\mu\mu$~+~Jets and (d) \Pphoton~+~Jets
+      samples when requiring exactly two reconstructed
+      b-jets. The observed event yields in data (black dots) and the
+      expectations and their uncertainties, as determined by the
+      simultaneous fit, for all SM processes (light blue solid line
+      with dark blue bands) are shown. For illustrative purposes only,
+      an example signal model is superimposed on the SM expectation
+      (magenta solid line). The expected signal contamination in the
+      control samples is negligible.}
+  \end{center}
+\end{figure}
+
+\newpage
+\begin{figure}[h!]
+  \begin{center}
+    \subfigure[Hadronic sample]{\includegraphics[width=0.48\textwidth]{figures/Analysis/stats_plots/v8/hadronic_signal_fit_logy55_gt2b}}
+    \subfigure[$\mu$ + jets sample]{\includegraphics[width=0.48\textwidth]{figures/Analysis/stats_plots/v8/muon_control_fit_logy55_gt2b}} \\
+    \caption{\label{fig:best-fit-3-btag} Comparison of the observed
+      yields and SM expectations given by the simultaneous fit in bins
+      of \HT for the (a) hadronic and (b) \Pmu~+~Jets samples when
+      requiring at least three reconstructed b-jets. The observed
+      event yields in data (black dots) and the expectations and their
+      uncertainties, as determined by the simultaneous fit, for all SM
+      processes (light blue solid line with dark blue bands) are
+      shown. For illustrative purposes only, an example signal model
+      is superimposed on the SM expectation (magenta solid line). The
+      expected signal contamination in the \Pmu~+~Jets control sample is
+      negligible.}
+  \end{center}
+\end{figure}
+
+
+% subsection agreement_with_the_standard_model (end)
+
+
+
+\subsection{Interpretation in terms of new physics models.} % (fold)
+\label{sub:interpretation_in_terms_of_new_physics_models_}
+Due to the lack of a signal like observation limits are set on new physics models. The first of these is the \ac{cmssm}, at each point in the $m_{0}, m_{1/2}$ parameter space the \ac{susy} particle spectrum is calculated using \texttt{SoftSUSY}\cite{Allanach:2001kg}, the signal events are generated at leading order using \texttt{Pythia 6.4}\cite{pythia}, the \ac{nlonll} process dependant cross sections are calculated using \texttt{PROSPINO}\cite{Beenakker:1996ch} using the \texttt{CTEQ6}\cite{cteq6.1} \ac{pdf} set. The previously measured errors on the background prediction, total collected luminosity and signal yield are included in the calculation of the limit. Although signal contributions from each data observation (hadronic, \Pmu~+~Jets, $\mu\mu$~+~Jets and \Pphoton~+~Jets) are included, the only relevant signal contribution to the \ac{cmssm} is from the hadronic signal regions.
+Figure~\ref{fig:cmssm-limit} shows the expected limit contour with it's associated $\pm1\sigma$ error band as well as the observed limit. The limit is calculated using \ac{nlonll} cross sections using CL$_s$\cite{cls-pdg}, the limit presented is for the 95$\%$ confidence level. For the choice of $\tan\beta = 10$, $A_0 = $\unit{0}{\GeV}, $\mu > 0$ and a top quark mass $m_{top} = $\unit{173.2}{\GeV}, squarks with masses below \unit{1.25}{\TeV} are excluded at 95$\%$ confidence, gluninos with a mass up to \unit{1.25}{\TeV} are also excluded when $m_{0} < $\unit{600}{\GeV}. In the region $m_{0} > $\unit{600}{\GeV} gluino masses below \unit{700}{\GeV} are excluded as are squarks with masses between \unit{1.25-2.5}{\TeV}, $m_{0}$ dependant.
+
+\begin{figure}[h!]
+  \begin{center}
+    \includegraphics[width=0.7\textwidth]{figures/Analysis/stats_plots/v8/CMSSM.pdf}
+    \caption{\label{fig:cmssm-limit} Exclusion contours at 95$\%$ CL in
+      the CMSSM ($m_0, m_{1/2}$) plane ($\tan \beta = 10, A_0 = 0, \mu
+      > 0$) calculated with \ac{nlonll} \ac{susy} production cross sections and
+      the CL$_{s}$ method. The solid black line indicates the observed
+      exclusion region. The dotted-dashed black lines represent the
+      observed excluded region when varying the cross section by its
+      theoretical uncertainty. The expected median exclusion region
+      (green dashed line) $\pm 1 \sigma$ (green band) are also
+      shown. }
+  \end{center}
+\end{figure}
+
+
+THe observed yields are also used to set limits on \ac{sms} models. This allows interpretation of the results for defined mass splittings and final states. Each \ac{sms} sample is characterised by the \ac{susy} particle which is pair produced, either a squark or a gluino and the \ac{lsp} mass, the individual points are then defined by the mass difference between the pair produced particle and the \ac{lsp}.
+The decay topologies are further specialised by enforcing the final state quarks to be heavy flavours, either top or bottom quarks. The decays of the considered models are summarised in Table~\ref{tab:sms}
+As before the experimental uncertainties on the background estimation, collected luminosity, and the model dependant signal uncertainties are accounted for in the calculation of the limit.
+
+In the regions $m_{\Psquark(\PSgluino)} - m_{LSP} < \unit{200}{\GeV}$ and $m_{\Psquark(\PSgluino)} < \unit{350}{\GeV}$ any selection efficiency is strongly dependant on the presence of initial state radiation which is not well modelled in the Montecarlo simulation, hence these regions are not considered when setting limits in the \ac{sms} models, for the model \texttt{T1tttt} the ignored region is expanded to cover $m_{\PSgluino} - m_{LSP} < \unit{400}{\GeV}$.
+
+Figure~\ref{fig:limits-sms} shows the observed limits at 95$\%$ confidence level obtained using CL$_{s}$ as a function of $m_{\Psquark(\PSgluino)}$ and $m_{LSP}$. The solid black lines represent the observed median limit assuming \ac{nlonll}\cite{Beenakker:1996ch,susy-nlo-nll} \ac{susy} cross sections for squark pair production in the limit of de-coupled gluinos and vice versa for the gluino production models. The thin black lines represent the limit wen this cross section is varied by $\pm1\sigma$ of the theoretical uncertainty, the dashed purple lines represent the expected limit and it's $\pm1\sigma$ uncertainty.
+
+The best limits are set on the mass of the pair produced sparticles are at low $m_{LSP}$ due to the large mass splitting between the sparticles and the \ac{lsp} producing high \pt final state objects. The limits degrade as the decay spectra become compressed, above a certain $m_{LSP}$ no limit is set.
+
+No exclusion on direct stop, stop production (\texttt{T2tt}) is expected assuming the \ac{nlonll} production cross section for $m_{LSP} > \unit{50}{\GeV}$. Figure~\ref{fig:t2tt-mlsp50} shows the observed upper limit at 95$\%$ confidence level on the cross section as a function of $m_{stop}$ for an \ac{lsp} with a mass of \unit{50}{\GeV}.
+
+
+\begin{figure}[h!]
+  \begin{center}
+    \subfigure[\label{fig:t1}\HepProcess{\PSgluino\PSgluino\to\Pquark\APquark\PSneutralino\Pquark\APquark\PSneutralino} (\texttt{T1})]{
+      \includegraphics[width=0.45\textwidth]{figures/Analysis/stats_plots/v8/T1}
+    }
+    \subfigure[\label{fig:t2}\HepProcess{\Psquark\Psquark\to\Pquark\PSneutralino\APquark\PSneutralino} (\texttt{T2})]{ 
+      \includegraphics[width=0.45\textwidth]{figures/Analysis/stats_plots/v8/T2}
+    } \\
+    \subfigure[\label{fig:t2tt}\HepProcess{\PStop\PStop\to\Ptop\PSneutralino\APtop\PSneutralino} (\texttt{T2tt})]{ 
+      \includegraphics[width=0.45\textwidth]{figures/Analysis/stats_plots/v8/T2tt}
+    } 
+    \subfigure[\label{fig:t2bb}\HepProcess{\PSbottom\PSbottom\to\Pbottom\PSneutralino\APbottom\PSneutralino} (\texttt{T2bb})]{ 
+      \includegraphics[width=0.45\textwidth]{figures/Analysis/stats_plots/v8/T2bb}
+    } \\
+    \subfigure[\label{fig:t1tttt}\HepProcess{\PSgluino\PSgluino\to\Ptop\APtop\PSneutralino\Ptop\APtop\PSneutralino}(\texttt{T1tttt})]{
+      \includegraphics[width=0.45\textwidth]{figures/Analysis/stats_plots/v8/T1tttt}
+    } 
+    \subfigure[\label{fig:t1bbbb}\HepProcess{\PSgluino\PSgluino\to\Pbottom\APbottom\PSneutralino\Pbottom\APbottom\PSneutralino} (\texttt{T1bbbb})]{
+      \includegraphics[width=0.45\textwidth]{figures/Analysis/stats_plots/v8/T1bbbb}
+    } \\
+    \caption{\label{fig:limits-sms}Upper limit on cross section at
+      95\% CL as a function of $m_{\Psquark}$ or $m_{\PSgluino}$ and $m_{\rm
+        LSP}$ for various simplified models. The solid thick black
+      line indicates the observed exclusion region assuming \ac{nlonll}
+      \ac{susy} production cross section. The thin black lines represent
+      the observed excluded region when varying the cross section by
+      its theoretical uncertainty. The dashed purple lines indicate
+      the median (thick line) $\pm 1 \sigma$ (thin lines) expected
+      exclusion regions.  }
+  \end{center}
+\end{figure}
+
+\begin{table}[h!]
+  \caption{Production and decay modes for various simplified models.}
+  \label{tab:sms}
+  \centering
+  \footnotesize
+  \begin{tabular}{ llc }
+    \hline
+    Model & Production and decay modes & Figure showing limit \\ [0.5ex]
+    \hline
+    \texttt{T1} & \HepProcess{\PSgluino\PSgluino\to\Pquark\APquark\PSneutralino\Pquark\APquark\PSneutralino} & \ref{fig:t1} \\
+    \texttt{T2} & \HepProcess{\Psquark\Psquark\to\Pquark\PSneutralino\APquark\PSneutralino} & \ref{fig:t2} \\
+    \texttt{T2tt} & \HepProcess{\PStop\PStop\to\Ptop\PSneutralino\APtop\PSneutralino} & \ref{fig:t2tt},\ref{fig:t2tt-mlsp50} \\
+    \texttt{T2bb} & \HepProcess{\PSbottom\PSbottom\to\Pbottom\PSneutralino\APbottom\PSneutralino} & \ref{fig:t2bb} \\
+    \texttt{T1tttt} & \HepProcess{\PSgluino\PSgluino\to\Ptop\APtop\PSneutralino\Ptop\APtop\PSneutralino} & \ref{fig:t1tttt} \\
+    \texttt{T1bbbb} & \HepProcess{\PSgluino\PSgluino\to\Pbottom\APbottom\PSneutralino\Pbottom\APbottom\PSneutralino} & \ref{fig:t1bbbb} \\
+    \hline
+  \end{tabular}
+\end{table}
+
+
+\begin{figure}[t!]
+  \begin{center}
+    \includegraphics[width=0.6\textwidth]{figures/Analysis/stats_plots/v8/T2tt_1D.pdf}
+    \caption{\label{fig:t2tt-mlsp50} Excluded cross section versus top
+      squark mass for a model in which pair-produced top squarks decay
+      to two top quarks and a two neutralinos. The solid blue line
+      indicates the observed cross section upper limit (95\% CL) as a
+      function of the top squark mass, $m_{\PStop}$. The dashed orange
+      line and blue band indicate the median expected excluded cross
+      section with experimental uncertainties. The solid black line
+      with grey band indicates the \ac{nlonll} \ac{susy} top squark
+      pair-production cross section and theoretical uncertainties.}
+  \end{center}
+\end{figure}
+
+% subsection interpretation_in_terms_of_new_physics_models_ (end)
+
+% section final_results (end)
+
+% chapter the_t_analysis (end)
