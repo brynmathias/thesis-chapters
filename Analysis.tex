@@ -707,14 +707,26 @@ run as in the 2011 run.
 
 % section high_level_triggers_for_the_alt_analysis (end)
 
-\section{Extension to higher analysis dimensions.} % (fold)
+\section{Extension to higher analysis dimensions. B-tagging} % (fold)
 \label{sec:extension_to_higher_analysis_dimensions_}
+\paragraph{Declaration} % (fold)
+\label{par:declaration}
 Whilst it should be noted that the author did not contribute towards the 
 extension of the analysis to include a dimension based on the measurement of 
 the number of jets containing \Pbottom quarks in the final state, the final 
 analysis does include this extension, hence the \Pbottom-tagging procedure is 
 explained in sufficient detail as to understand the process but not to elude to 
 all the nuances of the method in the following section.
+% paragraph declaration (end)
+
+
+
+
+
+Jets are tagged as originating from a \Pbottom decay via the identification of a displaced vertex as it takes the \Pbottom a finite amount of time to decay, during this time the quark which is not produced at rest travels away from the initial interaction point, where upon decaying a secondary decay vertex is created. The algorithm used to classify these jets as containing a \Pbottom quark is the \ac{csv} tagger. The ``Medium'' working point is used in the analysis, which requires at cut of $>0.679$ on the \ac{csv} value. This results in a gluon/light quark miss tag rate of $1\%$ where ``light'' quarks are \Pup, \Pdown and \Pstrange types. The efficiency for tagging \Pbottom quark jets in the range $60-70\%$\cite{ref-b-tag-eff} is achieved, this efficiency depends on the jet \PT. The discriminator is supported by the \ac{cms} \Pbottom physics object group\cite{ref-b-pog-algo} and its performance is well understood. The Montecarlo miss tag and identification rates are re-weighted to agree with data observations, thus provide an accurate background prediction for the high multiplicity \Pbottom-tagged bins which are dominated by the miss tag of light quarks as \Pbottom quarks.
+
+
+
 % section extension_to_higher_analysis_dimensions_ (end)
 
 \clearpage
