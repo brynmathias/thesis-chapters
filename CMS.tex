@@ -1,32 +1,123 @@
 \chapter{The CMS detector} % (fold)
 \label{cha:the_cms_detector}
+\begin{figure}[htbp]
+  \centering
+    \includegraphics[width=\textwidth]{figures/CMS/cmsDetector.png}
+  \caption{A perspective view of the C.M.S detector\cite{cms-sketchup}.}
+  \label{fig:figures_CMS_cmsDetector}
+\end{figure}
+
+The \ac{cms} detector was designed and built to study proton-proton 
+interactions at the \ac{lhc} with the aim of discovering the Higgs boson and 
+searching for beyond the standard model physics signals. The detector is 
+constructed in a traditional onion layer design with high precision tracking 
+detectors nearest the interaction point and high energy resolution calorimetric 
+detectors in the outer layers. Due to the predicted presence of missing energy \MET in new physics models, energy measurement over the full $\eta$ range is required. As allured to in the name the possibilities of the new physics models containing muons and the clean Higgs decay \HepProcess{\PH\to\PZ\PZ\to\Pmu\Pmu\Pmu\Pmu}, the detector was built with accurately reconstructing muons with \PT of \unit{1}{\TeV}, due to the prevalence of lepton signals and the ability to distinguish these leptons from the large amount of hadronic fragmentation caused by smashing two protons together at a centre of mass energy of \unit{14}{\TeV} the \ac{cms} Electromagnetic calorimeter was also designed to have precise energy measurement and fine grain spatial resolution, this design feature was also necessitated by the Higgs decay channel \HepProcess{\PH\to\Pphoton\Pphoton}.The other new feature of \ac{cms} is the use silicon detectors through out for particle tracking these give precise track reconstruction abilities and the associated fine grain resolution in both position and momentum. All the sub-detectors save the muon system are contained with in the barrel of a \unit{4}{\tesla} superconducting solenoid. This magnet provides the particle track bending required for momentum and lepton charge measurement.In this section the key detector elements and their design parameters are discussed in Section~\ref{cha:offline_object_deffinitions} the construction of offline physics objects is discussed.
 
 \section{The Silicon Tracker} % (fold)
 \label{sec:the_silicon_tracker}
+\begin{figure}[htbp]
+  \centering
+    \includegraphics[width=0.5\textwidth]{figures/CMS/tracker.png}
+  \caption{The \ac{cms} tracking system, pixel detectors are situated at the centre of the detector closest to the interaction point, surrounded by layers of silicon strip detectors\cite{cms-sketchup}.}
+  \label{fig:figures_CMS_tracker}
+\end{figure}
+
+The design goal for the \ac{cms} tracking system was to produce a system that 
+can precisely and efficiently measure the trajectories of charged particles 
+produced in \ac{lhc} collisions. The tracking system surrounds the collision 
+point and has a length of \unit{5.8}{\meter} and a diameter of 
+\unit{2.5}{\meter}. At full the instantaneous \ac{lhc} luminosity of 
+\unit{10$^{34}$}{\lumiunits} an average of 1000 charged particles from more 
+than 20 proton-proton interactions will be produced per \unit{25}{\nano\second} 
+bunch crossing. This imposes the requirements of high granularity so that the 
+individual particles and their trajectories can be distinguished and a fast 
+response so that the hits can be assigned to the correct bunch crossing. The 
+technical implications of these requirements imply both a large amount of 
+on-detector electronics and their associated cooling equipment. This large 
+amount of tracker material increases the multiple scattering, bremsstrahlung, 
+photon conversion and nuclear interactions of the particles which are 
+traversing the tracking system, this in turn limits the position and energy 
+resolution of the calorimeter systems. A compromise between the material budget 
+of the tracking system, the desired features and the requirement for the 
+tracking system to have an expected life time of 10 years in a high radiation 
+environment, this was to construct the tracking system using only solid state 
+silicon detector technology.
+
+The \ac{cms} tracking system is formed of a pixel detector with three layers 
+situated between \unit{4.4}{\cm} and \unit{10.2}{\cm} of the interaction point 
+and a silicon strip tracker with 10 barrel layers extending outwards to a 
+radius of \unit{1.1}{\meter} from the interaction point. The barrel layers of 
+both the pixel and strip detectors are complimented by layers of either pixel 
+or strip disks which extend the acceptance of the tracker to \mETA $<$ 2.5. The 
+resulting structure is that of a detector with \unit{200}{\squaremetre} of 
+active silicon which makes the \ac{cms} tracker the largest detector of it's 
+type ever constructed.
+
+The individual pixels that comprise the pixel detector are 100 $\times$ 
+150 $\micro\textrm{m}^{2}$ which corresponds to an occupancy of around 10$^{-4}$ 
+per bunch crossing. The detector cell size for the Microstrip detectors at a 
+radius between \unit{20-55}{\cm} is \unit{10}{\cm} $\times$ 
+\unit{180}{\micro\meter} which leads to an average occupancy of 2-3$\%$, 
+further out the minimum cell size is increased to \unit{25}{\cm} $\times$ 
+\unit{180}{\micro\meter} with an occupancy of around 1$\%$. The tracker 
+performance is extensively documented in \cite{cmstracking}.
 
 % section the_silicon_tracker (end)
 
-\section{The Electro-Magnetic Calorimeter} % (fold)
-\label{sec:the_electro_magnetic_calorimeter}
+\section{The Electromagnetic Calorimeter (ECAL).} % (fold)
+\label{sec:the_electromagnetic_calorimeter}
+The \ac{cms} electromagnetic calorimeter is a hermetic homogeneous calorimeter constructed from lead tungstate (PbWO$_{4}$) crystals. The ECAL is split into two parts, a barrel covering $|\eta| < 1.479$ read out by avalanche photodiodes and the two end-caps covering $1.479 < |\eta| < 3.0$, read out by vacuum phototriodes.
+
+Lead tungstate crystals were chosen because of their short radiation length $X_{0}= \unit{0.89}{\cm}$, fast scintillation and radiation hardness. During the research and development program it was shown that radiation damage does not affect the scintillation method or the uniformity of the emitted light yield along the crystal, it only effects the transparency through the creation of colour centres. This will be monitored throughout the lifetime of the ECAL via a light injection system\cite{Smith:2000p5245}.
+
+The barrel crystals have a front face of \unit{22 $\times$ 22}{\mm\squared}, 
+this corresponds to the Moliere radius of $\approx $ \unit{22}{\mm}; with a 
+length of \unit{230}{\mm} giving a each crystal length of $25.8 X_{0}$ where $X_{0}$ is amount of material required for 68$\%$ of an electromagneticly interacting particle's energy to be radiated in the form of bremsstrahlung or pair production whilst traversing that material. They are arranged in 36 super-modules, forming two half barrels. The crystal axes are skewed at \unit{3}{\degree} with respect to the vertex and each covers \unit{1}{\degree} in $\phi ~ \& ~ \eta$
+
+The End cap crystals are arranged in two semi-circular `Dees', groups of 
+$5\times 5$ crystals are canter-levered on a aluminium backing plate. The 
+crystals are again skewed with regard to the interaction vertex, however they 
+are arranged in an $x-y$ grid rather than a $\phi - \eta$ grid. The crystal 
+dimensions are different to the barrel, in that the cross section is \unit{28.6 
+$\times$ 28.6}{\mm\squared}, with a length of \unit{220}{\mm} corresponding to 
+24.7 radiation lengths
+
+In addition to the ECAL there is a pre-shower detector situated at $1.653 < 
+\mETA < 2.6$, this provides identification of elections against minimum 
+ionising particles and improves the position measurement of electrons and 
+photons in the ECAL endcaps.
+\begin{figure}[ht]
+  \centering
+    \includegraphics[width=0.5\textwidth]{figures/CMS/laser_history_2011-12.png}
+  \caption{Relative response to laser light (440 nm) measured by the ECAL laser monitoring system, averaged over all crystals in bins of pseudorapidity, for the 2011 and 2012 data taking periods 
+The response change observed in the ECAL channels is of the order of a few percent in the barrel, while it reaches up to 25$\%$ in the most forward endcap regions used for electron and photon reconstruction. The response change is up to 60$\%$ in channels closest to the beam pipe. These measurements are used to correct the physics data. \\ The bottom plot shows the instantaneous LHC luminosity delivered during this time period.\cite{CMS-DP-2012-015}}
+  \label{fig:figures_CMS_laser_history_2011-12}
+\end{figure}
+
+Figure~\ref{fig:figures_CMS_laser_history_2011-12} shows the change in response 
+of the ECAL during running, due to the formation of colour centres, this 
+response is measured using laser light at 440 nm and is used to correct the 
+energies recorded in data during each run to form a uniform response.
 
 % section the_electro_magnetic_calorimeter (end)
 
-\section{The Hadronic Calorimeter} % (fold)
+\section{The Hadronic Calorimeter.} % (fold)
 \label{sec:the_hadronic_calorimeter}
 
 % section the_hadronic_calorimeter (end)
 
-\section{The CMS Muon system} % (fold)
+\section{The \ac{cms} Muon system.} % (fold)
 \label{sec:the_cms_muon_system}
 
 % section the_cms_muon_system (end)
 
-\section{The Level One Trigger System} % (fold)
+\section{The Level One Trigger System.} % (fold)
 \label{sec:the_level_one_trigger_system}
 
 % section the_level_one_trigger_system (end)
 
-\section{The High Level Trigger System} % (fold)
+\section{The High Level Trigger System.} % (fold)
 \label{sec:the_high_level_trigger_system}
 
 % section the_high_level_trigger_system (end)
