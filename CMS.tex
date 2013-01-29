@@ -67,13 +67,29 @@ performance is extensively documented in \cite{cmstracking}.
 
 \section{The Electromagnetic Calorimeter (ECAL).} % (fold)
 \label{sec:the_electromagnetic_calorimeter}
-The \ac{cms} electromagnetic calorimeter is a hermetic homogeneous calorimeter constructed from lead tungstate (PbWO$_{4}$) crystals. The ECAL is split into two parts, a barrel covering $|\eta| < 1.479$ read out by avalanche photodiodes and the two end-caps covering $1.479 < |\eta| < 3.0$, read out by vacuum phototriodes.
+The \ac{cms} electromagnetic calorimeter is a hermetic homogeneous calorimeter 
+constructed from lead tungstate (PbWO$_{4}$) crystals. The ECAL is split into 
+two parts, a barrel covering $|\eta| < 1.479$ read out by avalanche photodiodes 
+and the two end-caps covering $1.479 < |\eta| < 3.0$, read out by vacuum 
+phototriodes.
 
-Lead tungstate crystals were chosen because of their short radiation length $X_{0}= \unit{0.89}{\cm}$, fast scintillation and radiation hardness. During the research and development program it was shown that radiation damage does not affect the scintillation method or the uniformity of the emitted light yield along the crystal, it only effects the transparency through the creation of colour centres. This will be monitored throughout the lifetime of the ECAL via a light injection system\cite{Smith:2000p5245}.
+Lead tungstate crystals were chosen because of their short radiation length 
+$X_{0}= \unit{0.89}{\cm}$, fast scintillation and radiation hardness. During 
+the research and development program it was shown that radiation damage does 
+not affect the scintillation method or the uniformity of the emitted light 
+yield along the crystal, it only effects the transparency through the creation 
+of colour centres. This will be monitored throughout the lifetime of the ECAL 
+via a light injection system\cite{Smith:2000p5245}.
 
 The barrel crystals have a front face of \unit{22 $\times$ 22}{\mm\squared}, 
 this corresponds to the Moliere radius of $\approx $ \unit{22}{\mm}; with a 
-length of \unit{230}{\mm} giving a each crystal length of $25.8 X_{0}$ where $X_{0}$ is amount of material required for 68$\%$ of an electromagneticly interacting particle's energy to be radiated in the form of bremsstrahlung or pair production whilst traversing that material. They are arranged in 36 super-modules, forming two half barrels. The crystal axes are skewed at \unit{3}{\degree} with respect to the vertex and each covers \unit{1}{\degree} in $\phi ~ \& ~ \eta$
+length of \unit{230}{\mm} giving a each crystal length of $25.8 X_{0}$ where 
+$X_{0}$ is amount of material required for 68$\%$ of an electromagneticly 
+interacting particle's energy to be radiated in the form of bremsstrahlung or 
+pair production whilst traversing that material. They are arranged in 36 
+super-modules, forming two half barrels. The crystal axes are skewed at 
+\unit{3}{\degree} with respect to the vertex and each covers \unit{1}{\degree} 
+in $\phi ~ \& ~ \eta$
 
 The End cap crystals are arranged in two semi-circular `Dees', groups of 
 $5\times 5$ crystals are canter-levered on a aluminium backing plate. The 
@@ -83,15 +99,24 @@ dimensions are different to the barrel, in that the cross section is \unit{28.6
 $\times$ 28.6}{\mm\squared}, with a length of \unit{220}{\mm} corresponding to 
 24.7 radiation lengths
 
+The crystals are read out with avalanche photo-diodes in the barrel region which coveres $\mETA < 1.479$ and with vacuum photo-triodes in the end cap region which covers $1.479 < \mETA < 3.0$.
+
 In addition to the ECAL there is a pre-shower detector situated at $1.653 < 
 \mETA < 2.6$, this provides identification of elections against minimum 
 ionising particles and improves the position measurement of electrons and 
 photons in the ECAL endcaps.
 \begin{figure}[ht]
   \centering
-    \includegraphics[width=0.5\textwidth]{figures/CMS/laser_history_2011-12.png}
-  \caption{Relative response to laser light (440 nm) measured by the ECAL laser monitoring system, averaged over all crystals in bins of pseudorapidity, for the 2011 and 2012 data taking periods 
-The response change observed in the ECAL channels is of the order of a few percent in the barrel, while it reaches up to 25$\%$ in the most forward endcap regions used for electron and photon reconstruction. The response change is up to 60$\%$ in channels closest to the beam pipe. These measurements are used to correct the physics data. \\ The bottom plot shows the instantaneous LHC luminosity delivered during this time period.\cite{CMS-DP-2012-015}}
+    \includegraphics[width=0.75\textwidth]{figures/CMS/laser_history_2011-12.png}
+  \caption{Relative response to laser light (440 nm) measured by the ECAL laser 
+monitoring system, averaged over all crystals in bins of pseudo-rapidity, for 
+the 2011 and 2012 data taking periods 
+The response change observed in the ECAL channels is of the order of a few 
+percent in the barrel, while it reaches up to 25$\%$ in the most forward endcap 
+regions used for electron and photon reconstruction. The response change is up 
+to 60$\%$ in channels closest to the beam pipe. These measurements are used to 
+correct the physics data. \\ The bottom plot shows the instantaneous LHC 
+luminosity delivered during this time period.\cite{CMS-DP-2012-015}}
   \label{fig:figures_CMS_laser_history_2011-12}
 \end{figure}
 
@@ -102,10 +127,43 @@ energies recorded in data during each run to form a uniform response.
 
 % section the_electro_magnetic_calorimeter (end)
 
-\section{The Hadronic Calorimeter.} % (fold)
+\section{The Hadronic Calorimeter (HCAL).} % (fold)
 \label{sec:the_hadronic_calorimeter}
+The design of the \ac{cms} HCAL is constrained by the resize requirements of 
+fitting the tracking system, ECAL and HCAl inside the solenoid magnet. The HCAL 
+is situated between the ECAL which ends at a radius of \unit{1.77}{\meter} and 
+the solenoid which starts at a radius of \unit{2.95}{\meter}. This constraint 
+limits the amount of material which can be put in place to fully contain the 
+hadronic showers. To overcome this an outer lay of instrumentation is placed 
+outside of the magnet and cryogenic system to catch the hadronic tails. The 
+full containment of the hadronic objects is necessary for precise missing 
+energy measurement, which is a key discriminatory feature for new physics 
+models with undetectable final state particles.
 
+The hadronic calorimeter is split in to three sub detectors, the hadronic 
+barrel (HB) \mETA $< 1.3$ , hadronic endcaps (HE) $1.3 < \mETA < 3.0$ and a 
+forward calorimeter (HF) $3.0 < \mETA < 5.5$.
+\todo[inline]{put in the dimensions of the plates, the read outs and the HPD info. this should flush this out enough.}
+The HB and HE are comprised of layered tiles of brass absorber plates 
+interspaced with scintillator plates which are read out by wave length shifting 
+fibres. The total absorber thickness varies between 5.2 and 10.6 interaction 
+lengths, the ECAL adds approximately one extra interaction length.
+The HF is constructed from radiation hard quartz fibres, this enables the 
+detector to survive in the very forward regions of the detector where 
+unprecedented levels of radiation are experienced.
+
+The hadronic outer (HO) which is situated outside the solenoid used the 
+solenoid coils as an extra absorber adding extra interaction lengths in the 
+barrel region ensuring full containment of hadronic showers. The HO is 
+constructed from layers of scintillator tiles which are then read out by 
+wavelength shifting fibres.
 % section the_hadronic_calorimeter (end)
+
+
+\section{The \ac{cms} Super-Conducting Solenoid} % (fold)
+\label{sec:the_cms_super_conducting_solenoid}
+
+% section the_cms_super_conducting_solenoid (end)
 
 \section{The \ac{cms} Muon system.} % (fold)
 \label{sec:the_cms_muon_system}
