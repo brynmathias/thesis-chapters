@@ -12,7 +12,27 @@ interactions at the \ac{lhc} with the aim of discovering the Higgs boson and
 searching for beyond the standard model physics signals. The detector is 
 constructed in a traditional onion layer design with high precision tracking 
 detectors nearest the interaction point and high energy resolution calorimetric 
-detectors in the outer layers. Due to the predicted presence of missing energy \MET in new physics models, energy measurement over the full $\eta$ range is required. As allured to in the name the possibilities of the new physics models containing muons and the clean Higgs decay \HepProcess{\PH\to\PZ\PZ\to\Pmu\Pmu\Pmu\Pmu}, the detector was built with accurately reconstructing muons with \PT of \unit{1}{\TeV}, due to the prevalence of lepton signals and the ability to distinguish these leptons from the large amount of hadronic fragmentation caused by smashing two protons together at a centre of mass energy of \unit{14}{\TeV} the \ac{cms} Electromagnetic calorimeter was also designed to have precise energy measurement and fine grain spatial resolution, this design feature was also necessitated by the Higgs decay channel \HepProcess{\PH\to\Pphoton\Pphoton}.The other new feature of \ac{cms} is the use silicon detectors through out for particle tracking these give precise track reconstruction abilities and the associated fine grain resolution in both position and momentum. All the sub-detectors save the muon system are contained with in the barrel of a \unit{4}{\tesla} superconducting solenoid. This magnet provides the particle track bending required for momentum and lepton charge measurement.In this section the key detector elements and their design parameters are discussed in Section~\ref{cha:offline_object_deffinitions} the construction of offline physics objects is discussed.
+detectors in the outer layers. Due to the predicted presence of missing energy 
+\MET in new physics models, energy measurement over the full $\eta$ range is 
+required. As allured to in the name the possibilities of the new physics models 
+containing muons and the clean Higgs decay 
+\HepProcess{\PH\to\PZ\PZ\to\Pmu\Pmu\Pmu\Pmu}, the detector was built with 
+accurately reconstructing muons with \PT of \unit{1}{\TeV}, due to the 
+prevalence of lepton signals and the ability to distinguish these leptons from 
+the large amount of hadronic fragmentation caused by smashing two protons 
+together at a centre of mass energy of \unit{14}{\TeV} the \ac{cms} 
+Electromagnetic calorimeter was also designed to have precise energy 
+measurement and fine grain spatial resolution, this design feature was also 
+necessitated by the Higgs decay channel \HepProcess{\PH\to\Pphoton\Pphoton}.The 
+other new feature of \ac{cms} is the use silicon detectors through out for 
+particle tracking these give precise track reconstruction abilities and the 
+associated fine grain resolution in both position and momentum. All the 
+sub-detectors save the muon system are contained with in the barrel of a 
+\unit{4}{\tesla} superconducting solenoid. This magnet provides the particle 
+track bending required for momentum and lepton charge measurement.In this 
+section the key detector elements and their design parameters are discussed in 
+Section~\ref{cha:offline_object_deffinitions} the construction of offline 
+physics objects is discussed.
 
 \section{The Silicon Tracker} % (fold)
 \label{sec:the_silicon_tracker}
@@ -55,9 +75,9 @@ active silicon which makes the \ac{cms} tracker the largest detector of it's
 type ever constructed.
 
 The individual pixels that comprise the pixel detector are 100 $\times$ 
-150 $\micro\textrm{m}^{2}$ which corresponds to an occupancy of around 10$^{-4}$ 
-per bunch crossing. The detector cell size for the Microstrip detectors at a 
-radius between \unit{20-55}{\cm} is \unit{10}{\cm} $\times$ 
+150 $\micro\textrm{m}^{2}$ which corresponds to an occupancy of around 
+10$^{-4}$ per bunch crossing. The detector cell size for the Microstrip 
+detectors at a radius between \unit{20-55}{\cm} is \unit{10}{\cm} $\times$ 
 \unit{180}{\micro\meter} which leads to an average occupancy of 2-3$\%$, 
 further out the minimum cell size is increased to \unit{25}{\cm} $\times$ 
 \unit{180}{\micro\meter} with an occupancy of around 1$\%$. The tracker 
@@ -71,7 +91,7 @@ The \ac{cms} electromagnetic calorimeter is a hermetic homogeneous calorimeter
 constructed from lead tungstate (PbWO$_{4}$) crystals. The ECAL is split into 
 two parts, a barrel covering $|\eta| < 1.479$ read out by avalanche photodiodes 
 and the two end-caps covering $1.479 < |\eta| < 3.0$, read out by vacuum 
-phototriodes.
+photo-triodes.
 
 Lead tungstate crystals were chosen because of their short radiation length 
 $X_{0}= \unit{0.89}{\cm}$, fast scintillation and radiation hardness. During 
@@ -99,7 +119,9 @@ dimensions are different to the barrel, in that the cross section is \unit{28.6
 $\times$ 28.6}{\mm\squared}, with a length of \unit{220}{\mm} corresponding to 
 24.7 radiation lengths
 
-The crystals are read out with avalanche photo-diodes in the barrel region which coveres $\mETA < 1.479$ and with vacuum photo-triodes in the end cap region which covers $1.479 < \mETA < 3.0$.
+The crystals are read out with avalanche photo-diodes in the barrel region 
+which covers $\mETA < 1.479$ and with vacuum photo-triodes in the end cap 
+region which covers $1.479 < \mETA < 3.0$.
 
 In addition to the ECAL there is a pre-shower detector situated at $1.653 < 
 \mETA < 2.6$, this provides identification of elections against minimum 
@@ -143,36 +165,89 @@ models with undetectable final state particles.
 The hadronic calorimeter is split in to three sub detectors, the hadronic 
 barrel (HB) \mETA $< 1.3$ , hadronic endcaps (HE) $1.3 < \mETA < 3.0$ and a 
 forward calorimeter (HF) $3.0 < \mETA < 5.5$.
-\todo[inline]{put in the dimensions of the plates, the read outs and the HPD info. this should flush this out enough.}
+
 The HB and HE are comprised of layered tiles of brass absorber plates 
 interspaced with scintillator plates which are read out by wave length shifting 
 fibres. The total absorber thickness varies between 5.2 and 10.6 interaction 
-lengths, the ECAL adds approximately one extra interaction length.
-The HF is constructed from radiation hard quartz fibres, this enables the 
-detector to survive in the very forward regions of the detector where 
-unprecedented levels of radiation are experienced.
+lengths, the ECAL adds approximately one extra interaction length. The 
+scintillators are segmented in to towers of area $\Delta\eta\times\Delta\phi = 
+0.087\times0.087$ in the barrel and $\Delta\eta\times\Delta\phi = 
+0.17\times0.17$ in the end caps. The light produced and in the scintillators is 
+merged in the wavelength shifting fibres and then read out using hybrid 
+photo-diodes.The HF is constructed from radiation hard quartz fibres, this 
+enables the detector to survive in the very forward regions of the detector 
+where unprecedented levels of radiation are experienced.
 
 The hadronic outer (HO) which is situated outside the solenoid used the 
 solenoid coils as an extra absorber adding extra interaction lengths in the 
 barrel region ensuring full containment of hadronic showers. The HO is 
-constructed from layers of scintillator tiles which are then read out by 
-wavelength shifting fibres.
+constructed from layers of scintillator tiles, the light from which is then merged in the wavelength shifting fibres and read out using hybrid photo-diodes.
 % section the_hadronic_calorimeter (end)
 
 
 \section{The \ac{cms} Super-Conducting Solenoid} % (fold)
 \label{sec:the_cms_super_conducting_solenoid}
-
+The requirement for precise muon momentum measurements for muons with \PT $>$ 
+\unit{1}{\TeV} infers the requirement of large bending power, this requirement 
+forces the choice of a superconducting magnet. The \ac{cms} magnet is 
+\unit{13}{\meter} long, has an inner diameter of \unit{6}{\meter} and provides 
+a \unit{4}{\tesla} magnetic field, which gives a bending power of 
+\unit{12}{\tesla\meter} before the muon bending angle is measured by the muon 
+system. The bore of the solenoid contains the tracking and calorimeter systems.
+The magnet is constructed from Niobium-Titanium superconductor embedded in an 
+aluminium stabiliser is coiled in four layers resulting in \unit{220}{\ton} of 
+cold mass. This is then cooled to around \unit{4}{\kelvin} using liquid helium 
+and a current of $\approx$\unit{20}{\kilo\ampere} is applied to generate the 
+magnetic field.
 % section the_cms_super_conducting_solenoid (end)
 
 \section{The \ac{cms} Muon system.} % (fold)
 \label{sec:the_cms_muon_system}
+The \ac{cms} muon system is designed to provide accurate muon \PT measurements 
+($\sqrt{\PT}/\PT < 0.1$) for muons over a large \PT range. Due to the 
+cylindrical nature of the solenoid, the muon system is also designed to be 
+cylindrical. The muon system has three purposes the first is the identification 
+of muons, secondly the momentum measurement of these muons and thirdly to 
+provide information to the trigger system.
+The muon system uses three types of gaseous detectors for particle tracking and 
+identification, in the barrel region where the magnetic field is uniform, drift 
+chambers (DT) are used, these cover the region $\mETA < 1.2$ are are 
+interspaced between the layers of the magnetic flux return plates. In the end 
+cap regions where the muon and background rates are higher and the magnetic 
+field is non-uniform, cathode strip chambers (CSC) are are used due to their 
+fast response, radiation hardness and fine grain segmentation, the CSC's cover 
+$0.9 < \mETA < 2.4$. Due to the initial uncertainty on the background rates and 
+the \unit{25}{\nano\second} bunch crossing intervals expected when the \ac{lhc} 
+is running under design conditions a complementary dedicated muon triggering 
+system consisting of resistive plate chambers (RCP) was added in the range 
+$\mETA < 1.6$, the RCPs provide a fast, independent and fine grain system for 
+which to trigger on muon objects in the harshest of running conditions.
 
+Due to multiple scattering and the shear quantity of detector material before 
+the first muon station momentum measurement using the muon system only is 
+accurate to a level of $\approx10\%$ below \unit{200}{\GeV} and accurate to a 
+level of $15-40\%$, \mETA dependant for \unit{1}{\TeV} muons, when including 
+the tracker information in the muon momentum measurement the resolution is 
+improved to $\approx1\%$ below \unit{200}{\GeV} and to about $5\%$ for 
+\unit{1}{\TeV} muons.
 % section the_cms_muon_system (end)
 
 \section{The Level One Trigger System.} % (fold)
 \label{sec:the_level_one_trigger_system}
-
+The \ac{cms} trigger system is designed in two levels, the first, the \Lone 
+trigger is built using custom electronics and is designed to reduce the input 
+rate of 40 million events per second to a manageable rate of 100 thousand 
+events per second. Information from the calorimeter and muon systems only are 
+considered as the time required to read out the tracking information is 
+prohibitive at this level. Two separate trigger systems, one performing 
+triggering on the calorimeter system, the other performing triggering on the 
+muon systems are employed. For a detailed discussion of the calorimeter 
+triggering algorithms and their performance see 
+Chapter~\ref{cha:level_one_trigger}. The information from these two sub 
+triggers is passed to the global trigger, where the decision to accept the 
+event or not is made. 
+The muon trigger considers information from each of the DT, CSC and RCP muon systems. Tracks are created from the hits in each of the sub systems and fitted, the muon momentum is then calculated from the radius of curvature of these muons, the four highest \PT muon candidates are then passed to the global trigger.
+Electron and photon candidates are created by the regional calorimeter trigger, which is in turn read out by the global calorimeter trigger (GCT), the GCT creates jet candidates, energy and missing energy sums, the four highest \ET jet candidates, the energy sums and the electron/photon candidates are then passed to the global trigger where the final trigger decisions are made. These decisions can require information from a single detector or can require cross objects such as the requirement of an energy sum value and a muon.
 % section the_level_one_trigger_system (end)
 
 \section{The High Level Trigger System.} % (fold)
