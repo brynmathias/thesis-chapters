@@ -2,7 +2,7 @@
 \label{cha:the_cms_detector}
 \begin{figure}[htbp]
   \centering
-    \includegraphics[width=\textwidth]{figures/CMS/cmsDetector.png}
+    \includegraphics[width=0.9\textwidth]{figures/CMS/cmsDetector.png}
   \caption{A perspective view of the C.M.S detector\cite{cms-sketchup}.}
   \label{fig:figures_CMS_cmsDetector}
 \end{figure}
@@ -246,12 +246,71 @@ triggering algorithms and their performance see
 Chapter~\ref{cha:level_one_trigger}. The information from these two sub 
 triggers is passed to the global trigger, where the decision to accept the 
 event or not is made. 
-The muon trigger considers information from each of the DT, CSC and RCP muon systems. Tracks are created from the hits in each of the sub systems and fitted, the muon momentum is then calculated from the radius of curvature of these muons, the four highest \PT muon candidates are then passed to the global trigger.
-Electron and photon candidates are created by the regional calorimeter trigger, which is in turn read out by the global calorimeter trigger (GCT), the GCT creates jet candidates, energy and missing energy sums, the four highest \ET jet candidates, the energy sums and the electron/photon candidates are then passed to the global trigger where the final trigger decisions are made. These decisions can require information from a single detector or can require cross objects such as the requirement of an energy sum value and a muon.
+The muon trigger considers information from each of the DT, CSC and RCP muon 
+systems. Tracks are created from the hits in each of the sub systems and 
+fitted, the muon momentum is then calculated from the radius of curvature of 
+these muons, the four highest \PT muon candidates are then passed to the global 
+trigger.
+Electron and photon candidates are created by the regional calorimeter trigger, 
+which is in turn read out by the global calorimeter trigger (GCT), the GCT 
+creates jet candidates, energy and missing energy sums, the four highest \ET 
+jet candidates of each type (central, tau and forward), the energy sums and the 
+electron/photon candidates are then passed to the global trigger where the 
+final trigger decisions are made. These decisions can require information from 
+a single detector or can require cross objects such as the requirement of an 
+energy sum value and a muon.
 % section the_level_one_trigger_system (end)
 
 \section{The High Level Trigger System.} % (fold)
 \label{sec:the_high_level_trigger_system}
+The high level trigger system is constructed from off the shelf components. 
+The system is composed of two sets of machines, the first are the Event Builder 
+(EB) units, these build raw data in to regional chunks from the data read out 
+at the front end of the detector when a \Lone accept is received, this is then  
+combined and transmitted to the event filter cluster. The EB units transfer the 
+data to the Event Filter (EF) units via a standard TCP/IP gigabit ethernet link.
+The task of the HLT EF units is to run complex reconstruction algorithms using 
+combined detector information to reduce the data rate accepted by the \Lone 
+trigger to a manageable rate, the original design anticipated an output rate of 
+100 events per second, however in 2012 running 1000 events per second were 
+stored, half of this rate was assigned to the prompt reconstruction work flow, 
+the other half was stored for reconstruction during the long shut down of the 
+\ac{lhc} in 2013-2015.
+
+The EF farm is formed from standard rack-mounted pc units with a total of 
+approximately 1000 computing cores operating at a clock frequency of around 
+\unit{2}{\giga\hertz}. Upon receiving an event, each unit performs the \ac{cms} 
+reconstruction, the same software is used as for offline analysis meaning that 
+the objects used for trigger decisions are as close in performance to the 
+offline objects as possible, this increases the over all trigger efficiency. 
+Trigger chains are designed so that full event reconstruction can be performed, 
+however when constructing a trigger that requires full tracking reconstruction 
+steps are made so that if a given requirement is failed at a lower stage of the 
+reconstruction then time is not wasted performing the full reconstruction. The 
+EF farm is connected to a large (several hundred terrabyte) storage area net 
+work, this acts as a temporary storage area for the events accepted by the HLT 
+before the events are transferred to the tier-zero reconstruction farm which is 
+located at the central CERN site.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 % section the_high_level_trigger_system (end)
 
