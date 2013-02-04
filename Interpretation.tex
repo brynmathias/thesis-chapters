@@ -1,0 +1,378 @@
+\chapter{Interpretation} % (fold)
+\label{cha:interpretation}
+
+
+\section{Signal Models} % (fold)
+\label{sec:signal_models}
+The level of agreement of the analysis with the \ac{sm} give a handle on the 
+production cross sections and masses of particles predicted by new physics 
+models. The final results are presented in terms of a specific \ac{susy} model 
+and a selection of generic final state topologies, known as \ac{sms}.
+
+The \ac{susy} model considered is the \ac{cmssm}\cite{} which is described 
+in Section~\ref{sec:the_constrained_minimal_super_symmetric_model}, the 
+parameters chosen are $\tan\beta =3, \mathcal{A}_{0} = , \mu = $ with the 
+exclusion curve presented in the $m_{0}$, $m_{1/2}$ plane. This model combines 
+many production and decay topologies and is common to results shown by previous 
+and contemporary experiments \cite{} \todo[inline]{Reference ATLAS and Tevatron 
+susy results}.
+The results are also presented in terms of \ac{sms}\cite{} models, these are 
+models with single production methods and a specified decay topology. The 
+\ac{cms} terminology for the production methods are as follows: T1 models are 
+gluino-gluino production, which then decay to four \ac{sm} hadronic jets and 
+two neutrilinos. T2 models are squark-squark production with decays to two 
+\ac{sm} hadronic jets and two neutrilinos.
+These topologies can be further specialised by enforcing the squarks or gluinos 
+to decay to heavy flavour \ac{sm} quarks, such as \Ptop, which promptly decay 
+to jets containing \Pbottom quarks or direct decays to \Pbottom quarks. The 
+limits on the \ac{sms} space are defined in terms of the mass splitting between 
+the neutrilino and the pair produced \ac{susy} particle defining the model.
+\section{Signal Efficiency} % (fold)
+\label{sub:signal_efficiency}
+\subsection{\ac{cmssm}} % (fold)
+\label{par:cmssm}
+The \ac{cmssm} signal scan is composed of eight sub-processes which define the 
+production and decay topologies. The dominant process varies with $m_{0}, 
+m_{1/2}$ and at next to leading order the cross section for each of theses 
+processes varies per point. The analysis is run over each sub process in turn 
+with the final efficiency given by the weighted sum of the subprocess 
+efficiencies. The yield per point is then given by 
+$\epsilon\time\sigma\times\mathcal{L}$ for \unit{5}{\invfb} the total yields 
+are show in the appendix in Figure~\ref{fig:sig-eff-cmssm} these yields are for 
+the sum of the \HT analysis bins.
+% paragraph cmssm (end)
+
+\subsection{Simplified Models} % (fold)
+\label{par:simplified_models}
+The \ac{sms} models contain only one production process and a set decay 
+topology, making the interpretation in these models simpler, however the 
+individual models are not representative of some complete \ac{susy} model. 
+Instead these models allow the testing of specific facets of new physics 
+models, with out the ambiguity of the relative contributions of each sub 
+process at a point which is seen when testing full models. The efficiency is 
+measured for each of the models, with the yield per point given by 
+$\epsilon\times\sigma\times\mathcal{L}$ where $\sigma$ is given as a reference 
+cross section only. The efficiencies for which are shown in the appendix, 
+Table~\ref{tab:sms-eff} lists which figure corresponds to which model, it is to 
+be noted that the total efficiency summed over \HT bins is shown.
+
+
+
+\begin{table}[h!]
+  \caption{Production and decay modes for various simplified models.}
+  \label{tab:sms-eff}
+  \centering
+  \footnotesize
+  \begin{tabular}{ llc }
+    \hline
+    Model & Production and decay modes & Figure showing efficiency \\ [0.5ex]
+    \hline
+    \texttt{T1} & \HepProcess{\PSgluino\PSgluino\to\Pquark\APquark\PSneutralino\Pquark\APquark\PSneutralino} & \ref{fig:sig-eff-t1} \\
+    \texttt{T2} & \HepProcess{\Psquark\Psquark\to\Pquark\PSneutralino\APquark\PSneutralino} & \ref{fig:sig-eff-t2} \\
+    \texttt{T2tt} & \HepProcess{\PStop\PStop\to\Ptop\PSneutralino\APtop\PSneutralino}
+& \ref{fig:sig-eff-t2tt} \\
+    \texttt{T2bb} & \HepProcess{\PSbottom\PSbottom\to\Pbottom\PSneutralino\APbottom\PSneutralino} & \ref{fig:sig-eff-t2bb} \\
+    \texttt{T1tttt} & \HepProcess{\PSgluino\PSgluino\to\Ptop\APtop\PSneutralino\Ptop\APtop\PSneutralino} & \ref{fig:sig-eff-t1tttt} \\
+    \texttt{T1bbbb} & \HepProcess{\PSgluino\PSgluino\to\Pbottom\APbottom\PSneutralino\Pbottom\APbottom\PSneutralino} & \ref{fig:sig-eff-t1bbbb} \\
+    \hline
+  \end{tabular}
+\end{table}
+% paragraph simplified_models (end)
+
+
+\paragraph{Signal Efficiency for the Background Selection} % (fold)
+\label{par:signal_efficiency_for_the_background_selection}
+If the couplings of the \ac{susy} particles are analogous to the \ac{sm} 
+particles then the final states may involve muons which in the presence of 
+signal would infer an over estimation of the background from the control 
+samples.
+To measure this the background selection is applied to the signal models and 
+the yields are taken into account in the final limit setting procedure. On 
+average the background selection's efficiency on signal is $10\times$ lower 
+than the efficiency in the hadronic signal region. This is shown for the model 
+\texttt{T1tttt} in Figure~\ref{fig:sig-eff-contam} where the most muons of all 
+the signal models are expected in the final state, the contamination in the 
+$n_{b}$ bins that drive the limit is on the order of $10-20\%$.
+% paragraph signal_efficiency_for_the_background_selection (end)
+% section signal_efficiency (end)
+
+\section{Uncertainty on Signal Efficiency} % (fold)
+\label{sub:uncertainty_on_signal_efficiency}
+The systematic uncertainty on the signal models is due to: Choice of \ac{pdf} 
+at generator level, the \ac{pdf} set used to generate the sample has effects on 
+both the acceptance and the cross section; The measurement of the integrated 
+luminosity is accounted for in the signal yield; Due to the signal models being 
+created with \ac{cms} FastSim\cite{} rather than \ac{cms} FullSim\cite{} the 
+acceptance differs between the signal and the background samples; The error on 
+the jet energy scale is accounted for on the signal yield; Systematic errors 
+from the cleanings cuts (\Rmiss and ECAL dead regions) and lepton/photon vetoes 
+are also taken in to account; Finally corrections to the \Pbottom-tagging 
+efficiency between the FullSim and the FastSim are applied as well as their 
+errors.
+
+Each of these uncertainties is expressed as a percentage change in the 
+efficiency from the central value given by applying the full analysis to each 
+signal model, the total systematic is given by summing the components in 
+quadrature. In the following section the measurements of the error from each of 
+these sources is detailed and summarised per considered signal model at the end 
+of the section.
+
+The uncertainties for the \ac{cmssm} are considered in a band of 
+$\pm$\unit{60}{\GeV} in $m_{1/2}$ around the expected limit to confine the 
+errors to the relevant part of the plane, in the very high $m_{0},m_{1/2}$ area 
+the jet energy scale causes large fluctuations due to the small mass splitting 
+between the \ac{susy} particles.
+For the \ac{sms} models two regions are defined, one ``close'' to the diagonal, 
+which has small mass splitting and thus the effects of jet energy scale and 
+\ac{pdf} acceptance have a large impact on the analysis efficiency. A second 
+``far'' region is defined with large mass splitting and thus a small change on 
+the analysis efficiency due to jet energy scale and \ac{pdf} variations. The 
+near and far regions are defined by:
+\begin{equation}
+  m_{sq}(m_{gl}) - m_{lsp} > \unit{350}{\GeV}~and~m_{sq}(m_{gl}) > \unit{475}{\GeV}
+\end{equation}
+events passing these conditions are classified as being in the ``far'' region, 
+those failing in the ``close'' region.
+% section uncertainty_on_signal_efficiency (end)
+ 
+\section{Choice of \ac{pdf} set at generator level.} % (fold)
+\label{sub:choice_of_pdf_set_at_generator_level_}
+The \ac{pdf} set contains information on the interaction probabilities of the 
+quark and gluons in the proton at different energies, the model used in the 
+production of the Montecarlo simulation has direct impact on the kinematics of 
+the final states, since the \ac{pdf}s have been measured at lower energies than 
+those found at the \ac{lhc} the quark and gluon distributions have been 
+extrapolated from the low energy regime, the uncertainty at high energy is thus 
+significant.
+The uncertainties on acceptance due to the choice of \ac{pdf} set used to 
+generate the signal Montecarlo are calculated in line with the 
+\texttt{PDF4LHC}\cite{pdf4lhc} working group recommendations. On the event 
+level the individual weights are re-calculated by moving between \ac{pdf} set, 
+the weight is based on the energy at which the quarks or gluons interaction and 
+the form given by the \ac{pdf}. This is done for the central value of the three 
+considered \ac{pdf} sets (CTEQ6.1\cite{cteq6.1}, MSTW2008nlo68cl\cite{MSTW} and 
+NNPDF2.0\cite{NNPDF}) and for the variations of each of their errors. The 
+change in analysis efficiency is measured per \HT bin, 
+Figure~\ref{fig:pdfSummary} shows the deviation in efficiency per bin for three 
+examples points in the \ac{cmssm} plane, the error bars represent the \ac{rms} 
+of the spread of the efficiency inside each \ac{pdf} set. It is to be noted 
+that some bins show a large change in efficiency due to the choice of \ac{pdf} 
+set, however these are low efficiency bins where changes in yield of a few 
+events has a large effect, the final result however is driven by the high 
+efficiency bins, hence these large fluctuations can be ignored. The effects on 
+the cross section are studied by re-calculating the \ac{nlo} cross sections of 
+each of the sub processes for each choice of \ac{pdf} set, this is done 
+centrally by \ac{cms}, these changes in cross section are accounted for in the 
+error band on the expected limit.
+
+\begin{figure}[!h]
+  \begin{center}
+    \subfigure[\label{fig:pdf-var-200-500}$m_{0} = 200~GeV, m_{1/2} = 500~GeV $]{ 
+        \includegraphics[width=0.4\textwidth]{figures/Analysis/syst_plots/pdfVars/PDFVarComp_200_500.pdf}
+    }
+    \subfigure[\label{fig:pdf-var-500-500}$m_{0} = 500~GeV, m_{1/2} = 500~GeV $]{ 
+        \includegraphics[width=0.4\textwidth]{figures/Analysis/syst_plots/pdfVars/PDFVarComp_500_500.pdf}
+    }
+    \subfigure[\label{fig:pdf-var-200-1800}$m_{0} = 200~GeV, m_{1/2} = 1800~GeV $]{ 
+        \includegraphics[width=0.4\textwidth]{figures/Analysis/syst_plots/pdfVars/PDFVarComp_200_1800.pdf}
+    }
+    \subfigure[\label{fig:pdf-var-ratio-200-500}$m_{0} = 200~GeV, m_{1/2} =1800~GeV $]{ 
+        \includegraphics[width=0.4\textwidth]{figures/Analysis/syst_plots/pdfVars/CteqOvMSTW_200_500.pdf}
+    }
+    \subfigure[\label{fig:pdf-var-ratio-500-500}$m_{0} = 500~GeV, m_{1/2} = 500~GeV $]{ 
+        \includegraphics[width=0.4\textwidth]{figures/Analysis/syst_plots/pdfVars/CteqOvMSTW_500_500.pdf}
+    }
+    \subfigure[\label{fig:pdf-var-ratio-200-1800}$m_{0} = 200~GeV, m_{1/2} = 1800~GeV $]{ 
+        \includegraphics[width=0.4\textwidth]{figures/Analysis/syst_plots/pdfVars/CteqOvMSTW_200_1800.pdf}
+    }
+    \caption{Figures~\ref{fig:pdf-var-200-500}, \ref{fig:pdf-var-500-500} and 
+    \ref{fig:pdf-var-200-1800} show the efficiency per \HT bin for the 
+    inclusive selection. The three coloured lines represent the analysis 
+    efficiency for a choice of \ac{pdf} set, the error bars are the \ac{rms} of 
+    the change in efficiency per \ac{pdf} set from varying the internal 
+    components by 1$\sigma$ of their error. 
+    Figures~\ref{fig:pdf-var-ratio-200-500}, \ref{fig:pdf-var-ratio-500-500} 
+    and \ref{fig:pdf-var-ratio-200-1800} show the ratio of the change in 
+    efficiency from the default \ac{pdf} set (CTEQ6.1) for three illustrative 
+    points in the $m_{0}, m_{1/2}$ plane of the \ac{cmssm}. The change in 
+    efficiency in the high efficiency bins is on the order of $10\%$ for all 
+    points.}
+    \label{fig:pdfSummary}
+  \end{center}
+\end{figure}
+
+% section choice_of_pdf_set_at_generator_level_ (end)
+
+\section{Effects of Jet Energy Scale Variations on Signal Efficiency} 
+% (fold)
+\label{sub:effects_of_jet_energy_scale_on_signal_efficiency}
+Section~\ref{sec:hadronic_jets} describes the \ac{jec} and their uncertainties, 
+which are derived in \cite{}, these uncertainties are dependant on the \mETA 
+and \ET of the jet in question. To measure the impact of the individual jet 
+energy uncertainties on signal acceptance two additional selections are 
+performed on the signal samples, the first with the energy of each jet in the 
+event raised from the central value by 1$\sigma$ of it's uncertainty, the 
+second with the energy decreased by 1$\sigma$, the relative change in 
+efficiency with respect to the central value is then calculated for signal 
+point. The model dependant systematic is found from the 68$^{th}$ percentile of 
+the 1D distribution of the absolute change in signal efficiency over each point 
+in the model space. Figure~\ref{fig:cmssm-jes} shows the change in efficiency 
+over the full $m_{0}, m_{1/2}$ plane for the \ac{cmssm}, at high $m_{0}, 
+m_{1/2}$ the variation is large due to the primary production method of 
+\ac{susy} particles being electro-weak production of charginos in this region. 
+These charginos then decay though a chain to the neutrilio and \ac{sm} 
+particles, due to the small mass splitting (compressed spectra) between each of 
+the charginos the jets produced are only just with in \ET acceptance. A small 
+change of the individual jet \ET's thus moves many jets in and out of 
+acceptance causing a large change in analysis efficiency, hence only the region 
+within $\pm$\unit{60}{\GeV} around the expected limit in $m_{1/2}$ is 
+considered when calculating the systematic for the \ac{cmssm}. The points close 
+to the diagonal in the \ac{sms} models display compressed spectra and so are 
+effected by the change in jet energy scale. 
+Figures~\ref{fig:sms-jes-up}~and~\ref{fig:sms-jes-down} show the effects of 
+scaling the jet energies for the considered \ac{sms} models, 
+Figures~\ref{fig:sms-jes-near} and \ref{fig:sms-jes-far} show the 68$\%$ 
+coverage of the 1D distribution of the relative change in efficiency for the 
+near and far regions from which the systematic is taken.
+% section effects_of_jet_energy_scale_on_signal_efficiency (end)
+
+\section{Systematic Uncertainty on Signal Yield from Cleaning Filters and Object Vetoes.} % (fold)
+\label{sub:systematic_uncertainty_on_signal_yield_from_cleaning_filters_and_object_vetoes_}
+
+For each of the cleaning cuts, \Rmiss and the \texttt{DeadECAL}, the 
+systematic is given as the product of the ratio of normalised yields in the 
+control samples, between data and Montecarlo and the relative change in 
+efficiency due to the cleaning filter for each individual signal model. The 
+background sample is chosen before an \alt cut or any other cleaning cuts and 
+is high in real \MET due to the selection of \HepProcess{\PW}~+~Jets and 
+\HepProcess{\Ptop\APtop} events, meaning the efficiency of the \Rmiss cut 
+should be high. Figure~\ref{fig:modelling} shows the accuracy of the \Rmiss 
+modelling, at a cut value of \Rmiss $<$ 1.25 the miss modelling is at the level 
+of 14$\%$. Figures~\ref{fig:cmssm-mht-met},~\ref{fig:sms-mht-met-ineff}~and~\ref{fig:sms-mht-met-near} show the change in selection efficiency due to the \Rmiss on the 
+signal models.
+
+As for the \Rmiss cut the background selection is performed on data and 
+Montecarlo and the accuracy of modelling the \texttt{DeadECAL} filter is 
+measured, the ratio of the normalised cut efficiency on data and simulation 
+shows a miss modelling at the level of 1.8$\%$, this is taken as the 
+uncertainty on the Montecarlo model of the detector failures. 
+Figures~\ref{fig:cmssm-dead-ecal},~\ref{fig:sms-dead-ecal-ineff}~and~\ref{fig:sms-dead-ecal-near} show the relative change in efficiency due to the 
+\texttt{DeadECAL} filter on the considered signal models.
+
+Again regions with compressed spectra and many jet topologies are more effected 
+by the cleaning cuts.
+
+Finally the effects of the lepton vetoes on the signal efficiency are studied. 
+A generator level filter is first applied removing any events with final state 
+leptons or photons, thus measuring the effect of hadronic objects faking 
+leptons or photons. The relative change in efficiency due to the application of 
+the object vetoes is show in 
+Figures~\ref{fig:cmssm-lepton-veto},~\ref{fig:sms-lepton-veto-near}~and~~\ref{fig:sms-lepton-veto-far}, the inefficiency for each signal model are very small 
+and are used directly as the systematic error.
+% section systematic_uncertainty_on_signal_yield_from_cleaning_filters_and_object_vetoes_ (end)
+
+
+\section{Interpretation in terms of new physics models.} % (fold)
+\label{cha:interpretation_in_terms_of_new_physics_models_}
+Due to the lack of a signal like observation limits are set on new physics models. The first of these is the \ac{cmssm}, at each point in the $m_{0}, m_{1/2}$ parameter space the \ac{susy} particle spectrum is calculated using \texttt{SoftSUSY}\cite{Allanach:2001kg}, the signal events are generated at leading order using \texttt{Pythia 6.4}\cite{pythia}, the \ac{nlonll} process dependant cross sections are calculated using \texttt{PROSPINO}\cite{Beenakker:1996ch} using the \texttt{CTEQ6}\cite{cteq6.1} \ac{pdf} set. The previously measured errors on the background prediction, total collected luminosity and signal yield are included in the calculation of the limit. Although signal contributions from each data observation (hadronic, \Pmu~+~Jets, $\mu\mu$~+~Jets and \Pphoton~+~Jets) are included, the only relevant signal contribution to the \ac{cmssm} is from the hadronic signal regions.
+Figure~\ref{fig:cmssm-limit} shows the expected limit contour with it's associated $\pm1\sigma$ error band as well as the observed limit. The limit is calculated using \ac{nlonll} cross sections using CL$_s$\cite{cls-pdg}, the limit presented is for the 95$\%$ confidence level. For the choice of $\tan\beta = 10$, $A_0 = $\unit{0}{\GeV}, $\mu > 0$ and a top quark mass $m_{top} = $\unit{173.2}{\GeV}, squarks with masses below \unit{1.25}{\TeV} are excluded at 95$\%$ confidence, gluninos with a mass up to \unit{1.25}{\TeV} are also excluded when $m_{0} < $\unit{600}{\GeV}. In the region $m_{0} > $\unit{600}{\GeV} gluino masses below \unit{700}{\GeV} are excluded as are squarks with masses between \unit{1.25-2.5}{\TeV}, $m_{0}$ dependant.
+
+\begin{figure}[h!]
+  \begin{center}
+    \includegraphics[width=0.7\textwidth]{figures/Analysis/stats_plots/v8/CMSSM.pdf}
+    \caption{\label{fig:cmssm-limit} Exclusion contours at 95$\%$ CL in
+      the CMSSM ($m_0, m_{1/2}$) plane ($\tan \beta = 10, A_0 = 0, \mu
+      > 0$) calculated with \ac{nlonll} \ac{susy} production cross sections and
+      the CL$_{s}$ method. The solid black line indicates the observed
+      exclusion region. The dotted-dashed black lines represent the
+      observed excluded region when varying the cross section by its
+      theoretical uncertainty. The expected median exclusion region
+      (green dashed line) $\pm 1 \sigma$ (green band) are also
+      shown. }
+  \end{center}
+\end{figure}
+
+
+THe observed yields are also used to set limits on \ac{sms} models. This allows interpretation of the results for defined mass splittings and final states. Each \ac{sms} sample is characterised by the \ac{susy} particle which is pair produced, either a squark or a gluino and the \ac{lsp} mass, the individual points are then defined by the mass difference between the pair produced particle and the \ac{lsp}.
+The decay topologies are further specialised by enforcing the final state quarks to be heavy flavours, either top or bottom quarks. The decays of the considered models are summarised in Table~\ref{tab:sms}
+As before the experimental uncertainties on the background estimation, collected luminosity, and the model dependant signal uncertainties are accounted for in the calculation of the limit.
+
+In the regions $m_{\Psquark(\PSgluino)} - m_{LSP} < \unit{200}{\GeV}$ and $m_{\Psquark(\PSgluino)} < \unit{350}{\GeV}$ any selection efficiency is strongly dependant on the presence of initial state radiation which is not well modelled in the Montecarlo simulation, hence these regions are not considered when setting limits in the \ac{sms} models, for the model \texttt{T1tttt} the ignored region is expanded to cover $m_{\PSgluino} - m_{LSP} < \unit{400}{\GeV}$.
+
+Figure~\ref{fig:limits-sms} shows the observed limits at 95$\%$ confidence level obtained using CL$_{s}$ as a function of $m_{\Psquark(\PSgluino)}$ and $m_{LSP}$. The solid black lines represent the observed median limit assuming \ac{nlonll}\cite{Beenakker:1996ch,susy-nlo-nll} \ac{susy} cross sections for squark pair production in the limit of de-coupled gluinos and vice versa for the gluino production models. The thin black lines represent the limit wen this cross section is varied by $\pm1\sigma$ of the theoretical uncertainty, the dashed purple lines represent the expected limit and it's $\pm1\sigma$ uncertainty.
+
+The best limits are set on the mass of the pair produced sparticles are at low $m_{LSP}$ due to the large mass splitting between the sparticles and the \ac{lsp} producing high \pt final state objects. The limits degrade as the decay spectra become compressed, above a certain $m_{LSP}$ no limit is set.
+
+No exclusion on direct stop, stop production (\texttt{T2tt}) is expected assuming the \ac{nlonll} production cross section for $m_{LSP} > \unit{50}{\GeV}$. Figure~\ref{fig:t2tt-mlsp50} shows the observed upper limit at 95$\%$ confidence level on the cross section as a function of $m_{stop}$ for an \ac{lsp} with a mass of \unit{50}{\GeV}.
+
+
+\begin{figure}[h!]
+  \begin{center}
+    \subfigure[\label{fig:t1}\HepProcess{\PSgluino\PSgluino\to\Pquark\APquark\PSneutralino\Pquark\APquark\PSneutralino} (\texttt{T1})]{
+      \includegraphics[width=0.45\textwidth]{figures/Analysis/stats_plots/v8/T1}
+    }
+    \subfigure[\label{fig:t2}\HepProcess{\Psquark\Psquark\to\Pquark\PSneutralino\APquark\PSneutralino} (\texttt{T2})]{ 
+      \includegraphics[width=0.45\textwidth]{figures/Analysis/stats_plots/v8/T2}
+    } \\
+    \subfigure[\label{fig:t2tt}\HepProcess{\PStop\PStop\to\Ptop\PSneutralino\APtop\PSneutralino} (\texttt{T2tt})]{ 
+      \includegraphics[width=0.45\textwidth]{figures/Analysis/stats_plots/v8/T2tt}
+    } 
+    \subfigure[\label{fig:t2bb}\HepProcess{\PSbottom\PSbottom\to\Pbottom\PSneutralino\APbottom\PSneutralino} (\texttt{T2bb})]{ 
+      \includegraphics[width=0.45\textwidth]{figures/Analysis/stats_plots/v8/T2bb}
+    } \\
+    \subfigure[\label{fig:t1tttt}\HepProcess{\PSgluino\PSgluino\to\Ptop\APtop\PSneutralino\Ptop\APtop\PSneutralino}(\texttt{T1tttt})]{
+      \includegraphics[width=0.45\textwidth]{figures/Analysis/stats_plots/v8/T1tttt}
+    } 
+    \subfigure[\label{fig:t1bbbb}\HepProcess{\PSgluino\PSgluino\to\Pbottom\APbottom\PSneutralino\Pbottom\APbottom\PSneutralino} (\texttt{T1bbbb})]{
+      \includegraphics[width=0.45\textwidth]{figures/Analysis/stats_plots/v8/T1bbbb}
+    } \\
+    \caption{\label{fig:limits-sms}Upper limit on cross section at
+      95\% CL as a function of $m_{\Psquark}$ or $m_{\PSgluino}$ and $m_{\rm
+        LSP}$ for various simplified models. The solid thick black
+      line indicates the observed exclusion region assuming \ac{nlonll}
+      \ac{susy} production cross section. The thin black lines represent
+      the observed excluded region when varying the cross section by
+      its theoretical uncertainty. The dashed purple lines indicate
+      the median (thick line) $\pm 1 \sigma$ (thin lines) expected
+      exclusion regions.  }
+  \end{center}
+\end{figure}
+
+\begin{table}[h!]
+  \caption{Production and decay modes for various simplified models.}
+  \label{tab:sms}
+  \centering
+  \footnotesize
+  \begin{tabular}{ llc }
+    \hline
+    Model & Production and decay modes & Figure showing limit \\ [0.5ex]
+    \hline
+    \texttt{T1} & \HepProcess{\PSgluino\PSgluino\to\Pquark\APquark\PSneutralino\Pquark\APquark\PSneutralino} & \ref{fig:t1} \\
+    \texttt{T2} & \HepProcess{\Psquark\Psquark\to\Pquark\PSneutralino\APquark\PSneutralino} & \ref{fig:t2} \\
+    \texttt{T2tt} & \HepProcess{\PStop\PStop\to\Ptop\PSneutralino\APtop\PSneutralino} & \ref{fig:t2tt},\ref{fig:t2tt-mlsp50} \\
+    \texttt{T2bb} & \HepProcess{\PSbottom\PSbottom\to\Pbottom\PSneutralino\APbottom\PSneutralino} & \ref{fig:t2bb} \\
+    \texttt{T1tttt} & \HepProcess{\PSgluino\PSgluino\to\Ptop\APtop\PSneutralino\Ptop\APtop\PSneutralino} & \ref{fig:t1tttt} \\
+    \texttt{T1bbbb} & \HepProcess{\PSgluino\PSgluino\to\Pbottom\APbottom\PSneutralino\Pbottom\APbottom\PSneutralino} & \ref{fig:t1bbbb} \\
+    \hline
+  \end{tabular}
+\end{table}
+
+
+\begin{figure}[t!]
+  \begin{center}
+    \includegraphics[width=0.6\textwidth]{figures/Analysis/stats_plots/v8/T2tt_1D.pdf}
+    \caption{\label{fig:t2tt-mlsp50} Excluded cross section versus top
+      squark mass for a model in which pair-produced top squarks decay
+      to two top quarks and a two neutralinos. The solid blue line
+      indicates the observed cross section upper limit (95\% CL) as a
+      function of the top squark mass, $m_{\PStop}$. The dashed orange
+      line and blue band indicate the median expected excluded cross
+      section with experimental uncertainties. The solid black line
+      with grey band indicates the \ac{nlonll} \ac{susy} top squark
+      pair-production cross section and theoretical uncertainties.}
+  \end{center}
+\end{figure}
+
+% section interpretation_in_terms_of_new_physics_models_ (end)
+
+% chapter interpretation (end)

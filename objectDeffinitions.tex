@@ -3,12 +3,15 @@
 In this chapter the \ac{cms} offline reconstruction algorithms relevant to the analysis presented are discussed as well as the performance of these techniques.
 \section{Hadronic Jets.} % (fold)
 \label{sec:hadronic_jets}
+
+\todo[inline]{ Jets are constructed from running the \AK jet algo over the trigger towers with a size parameter of 0.5, this produces cone like jets for those with high PT and non cone like jets for soft interactions. The contribution of energy from each calorimeter tower is assigned a momentum, the raw jet energy being the vectorial sum of all towers inside the jet cone. This raw energy is then corrected to give a uniform response in $\eta$ and a calibrated response as a function of \PT.
+ 
+ Each jet then has a set of measured variables associated to it which can be used to perform quality criteria selection. These are
+
+
 AK5 calo jets -- explanation of the jet algos. How they are clustered at CMS.
 No need to mention PF? (we don't use it so why bother). Energy resolution, Jet 
-energy corrections, ID. 2011 note
-
-here is a new world
-
+energy corrections, ID. 2011 note}
 % section hadronic_jets (end)
 
 \section{Electrons.} % (fold)
