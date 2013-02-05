@@ -13,8 +13,6 @@ performance of the upgraded \alt HLT paths.
 % paragraph declaration (end)
 
 
-
-
 \section{The \alt variable.} % (fold)
 \label{sec:the_alpha___t_variable_}
 \alt is inspired by Ref~\cite{Randall:2008dk} and was expanded to transverse 
@@ -84,19 +82,36 @@ In order to select events for the hadronic signal sample and the muon and
 photon control samples a common set of section cuts is defined. In this section 
 the objects are defined as are the flow of the analysis cuts and filters.
 
-\paragraph{Preselection of hadronic objects} % (fold)
-\label{par:Preselection_of_hadronic_objects}
-Hadronic showers are clustered in to objects which from now on will be referred to as jets. These jets are formed from the energy deposits recored in the calorimeter towers. Individual jets are clustered using the \AK algorithm\cite{Cacciari:2008ua}, for high \PT jets this produces cone like jets, for low \PT jets deviations from the circular geometry are allowed, as show in Figure~\ref{fig:figures_Analysis_ak5algo}. \ac{cms} uses two complimentary reconstruction methods for creating jets, the first uses only calorimeter information, these jets are referred to as \AK-Calorimeter jets, the second method adds information from the tracking system to improve the energy resolution and is not used in this analysis due to the requirements of using the same objects at both trigger level and offline to preserve data taking efficiency.
+\subsection{Preselection of hadronic objects} % (fold)
+\label{sub:Preselection_of_hadronic_objects}
+Hadronic showers are clustered in to objects which from now on will be referred 
+to as jets. These jets are formed from the energy deposits recored in the 
+calorimeter towers. Individual jets are clustered using the \AK 
+algorithm\cite{Cacciari:2008ua}, for high \PT jets this produces cone like 
+jets, for low \PT jets deviations from the circular geometry are allowed, as 
+show in Figure~\ref{fig:figures_Analysis_ak5algo}. \ac{cms} uses two 
+complimentary reconstruction methods for creating jets, the first uses only 
+calorimeter information, these jets are referred to as \AK-Calorimeter jets, 
+the second method adds information from the tracking system to improve the 
+energy resolution and is not used in this analysis due to the requirements of 
+using the same objects at both trigger level and offline to preserve data 
+taking efficiency.
 
 \begin{figure}[htbp]
   \centering
     \includegraphics[width=0.5\textwidth]{figures/Analysis/ak5algo.pdf}
-  \caption{Simulated hadronic objects clustered in to Jets using the \AK jet clustering algorithm, note the high \PT green object which causes the low \PT jet in close proximity to be cut off.}
+  \caption{Simulated hadronic objects clustered in to Jets using the \AK jet 
+  clustering algorithm, note the high \PT green object which causes the low \PT 
+  jet in close proximity to be cut off.}
   \label{fig:figures_Analysis_ak5algo}
 \end{figure}
-The jets have their raw energies corrected based on their position and momentum to establish a uniform relative response in $\eta$ and a calibrated absolute 
+The jets have their raw energies corrected based on their position and momentum 
+to establish a uniform relative response in $\eta$ and a calibrated absolute 
 response in transverse energy \ET, with an associated uncertainty of between 
-2$\%$ and 4$\%$ dependant on \ET and $\eta$\cite{Chatrchyan:2011ds}. Figure~\ref{fig:figures_Analysis_caloJetUncertianty} shows the absolute jet energy scale uncertainty as a function of the jet's \PT for the jets considered in this analysis.
+2$\%$ and 4$\%$ dependant on \ET and $\eta$\cite{Chatrchyan:2011ds}. 
+Figure~\ref{fig:figures_Analysis_caloJetUncertianty} shows the absolute jet 
+energy scale uncertainty as a function of the jet's \PT for the jets considered 
+in this analysis.
 
 \begin{figure}[htbp]
   \centering
@@ -105,48 +120,97 @@ response in transverse energy \ET, with an associated uncertainty of between
   \label{fig:figures_Analysis_caloJetUncertianty}
 \end{figure}
 
-It is also possible to correct the raw energies of the jets for pile up. Pile up causes energy from secondary interactions to be added to the event, for soft pile up interactions this energy is distributed uniformly though out the detector. Two forms of pile up corrections are used in \ac{cms} to correct the energies of calorimeter jets. The first is an offset correction, the raw energy has a constant energy removed though out the detector based on the number of primary vertices in the event. The second method is to calculate per event the average energy deposited in each calorimeter tower using the \texttt{FastJet}\cite{Cacciari:2011ma,hep-ph/0512210} jet clustering package, this quantity is referred to as $\rho$ and is also used to correct the isolation variables for elections, muons and photons.
+It is also possible to correct the raw energies of the jets for pile up. Pile 
+up causes energy from secondary interactions to be added to the event, for soft 
+pile up interactions this energy is distributed uniformly though out the 
+detector. Two forms of pile up corrections are used in \ac{cms} to correct the 
+energies of calorimeter jets. The first is an offset correction, the raw energy 
+has a constant energy removed though out the detector based on the number of 
+primary vertices in the event. The second method is to calculate per event the 
+average energy deposited in each calorimeter tower using the 
+\texttt{FastJet}\cite{Cacciari:2011ma,hep-ph/0512210} jet clustering package, 
+this quantity is referred to as $\rho$ and is also used to correct the 
+isolation variables for elections, muons and photons.
 
 
-The jets considered in the analysis are required to have \ET $>$ \unit{50}{\GeV}, the highest \ET jet in the events is required to be within tracker acceptance ($|\eta| <$ 2.5) and the sub leading jet is required to have \ET $>$ \unit{100}{\GeV}. In the lowest two offline \HT bins the jet thresholds are scaled to preserve the jet multiplicity, for the bin \unit{275}{\GeV} $<$ \HT $<$ \unit{325}{\GeV}, the jet threshold is \unit{36.$\dot{6}$}{\GeV} and the sub leading jet threshold is \unit{73.$\dot{3}$}{\GeV}. In the bin \unit{325}{\GeV} $<$ \HT $<$ \unit{375}{\GeV}, the jet threshold is \unit{43.$\dot{3}$}{\GeV} and the sub leading jet threshold is \unit{86.$\dot{6}$}{\GeV}.
+The jets considered in the analysis are not corrected for pile up, each jet is 
+required to have \ET $>$ \unit{50}{\GeV}, the highest \ET jet in the events is 
+required to be within tracker acceptance ($|\eta| <$ 2.5) and the sub leading 
+jet is required to have \ET $>$ \unit{100}{\GeV}. In the lowest two offline \HT 
+bins the jet thresholds are scaled to preserve the jet multiplicity, for the 
+bin \unit{275}{\GeV} $<$ \HT $<$ \unit{325}{\GeV}, the jet threshold is 
+\unit{36.$\dot{6}$}{\GeV} and the sub leading jet threshold is 
+\unit{73.$\dot{3}$}{\GeV}. In the bin \unit{325}{\GeV} $<$ \HT $<$ 
+\unit{375}{\GeV}, the jet threshold is \unit{43.$\dot{3}$}{\GeV} and the sub 
+leading jet threshold is \unit{86.$\dot{6}$}{\GeV}.
 
 The quantities \HT and \HTm are then formed from these jets.
 % paragraph definition_of_event_level_jets (end)
 
-\paragraph{Elections} % (fold)
-\label{par:elections}
-Elections are reconstructed as described in Section~\ref{sec:electrons}. For 
-the purpose of the analysis an object is defined as an electron if it has \PT 
-$>$ \unit{10}{\GeV}, \mETA $<$ 2.5 and passes ``VBTF'' working point 95 quality 
-criteria\cite{PAS-EGM-10-004}. Any event containing an identified electron is 
-vetoed. 
+\subsection{Electrons} % (fold)
+\label{sub:electrons}
+Two complementary algorithms are used at the track seeding stage of the 
+electron reconstruction. Tracker driven seeding which is more suitable for low 
+\PT (\PT $<$ \unit{5}{\GeV}) electrons and ECAL driven seeding, which starts at 
+the ECAL and works back towards the interaction point. The ECAL driven seeding 
+starts by creating superclusters\cite{0954-3899-34-6-S01} which contain 
+information on the lateral shower shape in the $\eta$ direction of the electron 
+or photon shower and the spread of energy deposits in the $\phi$ plane for 
+elections, due to the radiation of photons by the election in the \ac{cms} 
+magnetic field. Track seeds from inner tracking layers and electron track are 
+then build from these track seeds. The trajectories are reconstructed using a 
+dedicated modeling of the electron energy loss and fitted with a Gaussian Sum 
+Filter\cite{0954-3899-31-9-N01}.
+For the purpose of the analysis an object is defined as an electron if it has 
+\PT $>$ \unit{10}{\GeV}, \mETA $<$ 2.5 and passes ``VBTF'' working point 95 
+quality criteria\cite{PAS-EGM-10-004}. Any event containing an identified 
+electron is vetoed. 
 % paragraph elections (end)
 
-\paragraph{Muons} % (fold)
-\label{par:muons}
-Muon reconstruction at \ac{cms} is detailed in Section~\ref{sec:muons}. Signal 
-events are vetoed if they contain a muon with \PT $>$ \unit{10}{\GeV} and \mETA 
-$<$ 2.5 that passes the ``VBTF'' working point 95 for muons 
+\subsection{Muons} % (fold)
+\label{sub:muons}
+Muon reconstruction at \ac{cms} is designed to be regional meaning that the 
+full reconstruction sequence can be run at both the HLT and offline. Regional 
+reconstruction only performs the reconstruction in a small part of the detector 
+meaning that the time taken is short. As an example the amount of information 
+required to reconstruct a muon in the silicon tracker is less than one percent 
+of the entire tracker read out. The regions which are reconstructed at the HLT 
+are seeded by the muon candidates produced by the \Lone trigger even if these 
+muons did not cause the issue of the \Lone accept. Global muon reconstruction 
+uses information from both the stand alone muon system and from the silicon 
+tracker and performs a fit to the individual detector hits.
+Figure~\ref{fig:figures_Analysis_MuonPTResolution} shows the muon \PT 
+resolution for muons reconstructed using either the muon system only, the 
+tracker only or the global muon reconstruction.
+\begin{figure}[htbp]
+  \centering
+    \includegraphics[width=\textwidth]{figures/Analysis/MuonPTResolution.pdf}
+  \caption{Resolution of (1/p) versus p for standalone, global and tracker-only reconstruction. a) Barrel, $\eta$ = 0.5; b) Endcap, $\eta$ = 1.5.\cite{0954-3899-34-6-S01}}
+  \label{fig:figures_Analysis_MuonPTResolution}
+\end{figure}
+
+Signal events are vetoed if they contain a muon with \PT $>$ \unit{10}{\GeV} 
+and \mETA $<$ 2.5 that passes the ``VBTF'' working point 95 for muons 
 \cite{PAS-MUO-10-002}. Two separate muon control samples are defined, one 
 requiring exactly one muon with \PT $>$ \unit{10}{\GeV}, the second requiring 
 two muons, who's invariant mass sums to the \PZ mass. 
-% paragraph muons (end)
+% subsection muons (end)
 
 
-\paragraph{Photons} % (fold)
-\label{par:photons}
-Photon reconstruction as \ac{cms} is detailed in Section~\ref{sec:photons}, 
-signal events are vetoed if they contain a photon with \ET $>$ \unit{25}{\GeV}, 
+\subsection{Photons} % (fold)
+\label{sub:photons}
+Photons are reconstructed in the ECAL using the same methods as used to reconstruct elections. However an anti selection is performed on the tracking requirements. For photons which do not convert in the tracker a supercluster energy deposit is required with no associated electron track, for photons which undergo pair production in the tracker material the tracks associated to the super clusters do not originate from the interaction vertex, instead they appear in a layer of the tracker. For unconverted photons the ratio of the energy deposited in the central ECAL crystal to the energy of the surrounding  $3\times3$ group of ECAL crystals is used as an identification variable. Signal events are vetoed if they contain a photon with \ET $>$ \unit{25}{\GeV}, 
 \mETA $<$ 2.5 and that passes ID requirements\cite{PAS-EGM-10-006}. A 
 requirement of exactly one photon with \ET $>$ \unit{150}{\GeV} with in \mETA 
 $<$ 1.45 is made for the photon control sample.
-% paragraph photons (end)
+% subsection photons (end)
 
 
 
-The use of these control samples will be discussed in Section~\ref{sec:electro_weak_background_prediction}. 
+\section{Common Analysis cuts} % (fold)
+\label{sec:common_analysis_cuts}
 
-The common selection cuts and filters consist of:
+
 
 \begin{itemize}
 \item \textbf{Good run selection}, All detector subsystems on, \ac{cms} in 
@@ -239,11 +303,11 @@ simulation is used to form a translation factor between two samples measured in
 data, a control sample which closely mimics the \ac{sm} processes 
 producing missing energy, but has a visible muon or photon in the final state. 
 The background estimation methods are described and the background predictions 
-stated in Section~\ref{sec:electro_weak_background_prediction}.
-The next section describes the triggerd used to collect the data samples
+stated in Section~\ref{sec:electro_weak_background_prediciton}.
+The next section describes the triggers used to collect the data samples
 % section event_selection (end)
 
-\section{High Level triggers for the \texorpdfstring{\alt} analysis} % (fold)
+\section{High Level triggers for the \alt analysis} % (fold)
 \label{sec:high_level_triggers_for_the_alt_analysis}
 The CMS trigger system has been discussed in detail in 
 Section~\ref{sec:the_high_level_trigger_system} and 
@@ -296,7 +360,7 @@ only muon reconstruction is performed, reducing the reconstruction time. The
 \alt triggers are seeded on the lowest threshold unprescaled L1 \HT trigger, 
 during 2011 this was L1$\_$HTT100. Any events issuing a L1 accept and passing 
 L1$\_$HTT100 undergo calorimeter jet reconstruction, the reconstruction 
-algorithm is detailed in Section~\ref{sec:hadronic_jets}.
+algorithm is detailed in Section~\ref{sub:Preselection_of_hadronic_objects}.
 
 Once the jets have been formed the trigger filter is entered. Initially the 
 first two jets ranked by \ET, are considered, \HT and \alt are calculated, if 
@@ -311,6 +375,8 @@ missing energy due to miss-measurement, when calculating \alt offline these
 events have values of \alt $< 0.5$. This introduces an impurity to the trigger 
 and costs rate for events that will not be considered in the offline analysis.
 
+
+% section common_analysis_cuts (end)
 \subsection{Trigger efficiency measurement} % (fold)
 \label{sub:trigger_efficiency_measurement}
 
