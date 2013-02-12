@@ -1,5 +1,134 @@
 \chapter{Theory} % (fold)
 \label{cha:theory}
+% The standard model of particle physics is the most complete model describing the particles that make up the visible universe and their interactions. The particles have half integer spin and carry combinations of various charges, the effects of these charges are mediated by the force carrying bosons. Figure~\ref{fig:figures_Theory_particle-interaction} shows the matter particles the three families of quarks and leptons and the force mediating bosons the photon, gluon, \PW, \PZ and the Higgs, the lines represent the allowed couplings between particles.
+% 
+% 
+
+% 
+% These forces can be described in terms of three symmetry groups, the force carrying bosons arise from breaking these symmetries via a local gauge transform. The strong force which acts between quarks and is mediated by the gluon is described by $SU(3)$, the weak isospin is described by $SU(2)$ and the weak hyper-charge is described by $U(1)$, $SU(2)\times U(1)$ provides the photon and the massive electro-weak bosons. The invariance under a local gauge transform infers that the electro-weak bosons are massless, the addition of a global scalar field to the Lagrangian breaks this mass symmetry and gives non-zero expectation values for the masses of the electro-weak bosons and the massive fermions.
+
+
+
+% The \ac{sm} of particle physics which is fully described in \cite{} is a theoretical description of the fundamental particles observed in nature and their interactions. It describes the three fundamental forces: the strong force which is mediated by the gluon (\Pgluon) which carries a ``colour'' charge and interacts with quarks and has a self interaction; the weak force which is mediated by the electrically neutral \PZ boson and the electrically charged \PW, this weak force interacts with all known fundamental spin (1/2) particles; finally the electro-magnetic force is carried by the photon (\Pphoton) which mediates all electrical and magnetic interactions.
+% One final mechanism grants the fundamental particles their masses, this is a scalar field who's manifestation is know as the Higgs boson (\PHiggs).
+% The matter fermions and force carrying bosons are shown in Figure~\ref{fig:figures_Theory_particle-interaction}.
+% 
+
+% 
+% The model it's self is a quantum field theory which is invariant under local gauge transform. This requirement determines the structure of the model. The full model is represented by the unitary product group of $SU(3) \bigotimes SU(2) \bigotimes U(1)$. Below we show that the requirement of the invariance under local gauge transform infers that all particles are massless:
+% 
+% 
+% Consider two spin (1/2) fields $\psi_{1}$ and $\psi_{2}$, in natural units the free Lagrangian is then the sum of two Dirac Lagrangians:
+% 
+% \begin{equation}
+%   \mathcal{L} = [i\bar{\psi}_{1}\gamma^{\mu}\partial_{\mu}\psi_{1} - m_{1}\bar{\psi}_{1}\psi_{1}] + [i\bar{\psi}_{2}\gamma^{\mu}\partial_{\mu}\psi_{2} - m_{2}\bar{\psi}_{2}\psi_{2}],
+%   \label{eq:diracLagrangian}
+% \end{equation}
+% this can be simplified by combining $\psi_{1}$ and $\psi_{2}$ in to the column vector $\psi \equiv \colvec{2}{\psi_{1}}{\psi_{2}}$ where the adjoint spinor is $\bar{\psi} = \left(\bar{\psi}_{1}~\bar{\psi}_{2}\right)$, the simplified Lagrangian is then:
+% 
+% \begin{equation}
+%   \mathcal{L} = i\bar{\psi}\gamma^{\mu}\partial_{\mu}\psi - m\bar{\psi}\psi
+%   \label{eq:simpleDiracLagrangian}
+% \end{equation}
+% for the case where $m_1 = m_2$. $\psi$ is invariant under the transform
+% \begin{equation}
+%   \psi \rightarrow U\psi
+% \end{equation}
+% where $U$ is any $2\times2$ unitary matrix ie:
+% \begin{equation}
+%   U^{\dagger} U = 1,
+% \end{equation}
+% likewise
+% \begin{equation}
+%   \bar{\psi} \rightarrow \bar{\psi}U^{\dagger}
+% \end{equation}
+% is invariant meaning that $\bar{\psi}\psi$ is also invariant. $U$ may be written $U = e^{iH}$ where $H$ is hermitian and can be represented as 
+% \begin{equation}
+%   H = \theta\bm{1} + \bm{\tau}\cdot\bm{a},
+% \end{equation}
+% where $\bm{1}$ is the $2\times2$ unitary matrix and $\bm{\tau}$ represents the three Pauli matrices, hence any unitary $2\times2$ matrix can be expressed as
+% \begin{equation}
+%   U = e^{1\theta}e^{i\bm{\tau}\cdot\bm{a}}
+% \end{equation}
+% taking $\theta$ to be some global phase, the system is invariant under $\psi\rightarrow e^{i\theta}\psi$ and so only the effects of the global $SU(2)$ transform $\psi\rightarrow e^{i\bm{\tau}\cdot\bm{a}}$ are considered, as known the effects of a global transform do not effect the physics of the system, it is like changing the sea level on a contour map, the values all change but the gradients of the slopes do not. However the required invariance under a local gauge transform does not necessarily leave the system unchanged. To investigate this let $\bm{a}\rightarrow\bm{a}(x)$, we now have the transform:
+% \begin{equation}
+%   \psi\rightarrow e^{i\bm{\tau}\cdot\bm{a}(x)\psi}
+%   \label{eq:localGaugeTransform}
+% \end{equation}
+% for simplicities sake let $S = e^{i\bm{\tau}\cdot\bm{a}(x)}$ which is a local $SU(2)$ transform. The Lagrangian $\mathcal{L}$ is not invariant under the transformation as there is an extra term due to the derivative of $S$, $\partial_\mu\psi\rightarrow S\partial_{\mu}\psi+\left(\partial_{\mu}S\right)\psi$, to over come this the derivative in $\mathcal{L}$ is replaced by a covariant derivative
+% \begin{equation}
+%   \mathcal{D}_{\mu} \equiv \partial_{\mu} + \bm{\tau} \cdot \bm{A}_{\mu}
+% \end{equation}
+% where $\bm{A}_{\mu}$ are the three gauge fields which transform such that
+% \begin{equation}
+%   \mathcal{D}_{\mu}\psi\rightarrow S\left(\mathcal{D}_{\mu}\psi\right)
+% \end{equation}
+\section{The Standard Model (SM)} % (fold)
+\label{sec:the_standard_model_sm_}
+
+% section the_standard_model_sm_ (end)
+The \ac{sm} of particle physics seeks to describe all of the observed matter particles and their interactions. The theory is a quantum field theory which is both invariant under local gauge transform and renormilisable. The theory is constructed from the unitary product group $SU(3)\bigotimes SU(2)_{L} \bigotimes U(1)_{Y}$ where $SU(3)$ describes the colour charged strong nuclear force and $SU(2)_{L} \bigotimes U(1)_{Y}$ describes the electro-weak interactions. The electro-weak sector contains bosons which exhibit mass, which is contrary to what is inferred by the invariance under local gauge transform, that the gauge bosons should be massless. The $SU(2)_{L} \bigotimes U(1)_{Y}$ symmetry is thus seen to be broken, this is achieved by the addition of a scalar field with a non-zero vacuum expectation value, the extra degrees of freedom introducted by this scalar field allow the electro-weak bosons to gain mass with out breaking the local gauge invariance of the Lagrangian. The method was proposed by Englert, Brout, Higgs, Guralnik, Hagen and Kibble \cite{} but is shortened to the ``Higgs'' mechanism and the resulting mediator is known as the Higgs boson (\PHiggs).
+
+The \ac{sm} matter particles have spin (1/2) and obey Fermi-Dirac statistics, they exist in three families of quark and lepton doublets. The force carrying particles have spin (1) except for the \PHiggs which is predicted to have spin (0), the bosons obey Bose-Einstein statistics. Figure~\ref{fig:figures_Theory_particle-interaction} shows the hierarchy of the standard model particles and the couplings between them.
+
+\begin{figure}[htbp]
+  \centering
+    \includegraphics[width=0.5\textwidth]{figures/Theory/particle-interaction.jpeg}
+  \caption{caption}
+  \label{fig:figures_Theory_particle-interaction}
+\end{figure}
+
+\subsection{Gauge Invariance} % (fold)
+\label{sub:gauge_invariance}
+The example of adding a local gauge term to the free Dirac Lagrangian is chosen to show the effects of requiring a system to be invariant under local gauge transform. It is to be noted that natural units are used throughout ($c = \hbar = 1$). The free Dirac Lagrangian is written as
+\begin{equation}
+  \mathcal{L} = i\bar{\psi}\gamma^{\mu}\partial_{\mu}\psi - m\bar{\psi}\psi,
+  \label{eq:freeDiracL}
+\end{equation}
+under a simple global phase transform $\psi\rightarrow e^{i\theta}\psi$ and $\bar{\psi}\rightarrow e^{-i\theta}\bar{\psi}$ the exponents cancel and we are left with an invariant system. However if $\theta\rightarrow\theta (x)$ there is a $\theta$ dependant term introduced when evaluating the derivative which destroys the invariance of the system:
+\begin{equation}
+  \partial_{\mu}\left(e^{i\theta}\psi\right) = i\left(\partial_{\mu}\theta\right)e^{i\theta}\psi + e^{i\theta}\partial_{\mu}\psi.
+\end{equation} 
+
+This infers that an extra term is added to the Lagrangian, i.e
+\begin{equation}
+  \mathcal{L}\rightarrow\mathcal{L}-\left(\partial_{\mu}\theta\right)\bar{\psi}\gamma^{\mu}\psi
+\end{equation}
+for convenience we set $\lambda(x) = -\frac{\theta(x)}{q}$ where $q$ is the charge/coupling of the particle we can re-express the Lagrangian as
+\begin{equation}  \mathcal{L} \rightarrow \mathcal{L} + \left( q\bar{\psi}\gamma^{\mu} \psi \right) \partial_{\mu} \lambda(x)
+  \label{eq:diracLplusLambda}
+\end{equation}
+
+when demanding that the entire Lagrangian is invariant under local transform one must add a term to cancel the additional term in Equation~\eqref{eq:diracLplusLambda}, we take
+\begin{equation}
+  \mathcal{L} = \left[i\bar{\psi}\gamma^{\mu}\partial_{\mu} - m \bar{\psi}\psi\right] - \left(q\bar{\psi}\gamma^{\mu}\psi\right)\bm{A}_{\mu}
+\end{equation}
+where $\bm{A}_{\mu}$ is some new field which transforms as
+\begin{equation}
+  \bm{A}_{\mu}\rightarrow \bm{A}_{\mu} + \partial_{\mu}\lambda(x)
+  \label{eq:localGaugeInvar}
+\end{equation}
+This property of $\bm{A}_{\mu}$ means that the Lagrangian is now invariant to the additions of a local phase or gauge. However $\mathcal{L}$ must include a term for the free field $\bm{A}^{\mu}$
+\begin{equation}
+  \mathcal{L} = \frac{-1}{16\pi}\bm{F}^{\mu\nu}\bm{F}_{\mu\nu} + \frac{1}{8\pi}m_{A}^{2}\bm{A}^{\nu}\bm{A}_{\nu}
+\end{equation}
+for the Lagrangian to remain invariant $m_{A}$ must equal zero. Hence requiring that the Dirac Lagrangian be invariant under local phase or gauge transform requires the addition of a massless vector field $\bm{A}_{\mu}$ giving the full Lagrangian as
+\begin{equation}
+  \mathcal{L} = \left[i\bar{\psi}\gamma^{\mu}\partial_{\mu}\psi - m \bar{\psi}\psi\right] - \left[\frac{-1}{16\pi}\bm{F}^{\mu\nu}\bm{F}_{\mu\nu}\right] - \left(q\bar{\psi}\gamma^{\mu}\psi\right)\bm{A}_{\mu}.
+\end{equation}
+Equation~\eqref{eq:localGaugeInvar} shows the choice of gauge, in this case the electro-magnetic potential does not change the system. This additon of a local phase invariance to the free Dirac Lagrangian generates all electro dynamics.
+
+The difference between the addition of a global phase and a local phase arrises from the calculation of the derivatives of the fields
+\begin{equation}
+  \partial_{\mu}\psi\rightarrow e^{-iq\lambda(x)}\left[\partial_{\mu}- iq\left(\partial_{\mu}\lambda(x)\right)\right]\psi
+  \label{eq:needsCanceling}
+\end{equation}
+here rather than picking up a phase factor we pick up a term involving $\partial_{\mu}\lambda(x)$, this can be removed by replacing $\partial_{\mu}$ in the full Lagrangian by the covariant derivative
+\begin{equation}
+  \mathcal{D} \equiv \partial_{\mu} + iq\bm{A}_{\mu}
+\end{equation}
+this replacement cancels the extra term in Equation~\eqref{eq:needsCanceling}. This substitution of $\mathcal{D}_{\mu}$ is an elegant method for promoting a globally invariant Lagrangian to a locally invariant one.
+% subsection gauge_invariance (end)
 
 \section{The Constrained Minimal Super Symmetric Model} % (fold)
 \label{sec:the_constrained_minimal_super_symmetric_model}

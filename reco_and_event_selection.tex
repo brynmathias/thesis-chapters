@@ -1,16 +1,16 @@
-\chapter{Reconstruction and Event selction} % (fold)
+\chapter{Reconstruction and Event selection} % (fold)
 \label{cha:the_t_analysis}
-\paragraph{Declaration} % (fold)
-\label{par:declaration-alphat}
+In this chapter the event reconstruction and selection are defined, the search 
+variable \alt is constructed both as an offline discriminator and as an 
+analysis specific trigger, the performance of this trigger under different data 
+taking conditions is measured with respect to the final event selection.
 
-
-In this chapter we discuss the main analysis performed as the subject of this 
-thesis. For the theoretical motivations of this search please see 
-Chapter~\ref{cha:theory}. The analysis is based on the full 2011 data set which
-is made up of \unit{5}{\invfb} of \unit{7}{\TeV} data. However 
-\unit{11.7}{\invfb} of the 2012 \unit{8}{\TeV} is looked at to measure the 
-performance of the upgraded \alt HLT paths.
-% paragraph declaration (end)
+The first performance measurement is performed on the full \unit{5}{\invfb} of 
+\unit{7}{\TeV} data collected in 2011, this data set is then used for the full 
+analysis presented in this thesis. The performance of a suite of upgraded \alt 
+triggers is then measured on \unit{11}{\invfb} of \unit{8}{\TeV} data which was 
+collected during the 2012 \ac{lhc} run. These performance measurements were 
+used in the analysis presented in \todo[inline]{ref latest paper.}
 
 
 \section{The \alt variable.} % (fold)
@@ -26,8 +26,8 @@ For di-jet systems \alt is defined as:
 \begin{equation}
   \alt = \frac{E_{T}^{j_{2}}}{M_{T}}
 \end{equation}
-where $E_{T}^{j_{2}}$ is the transverse energy of least energetic of the two jets 
-and M$_{T}$ is defined as:
+where $E_{T}^{j_{2}}$ is the transverse energy of least energetic of the two 
+jets and M$_{T}$ is defined as:
 
 \begin{equation}
   M_{T} = \sqrt{\left(\sum^{2}_{i=1}E_{T}^{j_{i}}\right)^{2} - \left(\sum^{2}_{i=1}p_{x}^{j_{i}}\right)^{2} - \left(\sum^{2}_{i=1}p_{y}^{j_{i}}\right)^{2}}
@@ -159,7 +159,7 @@ or photon shower and the spread of energy deposits in the $\phi$ plane for
 elections, due to the radiation of photons by the election in the \ac{cms} 
 magnetic field. Track seeds from inner tracking layers and electron track are 
 then build from these track seeds. The trajectories are reconstructed using a 
-dedicated modeling of the electron energy loss and fitted with a Gaussian Sum 
+dedicated modelling of the electron energy loss and fitted with a Gaussian Sum 
 Filter\cite{0954-3899-31-9-N01}.
 For the purpose of the analysis an object is defined as an electron if it has 
 \PT $>$ \unit{10}{\GeV}, \mETA $<$ 2.5 and passes ``VBTF'' working point 95 
@@ -199,7 +199,16 @@ two muons, who's invariant mass sums to the \PZ mass.
 
 \subsection{Photons} % (fold)
 \label{sub:photons}
-Photons are reconstructed in the ECAL using the same methods as used to reconstruct elections. However an anti selection is performed on the tracking requirements. For photons which do not convert in the tracker a supercluster energy deposit is required with no associated electron track, for photons which undergo pair production in the tracker material the tracks associated to the super clusters do not originate from the interaction vertex, instead they appear in a layer of the tracker. For unconverted photons the ratio of the energy deposited in the central ECAL crystal to the energy of the surrounding  $3\times3$ group of ECAL crystals is used as an identification variable. Signal events are vetoed if they contain a photon with \ET $>$ \unit{25}{\GeV}, 
+Photons are reconstructed in the ECAL using the same methods as used to 
+reconstruct elections. However an anti selection is performed on the tracking 
+requirements. For photons which do not convert in the tracker a supercluster 
+energy deposit is required with no associated electron track, for photons which 
+undergo pair production in the tracker material the tracks associated to the 
+super clusters do not originate from the interaction vertex, instead they 
+appear in a layer of the tracker. For unconverted photons the ratio of the 
+energy deposited in the central ECAL crystal to the energy of the surrounding  
+$3\times3$ group of ECAL crystals is used as an identification variable. Signal 
+events are vetoed if they contain a photon with \ET $>$ \unit{25}{\GeV}, 
 \mETA $<$ 2.5 and that passes ID requirements\cite{PAS-EGM-10-006}. A 
 requirement of exactly one photon with \ET $>$ \unit{150}{\GeV} with in \mETA 
 $<$ 1.45 is made for the photon control sample.
@@ -408,17 +417,22 @@ the total efficiency for each \HT bin is then calculated by combining the
 individual efficiencies using a weighted sum based on the fraction of 
 the total luminosity of the sample that each version carries. This accounts for 
 the change in running conditions during the data taking period and the criteria 
-that the trigger suite takes constant rate. The higher trigger versions and thresholds generally represent more integrated luminosity due to the evolution of running conditions with time.
+that the trigger suite takes constant rate. The higher trigger versions and 
+thresholds generally represent more integrated luminosity due to the evolution 
+of running conditions with time.
 
-The efficiency is measured as a function of the cumulative number of events, ie the efficiency at each point on the x axis is the measured efficiency if a cut were applied offline at that cut value.
+The efficiency is measured as a function of the cumulative number of events, ie 
+the efficiency at each point on the x axis is the measured efficiency if a cut 
+were applied offline at that cut value.
 
 
 
 
 \begin{table}
     \centering
+\footnotesize
 \begin{tabular}{|c|c|c|}
-
+  
 \hline
 Offline \HT bin & Signal Trigger & Reference Trigger\\
 \hline
@@ -475,7 +489,7 @@ Offline \HT bin & Signal Trigger & Reference Trigger\\
 
 \begin{table}
     \centering
-
+  \footnotesize
 \begin{tabular}{|c|c|c|}
     \hline
 Offline \HT bin &Signal Trigger & Reference Trigger\\
@@ -591,7 +605,7 @@ in efficiency comes from the disparity between the minimum thresholds for jets
 to enter the \HT and \alt calculations at the HLT and those used in the 
 analysis. The trigger jet \ET threshold is \unit{40}{\GeV} where as 
 the analysis jet \ET threshold in this bin is 
-\unit{36.$\cdot {6}$}{\GeV}. The triggers used to take data at the end of this 
+\unit{36.$\dot{6}$}{\GeV}. The triggers used to take data at the end of this 
 running period also have an \alt threshold above the analysis cut of \altg, which again causes an inefficiency. The list of efficiencies for each \HT 
 bin are shown in Table~\ref{tab:altEfficiencies7TeV}. The trigger efficiencies 
 are measured to better than one percent and this information is used in the 
@@ -666,6 +680,7 @@ Figure~\ref{fig:figures_Analysis_8TeVTriggers_HT275AlphaT} shows the combined
 cumulative efficiency of the 2012 trigger suite.
 
 \begin{table}
+
 \begin{tabular}{|c|c|}
 \hline
 \HT range & Trigger \\
@@ -763,28 +778,26 @@ all the nuances of the method in the following section.
 
 
 
-Jets are tagged as originating from a \Pbottom decay via the identification of a displaced vertex as it takes the \Pbottom a finite amount of time to decay, during this time the quark which is not produced at rest travels away from the initial interaction point, where upon decaying a secondary decay vertex is created. The algorithm used to classify these jets as containing a \Pbottom quark is the \ac{csv} tagger. The ``Medium'' working point is used in the analysis, which requires at cut of $>0.679$ on the \ac{csv} value. This results in a gluon/light quark miss tag rate of $1\%$ where ``light'' quarks are \Pup, \Pdown and \Pstrange types. The efficiency for tagging \Pbottom quark jets in the range $60-70\%$\cite{ref-b-tag-eff} is achieved, this efficiency depends on the jet \PT. The discriminator is supported by the \ac{cms} \Pbottom physics object group\cite{ref-b-pog-algo} and its performance is well understood. The Montecarlo miss tag and identification rates are re-weighted to agree with data observations, thus provide an accurate background prediction for the high multiplicity \Pbottom-tagged bins which are dominated by the miss tag of light quarks as \Pbottom quarks.
+Jets are tagged as originating from a \Pbottom decay via the identification of 
+a displaced vertex as it takes the \Pbottom a finite amount of time to decay, 
+during this time the quark which is not produced at rest travels away from the 
+initial interaction point, where upon decaying a secondary decay vertex is 
+created. The algorithm used to classify these jets as containing a \Pbottom 
+quark is the \ac{csv} tagger. The ``Medium'' working point is used in the 
+analysis, which requires at cut of $>0.679$ on the \ac{csv} value. This results 
+in a gluon/light quark miss tag rate of $1\%$ where ``light'' quarks are \Pup, 
+\Pdown and \Pstrange types. The efficiency for tagging \Pbottom quark jets in 
+the range $60-70\%$\cite{ref-b-tag-eff} is achieved, this efficiency depends on 
+the jet \PT. The discriminator is supported by the \ac{cms} \Pbottom physics 
+object group\cite{ref-b-pog-algo} and its performance is well understood. The 
+Montecarlo miss tag and identification rates are re-weighted to agree with data 
+observations, thus provide an accurate background prediction for the high 
+multiplicity \Pbottom-tagged bins which are dominated by the miss tag of light 
+quarks as \Pbottom quarks.
 
 
 
 % section extension_to_higher_analysis_dimensions_ (end)
-
-\clearpage
-
-
-
-
-
-
-
 % section signal_models (end)
-
-
-
-
-
-
-
 % section final_results (end)
-
 % chapter the_t_analysis (end)

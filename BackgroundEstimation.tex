@@ -118,7 +118,7 @@ instead the level of agreement with in statistical uncertainty is used to set
 the scale of the systematic error for each \HT bin.
 
 
-\paragraph{The $\mu$~+~Jets control sample} % (fold)
+\subsection{The $\mu$~+~Jets control sample} % (fold)
 \label{par:the_mu_jets_control_sample}
 The $\mu$~+~Jets control sample is designed to mimic the events appearing in 
 the signal region due to \HepProcess{\PW}~+~Jets and \HepProcess{\Ptop\APtop} 
@@ -152,7 +152,7 @@ with in $\pm$\unit{25}{\GeV} of the \PZ mass, to suppress
 
 % paragraph the_mu_jets_control_sample (end)
 
-\paragraph{The $\mu\mu$~+~Jets control sample} % (fold)
+\subsection{The $\mu\mu$~+~Jets control sample} % (fold)
 \label{par:the_mumu_jets_control_sample}
 The $\mu\mu$~+~Jets control sample is used to measure the 
 \HepProcess{\PZ\to\nu\nu}~+~Jets irreducible background in the signal region. 
@@ -171,7 +171,7 @@ event level quantities are calculated from the hadronic objects alone. This
 control sample can be used in all of the offline \HT bins.
 % paragraph the_mumu_jets_control_sample (end)
 
-\paragraph{The \Pphoton~+~Jets control sample} % (fold)
+\subsection{The \Pphoton~+~Jets control sample} % (fold)
 \label{par:the_pphoton_jets_control_sample}
 The \Pphoton~+~Jets control sample can also be used to measure the 
 \HepProcess{\PZ\to\nu\nu}~+~Jets background as the \Pphoton~+~Jets process is 
@@ -227,7 +227,7 @@ Hadronic yield data               & 122                    & 44                 
 \end{tabular}
 \end{table}
 
-\paragraph{Muon control samples with out an \alt cut.} % (fold)
+\subsection{Muon control samples with out an \alt cut.} % (fold)
 \label{par:muon_control_samples_with_out_an_alt_cut_}
   
 The requirement of an \alt value above 0.55 in the previous control samples 
@@ -357,6 +357,114 @@ Table~\ref{tab:triggers-mu-mumu}.
 
 % paragraph muon_control_samples_with_out_an_alt_cut_ (end)
 % section electro_weak_background_prediction (end)
+
+\section{Systematic uncertainties on the electro-weak background model.} 
+% (fold)
+\label{sec:systematic_uncertainties_on_the_electro_weak_background_model_}
+As previously discussed in Section~\ref{sec:electro_weak_background_prediciton} 
+the final background prediction is given by the simultaneous fit to the yields 
+in the signal and control samples and the translation factors obtained from MC. 
+The fit has some freedom via the statistical and systematic uncertainties 
+measured for each translation factor. This implies that the measurement of the 
+systematic uncertainties on the translation factors are vital for the fitting 
+procedure.
+
+A set of closure tests were performed on data to identify any sources of 
+systematic biased introduced by the background prediction method.
+To do this the individual background samples are used to predict one another 
+using the same translation factor method as for the prediction of \ac{sm} 
+missing energy sources in the hadronic signal regions. The level of agreement 
+is quantified in terms of the ratio $\left(N_{obs} - N_{pred}\right)/N_pred$, 
+the statistical error from the translation factor, based on the available 
+Montecarlo statists is combined with the statistical error on the number of 
+events in the predicting sample to give the error on the closure, hence the 
+deviation of the ratio from zero gives the level of closure per analysis bin. 
+This gives a measure of any biases introduced by the background estimation 
+method.
+
+The closure tests between the background samples are designed to test the 
+Montecarlo's ability to model kinematic effects; such as the \alt acceptance; 
+\Pmu acceptance and \Pphoton acceptance, instrumental effects such as; 
+reconstruction efficiencies and the effects of pile up on isolation and finally 
+the theoretical precision of the production and decay cross sections and their 
+relative contributions to the \ac{sm} background. These individual components 
+are not separable by the closure tests, which instead gives a total systematic 
+error estimation.
+
+As described in Section~\ref{par:muon_control_samples_with_out_an_alt_cut_} the 
+control samples which do not require an \alt cut use a \muht cross object 
+trigger to collect the data events. As shown in Table~\ref{tab:muht-triggers} 
+there was a period of data taking where due to the increased trigger thresholds 
+the \muht triggers are unsuitable for use in the region \HT $<$ 
+\unit{375}{\GeV}. Thusly in the closure tests between the control samples which 
+use an \alt cut and those that do not the integrated luminosity is limited to 
+\unit{3.9}{\invfb}. This causes a loss of some statistical power in these cases.
+
+The individual closure tests and fits to the \HT dependance of the ratio 
+$\left(N_{obs} - N_{pred}\right)/N_{pred}$ are shown in 
+Appendix~\ref{sec:Closure_tests_and_systematic_uncertainties}.
+The Figures~\ref{fig:closure-with-alphat1} show the closure of the prediction 
+between \Pmu~+~Jets(no \alt) $\rightarrow$ \Pmu~+~Jets(\altg) and $\mu\mu$~+~Jets(no \alt) $\rightarrow$ 
+$\mu\mu$~+~Jets(\altg) for two samples, one with no requirement on the number of \Pbottom 
+tagged jets ($n_{b}$), which increases the precision of the measurement, and 
+one requiring $n_{b} = 1$, the read line is the result of a one parameter fit. 
+The level of closure shows that the Montecarlo accurately models the \alt 
+acceptance, with no significant bias.
+
+Figure~\ref{fig:closure-with-alphat2} shows the closure between \Pmu~+~Jets 
+$\rightarrow$ $\mu\mu$~+~Jets and between \Pphoton+jets $\rightarrow$ $\mu\mu$~+~Jets over both the 
+full \HT range using only \unit{3.9}{\invfb} of integrated luminosity and for 
+\HT $>$ \unit{375}{\GeV} using the full data set. Again the red lines are the 
+result of fitting with a one parameter fit.
+
+Figure~\ref{fig:btag-multi-closure} tests the closure between samples with 
+differing $n_{b}$ the three tests are \Pmu~+~Jets($n_b = 0$)$\rightarrow$\Pmu~+~Jets($n_b = 
+1$,no \alt), \Pmu~+~Jets($n_b = 1$)$\rightarrow$\Pmu~+~Jets($n_b > 1$,no \alt) and \Pmu~+~Jets($n_b = 
+0$)$\rightarrow$\Pmu~+~Jets($n_b > 1$,no \alt). Figure~\ref{fig:btag-samples} also 
+tests the closure between samples with differing $n_{b}$, here the test is 
+between \Pmu~+~Jets($n_b = 0$)$\rightarrow$$\mu\mu$~+~Jets($n_b = 0$) and \Pmu~+~Jets($n_b =  
+1$)$\rightarrow$$\mu\mu$~+~Jets($n_b = 1$).
+
+Finally any dependance on pile up is measured by comparing a subset of the 
+individual closure tests between samples which have pile up subtracted jets and 
+those that do not. The example closures are \Pmu~+~Jets(no \alt)$\rightarrow$\Pmu~+~Jets(\altg),
+\Pmu~+~Jets(no \alt)$\rightarrow$$\mu\mu$~+~Jets(no \alt), and \Pmu~+~Jets($n_b = 0$)$\rightarrow$\Pmu~+~Jets($n_b 
+= 1$,no \alt).
+
+\section{Motivating the combined systematic on the translation factors}
+ % (fold)
+\label{sub:motivating_the_combined_systematic_on_the_translation_factors}
+The closure tests described in the previous section are combined to give a 
+total systematic uncertainty. This uncertainty is binned in to three \HT 
+regions \unit{275}{\GeV}$\rightarrow$\unit{575}{\GeV}, 
+\unit{575}{\GeV}$\rightarrow$\unit{775}{\GeV} and \unit{775}{\GeV}+. In each of 
+these regions all of the individual closure tests are used to calculate a 
+weighted mean and variance. The systematic is defined as $3\sigma$ of this 
+variance, which is conservative but necessary to cover any biases. The 
+systematics are treated as fully uncorrelated between the three regions, again 
+this is the conservative approach. Figure~\ref{fig:closure-summary} shows the 
+key example closures, the grey shaded region shows the systematic error. The 
+values obtained for the error are 6$\%$, 20$\%$ and 39$\%$, these are rounded 
+to 10$\%$, 20$\%$ and 40$\%$ and then used in the final background simultaneous 
+fit.
+
+\begin{figure}[!h]
+  \begin{center}
+    \includegraphics[width=0.75\textwidth,angle=0]{figures/Analysis/syst_plots/incl.pdf}
+    \caption{A set of closure tests (open symbols) overlaid on top of
+      grey bands that represent the systematic uncertainties used for
+      three \HT regions in the final simultaneous fit. The solid
+      circles and their errors represent the weighted mean and
+      standard deviation for the five closure tests of each individual
+      \HT bin.}
+    \label{fig:closure-summary}
+  \end{center}
+\end{figure}
+
+% subsection motivating_the_combined_systematic_on_the_translation_factors (end)
+
+% section systematic_uncertainties_on_the_electro_weak_background_model_ (end)
+
 
 \section{Estimating the residual QCD background 
 component.\cite{CMS-AN-11-517}} % (fold)
@@ -491,116 +599,8 @@ signal region \altg and \Rmiss $<$ 1.25.
   \end{center}
 \end{figure}
 
-
 % subsection estimating_the_residual_qcd_background_component_ (end)
 
-
-\section{Systematic uncertainties on the electro-weak background model.} 
-% (fold)
-\label{sec:systematic_uncertainties_on_the_electro_weak_background_model_}
-As previously discussed in Section~\ref{sec:electro_weak_background_prediciton} 
-the final background prediction is given by the simultaneous fit to the yields 
-in the signal and control samples and the translation factors obtained from MC. 
-The fit has some freedom via the statistical and systematic uncertainties 
-measured for each translation factor. This implies that the measurement of the 
-systematic uncertainties on the translation factors are vital for the fitting 
-procedure.
-
-A set of closure tests were performed on data to identify any sources of 
-systematic biased introduced by the background prediction method.
-To do this the individual background samples are used to predict one another 
-using the same translation factor method as for the prediction of \ac{sm} 
-missing energy sources in the hadronic signal regions. The level of agreement 
-is quantified in terms of the ratio $\left(N_{obs} - N_{pred}\right)/N_pred$, 
-the statistical error from the translation factor, based on the available 
-Montecarlo statists is combined with the statistical error on the number of 
-events in the predicting sample to give the error on the closure, hence the 
-deviation of the ratio from zero gives the level of closure per analysis bin. 
-This gives a measure of any biases introduced by the background estimation 
-method.
-
-The closure tests between the background samples are designed to test the 
-Montecarlo's ability to model kinematic effects; such as the \alt acceptance; 
-\Pmu acceptance and \Pphoton acceptance, instrumental effects such as; 
-reconstruction efficiencies and the effects of pile up on isolation and finally 
-the theoretical precision of the production and decay cross sections and their 
-relative contributions to the \ac{sm} background. These individual components 
-are not separable by the closure tests, which instead gives a total systematic 
-error estimation.
-
-As described in Section~\ref{par:muon_control_samples_with_out_an_alt_cut_} the 
-control samples which do not require an \alt cut use a \muht cross object 
-trigger to collect the data events. As shown in Table~\ref{tab:muht-triggers} 
-there was a period of data taking where due to the increased trigger thresholds 
-the \muht triggers are unsuitable for use in the region \HT $<$ 
-\unit{375}{\GeV}. Thusly in the closure tests between the control samples which 
-use an \alt cut and those that do not the integrated luminosity is limited to 
-\unit{3.9}{\invfb}. This causes a loss of some statistical power in these cases.
-
-The individual closure tests and fits to the \HT dependance of the ratio 
-$\left(N_{obs} - N_{pred}\right)/N_pred$ are shown in 
-Appendix~\ref{sec:Closure_tests_and_systematic_uncertainties}.
-The Figures~\ref{fig:closure-with-alphat1} show the closure of the prediction 
-between \Pmu~+~Jets(no \alt) $\rightarrow$ \Pmu~+~Jets(\altg) and $\mu\mu$~+~Jets(no \alt) $\rightarrow$ 
-$\mu\mu$~+~Jets(\altg) for two samples, one with no requirement on the number of \Pbottom 
-tagged jets ($n_{b}$), which increases the precision of the measurement, and 
-one requiring $n_{b} = 1$, the read line is the result of a one parameter fit. 
-The level of closure shows that the Montecarlo accurately models the \alt 
-acceptance, with no significant bias.
-
-Figure~\ref{fig:closure-with-alphat2} shows the closure between \Pmu~+~Jets 
-$\rightarrow$ $\mu\mu$~+~Jets and between \Pphoton+jets $\rightarrow$ $\mu\mu$~+~Jets over both the 
-full \HT range using only \unit{3.9}{\invfb} of integrated luminosity and for 
-\HT $>$ \unit{375}{\GeV} using the full data set. Again the red lines are the 
-result of fitting with a one parameter fit.
-
-Figure~\ref{fig:btag-multi-closure} tests the closure between samples with 
-differing $n_{b}$ the three tests are \Pmu~+~Jets($n_b = 0$)$\rightarrow$\Pmu~+~Jets($n_b = 
-1$,no \alt), \Pmu~+~Jets($n_b = 1$)$\rightarrow$\Pmu~+~Jets($n_b > 1$,no \alt) and \Pmu~+~Jets($n_b = 
-0$)$\rightarrow$\Pmu~+~Jets($n_b > 1$,no \alt). Figure~\ref{fig:btag-samples} also 
-tests the closure between samples with differing $n_{b}$, here the test is 
-between \Pmu~+~Jets($n_b = 0$)$\rightarrow$$\mu\mu$~+~Jets($n_b = 0$) and \Pmu~+~Jets($n_b =  
-1$)$\rightarrow$$\mu\mu$~+~Jets($n_b = 1$).
-
-Finally any dependance on pile up is measured by comparing a subset of the 
-individual closure tests between samples which have pile up subtracted jets and 
-those that do not. The example closures are \Pmu~+~Jets(no \alt)$\rightarrow$\Pmu~+~Jets(\altg),
-\Pmu~+~Jets(no \alt)$\rightarrow$$\mu\mu$~+~Jets(no \alt), and \Pmu~+~Jets($n_b = 0$)$\rightarrow$\Pmu~+~Jets($n_b 
-= 1$,no \alt).
-
-\subsection{Motivating the combined systematic on the translation factors}
- % (fold)
-\label{sub:motivating_the_combined_systematic_on_the_translation_factors}
-The closure tests described in the previous section are combined to give a 
-total systematic uncertainty. This uncertainty is binned in to three \HT 
-regions \unit{275}{\GeV}$\rightarrow$\unit{575}{\GeV}, 
-\unit{575}{\GeV}$\rightarrow$\unit{775}{\GeV} and \unit{775}{\GeV}+. In each of 
-these regions all of the individual closure tests are used to calculate a 
-weighted mean and variance. The systematic is defined as $3\sigma$ of this 
-variance, which is conservative but necessary to cover any biases. The 
-systematics are treated as fully uncorrelated between the three regions, again 
-this is the conservative approach. Figure~\ref{fig:closure-summary} shows the 
-key example closures, the grey shaded region shows the systematic error. The 
-values obtained for the error are 6$\%$, 20$\%$ and 39$\%$, these are rounded 
-to 10$\%$, 20$\%$ and 40$\%$ and then used in the final background simultaneous 
-fit.
-
-\begin{figure}[!h]
-  \begin{center}
-    \includegraphics[width=0.75\textwidth,angle=0]{figures/Analysis/syst_plots/incl.pdf}
-    \caption{A set of closure tests (open symbols) overlaid on top of
-      grey bands that represent the systematic uncertainties used for
-      three \HT regions in the final simultaneous fit. The solid
-      circles and their errors represent the weighted mean and
-      standard deviation for the five closure tests of each individual
-      \HT bin.}
-    \label{fig:closure-summary}
-  \end{center}
-\end{figure}
-
-% subsection motivating_the_combined_systematic_on_the_translation_factors (end)
-
-% section systematic_uncertainties_on_the_electro_weak_background_model_ (end)
 
 
 \section{Likelihood model} % (fold)
@@ -642,26 +642,28 @@ Where $A_{QCD}$ and \kqcd have been constrained by measurements in the control r
 Where $m_{i}$ is the number of events per \HT bin which fail \altg and $\left<\HT\right>^{i}$ is the mean \HT of the the bin.
 
 
-For the electro-weak background two components are considered, $f^{i}_{Zinv}$ represents the fraction of the total electro-weak background contributed by \HepProcess{\PZ\to\Pnu\Pnu}~+~Jets events. This is models as a liner component:
+For the electro-weak background two components are considered, $f^{i}_{Zinv}$ represents the fraction of the total electro-weak background contributed by \HepProcess{\PZ\to\Pnu\Pnu}~+~Jets events. This is modelled as a liner component:
 \begin{equation}
   f^{i}_{Zinv} = f^{0}_{Zinv}+\frac{\left<\HT\right>^{i}-\left<\HT\right>^{0}}{\left<\HT\right>^{N-1}-\left<\HT\right>^{0}}\left(f^{N-1}_{Zinv}-f^{i}_{Zinv}\right),
 \end{equation}
 where $f^{i}_{Zinv}$ and $f^{N-1}_{Zinv}$ are floating parameters who's final values are limited between zero and one. The total number of \HepProcess{\PZ\to\Pnu\Pnu}~+~Jets events per bin is then given by:
 \begin{equation}
   Z^{i}_{inv} = f^{i}_{Zinv} \times EWK^{i}
+  \label{eq:fzinv}
 \end{equation}
 with the remaining background from other electro-weak processes given by:
 \begin{equation}
-  \slashed{Z}=\left(1-f^{i}_{Zinv}\right)\times EWK^{i}.
+  Y=\left(1-f^{i}_{Zinv}\right)\times EWK^{i}.
+  \label{eq:noZinv}
 \end{equation}
 
 In each \HT bin $i$ there are three background measurements, $n_{\Pphoton}^{i}, 
 n^{i}_{\mu}$ and $n^{i}_{\mu\mu}$, representing the event counts from the 
 photon, muon and di-muon control samples respectively, each of these yields has 
 a Montecarlo counter-part yield. From the Montecarlo it is also possible to 
-extract $MC^{i}_{Zinv}$ and $MC^{i}_{\slashed{Z}inv}$. After defining:
+extract $MC^{i}_{Zinv}$ and $MC^{i}_{Y}$. After defining:
 \begin{equation}
-  r^{i}_{\Pphoton} = \frac{MC^{i}_{\Pphoton}}{MC^{i}_{Zinv}},~ r^{i}_{\mu\mu} = \frac{MC^{i}_{\mu\mu}}{MC^{i}_{Zinv}},~r^{i}_{\mu} = \frac{MC^{i}_{\mu}}{MC^{i}_{\slashed{Z}inv}}
+  r^{i}_{\Pphoton} = \frac{MC^{i}_{\Pphoton}}{MC^{i}_{Zinv}},~ r^{i}_{\mu\mu} = \frac{MC^{i}_{\mu\mu}}{MC^{i}_{Zinv}},~r^{i}_{\mu} = \frac{MC^{i}_{\mu}}{MC^{i}_{Y}}
 \end{equation}
 three likelihood functions are defined:
 \begin{equation}
@@ -673,7 +675,7 @@ three likelihood functions are defined:
   \label{eqn:l_mumu}
 \end{equation}
 \begin{equation}
-  L_{\mu} = \prod_{i}Pois\left(n^{i}_{\mu}|\rho^{j}_{\Pmu\slashed{\PZ}}\cdot  r^{i}_{\mu}\cdot  \slashed{Z}^{i}+s^{i}_{\mu}\right),
+  L_{\mu} = \prod_{i}Pois\left(n^{i}_{\mu}|\rho^{j}_{\Pmu Y}\cdot  r^{i}_{\mu}\cdot  Y^{i}+s^{i}_{\mu}\right),
   \label{eqn:l_mu}
 \end{equation}
 Equation~\eqref{eqn:l_photon} is used to estimate the \ac{ml} values for 
@@ -687,17 +689,16 @@ The non \HepProcess{\PZ\to\Pnu\Pnu} backgrounds are estimated by the \ac{ml}
 value for Equation~\eqref{eqn:l_mu} in a similar way with the addition of 
 $s^{i}_{\Pmu}$ which represents the signal contamination in the single muon 
 control sample. The measurements and ratios are considered simultaneously 
-though the relationships defined in \todo[inline]{read the note here and 
-reference the right equations.}
+though the relationships defined in Equations~\eqref{eqn:l_had}, \eqref{eq:fzinv} and \eqref{eq:noZinv}.
 The ratios $r^{i}_{\Pphoton}, r^{i}_{\mu\mu}$ and $r^{i}_{\mu}$ are the inverse 
 of the translation factors given by Equation~\eqref{eq:traslationfactor}. The 
-parameters $\rho_{\Pphoton\PZ}, \rho_{\mu\mu\PZ}$ and $\rho_{\mu\slashed{\PZ}}$ 
+parameters $\rho_{\Pphoton\PZ}, \rho_{\mu\mu\PZ}$ and $\rho_{\mu Y}$ 
 are correction factors that account for the systematic uncertainty on each of 
 the ratios and $\sigma_{\Pphoton\PZ}, \sigma_{\mu\mu\PZ}$ and 
-$\sigma_{\mu\slashed{\PZ}}$ represent the relative systematic uncertainties for 
+$\sigma_{\mu Y}$ represent the relative systematic uncertainties for 
 the control sample constraints, these are accounted for in:
 \begin{equation}
-  L_{EWK~syst} = \prod_{j}Gaus\left(1.0|\rho_{\mu\slashed{\PZ}}^{j},\sigma_{\mu\slashed{\PZ}}^{j}\right)\times Gaus\left(1.0|\rho_{\mu\mu\PZ}^{j},\sigma_{\mu\mu\PZ}^{j}\right)\times Gaus\left(1.0|\rho_{\Pphoton\PZ}^{j},\sigma_{\Pphoton\PZ}^{j}\right)
+  L_{EWK~syst} = \prod_{j}Gaus\left(1.0|\rho_{\mu Y}^{j},\sigma_{\mu Y}^{j}\right)\times Gaus\left(1.0|\rho_{\mu\mu\PZ}^{j},\sigma_{\mu\mu\PZ}^{j}\right)\times Gaus\left(1.0|\rho_{\Pphoton\PZ}^{j},\sigma_{\Pphoton\PZ}^{j}\right)
 \end{equation}
 Three parameters per control sample are used to cover the eight \HT bins as 
 show in Table~\ref{tab:systMap}.
@@ -720,7 +721,7 @@ electro-weak background, we can define:
 \end{equation}
 and
 \begin{equation}
-  L^{\prime}_{\mu} = \prod_{i}Pois\left(n^{i}_{\mu}|\rho_{\mu\slashed{\PZ}}\times r^{\prime i}_{\mu}\times EWK^{i} + s_{\mu}^{i}\right)
+  L^{\prime}_{\mu} = \prod_{i}Pois\left(n^{i}_{\mu}|\rho_{\mu Y}\times r^{\prime i}_{\mu}\times EWK^{i} + s_{\mu}^{i}\right)
 \end{equation}
 
 \paragraph{Signal Contamination} % (fold)
@@ -732,16 +733,16 @@ $\epsilon^{i}_{\mu}$ for the single muon control sample, $\delta$ represents
 the relative uncertainty on signal measured in the previous section, $\delta$ 
 is taken to be fully correlated though the \HT bins. $\rho_{sig}$ is the 
 correction factor to the signal yield which accommodates this uncertainty. 
-$\mathcal{f}$ represents an unknown multiplicative factor on the signal cross 
+$f$ represents an unknown multiplicative factor on the signal cross 
 section, for which an allowed interval is computed.
 The expected signal yield $s^{i}$ from Equation~\eqref{eqn:l_had} is defined as:
 \begin{equation}
-  s^{i}_{had} = \mathcal{f}\rho_{sig}xl\epsilon_{had}^{i},
+  s^{i}_{had} = f \rho_{sig}xl\epsilon_{had}^{i},
   \label{eqn:sihad}
 \end{equation}
 the signal contamination $s^{i}_{\mu}$ is given by:
 \begin{equation}
-  s^{i}_{\mu} = \mathcal{f}\rho_{\mu}xl\epsilon_{\mu}^{i}.
+  s^{i}_{\mu} = f \rho_{\mu}xl\epsilon_{\mu}^{i}.
   \label{eqn:simu}
 \end{equation}
 The systematic on signal uncertainty is included by in an additional term in 
@@ -787,6 +788,7 @@ errors as given by the \ac{ml} fit are show below in Table~\ref{tab:fit-summary}
   given by the simultaneous fit.}  
 \label{tab:fit-summary}
 \centering
+\footnotesize
 \begin{tabular}{ lllllllll }
 \hline
 \HT (GeV)        & 275--325             & 325--375             & 375--475             & 475--575             & 575--675             & 675--775             & 775--875             & 875--$\infty$       \\ [1.000000ex]
