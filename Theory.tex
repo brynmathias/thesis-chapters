@@ -108,27 +108,78 @@ where $\bm{A}_{\mu}$ is some new field which transforms as
   \bm{A}_{\mu}\rightarrow \bm{A}_{\mu} + \partial_{\mu}\lambda(x)
   \label{eq:localGaugeInvar}
 \end{equation}
-This property of $\bm{A}_{\mu}$ means that the Lagrangian is now invariant to the additions of a local phase or gauge. However $\mathcal{L}$ must include a term for the free field $\bm{A}^{\mu}$
+This property of $\bm{A}_{\mu}$ means that the Lagrangian is now invariant to 
+the additions of a local phase or gauge. However $\mathcal{L}$ must include a 
+term for the free field $\bm{A}^{\mu}$
 \begin{equation}
   \mathcal{L} = \frac{-1}{16\pi}\bm{F}^{\mu\nu}\bm{F}_{\mu\nu} + \frac{1}{8\pi}m_{A}^{2}\bm{A}^{\nu}\bm{A}_{\nu}
 \end{equation}
-for the Lagrangian to remain invariant $m_{A}$ must equal zero. Hence requiring that the Dirac Lagrangian be invariant under local phase or gauge transform requires the addition of a massless vector field $\bm{A}_{\mu}$ giving the full Lagrangian as
+for the Lagrangian to remain invariant $m_{A}$ must equal zero. Hence requiring 
+that the Dirac Lagrangian be invariant under local phase or gauge transform 
+requires the addition of a massless vector field $\bm{A}_{\mu}$ giving the full 
+Lagrangian as
 \begin{equation}
   \mathcal{L} = \left[i\bar{\psi}\gamma^{\mu}\partial_{\mu}\psi - m \bar{\psi}\psi\right] - \left[\frac{-1}{16\pi}\bm{F}^{\mu\nu}\bm{F}_{\mu\nu}\right] - \left(q\bar{\psi}\gamma^{\mu}\psi\right)\bm{A}_{\mu}.
 \end{equation}
-Equation~\eqref{eq:localGaugeInvar} shows the choice of gauge, in this case the electro-magnetic potential does not change the system. This additon of a local phase invariance to the free Dirac Lagrangian generates all electro dynamics.
+Equation~\eqref{eq:localGaugeInvar} shows the choice of gauge, in this case the 
+electro-magnetic potential does not change the system. This addition of a local 
+phase invariance to the free Dirac Lagrangian generates all electro dynamics.
 
-The difference between the addition of a global phase and a local phase arrises from the calculation of the derivatives of the fields
+The difference between the addition of a global phase and a local phase arrises 
+from the calculation of the derivatives of the fields
 \begin{equation}
   \partial_{\mu}\psi\rightarrow e^{-iq\lambda(x)}\left[\partial_{\mu}- iq\left(\partial_{\mu}\lambda(x)\right)\right]\psi
   \label{eq:needsCanceling}
 \end{equation}
-here rather than picking up a phase factor we pick up a term involving $\partial_{\mu}\lambda(x)$, this can be removed by replacing $\partial_{\mu}$ in the full Lagrangian by the covariant derivative
+here rather than picking up a phase factor we pick up a term involving 
+$\partial_{\mu}\lambda(x)$, this can be removed by replacing $\partial_{\mu}$ 
+in the full Lagrangian by the covariant derivative
 \begin{equation}
-  \mathcal{D} \equiv \partial_{\mu} + iq\bm{A}_{\mu}
+  \mathcal{D}_{\mu} \equiv \partial_{\mu} + iq\bm{A}_{\mu}
 \end{equation}
-this replacement cancels the extra term in Equation~\eqref{eq:needsCanceling}. This substitution of $\mathcal{D}_{\mu}$ is an elegant method for promoting a globally invariant Lagrangian to a locally invariant one.
+this replacement cancels the extra term in Equation~\eqref{eq:needsCanceling}. 
+This substitution of $\mathcal{D}_{\mu}$ is an elegant method for promoting a 
+globally invariant Lagrangian to a locally invariant one.
 % subsection gauge_invariance (end)
+
+\subsection{Electro-weak symmetry and interactions} % (fold)
+\label{sub:electro_weak_symmetry_and_interactions}
+If we take the example show in Section~\ref{sub:gauge_invariance} which 
+describes the effects of requiring that the Lagrangian for a free Dirac 
+particle is invariant under local gauge transformation infers the existence of 
+a massless gauge field, which is responsible for the photon and the 
+electrodynamic interactions.
+
+If we expand this so that rather than considering the Dirac equation for one 
+free particle we consider two free particles, the requirement for invariance 
+under local gauge transform describes not only the interaction with the gauge 
+field but also the inter particle interactions. In this case the covariant 
+derivative $\mathcal{D}_{\mu}$ is expressed as:
+\begin{equation}
+  \mathcal{D}_{\mu}\equiv \partial_{\mu} + iq \bm{\tau}\cdot\bm{A}_{\mu}
+\end{equation}
+this promotes us to the $SU(2)_{L} \bigotimes U(1)_{Y}$ regime where there are a total of four gauge fields, $\bm{\tau}$ represents the three Pauli matrices and $\bm{A}_{\mu}$ represents three gauge fields, these three gauge fields and the interaction with the gauge field seen in $U(1)_{Y}$ are responsible for the \PW and \PZ bosons and the photon. However as shown before the requirement for the whole Lagrangian including the terms for the free gauge fields to be invariant under local gauge transform forces these gauge fields to be massless.
+
+\subsection{The Higgs and Electro-weak Symmetry Breaking} % (fold)
+\label{sub:the_higgs_and_electro_weak_symmetry_breaking}
+From observation we know that the fundamental particles and the electro-weak bosons are not massless
+
+
+
+
+
+% subsection the_higgs_and_electro_weak_symmetry_breaking (end)
+
+
+
+
+
+
+
+
+% subsection electro_weak_symmetry_and_interactions (end)
+
+
 
 \section{The Constrained Minimal Super Symmetric Model} % (fold)
 \label{sec:the_constrained_minimal_super_symmetric_model}
