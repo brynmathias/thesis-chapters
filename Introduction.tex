@@ -1,30 +1,86 @@
 \chapter{Introduction} % (fold)
 \label{cha:introduction}
-\paragraph{The accelerator and detectors} % (fold)
-\label{par:the_accelerator_and_detectors}
-The Large Hadron Collider (LHC) \cite{Benedikt:823808} is a proton-proton collider which is situated in the Large Electron Positron
-(LEP) tunnel approximately 100 m under the franco-swiss border. Design center of mass energy is 14 TeV with an instantaneous
-luminosity of $ 1 \times 10$e$^{34}$cm$^{-2}$s$^{-1}$. However during 2011 the center of mass energy was 7 TeV and the maximum
-luminosity was $ 5 \times 10$e$^{33}$ cm$^{-2}$s$^{-1}$.
-To achieve this high energy and high beam current the LHC uses superconducting niobium-titanium magnets, cooled to a temperature of 
-1.8 Kelvin, that produce a maximum field strength of 8.36 Tesla.
+The key factor in mankind's success is the ability to abstract, experiment, 
+quantify and learn from our surroundings and experiments. Over time this 
+ability have improved, from making fire to shaping stones and metal to form 
+tools. This understanding of our surroundings now allows us to harness energy 
+directly from nuclear processes. Our understanding is built upon rigorous mathematical foundation, we can successfully describe the motion of planets, stars and galaxies using \ac{gr} and the interactions of the fundamental particles are described by the \ac{sm} of particle physics.
 
-\todo[inline]{we might well need some more stuff about the LHC its self in here!}
+However our understanding is incomplete, we are currently unable to produce a combined description of gravity and the interactions of fundamental particles. Some model which describes both of these regimes must exist.
+Our current best model, the \ac{sm} predicts no dark matter, which has been conclusively inferred from cosmological observations, for example the rotational curves of the M33 galaxy\cite{Corbelli:1999af} show that the amount of visible mass is not enough to confine the stars at the edges given their velocities as shown in Figure~\ref{fig:M33RotationalCurve}
+\begin{figure}
+ \includegraphics[width=0.62\textwidth]{figures/Introduction/M33.pdf}
+\caption{ M33 rotation curve (points) compared with the best fit model
+(continuous line). Also shown  the 
+halo contribution (dashed-dotted line), the stellar disk (short dashed 
+line) and  the gas contribution (long dashed line), from \cite{Corbelli:1999af}. }
+\label{fig:M33RotationalCurve}
+\end{figure}
 
-Situated around the LHC ring are four detectors, two general detectors ATLAS \cite{Akesson:1999uv} and CMS (see
-Chapter~\ref{cha:the_cms_detector} for a detailed discussion of the CMS detector) \cite{Friedl:1140134}\cite{Wulz:vf} which are  designed to measure the \ac{sm} to high precision and search for new physics. The LHC beauty experiment 
-\cite{Rademacker:2005tx} is designed to study at previously unattainable precision the decays of heavy quark 
-flavors, both to measure the \ac{sm} couplings and to search for beyond the \ac{sm} (BSM) physical processes. Finally
-the ALICE \cite{Alessandro:2006ht} experiment is designed to run when the LHC is running in it's secondary mode where rather than
-proton bunches, lead ions are collided, in an effort to study the quark-gluon plasma.
+So far it is unknown if we are on the correct track with our descriptions of the universe at high energies and short time scales, experimentally our theories are supported, however one can only guess at how nature works outside of our experimental range.
+With this in mine the \ac{lhc} was designed and built, to test our theories and search for the missing components of the \ac{sm} at previously unattainable energy scales.
 
-% paragraph the_accelerator_and_detectors (end)
+The \ac{lhc} its self is a particle accelerator and collider, two counter rotating beams of protons are collided at four interaction points around it's circumference, at design capacity these collisions occur every \unit{25}{\nano\second} or at a rate of 40 million times per second.
+The accelerator is situated in the \ac{lep}\cite{} tunnel at CERN on the Franco-Swiss border. At \unit{27}{\kilo\meter} in circumference it is the largest machine on the earth, it is constructed from 1624 niobium-titanium magnets, cooled to \unit{1.8}{\kelvin} which produce a maximum field strength of \unit{8.36}{\tesla}, this magnetic field is used to bend the trajectories of the proton beams so they move in a circular path.
 
+Protons are to be collided at a design centre of mass energy of \unit{14}{\TeV}, however design energy has not yet been realised, instead two runs, one at \unit{7}{\TeV} and the other at \unit{8}{\TeV} have been performed. The beams are collided to give an instantaneous luminosity of up to \unit{$1\times10^{34}$}{\lumiunits}, with a maximum instantaneous luminosity of \unit{$\approx 5 \times 10^{33}$}{\lumiunits} delivered during the 2012 run.
 
 
-\paragraph{New physics} % (fold)
-\label{par:new_physics}
-Whilst the theory of the \ac{sm} and of new physics models will be discussed in chapter~\ref{cha:theory} it is prudent to 
-discuss the observable features of these models with regard to design requirements for the general purpose detectors.
-% paragraph new_physics (end)
-% chapter introduction (end)
+
+\begin{figure}[ht]
+  \centering
+    \includegraphics[width=0.75\textwidth]{figures/Introduction/xsec.pdf}
+  \caption{Production cross sections for \ac{sm} processes and Higgs production for various Higgs masses.}
+  \label{fig:figures_Introduction_xsec}
+\end{figure}
+
+Figure~\ref{fig:figures_Introduction_xsec} shows the production cross sections of \ac{sm} and \ac{bsm} processes. To disentangle the already discovered physics low \pt physics from electro-weak and new unseen processes requires highly sophisticated particle detectors, four of which are employed at CERN for the \ac{lhc}. These consist of two general purpose detectors ATLAS\cite{ref:atlas} and \ac{cms}\cite{ref:cms} which is described in detail in Chapter~\ref{cha:the_cms_detector}. The other two detectors are specialised LHCb\cite{ref:lhcb} is designed to charge-parity violation in the \Pbottom sector and perform precision measurements of the \ac{sm} and the ALICE\cite{ref:alice} experiment designed to study the quark-gluon plasma when the \ac{lhc} is running in it's secondary mode and colliding lead ions.
+
+
+The low production cross sections for ``interesting'' new events mean that choosing which events to write out for later analysis and which events to dump is highly important and requires complex algorithms. The thesis covers triggering and event selection for a search for beyond the standard model physics that produces a dark matter candidate particle, as well as the analysis of the data collected. In the absence of discovery limits are set on the production cross section and mass scale of new physics models.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+% 
+% \paragraph{The accelerator and detectors} % (fold)
+% \label{par:the_accelerator_and_detectors}
+% The Large Hadron Collider (LHC) \cite{Benedikt:823808} is a proton-proton collider which is situated in the Large Electron Positron
+% (LEP) tunnel approximately 100 m under the franco-swiss border. Design centre of mass energy is 14 TeV with an instantaneous
+% luminosity of $ 1 \times 10$e$^{34}$cm$^{-2}$s$^{-1}$. However during 2011 the centre of mass energy was 7 TeV and the maximum
+% luminosity was $ 5 \times 10$e$^{33}$ cm$^{-2}$s$^{-1}$.
+% To achieve this high energy and high beam current the LHC uses superconducting niobium-titanium magnets, cooled to a temperature of 
+% 1.8 Kelvin, that produce a maximum field strength of 8.36 Tesla.
+% 
+% \todo[inline]{we might well need some more stuff about the LHC its self in here!}
+% 
+% Situated around the LHC ring are four detectors, two general detectors ATLAS \cite{Akesson:1999uv} and CMS (see
+% Chapter~\ref{cha:the_cms_detector} for a detailed discussion of the CMS detector) \cite{Friedl:1140134}\cite{Wulz:vf} which are  designed to measure the \ac{sm} to high precision and search for new physics. The LHC beauty experiment 
+% \cite{Rademacker:2005tx} is designed to study at previously unattainable precision the decays of heavy quark 
+% flavors, both to measure the \ac{sm} couplings and to search for beyond the \ac{sm} (BSM) physical processes. Finally
+% the ALICE \cite{Alessandro:2006ht} experiment is designed to run when the LHC is running in it's secondary mode where rather than
+% proton bunches, lead ions are collided, in an effort to study the quark-gluon plasma.
+% 
+% % paragraph the_accelerator_and_detectors (end)
+% 
+% 
+% 
+% \paragraph{New physics} % (fold)
+% \label{par:new_physics}
+% Whilst the theory of the \ac{sm} and of new physics models will be discussed in chapter~\ref{cha:theory} it is prudent to 
+% discuss the observable features of these models with regard to design requirements for the general purpose detectors.
+% % paragraph new_physics (end)
+% % chapter introduction (end)
