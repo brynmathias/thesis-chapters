@@ -9,37 +9,36 @@
 
 The \ac{cms} detector was designed and built to study proton-proton 
 interactions at the \ac{lhc} with the aim of discovering the Higgs boson and 
-searching for beyond the standard model physics signals. The detector is 
-constructed in a traditional onion layer design with high precision tracking 
-detectors nearest the interaction point and high energy resolution calorimetric 
-detectors in the outer layers. Due to the predicted presence of missing energy 
-\MET in new physics models, energy measurement over the full $\eta$ range is 
-required. As allured to in the name the possibilities of the new physics models 
-containing muons and the ``golden'' Higgs decay channel
-\HepProcess{\PH\to\PZ\PZ\to\Pmu\Pmu\Pmu\Pmu}, the detector was designed to 
-accurately reconstruct muons with \PT of \unit{1}{\TeV}. Due to the 
-prevalence of lepton signals and the ability to distinguish these leptons from 
-the large amount of hadronic fragmentation caused by smashing two protons 
-together at a centre of mass energy of \unit{14}{\TeV} the \ac{cms} 
+searching for beyond the standard model physics signals. The detector is a 
+traditional onion layer design with high precision tracking detectors nearest 
+the interaction point and high energy resolution calorimetric detectors in the 
+outer layers. Due to the predicted presence of missing energy \MET in new 
+physics models, energy measurement over the full $\eta$ range is required. As 
+alluded to in the name the possibilities of the new physics models containing 
+muons and the ``golden'' Higgs decay channel 
+\HepProcess{\PH\to\PZ\PZ\to\Pmu\Pmu\Pmu\Pmu}, and \PZprime models the detector 
+was designed to accurately reconstruct muons with \PT of up to \unit{1}{\TeV}. 
+Due to the prevalence of lepton signals and the ability to distinguish these 
+leptons from the large amount of hadronic fragmentation caused by smashing two 
+protons together at a centre of mass energy of \unit{14}{\TeV} the \ac{cms} 
 Electromagnetic calorimeter was also designed to have precise energy 
-measurement and fine grain spatial resolution, this design feature was also 
-necessitated by the Higgs decay channel \HepProcess{\PH\to\Pphoton\Pphoton}.The 
-other new feature of \ac{cms} is the use silicon detectors through out for 
+measurement and fine grain spatial resolution, this design feature was motivated by the Higgs decay channel \HepProcess{\PH\to\Pphoton\Pphoton}.The 
+other new feature of \ac{cms} is the use silicon detectors throughout for 
 particle tracking these give precise track reconstruction abilities and the 
 associated fine grain resolution in both position and momentum. All the 
 sub-detectors save the muon system are contained with in the barrel of a 
 \unit{4}{\tesla} superconducting solenoid. This magnet provides the particle 
 track bending required for momentum and lepton charge measurement. In this 
-section the key detector elements and their design parameters are discussed. In 
-Section~\ref{cha:the_t_analysis} the construction of offline 
-physics objects is discussed.
+section the key detector elements and their design parameters are discussed.
 
 \section{The Silicon Tracker} % (fold)
 \label{sec:the_silicon_tracker}
 \begin{figure}[htbp]
   \centering
     \includegraphics[width=0.5\textwidth]{figures/CMS/tracker.png}
-  \caption{The \ac{cms} tracking system, pixel detectors are situated at the centre of the detector closest to the interaction point, surrounded by layers of silicon strip detectors\cite{cms-sketchup}.}
+  \caption{The \ac{cms} tracking system, pixel detectors are situated at the 
+  centre of the detector closest to the interaction point, surrounded by layers 
+  of silicon strip detectors\cite{cms-sketchup}.}
   \label{fig:figures_CMS_tracker}
 \end{figure}
 
@@ -47,7 +46,8 @@ The design goal for the \ac{cms} tracking system was to produce a system that
 can precisely and efficiently measure the trajectories of charged particles 
 produced in \ac{lhc} collisions. The tracking system surrounds the collision 
 point and has a length of \unit{5.8}{\meter} and a diameter of 
-\unit{2.5}{\meter}. At the \ac{lhc}'s design instantaneous luminosity of \unit{10$^{34}$}{\lumiunits} an average of 1000 charged particles from more 
+\unit{2.5}{\meter}. At the \ac{lhc}'s design instantaneous luminosity of 
+\unit{10$^{34}$}{\lumiunits} an average of 1000 charged particles from more 
 than 20 proton-proton interactions will be produced per \unit{25}{\nano\second} 
 bunch crossing. This imposes the requirements of high granularity so that the 
 individual particles and their trajectories can be distinguished and a fast 
@@ -60,7 +60,7 @@ traversing the tracking system, this in turn limits the position and energy
 resolution of the calorimeter systems. A compromise between the material budget 
 of the tracking system, the desired features and the requirement for the 
 tracking system to have an expected life time of 10 years in a high radiation 
-environment, this was to construct the tracking system using only solid state 
+environment, this resulted in the construction of the tracking system using only solid state
 silicon detector technology.
 
 The \ac{cms} tracking system is formed of a pixel detector with three layers 
@@ -70,47 +70,48 @@ radius of \unit{1.1}{\meter} from the interaction point. The barrel layers of
 both the pixel and strip detectors are complimented by layers of either pixel 
 or strip disks which extend the acceptance of the tracker to \mETA $<$ 2.5. The 
 resulting structure is that of a detector with \unit{200}{\squaremetre} of 
-active silicon which makes the \ac{cms} tracker the largest detector of it's 
+active silicon which makes the \ac{cms} tracker the largest detector of its 
 type ever constructed.
 
 The individual pixels that comprise the pixel detector are 100 $\times$ 
 150 $\micro\textrm{m}^{2}$ which corresponds to an occupancy of around 
-10$^{-4}$ per bunch crossing. The detector cell size for the Microstrip 
+10$^{-4}$ per bunch crossing. The detector cell size for the microstrip 
 detectors at a radius between \unit{20-55}{\cm} is \unit{10}{\cm} $\times$ 
-\unit{180}{\micro\meter} which leads to an average occupancy of 2-3$\%$, 
-further out the minimum cell size is increased to \unit{25}{\cm} $\times$ 
-\unit{180}{\micro\meter} with an occupancy of around 1$\%$. The tracker 
-performance is extensively documented in \cite{cmstracking}.
+\unit{180}{\micro\meter} which leads to an average occupancy of 2-3$\%$. 
+Further out at a radius greater than \unit{55}{\cm}  the minimum cell size is 
+increased to \unit{25}{\cm} $\times$ \unit{180}{\micro\meter} with an occupancy 
+of around 1$\%$. The tracker performance is extensively documented in 
+\cite{cmstracking}.
 
 % section the_silicon_tracker (end)
 
 \section{The Electromagnetic Calorimeter (ECAL).} % (fold)
 \label{sec:the_electromagnetic_calorimeter}
-The \ac{cms} electromagnetic calorimeter is a hermetic homogeneous calorimeter 
-constructed from lead tungstate (PbWO$_{4}$) crystals. The ECAL is split into 
-two parts, a barrel covering $|\eta| < 1.479$ read out by avalanche photodiodes 
-and the two end-caps covering $1.479 < |\eta| < 3.0$, read out by vacuum 
-photo-triodes.
+The \ac{cms} electromagnetic calorimeter\cite{ref:cmsecaltdr} is a hermetic 
+homogeneous calorimeter constructed from lead tungstate (PbWO$_{4}$) crystals. 
+The ECAL is split into two parts, a barrel covering $|\eta| < 1.479$ read out 
+by avalanche photodiodes and the two end-caps covering $1.479 < |\eta| < 3.0$, 
+read out by vacuum photo-triodes.
 
-Lead tungstate crystals were chosen because of their short radiation length 
-$X_{0}= \unit{0.89}{\cm}$, fast scintillation and radiation hardness. During 
-the research and development program it was shown that radiation damage does 
-not affect the scintillation method or the uniformity of the emitted light 
-yield along the crystal, it only effects the transparency through the creation 
-of colour centres. This will be monitored throughout the lifetime of the ECAL 
-via a light injection system\cite{Smith:2000p5245}.
+Lead tungstate crystals were chosen because of their short radiation length, 
+fast scintillation and radiation hardness. During the research and development 
+program it was shown that radiation damage does not affect the scintillation 
+method or the uniformity of the emitted light yield along the crystal, it only 
+effects the transparency through the creation of colour centres. This will be 
+monitored throughout the lifetime of the ECAL via a light injection 
+system\cite{Smith:2000p5245}.
 
 The barrel crystals have a front face of \unit{22 $\times$ 22}{\mm\squared}, 
 this corresponds to the Moliere radius of $\approx $ \unit{22}{\mm}; with a 
 length of \unit{230}{\mm} giving a each crystal length of $25.8 X_{0}$ where 
 $X_{0}$ is amount of material required for 68$\%$ of an electromagneticly 
 interacting particle's energy to be radiated in the form of bremsstrahlung or 
-pair production whilst traversing that material. They are arranged in 36 
-super-modules, forming two half barrels. The crystal axes are skewed at 
-\unit{3}{\degree} with respect to the vertex and each covers \unit{1}{\degree} 
-in $\phi ~ \& ~ \eta$
+pair production whilst traversing that material for lead tungstate this length 
+is $X_{0}= \unit{0.89}{\cm}$. They are arranged in 36 super-modules, forming 
+two half barrels. The crystal axes are skewed at \unit{3}{\degree} with respect 
+to the vertex and each covers \unit{1}{\degree} in $\phi$ and $\eta$
 
-The End cap crystals are arranged in two semi-circular `Dees', groups of 
+The endcap crystals are arranged in two semi-circular `Dees', groups of 
 $5\times 5$ crystals are canter-levered on a aluminium backing plate. The 
 crystals are again skewed with regard to the interaction vertex, however they 
 are arranged in an $x-y$ grid rather than a $\phi - \eta$ grid. The crystal 
@@ -119,13 +120,15 @@ $\times$ 28.6}{\mm\squared}, with a length of \unit{220}{\mm} corresponding to
 24.7 radiation lengths
 
 The crystals are read out with avalanche photo-diodes in the barrel region 
-which covers $\mETA < 1.479$ and with vacuum photo-triodes in the end cap 
+which covers $\mETA < 1.479$ and with vacuum photo-triodes in the endcap 
 region which covers $1.479 < \mETA < 3.0$.
 
 In addition to the ECAL there is a pre-shower detector situated at $1.653 < 
-\mETA < 2.6$, this provides identification of elections against minimum 
-ionising particles and improves the position measurement of electrons and 
-photons in the ECAL endcaps.
+\mETA < 2.6$, this provides identification of isolated elections against 
+electrons produced in showers, each particle passes though the detector leaving 
+a minimum ionising track, or hit, the number of these hits per area gives 
+information on the isolation of the particle and improves the position 
+measurement of electrons and photons in the ECAL endcaps.
 \begin{figure}[ht]
   \centering
     \includegraphics[width=0.75\textwidth]{figures/CMS/laser_history_2011-12.png}
@@ -136,7 +139,7 @@ The response change observed in the ECAL channels is of the order of a few
 percent in the barrel, while it reaches up to 25$\%$ in the most forward endcap 
 regions used for electron and photon reconstruction. The response change is up 
 to 60$\%$ in channels closest to the beam pipe. These measurements are used to 
-correct the physics data. \\ The bottom plot shows the instantaneous LHC 
+correct the physics data. \\ The bottom plot shows the instantaneous \ac{lhc} 
 luminosity delivered during this time period.\cite{CMS-DP-2012-015}}
   \label{fig:figures_CMS_laser_history_2011-12}
 \end{figure}
@@ -145,7 +148,7 @@ Figure~\ref{fig:figures_CMS_laser_history_2011-12} shows the change in response
 of the ECAL during running, due to the formation of colour centres, this 
 response is measured using laser light at 440 nm and is used to correct the 
 energies recorded in data during each run to form a uniform response.
-
+The ECAL performance in 2011 is extensively documented in \cite{CMS-DP-2012-002}.
 % section the_electro_magnetic_calorimeter (end)
 
 \section{The Hadronic Calorimeter (HCAL).} % (fold)
@@ -156,8 +159,8 @@ is situated between the ECAL which ends at a radius of \unit{1.77}{\meter} and
 the solenoid which starts at a radius of \unit{2.95}{\meter}. This constraint 
 limits the amount of material which can be put in place to fully contain the 
 hadronic showers. To overcome this an outer lay of instrumentation is placed 
-outside of the magnet and cryogenic system to catch the hadronic tails. The 
-full containment of the hadronic objects is necessary for precise missing 
+outside of the magnet and cryogenic system to fully contain hadronic showers. 
+The full containment of the hadronic objects is necessary for precise missing 
 energy measurement, which is a key discriminatory feature for new physics 
 models with undetectable final state particles.
 
@@ -166,21 +169,22 @@ barrel (HB) \mETA $< 1.3$ , hadronic endcaps (HE) $1.3 < \mETA < 3.0$ and a
 forward calorimeter (HF) $3.0 < \mETA < 5.5$.
 
 The HB and HE are comprised of layered tiles of brass absorber plates 
-interspaced with scintillator plates which are read out by wave length shifting 
+interspaced with scintillator plates which are read out by wavelength shifting 
 fibres. The total absorber thickness varies between 5.2 and 10.6 interaction 
 lengths, the ECAL adds approximately one extra interaction length. The 
 scintillators are segmented in to towers of area $\Delta\eta\times\Delta\phi = 
 0.087\times0.087$ in the barrel and $\Delta\eta\times\Delta\phi = 
-0.17\times0.17$ in the end caps. The light produced and in the scintillators is 
+0.17\times0.17$ in the endcaps. The light produced and in the scintillators is 
 merged in the wavelength shifting fibres and then read out using hybrid 
 photo-diodes.The HF is constructed from radiation hard quartz fibres, this 
 enables the detector to survive in the very forward regions of the detector 
-where unprecedented levels of radiation are experienced.
+where high levels of radiation are experienced.
 
 The hadronic outer (HO) which is situated outside the solenoid used the 
 solenoid coils as an extra absorber adding extra interaction lengths in the 
 barrel region ensuring full containment of hadronic showers. The HO is 
 constructed from layers of scintillator tiles, the light from which is then merged in the wavelength shifting fibres and read out using hybrid photo-diodes.
+HCAL performance is documented in \cite{CMS-DP-2012-025}.
 % section the_hadronic_calorimeter (end)
 
 
@@ -214,12 +218,12 @@ chambers (DT) are used, these cover the region $\mETA < 1.2$ are are
 interspaced between the layers of the magnetic flux return plates. In the end 
 cap regions where the muon and background rates are higher and the magnetic 
 field is non-uniform, cathode strip chambers (CSC) are are used due to their 
-fast response, radiation hardness and fine grain segmentation, the CSC's cover 
+fast response, radiation hardness and fine grain segmentation, the CSCs cover 
 $0.9 < \mETA < 2.4$. Due to the initial uncertainty on the background rates and 
 the \unit{25}{\nano\second} bunch crossing intervals expected when the \ac{lhc} 
 is running under design conditions a complementary dedicated muon triggering 
-system consisting of resistive plate chambers (RCP) was added in the range 
-$\mETA < 1.6$, the RCPs provide a fast, independent and fine grain system for 
+system consisting of \ac{rpc} was added in the range $\mETA < 1.6$, the 
+\ac{rpc}s provide a fast, independent and fine grain system for 
 which to trigger on muon objects in the harshest of running conditions.
 
 Due to multiple scattering and the shear quantity of detector material before 
@@ -228,15 +232,16 @@ accurate to a level of $\approx10\%$ below \unit{200}{\GeV} and accurate to a
 level of $15-40\%$, \mETA dependant for \unit{1}{\TeV} muons, when including 
 the tracker information in the muon momentum measurement the resolution is 
 improved to $\approx1\%$ below \unit{200}{\GeV} and to about $5\%$ for 
-\unit{1}{\TeV} muons.
+\unit{1}{\TeV} muons. The performance of the \ac{cms} muon system is detailed 
+in \cite{cmsMuPerf}.
 % section the_cms_muon_system (end)
 
-\section{The Level One Trigger System.} % (fold)
+\section{The \Lone Trigger System.} % (fold)
 \label{sec:the_level_one_trigger_system}
 The \ac{cms} trigger system is designed in two levels, the first, the \Lone 
 trigger is built using custom electronics and is designed to reduce the input 
 rate of 40 million events per second to a manageable rate of 100 thousand 
-events per second. Information from the calorimeter and muon systems only are 
+events per second. Information only from the calorimeter and muon systems are 
 considered as the time required to read out the tracking information is 
 prohibitive at this level. Two separate trigger systems, one performing 
 triggering on the calorimeter system, the other performing triggering on the 
@@ -245,19 +250,18 @@ triggering algorithms and their performance see
 Chapter~\ref{cha:level_one_trigger}. The information from these two sub 
 triggers is passed to the global trigger, where the decision to accept the 
 event or not is made. 
-The muon trigger considers information from each of the DT, CSC and RCP muon 
-systems. Tracks are created from the hits in each of the sub systems and 
+The muon trigger considers information from each of the DT, CSC and \ac{rpc} 
+muon systems. Tracks are created from the hits in each of the sub systems and 
 fitted, the muon momentum is then calculated from the radius of curvature of 
 these muons, the four highest \PT muon candidates are then passed to the global 
 trigger.
 Electron and photon candidates are created by the regional calorimeter trigger, 
-which is in turn read out by the global calorimeter trigger (GCT), the GCT 
-creates jet candidates, energy and missing energy sums, the four highest \ET 
-jet candidates of each type (central, tau and forward), the energy sums and the 
-electron/photon candidates are then passed to the global trigger where the 
-final trigger decisions are made. These decisions can require information from 
-a single detector or can require cross objects such as the requirement of an 
-energy sum value and a muon.
+the GCT creates jet candidates, energy and missing energy sums, the four 
+highest \ET jet candidates of each type (central, tau and forward), the energy 
+sums and the electron/photon candidates are then passed to the global trigger 
+where the final trigger decisions are made. These decisions can require 
+information from a single detector or can require cross objects such as the 
+requirement of an energy sum value and a muon.
 % section the_level_one_trigger_system (end)
 
 \section{The High Level Trigger System.} % (fold)
@@ -266,30 +270,32 @@ The high level trigger system is constructed from off the shelf components.
 The system is composed of two sets of machines, the first are the Event Builder 
 (EB) units, these build raw data in to regional chunks from the data read out 
 at the front end of the detector when a \Lone accept is received, this is then  
-combined and transmitted to the event filter cluster. The EB units transfer the 
-data to the Event Filter (EF) units via a standard TCP/IP gigabit ethernet link.
+combined and transmitted to the Event Filter cluster. The EB units transfer the 
+data to the (EF) units via a standard TCP/IP gigabit ethernet link.
 The task of the HLT EF units is to run complex reconstruction algorithms using 
 combined detector information to reduce the data rate accepted by the \Lone 
 trigger to a manageable rate, the original design anticipated an output rate of 
 100 events per second, however in 2012 running 1000 events per second were 
-stored, half of this rate was assigned to the prompt reconstruction work flow, 
+stored, half of this rate was assigned to the prompt reconstruction queue, 
 the other half was stored for reconstruction during the long shut down of the 
 \ac{lhc} in 2013-2015.
 
-The EF farm is formed from standard rack-mounted pc units with a total of 
+The EF farm is formed from standard rack-mounted PC units with a total of 
 approximately 1000 computing cores operating at a clock frequency of around 
 \unit{2}{\giga\hertz}. Upon receiving an event, each unit performs the \ac{cms} 
-reconstruction, the same software is used as for offline analysis meaning that 
-the objects used for trigger decisions are as close in performance to the 
-offline objects as possible, this increases the over all trigger efficiency. 
+reconstruction, the same software framework is used as for offline analysis 
+meaning that the objects used for trigger decisions are as close in performance 
+to the offline objects as possible,  this increases the over all trigger 
+efficiency, however the calibrations used at HLT level are not the final 
+derived version. 
 Trigger chains are designed so that full event reconstruction can be performed, 
 however when constructing a trigger that requires full tracking reconstruction 
 steps are made so that if a given requirement is failed at a lower stage of the 
 reconstruction then time is not wasted performing the full reconstruction. The 
-EF farm is connected to a large (several hundred terrabyte) storage area net 
-work, this acts as a temporary storage area for the events accepted by the HLT 
-before the events are transferred to the tier-zero reconstruction farm which is 
-located at the central CERN site.
+EF farm is connected to a large (several hundred terrabytes) storage area 
+network, this acts as a temporary storage area for the events accepted by the 
+HLT before the events are transferred to the tier-zero reconstruction farm 
+which is located at the central CERN site.
 
 
 % section the_high_level_trigger_system (end)
