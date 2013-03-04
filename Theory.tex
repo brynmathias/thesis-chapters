@@ -67,7 +67,7 @@
 \label{sec:the_standard_model_sm_}
 
 % section the_standard_model_sm_ (end)
-The \ac{sm} of particle physics seeks to describe all of the observed matter 
+The \ac{sm} of particle physics \cite{Glashow1961579,PhysRevLett.19.1264,tHooft1972189} seeks to describe all of the observed matter 
 particles and their interactions. The theory is a quantum field theory which is 
 both invariant under local gauge transform and renormilisable. The theory is 
 constructed from the unitary product group $SU(3)\bigotimes SU(2)_{L} 
@@ -78,9 +78,9 @@ is contrary to what is inferred by the invariance under local gauge transform,
 that the gauge bosons should be massless. The $SU(2)_{L} \bigotimes U(1)_{Y}$ 
 symmetry is thus seen to be broken, this is achieved by the addition of a 
 scalar field with a non-zero vacuum expectation value, the extra degrees of 
-freedom introducted by this scalar field allow the electro-weak bosons to gain 
+freedom introduced by this scalar field allow the electro-weak bosons to gain 
 mass with out breaking the local gauge invariance of the Lagrangian. The method 
-was proposed by Englert, Brout, Higgs, Guralnik, Hagen and Kibble \cite{} but 
+was proposed by Englert, Brout, Higgs, Guralnik, Hagen and Kibble \cite{tHooft1972189,PhysRevLett.13.321,Higgs1964132,PhysRevLett.13.508,PhysRevLett.13.585,PhysRev.145.1156,PhysRev.155.1554} but 
 is shortened to the ``Higgs'' mechanism and the resulting mediator is known as 
 the Higgs boson (\PHiggs).
 
@@ -217,7 +217,7 @@ It has been shown that the choice of representing the \ac{sm} as a gauge invaria
 
 % subsection electro_weak_symmetry_and_interactions (end)
 
-\section{Beyond the Standard Mode.} % (fold)
+\section{Beyond the Standard Model.} % (fold)
 \label{sec:beyond_the_standard_mode_}
 The \ac{sm} does a good job of describing the fundamental particles, their 
 interactions and the generation of fundamental mass. However it is not a full 
@@ -235,7 +235,8 @@ the neutrino mass must be non-zero.
 The most glaring short coming other than the lack of a description of 
 gravitational dynamics is the lack of a dark matter candidate. This dark matter 
 candidate needs to be heavy, stable, chargeless, colourless and interact via 
-the weak nuclear force only. Such particles are predicted by \ac{susy}\cite{} 
+the weak nuclear force only. Such particles are predicted by \ac{susy}\cite{ref:SUSY-1, ref:SUSY0, ref:SUSY1, ref:SUSY2, ref:SUSY3,
+  ref:SUSY4, ref:hierarchy1, ref:hierarchy2} 
 models which also provide a description of gravity. These models insert a 
 further broken symmetry between bosons and fermions, i.e. for each \ac{sm} 
 boson there is a \ac{susy} fermion and visa versa.
@@ -246,7 +247,7 @@ boson there is a \ac{susy} fermion and visa versa.
 \subsection{The Constrained Minimal Super Symmetric Model} % (fold)
 \label{sec:the_constrained_minimal_super_symmetric_model}
 Whilst there are a plethora of \ac{susy} models, in order to compare the 
-\ac{cms} searches against previous and contemporary experiments the \ac{cmssm} 
+\ac{cms} searches against previous and contemporary experiments the \ac{cmssm}\cite{ref:CMSSM} 
 is chosen as a bench mark, however there are compelling reasons to study the 
 \ac{cmssm} it's self. \ac{susy} introduces 105 new parameters to the existing 
 19 of the \ac{sm}, effectively sampling a space this large is prohibitive, 
@@ -264,8 +265,8 @@ particles. For the interpretation of the analysis presented in this thesis,
 limits are set as a function of $m_{0}$ and $m_{1/2}$ with fixed values for the 
 other variables of $tan \beta = 10$, $A_{0} = 0$ and $\mu > 0$.
 Before \ac{lhc} start up the preferred values for $m_{0}$ and $m_{1/2}$ as 
-given by \cite{mastercode} were well defined and with in reach of the early 
-\ac{lhc} \ac{susy} searches.
+given by \cite{Buchmueller:2011tr} were well defined and with in reach of the 
+early \ac{lhc} \ac{susy} searches.
 % section the_constrained_minimal_super_symmetric_model (end)
 
 \subsection{Simplified Models} % (fold)
@@ -310,6 +311,64 @@ to form jets.
 
 % subsection simplified_models (end)
 
+\section{Motivating the \alt Analysis} % (fold)
+\label{cha:motivating_the_alt_analysis}
+
+As seen above, the particles produced by new physics models that provide a dark 
+matter candidate should leave a signature of a large amount of undetected 
+energy, in proton-proton collisions the initial momentum of each of the 
+colliding partons is not known as the proton is a composite object. However it 
+is known that the momentum in the plane transverse to the direction of the 
+proton beams (\pt) is zero. The final states that distinguish this new 
+predicted physics from \ac{sm} processes involve large amount of missing energy 
+projected on to the transverse plane \ETm. These events also involve the 
+production of \ac{sm} particles in the decay chain. The final states that are 
+searched for in this analysis involve hadronic jets and missing energy.
+
+However there are \ac{sm} processes that produce signatures with missing energy 
+in association with hadronic jets. These background sources need to be 
+predicted or measured from standard model processes, these predictions are then 
+compared to the observed number of events in each of the signal regions, the 
+compatibility of these results with the \ac{sm} allows us to discover or rule 
+out new physics models.
+
+% If Supersymmetry or some other beyond the \ac{sm} theory is to provide a 
+% yet undiscovered dark matter candidate the \ac{lsp}, it is predicted that this 
+% candidate will interact via the weak nuclear force only. This gives a decay 
+% topology involving missing energy in the form of the dark matter particle 
+% escaping the detector. Due to the nature of interactions at the \ac{lhc}, these 
+% particles would be produced at the end of a decay chain of heavy particles that 
+% interact strongly, giving a final topology involving hadronic objects which are 
+% classified as jets for the purpose of analysis and missing energy.
+% There are several \ac{sm} processes that mimic this final state.
+
+By far the largest of these backgrounds comes from QCD multi jet events where 
+fake missing energy is introduced either from failures in reconstruction, or 
+stochastic fluctuations in the calorimeter systems.
+However due to the theoretical errors on the QCD production cross section 
+predicting the number QCD background events from Montecarlo simulation is not 
+possible. A secondary QCD background also exists, where due to the requirement 
+of a jet \ET threshold, multiple jets fall under threshold by a few \GeV, this 
+causes a balanced event to look unbalanced as the jets under threshold are no 
+longer considered. It is these sources of QCD background that \alt is designed 
+to remove, for a detailed explanation of the \alt variable see Section~\ref{sec:the_alpha___t_variable_}
+
+The second major background comes from \ac{sm} electro-weak decays and 
+is irreducible as the final states involve real missing energy, from 
+neutrinos. The electro-weak decays that form the back ground are 
+\HepProcess{\PW\to\Ptau\Pnu} + Jets, where the $\tau$ is reconstructed as a 
+jet, or the lepton fails the identification required for the dedicated lepton 
+vetoes, \HepProcess{\PZ\to\Pnu\APnu} + Jets is completely irreducible. These 
+are generally di-jet topologies. At higher jet multiplicities top quark 
+production followed by semi-leptonic top decay accounts of the largest 
+background. These backgrounds are predicted using a well understood control 
+sample this is fully explained in 
+Section~\ref{sec:electro_weak_background_prediciton}.
+
+The final background source is that introduced by detector failure or 
+electronic noise induced by the movement of the \ac{lhc} proton beam.
+Approximately 1$\%$ of the ECAL read out is not available in offline event 
+reconstruction, this provides a source of fake missing energy.
 
 % chapter theory (end)
 
