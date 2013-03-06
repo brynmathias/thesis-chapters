@@ -1,10 +1,21 @@
 \chapter{Background Prediction} % (fold)
 
+The raw number of events in the signal region is meaningless with out 
+an accurate background prediction, as discussed earlier taking the background 
+estimation from simulation is not viable due to the requirement of high order 
+theory calculations on the cross sections of \ac{sm} processes involving 
+jets, these have many divergencies due to the nature of QCD. Instead the 
+simulation is used to form a translation factor between two samples measured in 
+data, a control sample which closely mimics the \ac{sm} processes 
+producing missing energy, but has a visible muon or photon in the final state. 
+The background estimation methods are described and the background predictions 
+stated in this chapter.
+
 \section{Electro-Weak Background Prediciton} % (fold)
 \label{sec:electro_weak_background_prediciton}
 
 The requirement of an \alt cut on the signal sample removes multi-jet QCD 
-events where a balanced event is counted as signal due to miss-measurements, 
+events where a balanced event is counted as signal due to mismeasurements, 
 the remaining background events in the signal region are due to electro-weak 
 processes which produce real missing energy. Primarily these events are 
 produced from \HepProcess{\PZ\to\Pnu\APnu}~+~Jets, 
@@ -113,7 +124,7 @@ The magnitude of the systematic uncertainties on the transfer factors is
 motivated by a set of closure tests between the control samples. A transfer 
 factor is produced to predict each control sample from each of the other 
 control samples. No assumed systematic is applied in these closure tests, 
-instead the level of agreement with in statistical uncertainty is used to set 
+instead the level of agreement within statistical uncertainty is used to set 
 the scale of the systematic error for each \HT bin.
 
 
@@ -129,7 +140,7 @@ containing the decay \HepProcess{\PW\to\mu\nu}~+~Jets in the same kinematic
 conditions as those events entering the signal selection. Offline the event 
 level discriminators, \HT and \alt, are calculated using only the hadronic 
 components of the event. In order to select the \HepProcess{\PW} exactly one 
-tightly identified, isolated muon with in \mETA $<$ 2.5 with \PT $>$ 
+tightly identified, isolated muon within \mETA $<$ 2.5 with \PT $>$ 
 \unit{10}{\GeV} is required. The transverse mass of the muon combined with the 
 missing energy of the event $M_{T}(\mu,\MET)$ is required to be larger than 
 \unit{30}{\GeV}, as shown in Figure~\ref{fig:figures_Analysis_Wmunu_pfMT} the 
@@ -137,7 +148,7 @@ transverse mass cut removes a large amount of QCD whilst preserving a high
 efficiency \HepProcess{\PW} selection. Events are vetoed if for any jet $\Delta 
 R(\mu,Jet) < 0.5$, or if a second muon candidate exists that is either loose, 
 non-isolated or outside of acceptance if the two muons have an invariant mass 
-with in $\pm$\unit{25}{\GeV} of the \PZ mass, to suppress 
+within $\pm$\unit{25}{\GeV} of the \PZ mass, to suppress 
 \HepProcess{\PZ\to\mu\mu} events.
 
 
@@ -162,8 +173,8 @@ verses the requirement of a particular lepton flavour, the acceptance
 difference is due to the \PT and identification quality requirements on the 
 muons alter the acceptance between the two processes. The following selection 
 criteria are applied on top of the common selection: Exactly two tightly 
-identified, isolated muons, with in \mETA $<$ 2.5 with \PT $>$ \unit{10}{\GeV} 
-are required; The invariant mass of the di-muon pair is required to be with in 
+identified, isolated muons, within \mETA $<$ 2.5 with \PT $>$ \unit{10}{\GeV} 
+are required; The invariant mass of the di-muon pair is required to be within 
 $\pm$\unit{25}{\GeV} of the \PZ mass; Events are vetoed if for any muon and jet 
 combination $\Delta R(\mu,Jet) < 0.5$. As in the single muon control sample all 
 event level quantities are calculated from the hadronic objects alone. This 
@@ -472,7 +483,7 @@ The expected QCD contamination in the signal region where \HT $>$
 \unit{275}{\GeV} and \altg from simulated background samples is 
 negligible\cite{CMS-AN-11-517}, residual events are removed via the application 
 of the detector failure and \Rmiss $<$ 1.25 filters. However due to the 
-difficulty in simulating QCD multi jet events accurately a conservative 
+difficulty in simulating QCD multi-jet events accurately a conservative 
 approach is taken where a term is inserted in the likelihood to model any 
 residual QCD contamination.
 
