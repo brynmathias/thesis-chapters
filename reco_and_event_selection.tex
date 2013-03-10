@@ -204,7 +204,12 @@ photon control sample.
 
 \subsection{Cross Cleaning} % (fold)
 \label{sub:cross_cleaning}
-\todo[inline]{write some stuff about the cross cleaning!!!!!}
+The \ac{cms} software attempts to identify each object in the detector, at 
+times this results in overlapping offline objects. For example a muon 
+reconstructed inside a jet. To avoid double counting of objects a cleaning 
+scheme is set up. The object with the tightest ID is declared the true object 
+and the overlapping object is merged and the energy recomputed.
+
 % subsection cross_cleaning (end)
 
 \section{Common Analysis cuts} % (fold)
@@ -305,7 +310,7 @@ are then binned in 8 \HT bins, these are \unit{275}{\GeV} - \unit{325}{\GeV},
 % The background estimation methods are described and the background predictions 
 % stated in Section~\ref{sec:electro_weak_background_prediciton}.
 The next section describes the triggers used to collect the data samples
-section event_selection (end)
+% section event_selection (end)
 
 \section{High Level Triggers for the \alt analysis} % (fold)
 \label{sec:high_level_triggers_for_the_alt_analysis}
