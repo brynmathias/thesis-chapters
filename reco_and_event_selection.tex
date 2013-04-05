@@ -1,3 +1,12 @@
+% \chapter{An all hadronic search for Supersymmetry at the LHC} % (fold)
+% \label{cha:an_all_hadronic_search_for_supersymmetry_at_the_lhc}
+% The subsequent chapters describe a search for \ac{susy} in exclusivly hadronic final
+
+
+% chapter an_all_hadronic_search_for_supersymmetry_at_the_lhc (end)
+
+
+
 \chapter{Reconstruction and Event selection} % (fold)
 \label{cha:the_t_analysis}
 In this chapter the event reconstruction and selection are described. The search variable \alt is constructed both as an offline discriminator and as an 
@@ -9,10 +18,10 @@ The first performance measurement is on the full \unit{5}{\invfb} of
 analysis presented in this thesis. The performance of a suite of upgraded \alt 
 triggers is then measured on \unit{11}{\invfb} of \unit{8}{\TeV} data which was 
 collected during the 2012 \ac{lhc} run. These performance measurements were 
-used in the analysis presented in \cite{Chatrchyan:2012wa}
+used in the analysis presented in \cite{Chatrchyan:2012wa}.
 
 
-\section{The \alt variable.} % (fold)
+\section{The \alt variable} % (fold)
 \label{sec:the_alpha___t_variable_}
 The \alt is variable inspired by Ref~\cite{Randall:2008dk} and was expanded first to consider transverse topologies and later expanded to  multi-jet systems by members of the CMS collaboration in 
 Refs~\cite{cms-pas-sus-08005,cms-pas-sus-09001}. The purpose is to provide a 
@@ -105,20 +114,20 @@ in this analysis.
   \label{fig:figures_Analysis_caloJetUncertianty}
 \end{figure}
 
-It is also possible to correct the raw energies of the jets for pile up. Pile 
-up causes energy from secondary interactions to be added to the event, his 
-energy is distributed uniformly though out the detector. Two forms of pile up 
+It is also possible to correct the raw energies of the jets for \pu. Pile-up 
+causes energy from secondary interactions to be added to the event, this 
+energy is distributed uniformly though out the detector. Two forms of \pu 
 corrections are used in \ac{cms} to correct the energies of calorimeter jets. 
 The first is an offset correction, the raw energy has a constant energy removed 
 though out the detector based on the number of primary vertices in the event. 
-The second method is to calculate per event the average energy deposited in 
+The second method is to calculate per event, the average energy deposited in 
 each calorimeter tower using the 
 \texttt{FastJet}\cite{Cacciari:2011ma,hep-ph/0512210} jet clustering package, 
 this quantity is referred to as $\rho$ and is also used to correct the 
 isolation variables for elections, muons and photons.
 
 
-The jets considered in the analysis are not corrected for pile up, each jet is 
+The jets considered in the analysis are not corrected for \pu, each jet is 
 required to have \ET $>$ \unit{50}{\GeV}, the highest \ET jet in the events is 
 required to be within tracker acceptance ($|\eta| <$ 2.5) and the sub leading 
 jet is required to have \ET $>$ \unit{100}{\GeV}. In the lowest two offline \HT 
@@ -202,13 +211,13 @@ photon with \ET $>$ \unit{150}{\GeV} within \mETA $<$ 1.45 is made for the
 photon control sample.
 % subsection photons (end)
 
-\subsection{Cross Cleaning} % (fold)
+\subsection{Resolving object overlaps} % (fold)
 \label{sub:cross_cleaning}
 The \ac{cms} software attempts to identify each object in the detector, at 
 times this results in overlapping offline objects. For example a muon 
 reconstructed inside a jet. To avoid double counting of objects a cleaning 
 scheme is set up. The object with the tightest ID is declared the true object 
-and the overlapping object is merged and the energy recomputed.
+and the overlapping object is merged and the energy recomputed. This is referred to as ``Cross Cleaning''.
 
 % subsection cross_cleaning (end)
 
@@ -399,8 +408,8 @@ and the \pt of any muons in an event is viewed as missing energy.
 The selection for the trigger efficiency measurement is the same as listed in 
 Section~\ref{sec:event_selection} with the requirement of exactly one well 
 identified muon with \PT $>$ \unit{45}{\GeV}, the sum of the \MET in the event 
-and the muon must add to the \PW mass and finally the muon must be separated by 
-at least 0.5 in $\Delta R$ to the closest jet, to avoid the muon energy 
+and the muon must add to the \PW mass. Finally the muon must be separated by 
+at least 0.5 in $\Delta R$ to the closest jet. This avoids the muon energy 
 changing the energy of the jet offline when the cross cleaning is applied.
 
 Due to the increase in luminosity over the running period the trigger 
@@ -615,17 +624,17 @@ final analysis.
 
 \begin{table}
   \centering
-\begin{tabular}{ |c|c| }
+\begin{tabular}{ |l|c| }
 \hline
 \HT range  & Trigger efficiency ($\%$)  \\ [1.0ex]
 \hline
-\unit{275}{\GeV}--\unit{325}{\GeV} & 83.3$^{+0.5}_{-0.6}$ \\ [1.0ex]
+\unit{275}{\GeV} -- \unit{325}{\GeV} & 83.3$^{+0.5}_{-0.6}$ \\ [1.0ex]
 \hline
-\unit{325}{\GeV}--\unit{375}{\GeV} & 95.9$^{+0.7}_{-0.9}$ \\ [1.0ex] 
+\unit{325}{\GeV} -- \unit{375}{\GeV} & 95.9$^{+0.7}_{-0.9}$ \\ [1.0ex] 
 \hline
-\unit{375}{\GeV}--\unit{475}{\GeV} & 98.5$^{+0.5}_{-0.9}$ \\ [1.0ex]
+\unit{375}{\GeV} -- \unit{475}{\GeV} & 98.5$^{+0.5}_{-0.9}$ \\ [1.0ex]
 \hline
-\unit{475}{\GeV}--\unit{7}{\TeV} & 100.0$^{+0.0}_{-4.8}$ \\ [1.0ex]
+\unit{475}{\GeV} -- \unit{7}{\TeV} & 100.0$^{+0.0}_{-4.8}$ \\ [1.0ex]
 \hline
 \end{tabular}
 
@@ -636,13 +645,13 @@ final analysis.
 
 
 The \alt triggers were upgraded for the increased instantaneous luminosity and 
-pile up conditions expected during the 2012 data taking period. The first stage 
+\pu conditions expected during the 2012 data taking period. The first stage 
 was to implement the full \alt calculation for each addition of a new jet, this 
 change increases the purity of the trigger, meaning that for the same threshold 
 the rate taken is lower than that of the previous algorithm. This allows the 
 thresholds to be kept low, whilst not increasing the overall trigger rate.
 
-The second upgrade was to switch to pile up corrected jets at the HLT, this 
+The second upgrade was to switch to \pu corrected jets at the HLT, this 
 change keeps the trigger cross section linear as a function of instantaneous 
 luminosity.
 
@@ -662,7 +671,7 @@ this trigger was unchanged during the data taking period, the path selected
 requires at least one muon with \PT $>$ \unit{24}{\GeV} that is not overlapping 
 with any other object in the detector(\texttt{HLT\_IsoMu24\_v*}). The same method is used as for the 2011 
 trigger efficiency measurement. However the offline jets are corrected for pile 
-up using the fast jet corrections, to stay inline with the HLT object 
+up using the fastjet corrections, to stay inline with the HLT object 
 definitions.
 
 Figure~\ref{fig:2012TriggersHT275} shows the efficiencies of the four 
@@ -673,17 +682,17 @@ cumulative efficiency of the 2012 trigger suite.
 
 \begin{table}
 
-\begin{tabular}{|c|c|}
+\begin{tabular}{|l|c|}
 \hline
 \HT range & Trigger \\
 \hline
-\unit{275}{\GeV}--\unit{325}{\GeV} & \verb|HLT_HT250_AlphaT0p55_v*| \\
+\unit{275}{\GeV} -- \unit{325}{\GeV} & \verb|HLT_HT250_AlphaT0p55_v*| \\
 \hline
-\unit{325}{\GeV}--\unit{375}{\GeV} & \verb|HLT_HT300_AlphaT0p53_v*| \\
+\unit{325}{\GeV} -- \unit{375}{\GeV} & \verb|HLT_HT300_AlphaT0p53_v*| \\
 \hline
-\unit{375}{\GeV}--\unit{475}{\GeV} & \verb|HLT_HT350_AlphaT0p52_v*| \\
+\unit{375}{\GeV} -- \unit{475}{\GeV} & \verb|HLT_HT350_AlphaT0p52_v*| \\
 \hline
-\unit{475}{\GeV}--\unit{8}{\TeV}   & \verb|HLT_HT400_AlphaT0p51_v*| \\
+\unit{475}{\GeV} -- \unit{8}{\TeV}   & \verb|HLT_HT400_AlphaT0p51_v*| \\
 \hline
 \end{tabular}
 \caption{Triggers used to seed the analysis \HT bins during 2012 data taking.}
@@ -720,7 +729,7 @@ cumulative efficiency of the 2012 trigger suite.
 
 
 \begin{table}
-\begin{tabular}{|c|c|}
+\begin{tabular}{|l|c|}
 \hline
 \HT range (GeV) & Trigger efficiency ($\%$)  \\ 
 \hline
