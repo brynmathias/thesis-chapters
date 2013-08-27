@@ -1,6 +1,6 @@
 \chapter{\Lone Calorimeter Trigger} % (fold)
 \label{cha:level_one_trigger}
-In this chapter the \Lone calorimetric triggers are are detailed and their performance is measured with respect to various offline quantities which are defined to match the HLT level objects. The performance is measured under evolving \pu conditions, the impacts of analyses evolving to use \pu corrected offline variables are measured with respect to \Lone quantities. Finally a method for reducing the impact of \pu on \Lone trigger rate with out directly raising the trigger thresholds is studied and the change in performance due to this change is then studied.
+In this chapter the \Lone calorimetric triggers are detailed and their performance is measured with respect to various offline quantities which are defined to match the \ac{hlt} level objects. The performance is measured under evolving \pu conditions, the impacts of analyses evolving to use \pu corrected offline variables are measured with respect to the \Lone quantities. Finally a method for reducing the impact of \pu on \Lone trigger rate without directly raising the trigger thresholds is studied and the change in performance due to this change is then studied.
 
 The nomenclature for the \Lone trigger algorithms is as follows \verb|L1_AlgoType Threshold| for example \verb|L1_HTT150| refers to a \Lone trigger requiring $\HT > \unit{150}{\GeV}$.
 
@@ -19,27 +19,24 @@ Figure~\ref{fig:figures_LoneTrigger_level1trigger}.
 
 Coarse information from the electromagnetic, hadronic and forward 
 calorimeters is processed by the Regional Calorimeter Trigger (RCT). This is 
-then passed to the Global Calorimeter Trigger (GCT), where the coarse grain 
+then passed to the \ac{gct}, where the coarse grain 
 information is clustered in to physics objects. These objects are then passed 
-to the Global Trigger where the \Lone accept decision is made. Due to the 
-limited size of the pipe line this \Lone accept must be issued within 4.0 
+to the \ac{gt} where the \Lone accept decision is made. Due to the 
+limited size of the pipeline this \Lone accept must be issued within 4.0 
 $\mu$s.
 
-The objects passed from the GCT to the GT include; electro-magnetic objects,
-which include both electrons and photons, as due to the lack of tracking 
-information at the \Lone trigger these objects are indistinguishable; jets and 
-energy sums.
+The objects passed from the \ac{gct} to the \ac{gt} include: electromagnetic objects, which include both electrons and photons, as due to the lack of tracking information at the \Lone trigger these objects are indistinguishable, jets and energy sums.
 
-The RCT generates up to 72 isolated and non-isolated electro-magnetic objects. 
+The RCT generates up to 72 isolated and non-isolated electromagnetic objects. 
 These are sorted by rank, which is equivalent to transverse energy \ET. The 
-four highest ranked electro-magnetic objects are then passed via the GCT to the 
+four highest ranked electromagnetic objects are then passed via the \ac{gct} to the 
 GT at an equivalent data rate of 29 \Gbs per type.
 
-Hadronic objects under go two clustering steps. First the transverse energy 
+Hadronic objects undergo two clustering steps. First the transverse energy 
 sums of the ECAL and corresponding HCAL towers are calculated, the towers are 
-then summed in to 4$\times$4 trigger regions, these  are passed to the GCT at a 
-data rate of 172.8 \Gbs. These trigger regions are clustered in to jet 
-candidates by the GCT and ranked. The jets are then sub-divided in the 
+then summed into 4$\times$4 trigger regions, these  are passed to the \ac{gct} at a 
+data rate of 172.8 \Gbs. These trigger regions are clustered into jet 
+candidates by the \ac{gct} and ranked. The jets are then sub-divided in the 
 categories depending on their pseudo-rapidity and the result of $\tau$ 
 identification. 
 
@@ -55,11 +52,11 @@ negative vector sum of the objects considered for the transverse sums.
 
 \section{Level-1 Trigger Jet Algorithm} % (fold)
 \label{sec:leve_1_trigger_jet_algorithm}
-The \Lone trigger algorithm is detailed explicitly in \cite{gctcomm}.
+The \Lone trigger algorithm is detailed in \cite{gctcomm}.
 The CMS detector can be un-rolled in the $\phi$ direction to form a rectangular 
 grid of the 396 calorimeter regions, connected along the $\phi$ edge. The
 rectangle is formed from 18 $\phi$ divisions (from $-180^{\circ} < \phi \leq 
-180^{\circ}$) and 22 $\eta$ divisions ( from $-5 < \eta < 5$). Each $\phi$ 
+180^{\circ}$) and 22 $\eta$ divisions (from $-5 < \eta < 5$). Each $\phi$ 
 division corresponds to 20$^{\circ}$. The $\eta$ divisions correspond to 
 $\Delta\eta$ $= 0.5$ in the forward calorimeters and to $\Delta\eta \approx 
 0.348$ in the barrel. A pictorial representation of this can be seen in 
@@ -68,9 +65,7 @@ Figure~\ref{fig:figures_LoneTrigger_jetfindermappings}.
 \begin{figure}[ht]
   \centering
     \includegraphics[width=0.8\textwidth]{figures/LoneTrigger/level1jetalgo.jpg}
-  \caption{The 3 $\times$ 3 jet-finder window at \Lone. Each cell represents a 
-  trigger tower, which is the sum of the HCAL and ECAL transverse energies. The 
-  $\tau$-jet veto patterns are shown to the right.}
+  \caption{The 3 $\times$ 3 jet-finder window at \Lone. Each devision represents a $4\times4$ grouping of \ac{ecal} crystals which form a trigger tower. The \ac{ecal} energies are then summed with the corresponding \ac{hcal} tower energies. The $\tau$-jet veto patterns are shown to the right.}
   \label{fig:figures_LoneTrigger_level1jetalgo}
 \end{figure}
 
@@ -79,7 +74,7 @@ A jet candidate is created when the sum of the HCAL and ECAL energies of the
 central calorimeter region has an energy deposit larger than all of its 
 neighbours, as shown in Figure~\ref{fig:figures_LoneTrigger_level1jetalgo}.
 The jet is centred at the region where $p_{T}^{central} > p_{T}^{surrounding}$
-and the transverse energies of the surrounding regions are summed in to the 
+and the transverse energies of the surrounding regions are summed into the 
 central region. The jet is then classified as a $\tau$ jet if \mETA $< 3.0$ and 
 none of the $\tau$ veto bits are set. If any $\tau$ vetoes are set the jet is 
 classified as a central jet. The jet is classified as forward if $ 3.0 < \mETA 
@@ -94,21 +89,21 @@ Any signal that deposits energy in all the trigger towers in a region is not
 from one or three isolated pions.
 
 It is possible to apply separate jet energy corrections to each of the sub 
-categories of GCT jets, however at current the same \ET and $\eta$ dependant 
+categories of \ac{gct} jets, however at current the same \ET and $\eta$ dependent 
 corrections are used for all three jet types.
 
 \begin{figure}[ht]
   \centering    
   \includegraphics[width=0.8\textwidth]{figures/LoneTrigger/jetfindermappings.png}
   \caption{The calorimeter map that the 3 $\times$ 3 jet-finder operates over
-   is made up for 396 calorimeter regions, each jet finder is mapped on to an 
+   is made up of 396 calorimeter regions. Each jet finder is mapped on to an 
    RCT crate which is composed of an 11 $\times$ 2 strip of these regions. RCT
    crate labels are shown for negative $\eta$ only. }
   \label{fig:figures_LoneTrigger_jetfindermappings}
 \end{figure}
 
 In order to reduce the total data duplicated and shared between the jet finders,
-the GCT employs a pre-clustering algorithm, which involves 18 jet finders 
+the \ac{gct} employs a pre-clustering algorithm, which involves 18 jet finders 
 operating simultaneously over the whole detector. These jet finders then only
 share information with neighbouring regions, when the clustered jets are found.
 Figure~\ref{fig:figures_LoneTrigger_jetfindermappings} shows the boundaries 
@@ -131,7 +126,7 @@ trigger regions are shared between the jet finders.
 An example of the jet finding is shown in
 Figure~\ref{fig:figures_LoneTrigger_jetfinderfunction}. The first step is to 
 create a $2 \times 3$ mini cluster around any local maxima found in the $12 
-\times 2$ strip. Equality statements are imposed so that the energy of the 
+\times 2$ strip (the strips are 11 cells long, however the first cell from the adjacent strip is shared so that no jet clusters are missed). Equality statements are imposed so that the energy of the 
 central cell is greater than its neighbours in some directions and greater than 
 or equal to the neighbours other directions to enforce a gap of at least one 
 trigger region in both $\eta$ and $\phi$ between the centres of the clustered 
@@ -143,7 +138,7 @@ finder. These are then compared against the existing mini clusters in that
 $\phi$ strip, those that are adjacent or diagonally adjacent to a larger mini 
 cluster are removed. The inequality statements are then reimposed to prevent 
 problems with clusters having the same energies. In the final stages the mini 
-clusters have their three adjacent regions summed in to produce a $3 \times 3$ 
+clusters have their three adjacent regions summed to produce a $3 \times 3$ 
 jet cluster. Finally the four highest ranked jets are corrected and passed to 
 the GT.
 % section leve_1_trigger_jet_algorithm (end)
@@ -151,12 +146,11 @@ the GT.
 \section{\Lone Trigger Performance} % (fold)
 
 During the start of data taking in 2010, no \ac{jec} were 
-applied in the \Lone trigger. This gave a relatively slow turn on in terms of 
-offline hadronic objects.
+applied in the \Lone trigger. This gave a large difference in energy between the energy of the \Lone objects and the offline objects, i.e the energy range over which the objects `turn on' is large, giving a relatively slow turn on in terms of offline hadronic objects.
 During the winter shutdown of the \ac{lhc} between the 2010 and 2011 running 
 periods, a set of \Lone \ac{jec} were developed. These corrections used a 
-peicewise cubic form for the interpolation function used to correct the jet 
-energy, dependant on it's uncorrected \ET and $\eta$ values. However as can be 
+piecewise cubic form for the interpolation function used to correct the jet 
+energy, dependent  on its uncorrected \ET and $\eta$ values. However as can be 
 seen in Figure~\ref{fig:figures_LoneTrigger_EnCorrelationNormalized} these 
 corrections were only applied to jets with a raw energy below \unit{130}{\GeV}, 
 the secondary lobe shows those objects that do not have their energies 
@@ -165,29 +159,20 @@ corrected.
 \begin{figure}[htbp]
   \centering
     \includegraphics[width=0.8\textwidth]{figures/LoneTrigger/EnCorrelationNormalized.pdf}
-  \caption{Correlation between offline corrected jet energy and \Lone corrected jet energy for matched jets. The discontinuity shows where the \Lone jet corrections do not alter the raw energy of the jet.}
+  \caption{Correlation between offline corrected jet energy and \Lone corrected jet energy for matched jets. The discontinuity shows where the \Lone jet corrections do not alter the raw energy of the jet. The z-axis is measured in arbitrary units.}
   \label{fig:figures_LoneTrigger_EnCorrelationNormalized}
 \end{figure}
 
 To overcome this a new set of corrections were derived, using a well established tool for producing offline corrections, 
-% \todo[inline]{REFERENCE TO tapper-001 here} 
 using the same functional form that was derived for correcting particle flow 
-jets\cite{PAS-JME-10-010}.% \todo[inline]{REFERENCE TO PF HERE}
-In this section we discuss the performance of both sets of \Lone \ac{jec} and 
-the performance of the energy sum and missing energy triggers \HT, \HTm, and 
-\MET. The performance of which are not effected by the application of jet 
-energy corrections at the \Lone trigger, due to the quantities being built from 
-the internal GCT jets before they pass though the corrections look up table.
-The performance is studied under both low \pu conditions where the mean 
-peak \pu $<PU>$ is 16 primary vertices and under high \pu conditions 
-where $<PU>$ is 36 primary vertices.
+jets\cite{PAS-JME-10-010}. In this section we discuss the performance of both sets of \Lone \ac{jec} and the performance of the energy sum and missing energy triggers \HT, \HTm, and \MET. The performance of which are not effected by the application of jet energy corrections at the \Lone trigger, due to the quantities being built from the internal \ac{gct} jets before they pass-through the corrections look up table. The performance is studied under both low \pu conditions where the mean peak \pu $<PU>$ is 16 primary vertices and under high \pu conditions where $<PU>$ is 36 primary vertices.
 
 To measure the performance of the \Lone single jet triggers we assume that the 
 leading offline corrected \AK calorimeter (see 
 Section~\ref{sub:Preselection_of_hadronic_objects} for a description of the 
 offline jet clustering algorithm) jet is the jet that triggered the 
-event. We then match this offline jet to the closest \Lone jet in $\Delta$R, 
-where for there to be a match $\Delta$R $< 0.5$ is required. For this match 
+event. We then match this offline jet to the closest \Lone jet in $\Delta$R ($\Delta\mathcal{R} = \sqrt{((\Delta \eta)^{2} + (\Delta \phi)^{2})}$), 
+where for there to be a match $|\Delta\mathcal{R}| < 0.5$ is required. For this match 
 central, $\tau$ and forward jets are considered. Events where the recorded 
 \Lone energy is set to the overflow bit, meaning they have more than 
 \unit{254}{\GeV} of \ET measured at \Lone, are ignored.
@@ -197,17 +182,11 @@ methods are used. The first is to require a Minimum Bias trigger, which is
 triggered by beam induced activity in the CMS detector.
 However due to the nature of these collisions the number of events with high 
 energy interactions is low and the prescale applied to this trigger further 
-reduces the sample size, this method does produce the least bias.
+reduces the sample size. This method does though produce the least bias.
 The second method is to trigger an object that does not deposit signifiant 
 energy in the calorimeter systems. In this case we choose the muon trigger with 
 the lowest unprescaled \PT threshold. The muon trigger is chosen with some 
-loose isolation requirements to make sure it does not overlap with a jet, 
-causing a discrepancy in the measurement of the calorimetric energy. The sample 
-has a higher number of events due to the large amount of bandwidth given to the 
-single object muon triggers at CMS. The use of a muon trigger also serves to 
-increase the precision of the measurement of the performance of the \Lone 
-missing energy trigger, as the muons are not seen by the calorimeter system the 
-\MET sample is enriched.
+loose detector based isolation requirements to make sure it does not overlap with a jet, causing a discrepancy in the measurement of the calorimetric energy. The sample has a higher number of events due to the large amount of bandwidth given to the single object muon triggers at CMS. The use of a muon trigger also serves to increase the precision of the measurement of the performance of the \Lone missing energy trigger, as the muons are not seen by the calorimeter system the \MET sample is enriched.
 
 \begin{figure}[htbp]
   \centering
@@ -221,12 +200,12 @@ missing energy trigger, as the muons are not seen by the calorimeter system the
 
 Figure~\ref{fig:figures_LoneTrigger_cf_correctionScheemes} shows the 
 performance of the piecewise cubic corrections (PWC) and the performance of the 
-new corrections. The data was taken with the PWC enabled in the GCT hardware. 
+new corrections. The data was taken with the PWC enabled in the \ac{gct} hardware. 
 The updated corrections were emulated in the bitwise reproduction of the GCT. 
-The made an event by event comparison possible. At low \ET the new corrections 
+This made an event by event comparison possible. At low \ET the new corrections 
 turn on before the PWC corrections, if the new corrections were applied with 
 no change to the trigger menu, the \Lone trigger rate would rise. At a 
-threshold of \unit{36}{\GeV} and higher the performance of the two correction 
+threshold of \unit{36}{\GeV} and higher, the performance of the two correction 
 schemes is very similar. Due to the small change in observed performance and 
 the ability to correct raw energies above \unit{130}{\GeV}, the new corrections 
 were deployed online after the first machine development period of 2011 and are 
@@ -235,12 +214,12 @@ still online at the end of data taking in 2012.
 \begin{figure}[htbp]
   \centering
     \includegraphics[width=0.8\textwidth]{figures/LoneTrigger/SingleMu_JetTurnOns.pdf}
-  \caption{Performance measurements of L1$\_$SingleJet16, L1$\_$SingleJet36 and L1$\_$SingleJet92, when using the new correction scheme deployed in the GCT hardware. The performance is slightly worse than that of the emulated triggers due to a change in \pu conditions between the two data taking periods.}
+  \caption{Trigger efficiency of the L1$\_$SingleJet16, L1$\_$SingleJet36 and L1$\_$SingleJet92 triggers, when using the new correction scheme deployed in the \ac{gct} hardware. The performance is slightly worse than that of the emulated triggers, where the plateau is reached at a higher offline energy, due to a change in \pu conditions between the two data taking periods. Due to the shift to lower energies the purity of the trigger is lower and a higher trigger rate is observed for the same threshold value.}
   \label{fig:figures_LoneTrigger_SingleMu_JetTurnOns}
 \end{figure}
 
 The performance of the updated corrections was then measured with data taken 
-with the corrections applied in the GCT hardware. The reference sample was 
+with the corrections applied in the \ac{gct} hardware. The reference sample was 
 taken with a trigger requiring an isolated muon with $\pt > \unit{24}{\GeV}$  (\verb|HLT_IsoMu24_v*|).
 The performance of three example triggers is shown in 
 Figure~\ref{fig:figures_LoneTrigger_SingleMu_JetTurnOns}.
@@ -277,7 +256,7 @@ quantities is on the order of \unit{10}{\GeV} under low \pu conditions.
 
 Due to the high \pu fill being a specialised fill with low instantaneous 
 luminosity, the high level trigger paths were disabled, instead \Lone trigger 
-pass though paths were utilised to take the data. The \Lone single muon pass 
+pass-through paths were utilised to take the data. The \Lone single muon pass 
 though trigger is used to collect the reference sample. Otherwise the same 
 analysis method is common between the two data sets.
 Figure~\ref{fig:figures_LoneTrigger_HighFastCompare} shows the difference in 
@@ -301,7 +280,7 @@ performance as during the low \pu conditions.
 \begin{figure}[htbp]
   \centering
     \includegraphics[width=0.8\textwidth]{figures/LoneTrigger/LowPUFastCompare.pdf}
-  \caption{Comparison of the performance of  L1$\_$SingleJet16, L1$\_$SingleJet36 and  L1$\_$SingleJet92 triggers. Where $<PU>$ = 16. For two offline reconstruction methods, standard \AK calorimeter jets and \pu corrected \AK calorimeter jets.}
+  \caption{Comparison of the performance of  L1$\_$SingleJet16, L1$\_$SingleJet36 and  L1$\_$SingleJet92 triggers. Where $<PU>$ = 16. For two offline reconstruction methods: standard \AK calorimeter jets and \pu corrected \AK calorimeter jets.}
   \label{fig:figures_LoneTrigger_LowPUFastCompare}
 \end{figure}
 
@@ -309,7 +288,7 @@ performance as during the low \pu conditions.
 \begin{figure}[htbp]
   \centering
     \includegraphics[width=0.8\textwidth]{figures/LoneTrigger/LowPUFastCompareHT.pdf}
-  \caption{Comparison of the performance of L1$\_$HTT75, L1$\_$HTT100 and  L1$\_$HTT150 triggers. Where $<PU>$ = 16. For two offline reconstruction methods, standard \AK calorimeter jets and \pu corrected \AK calorimeter jets.}
+  \caption{Comparison of the performance of L1$\_$HTT75, L1$\_$HTT100 and  L1$\_$HTT150 triggers. Where $<PU>$ = 16. For two offline reconstruction methods: standard \AK calorimeter jets and \pu corrected \AK calorimeter jets.}
   \label{fig:figures_LoneTrigger_LowPUFastCompareHT}
 \end{figure}
 
@@ -317,14 +296,14 @@ performance as during the low \pu conditions.
 \begin{figure}[htbp]
   \centering
     \includegraphics[width=0.8\textwidth]{figures/LoneTrigger/HighFastCompare.pdf}
-  \caption{Comparison of the performance of L1$\_$SingleJet16, L1$\_$SingleJet36 and L1$\_$SingleJet92 triggers. Where $<PU>$ = 36. For two offline reconstruction methods, standard \AK calorimeter jets and \pu corrected \AK calorimeter jets.}
+  \caption{Comparison of the performance of L1$\_$SingleJet16, L1$\_$SingleJet36 and L1$\_$SingleJet92 triggers. Where $<PU>$ = 36. For two offline reconstruction methods: standard \AK calorimeter jets and \pu corrected \AK calorimeter jets.}
   \label{fig:figures_LoneTrigger_HighFastCompare}
 \end{figure}
 
 \begin{figure}[htbp]
   \centering
     \includegraphics[width=0.8\textwidth]{figures/LoneTrigger/HighPUFastCompareHT.pdf}
-  \caption{Comparison of the performance of  L1$\_$HTT75, L1$\_$HTT100 and  L1$\_$HTT150 triggers. Where $<PU>$ = 36. For two offline reconstruction methods, standard \AK calorimeter jets and \pu corrected \AK calorimeter jets.}
+  \caption{Comparison of the performance of  L1$\_$HTT75, L1$\_$HTT100 and  L1$\_$HTT150 triggers. Where $<PU>$ = 36. For two offline reconstruction methods: standard \AK calorimeter jets and \pu corrected \AK calorimeter jets.}
   \label{fig:figures_LoneTrigger_HighPUFastCompareHT}
 \end{figure}
 
@@ -335,53 +314,43 @@ trigger menus where the requirement for taking the correct data has to be
 balanced against the total trigger rate of the \Lone menu.
 
 % section lone_trigger_performance (end)
-\clearpage
 \section{\Lone Trigger Pile-up Mitigation} % (fold)
 \label{sub:lone_trigger_pile_up_mitigation}
 
 
-Whilst we have seen that the offline performance of the \Lone hadronic triggers 
+We have seen that the offline performance of the \Lone hadronic triggers 
 can be maintained when raising the trigger thresholds to deal with increased 
 rate, when switching to \pu corrected offline objects. 
 Figure~\ref{fig:figures_HTT150_pileup} shows the trigger cross section as a 
 function of instantaneous luminosity for the \verb|L1_HTT150| trigger, which 
-requires \HT $>$ \unit{150}{\GeV}. However beyond a certain point raising 
+requires \HT $>$ \unit{150}{\GeV}. Beyond a certain point raising 
 thresholds causes a loss of performance.
 In this section we look at a method to reduce the effects of \pu hadronic 
 \Lone triggers, by making an addition to the \Lone jet finding algorithm.
 
 In Section~\ref{sec:leve_1_trigger_jet_algorithm} the \Lone jet clustering 
 algorithm was described. The proposed change was to add a requirement that the 
-seeding region has a direct energy threshold, in addition to the equality 
+seeding region has an energy threshold, in addition to the equality 
 relations that are set up. The effects of applying a \unit{2}{\GeV} and a 
 \unit{5}{\GeV} threshold are studied. This threshold is on the raw, uncorrected 
-energy of the trigger regions and effects all \Lone jets. The impact will be 
+energy of the trigger regions and affects all \Lone jets. The impact will be 
 seen in the \Lone jet triggers which use corrected energy and \Lone \HT and 
 \HTm which are formed from uncorrected jets.
 The aim is to remove the events which are accepted due to \pu, but not to 
 remove physics events.
 
-The triggers most effected by this change are the energy sum triggers as they 
+The triggers most affected by this change are the energy sum triggers as they 
 sum many jets of low threshold, where as the single object triggers are already 
 cutting on high \ET objects.
 
-Figure~\ref{fig:GCTrankRAW} shows the internal GCT uncorrected jet energy 
+Figure~\ref{fig:GCTrankRAW} shows the internal \ac{gct} uncorrected jet energy 
 spectrum in high \pu conditions, taken with the \verb|L1_SingleMu| pass 
-though triggers. The three histograms are for; no application of jet seed 
-threshold in black, where there are many low \ET jets; In red a \unit{2}{\GeV} 
-seed requirement is made, the effect is to cut out all jets below 
-\unit{2}{\GeV} and cut out jets with an energy up to approximately 
-\unit{35}{\GeV} of uncorrected energy; The blue histogram shows the jet energy 
-spectrum after applying a \unit{5}{\GeV} seed threshold, the effect is to 
-remove all jets below \unit{5}{\GeV} and to cut out jets with energy up to 
-\unit{55}{\GeV}. Figure~\ref{fig:GCTrankRatio} shows the efficiency with 
-respect to the no seed sample for the two test seed thresholds. The removal of 
-jets in the low energy region of the \ET spectrum due to the jet stemming from \pu rather than collimated objects is where the advantage of applying a seed threshold is seen over simply raising the trigger thresholds,or raising the threshold of jets to be included in the \Lone \HT or \HTm calculation.
+though triggers, however due to the presence of other triggers in the menu the distribution is not exponentially falling as would be expected. The three histograms are for: no application of jet seed threshold in black, where there are many low \ET jets; in red a \unit{2}{\GeV} seed requirement is made, the effect is to cut out all jets below \unit{2}{\GeV} and cut out jets with an energy up to approximately \unit{35}{\GeV} of uncorrected energy; the blue histogram shows the jet energy spectrum after applying a \unit{5}{\GeV} seed threshold, the effect is to remove all jets below \unit{5}{\GeV} and to cut out jets with energy up to \unit{55}{\GeV}. Figure~\ref{fig:GCTrankRatio} shows the efficiency with respect to the no seed sample for the two test seed thresholds. The removal of jets in the low energy region of the \ET spectrum due to the jet stemming from \pu rather than collimated objects is where the advantage of applying a seed threshold is seen over simply raising the trigger thresholds,or raising the threshold of jets to be included in the \Lone \HT or \HTm calculation.
 
 
 \begin{figure}[h!]
     \centering
-    \subfigure[GCT internal uncorrected jet \ET distributions for the same 
+    \subfigure[\ac{gct} internal uncorrected jet \ET distributions for the same 
     events with a 0, 2 or \unit{5}{\GeV} seed requirement.]{
           \label{fig:GCTrankRAW}
           \includegraphics[width=0.45\textwidth]{figures/LoneTrigger/GCT_Jet_Rank_highPU.pdf}
@@ -391,7 +360,7 @@ jets in the low energy region of the \ET spectrum due to the jet stemming from \
           \label{fig:GCTrankRatio}
           \includegraphics[width=0.45\textwidth]{figures/LoneTrigger/GCT_Jet_Rank_highPU_ratio.pdf}
      }
-    \caption{Effect of requiring a jet seed threshold on GCT internal jets.}
+    \caption{Effect of requiring a jet seed threshold on \ac{gct} internal jets.}
     \label{fig:GCTrank}
 \end{figure}
 
@@ -415,7 +384,7 @@ the \unit{0}{\GeV} seed threshold for seed thresholds of \unit{2}{\GeV} and
 \item \verb|L1_HTT100|, which requires that  \Lone \HT $>$ \unit{100}{\GeV}.
 \end{itemize}
 
-The rate of \verb|L1_SingleJet50| is not effected by the requirement of a 
+The rate of \verb|L1_SingleJet50| is not affected by the requirement of a 
 \unit{2}{\GeV} seed threshold and is reduced by 15$\%$ when a \unit{5}{\GeV} 
 seed requirement is made.
 The \verb|L1_QuadJet38| trigger rate is reduced by the same amount as the 
@@ -429,13 +398,13 @@ seed threshold and a 3$\%$ reduction in rate when requiring a \unit{5}{\GeV} see
 \begin{tabular}{c|c|c}
 
 \hline
-Trigger & $\%$ rate reduction with a 2\GeV requirement & $\%$ rate reduction with a 5\GeV requirement\\
+Trigger & $\%$ rate reduction with a \unit{2}{\GeV} requirement & $\%$ rate reduction with a \unit{5}{\GeV} requirement\\
 \hline
 L1$\_$HTT100 & $ 3 \pm 11\%$ & $ 3 \pm 11\%$\\
 \hline
-L1$\_$QuadJet38 & $0 \pm 0\%$ & $15 + 6 - 8\%$\\
+L1$\_$QuadJet38 & $0 \pm 0\%$ & $15^{+6}_{-8}\%$\\
 \hline
-L1$\_$Jet50 & $0 + 0 - 12\%$ & $15 + 9 - 15\%$\\
+L1$\_$Jet50 & $0^{+0}_{-12}\%$ & $15^{+9} _{-15}\%$\\
 \hline
 \end{tabular}
 \label{tab:lowpuratereduction}
@@ -460,13 +429,13 @@ error on this prediction is large.
   \footnotesize
 \begin{tabular}{c|c|c}
 \hline
-Trigger & $\%$ rate reduction with a 2\GeV requirement & $\%$ rate reduction with a 5\GeV requirement\\
+Trigger & $\%$ rate reduction with a \unit{2}{\GeV} requirement & $\%$ rate reduction with a \unit{5}{\GeV} requirement\\
 \hline
-L1$\_$HTT100 & $40 \pm 5.7\%$ & $99 +/- 50\%$\\
+L1$\_$HTT100 & $40 \pm 5.7\%$ & $99^{+1}_{-50}\%$\\
 \hline
-L1$\_$QuadJet38 & $30 \pm 20 \%$ & $40 + 22 - 24\%$\\
+L1$\_$QuadJet38 & $30 \pm 20 \%$ & $40^{+22}_{-24}\%$\\
 \hline
-L1$\_$Jet50 & $0 + 7 - 0\%$ & $30 + 10 - 12\%$\\
+L1$\_$Jet50 & $0^{+7}_{-0}\%$ & $30^{+10}_{-12}\%$\\
 \hline
 
 \end{tabular}
@@ -477,7 +446,7 @@ L1$\_$Jet50 & $0 + 7 - 0\%$ & $30 + 10 - 12\%$\\
 \subsection{Effect on trigger efficiency} % (fold)
 \label{sec:Effects of requiring a jet seed on offline efficiency}
 Section~\ref{sub:lone_trigger_pile_up_mitigation} shows that requiring a jet 
-seed threshold substantially reduces the trigger acceptance rate at in high 
+seed threshold substantially reduces the trigger rate at in high 
 \pu conditions.
 
 However the aim of requiring a jet seed is to reduce rate, but not at the cost 
@@ -485,11 +454,11 @@ of physics. In this section we look at the effects of requiring a seed
 threshold, whilst requiring some loose, generic offline selection on the 
 hadronic objects.
 
-The change in efficiency is measured under low \pu conditions where the 
-least extra energy added to the event. This gives a worse case estimate of the 
+The change in efficiency is measured in low \pu conditions where the 
+least extra energy is added to the event. This gives a worse case estimate of the 
 effect of requiring a jet seed on the offline efficiency.
 
-Each offline reconstructed calorimeter jet must adhere to the following quality 
+Each offline reconstructed calorimeter jet must satisfy the following quality 
 criteria:
 \begin{itemize}
 \item Pass loose calorimeter ID\cite{CaloJetID};
