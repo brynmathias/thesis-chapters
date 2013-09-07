@@ -9,74 +9,17 @@
 
 \chapter{Reconstruction and Event selection} % (fold)
 \label{cha:the_t_analysis}
-In this chapter the event reconstruction and selection are described. The search variable \alt is constructed both as an offline discriminator and as an 
-analysis specific trigger. The performance of this trigger under different data 
-taking conditions is measured with respect to the final event selection.
+In this chapter the event reconstruction and selection for events of interest to the analysis is described. As previously described this analysis focuses determining the number of events containing missing energy in the pure hadronic channel and comparing this with the standard model expectation. The sources of this missing energy come in two form, one irreducible from standard model processes involving neutrinos which are not measured in the detector, the other from fake missing energy, introduced by miss-measurement, due to detector effects.  The search variable \alt is constructed both as an offline discriminator and as an analysis specific trigger. It is the later of the two sources of missing energy, i.e.those from detector effects that \alt variable is designed to suppress. The performance of the trigger under different data taking conditions is measured after the final event selection, with respect to a well understood control region.
 
-The first performance measurement is on the full \unit{5}{\invfb} of 
-\unit{7}{\TeV} data collected in 2011, this data set is then used for the full 
+The first performance measurement is performed on the full \unit{5}{\invfb} of 
+\unit{7}{\TeV} data collected in 2011, this data set is then used for the  
 analysis presented in this thesis. The performance of a suite of upgraded \alt 
 triggers is then measured on \unit{11}{\invfb} of \unit{8}{\TeV} data which was 
 collected during the 2012 \ac{lhc} run. These performance measurements were 
-used in the analysis presented in \cite{Chatrchyan:2012wa}.
+used in the analysis presented in \mcite{Chatrchyan:2012wa}.
 
 
-\section{The \alt variable} % (fold)
-\label{sec:the_alpha___t_variable_}
-The \alt is variable inspired by Ref~\cite{Randall:2008dk} and was expanded first to consider transverse topologies and later expanded to  multi-jet systems by members of the CMS collaboration in 
-Refs~\cite{cms-pas-sus-08005,cms-pas-sus-09001}. The purpose is to provide a 
-variable that can be used to eliminate QCD from the final selection. To do 
-this the balance of the QCD system is exploited.
 
-For di-jet systems \alt is defined as:
-
-\begin{equation}
-  \alt = \frac{E_{T}^{j_{2}}}{M_{T}}
-\end{equation}
-where $E_{T}^{j_{2}}$ is the transverse energy of least energetic of the two 
-jets and M$_{T}$ is defined as:
-
-\begin{equation}
-  M_{T} = \sqrt{\left(\sum^{2}_{i=1}E_{T}^{j_{i}}\right)^{2} - \left(\sum^{2}_{i=1}p_{x}^{j_{i}}\right)^{2} - \left(\sum^{2}_{i=1}p_{y}^{j_{i}}\right)^{2}}
-\end{equation}
-
-For a perfectly measured di-jet system with $E_{T}^{j_{1}} = E_{T}^{j_{2}}$, 
-where the jets are opposite in azimuth ($\phi$), \alt = 0.5, for events with back to back jets where one is mismeasured \alt $ < 0.5$.
-However the majority of signals predict many jets in the final state.
-\alt can be generalised to work with an arbitrary number of jets in the following way. The variables \HT and \HTm are constructed as:
-\begin{equation}
-  \HT = \sum_{i = 0}^{n}E_{T}^{jet_{i}}, \\
-  \HTm = \left|\sum_{i = 0}^{n}\bar{p}_{T}^{jet_{i}}\right|,
-\end{equation}
-for jets above some predefined threshold in \ET which is common for all jet-based quantities. The multi-jet system is reduced to a pseudo di-jet system by forming two large jets. The individual jet \ET values are summed, with the final configuration being chosen to have the minimum difference in energy 
-($\Delta$\HT) between the pseudo jets. This simple clustering criteria provides 
-the best separation between mismeasured events and those with real \MET\cite{cms-pas-sus-09001}.
-
-\alt is then defined as:
-\begin{equation}
-  \alt = \frac{\HT - \Delta\HT}{2\sqrt{\HT^{2}-\HTm^{2}}}
-\end{equation}
-
-
-Figure~\ref{fig:figures_Analysis_AlphaT_all_375_upwards} shows the \alt 
-distribution for both data and simulated background samples. The QCD multi-jet 
-background is negligible above an \alt value of 0.55, where as the standard 
-model processes which involve real \MET exist at all possible values of \alt.
-Values of \alt in the range $0.5 < \alt < 0.55$ arise in multi-jet QCD due to 
-jets falling below threshold, large stochastic fluctuations or catastrophic mismeasurement due to detector element failures.
-It is to be noted that the discrepancy between data and simulation for \alt 
-$\leq 0.55$ is due to no trigger emulation being applied to the simulated 
-background samples.
-\begin{figure}[ht|]
-  \centering  \includegraphics[width=0.8\textwidth]{figures/Analysis/AlphaT_all_375_upwards.pdf}
-  \caption{\alt distribution for background and data for the region \HT $>$ 
-  \unit{375}{\GeV}. Trigger emulation is not applied in the simulated 
-  background which leads to the discrepancy in the region \alt $\leq 0.55$. The 
-  QCD multi-jet background is reduced to less than one event.}
-  \label{fig:figures_Analysis_AlphaT_all_375_upwards}
-\end{figure}
-
-% section the_alpha___t_variable_ (end)
 
 \section{Event selection} % (fold)
 \label{sec:event_selection}
@@ -86,23 +29,22 @@ the objects are defined as are the flow of the analysis cuts and filters.
 
 \subsection{Preselection of hadronic objects} % (fold)
 \label{sub:Preselection_of_hadronic_objects}
-Hadronic showers are clustered in to objects which from now on will be referred 
+Hadronic showers are clustered into objects which from now on will be referred 
 to as jets. These jets are formed from the energy deposits recored in the 
 calorimeter towers. Individual jets are clustered using the \AK 
-algorithm with a clustering parameter of 0.5\cite{Cacciari:2008ua}, for high \PT jets this produces cone like jets, for low \PT jets deviations from the circular geometry are allowed, as show in Figure~\ref{fig:figures_Analysis_ak5algo}.
+algorithm with a clustering parameter of 0.5\mcite{Cacciari:2008ua}, for high \PT jets this produces cone like jets, for low \PT jets deviations from the circular geometry are allowed, as show in Figure~\ref{fig:figures_Analysis_ak5algo}.
 
 \begin{figure}[htbp]
   \centering
     \includegraphics[width=0.5\textwidth]{figures/Analysis/ak5algo.pdf}
-  \caption{Simulated hadronic objects clustered in to jets using the \AK jet 
-  clustering algorithm, note the high \PT green object which causes the low \PT 
-  jet in close proximity to be cut off.}
+  \caption{Simulated hadronic objects clustered into jets using the \AK jet 
+  clustering algorithm.}
   \label{fig:figures_Analysis_ak5algo}
 \end{figure}
 The jets have their raw energies corrected based on their position and momentum 
 to establish a uniform relative response in $\eta$ and a calibrated absolute 
 response in transverse energy \ET, with an associated uncertainty of between 
-2$\%$ and 4$\%$ dependent  on \ET and $\eta$\cite{Chatrchyan:2011ds}. 
+2$\%$ and 4$\%$ dependent  on \ET and $\eta$\mcite{Chatrchyan:2011ds}. 
 Figure~\ref{fig:figures_Analysis_caloJetUncertianty} shows the absolute jet 
 energy scale uncertainty as a function of the jet \PT for the jets considered 
 in this analysis.
@@ -110,36 +52,24 @@ in this analysis.
 \begin{figure}[htbp]
   \centering
     \includegraphics[width=0.5\textwidth]{figures/Analysis/caloJetUncertianty.pdf}
-  \caption{Absolute jet energy scale uncertainty as a function of jet \PT for \AK-Calorimeter jets\cite{1748-0221-6-11-P11002}.}
+  \caption{Absolute jet energy scale uncertainty as a function of jet \PT for \AK-calorimeter jets\mcite{1748-0221-6-11-P11002}.}
   \label{fig:figures_Analysis_caloJetUncertianty}
 \end{figure}
 
 It is also possible to correct the raw energies of the jets for \pu. Pile-up 
 causes energy from secondary interactions to be added to the event, this 
-energy is distributed uniformly though out the detector. Two forms of \pu 
+energy is distributed uniformly thoughout the detector. Two forms of \pu 
 corrections are used in \ac{cms} to correct the energies of calorimeter jets. 
 The first is an offset correction, the raw energy has a constant energy removed 
-though out the detector based on the number of primary vertices in the event. 
+thoughout the detector based on the number of primary vertices in the event. 
 The second method is to calculate per event, the average energy deposited in 
 each calorimeter tower using the 
-\texttt{FastJet}\cite{Cacciari:2011ma,hep-ph/0512210} jet clustering package, 
+\texttt{FastJet}\mcite{Cacciari:2011ma,hep-ph/0512210} jet clustering package, 
 this quantity is referred to as $\rho$ and is also used to correct the 
 isolation variables for electrons, muons and photons.
 
 
-The jets considered in the analysis are not corrected for \pu, each jet is 
-required to have \ET $>$ \unit{50}{\GeV}, the highest \ET jet in the events is 
-required to be within tracker acceptance ($|\eta| <$ 2.5) and the sub leading 
-jet is required to have \ET $>$ \unit{100}{\GeV}. In the lowest two offline \HT 
-bins the jet thresholds are scaled to preserve the jet multiplicity, for the 
-bin \unit{275}{\GeV} $<$ \HT $<$ \unit{325}{\GeV}, the jet threshold is 
-\unit{36.$\dot{6}$}{\GeV} and the sub leading jet threshold is 
-\unit{73.$\dot{3}$}{\GeV}. In the bin \unit{325}{\GeV} $<$ \HT $<$ 
-\unit{375}{\GeV}, the jet threshold is \unit{43.$\dot{3}$}{\GeV} and the sub 
-leading jet threshold is \unit{86.$\dot{6}$}{\GeV}. This scaling of the jet 
-thresholds is implemented to conserve the allowed jet multiplicities in each of 
-the search bins, which in turn preserves the relative contribution of each of 
-the background sources.
+The jets considered in the analysis are not corrected for \pu, as during the data taking period the mean number of pile up vertices was at maximum 16 per bunch crossing, this means that the effects of the pile up corrections were low and in many cases the removal of energy from the calorimeters caused events to be come more unbalanced. Each jet is required to have \ET $>$ \unit{50}{\GeV}, the highest \ET jet in the events is required to be within the tracker acceptance ($|\eta| <$ 2.5) and the sub leading jet is required to have \ET $>$ \unit{100}{\GeV}. In the lowest two offline \HT bins the jet thresholds are scaled to preserve the jet multiplicity, for the bin \unit{275}{\GeV} $<$ \HT $<$ \unit{325}{\GeV}, the jet threshold is \unit{36.$\dot{6}$}{\GeV} and the sub leading jet threshold is \unit{73.$\dot{3}$}{\GeV}. In the bin \unit{325}{\GeV} $<$ \HT $<$ \unit{375}{\GeV}, the jet threshold is \unit{43.$\dot{3}$}{\GeV} and the sub leading jet threshold is \unit{86.$\dot{6}$}{\GeV}. This scaling of the jet thresholds is implemented to conserve the allowed jet multiplicities in each of the search bins, which in turn preserves the relative contribution of each of the background sources.
 
 The quantities \HT and \HTm are then formed from these jets.
 % paragraph definition_of_event_level_jets (end)
@@ -150,16 +80,16 @@ Two complementary algorithms are used at the track seeding stage of the
 electron reconstruction. Tracker driven seeding which is more suitable for low 
 \PT (\PT $<$ \unit{5}{\GeV}) electrons and ECAL driven seeding, which starts at 
 the ECAL and works back towards the interaction point. The ECAL driven seeding 
-starts by creating superclusters\cite{0954-3899-34-6-S01} which contain 
+starts by creating superclusters\mcite{0954-3899-34-6-S01} which contain 
 information on the lateral shower shape in the $\eta$ direction of the electron 
 or photon shower and the spread of energy deposits in the $\phi$ plane for 
 elections, due to the radiation of photons by the election in the \ac{cms} 
 magnetic field. Track seeds from inner tracking layers and electron track are 
 then build from these track seeds. The trajectories are reconstructed using a 
 dedicated modelling of the electron energy loss and fitted with a Gaussian Sum 
-Filter\cite{0954-3899-31-9-N01}.
+Filter\mcite{0954-3899-31-9-N01}.
 For the purpose of the analysis an object is defined as an electron if it has 
-\PT $>$ \unit{10}{\GeV}, \mETA $<$ 2.5 and passes standard criteria for $95\%$ selection efficiency\cite{PAS-EGM-10-004}. Any event containing an identified 
+\PT $>$ \unit{10}{\GeV}, \mETA $<$ 2.5 and passes standard criteria for $95\%$ selection efficiency\mcite{PAS-EGM-10-004}. Any event containing an identified 
 electron is vetoed. 
 % paragraph electrons (end)
 
@@ -175,40 +105,27 @@ are seeded by the muon candidates produced by the \Lone trigger even if these
 muons did not cause the issue of the \Lone accept. Global muon reconstruction 
 uses information from both the standalone muon system and from the silicon 
 tracker and performs a fit to the individual detector hits.
-Figure~\ref{fig:figures_Analysis_MuonPTResolution} shows the muon \textbf{p}
+Figure~\ref{fig:figures_Analysis_MuonPTResolution} shows the muon momentum
 resolution for muons reconstructed using either the muon system only, the 
 tracker only or the global muon reconstruction.
 \begin{figure}[htbp]
   \centering
     \includegraphics[width=\textwidth]{figures/Analysis/MuonPTResolution.pdf}
-  \caption{Resolution of (1/p) versus p for standalone, global and tracker-only reconstruction. a) Barrel, $\eta$ = 0.5; b) Endcap, $\eta$ = 1.5.\cite{0954-3899-34-6-S01}}
+  \caption{Resolution of (1/p) versus p for standalone, global and tracker-only reconstruction. a) Barrel, $\eta$ = 0.5; b) Endcap, $\eta$ = 1.5.\mcite{0954-3899-34-6-S01}}
   \label{fig:figures_Analysis_MuonPTResolution}
 \end{figure}
 
 Signal events are vetoed if they contain a muon with \PT $>$ \unit{10}{\GeV} 
 and \mETA $<$ 2.5 that passes the standard quality criteria for muon 
-identification that gives $95\%$ selection efficiency\cite{PAS-MUO-10-002}. Two 
+identification that gives $95\%$ selection efficiency\mcite{PAS-MUO-10-002}. Two 
 separate muon control samples are defined, one requiring exactly one muon with 
-\PT $>$ \unit{10}{\GeV}, the second requiring two muons where the invariant 
-mass sums to the \PZ mass. 
+\PT $>$ \unit{10}{\GeV}, the second requiring two oppositely charged muons where the invariant mass sums to the \PZ mass. 
 % subsection muons (end)
 
 
 \subsection{Photons} % (fold)
 \label{sub:photons}
-Photons are reconstructed in the ECAL using the same methods as used to 
-reconstruct electrons. However the tracking requirements are inverted. For 
-photons which do not convert in the tracker a supercluster energy deposit is 
-required with no associated electron track, for photons which undergo pair 
-production in the tracker material the tracks associated with the super 
-clusters do not originate from the interaction vertex, instead they appear in a 
-layer of the tracker. For unconverted photons the ratio of the energy deposited 
-in the central ECAL crystal to the energy of the surrounding $3\times3$ group 
-of ECAL crystals is used as an identification variable. Signal events are 
-vetoed if they contain a photon with \ET $>$ \unit{25}{\GeV}, \mETA $<$ 2.5 and 
-that passes ID requirements\cite{PAS-EGM-10-006}. A requirement of exactly one 
-photon with \ET $>$ \unit{150}{\GeV} within \mETA $<$ 1.45 is made for the 
-photon control sample.
+Photons are reconstructed in the ECAL using the same methods as used to reconstruct electrons. However the tracking requirements are inverted. For photons which do not convert in the tracker a supercluster energy deposit is required with no associated electron track, for photons which undergo pair production in the tracker material the tracks associated with the superclusters do not originate from the interaction vertex, instead they appear in a layer of the tracker. For unconverted photons the ratio of the energy deposited in the central ECAL crystal to the energy of the surrounding $3\times3$ group of ECAL crystals is used as an identification variable. Signal events are vetoed if they contain a photon with \ET $>$ \unit{25}{\GeV}, \mETA $<$ 2.5 and that passes ID requirements\mcite{PAS-EGM-10-006}. A requirement of exactly one photon with \ET $>$ \unit{150}{\GeV} within \mETA $<$ 1.45 is made for the photon control sample.
 % subsection photons (end)
 
 \subsection{Resolving object overlaps} % (fold)
@@ -220,6 +137,51 @@ scheme is set up. The object with the tightest ID is declared the true object
 and the overlapping object is merged and the energy recomputed. This is referred to as ``Cross Cleaning''.
 
 % subsection cross_cleaning (end)
+
+\section{The \alt variable} % (fold)
+\label{sec:the_alpha___t_variable_}
+The \alt is variable inspired by Ref~\mcite{Randall:2008dk} and was expanded first to consider transverse topologies and later expanded to  multi-jet systems by members of the CMS collaboration in  Refs~\mcite{cms-pas-sus-08005,cms-pas-sus-09001}. The purpose is to provide variable that can be used to reduce the fraction of QCD from the final event selection. To do this the balance of the QCD system is exploited.
+
+For di-jet systems \alt is defined as:
+
+\begin{equation}
+  \alt = \frac{E_{T}^{j_{2}}}{\mathcal{M}_{T}}
+  \label{eq:transverseMass}
+\end{equation}
+where $E_{T}^{j_{2}}$ is the transverse energy of least energetic of the two 
+jets and M$_{T}$ is defined as:
+
+\begin{equation}
+  M_{T} = \sqrt{\left(\sum^{2}_{i=1}E_{T}^{j_{i}}\right)^{2} - \left(\sum^{2}_{i=1}p_{x}^{j_{i}}\right)^{2} - \left(\sum^{2}_{i=1}p_{y}^{j_{i}}\right)^{2}}.
+\end{equation}
+
+For a perfectly measured di-jet system with $E_{T}^{j_{1}} = E_{T}^{j_{2}}$ and 
+where the jets are opposite in azimuth ($\phi$), \alt = 0.5. For events with back to back jets where one is missmeasured \alt $ < 0.5$.
+However a large number of beyond the standard model signals predict many jets in the final state. \alt can be generalised to work with an arbitrary number of jets in the following way. The variables \HT and \HTm are constructed as:
+\begin{equation}
+  \HT = \sum_{i = 1}^{n}E_{T}^{jet_{i}}, \\
+  \HTm = \left|\sum_{i = 1}^{n}\bar{p}_{T}^{jet_{i}}\right|,
+\end{equation}
+for jets above some predefined threshold in \ET which is common for all jet-based quantities. The multi-jet system is reduced to a pseudo di-jet system, where the jets are clustered into two objects around the leading and sub-leading jets, forming two large jets. The individual jet \ET values are summed, with the final configuration being chosen to have the minimum difference in energy ($\Delta$\HT) between the two new jets. This simple clustering criteria provides the best separation between missmeasured events and those with real \MET, this is shown in Ref~\mcite{cms-pas-sus-09001}.
+
+\alt is then defined as:
+\begin{equation}
+  \alt = \frac{\HT - \Delta\HT}{2\sqrt{\HT^{2}-\HTm^{2}}}
+\end{equation}
+
+
+Figure~\ref{fig:figures_Analysis_AlphaT_all_375_upwards} shows the \alt distribution for both data and simulated background samples after all full event selection which is described in detail later in this chapter. The QCD multi-jet background is negligible above an \alt value of 0.55, whereas the standard model processes which involve real \MET exist at all possible values of \alt.Values of \alt in the range $0.5 < \alt < 0.55$ arise in multi-jet QCD due to jets falling below threshold, large stochastic fluctuations or catastrophic missmeasurement due to detector element failures. It is to be noted that the discrepancy between data and simulation for \alt  $\leq 0.55$ is due to no trigger emulation being applied to the simulated background samples. The trigger emulation is omitted due to the changing thresholds throughout the data taking period and the centralised production of the \ac{mc} containing only one threshold value emulated on the \ac{hlt} level objects. However as this region is not considered for the analysis this does not effect the final result.
+\begin{figure}[ht|]
+  \centering  \includegraphics[width=0.8\textwidth]{figures/Analysis/AlphaT_all_375_upwards.pdf}
+  \caption{\alt distribution for background and data for the region \HT $>$ 
+  \unit{375}{\GeV}. Trigger emulation is not applied in the simulated 
+  background which leads to the discrepancy in the region \alt $\leq 0.55$. The 
+  QCD multi-jet background is reduced to less than one event.}
+  \label{fig:figures_Analysis_AlphaT_all_375_upwards}
+\end{figure}
+
+% section the_alpha___t_variable_ (end)
+
 
 \section{Common Analysis cuts} % (fold)
 \label{sec:common_analysis_cuts}
@@ -249,14 +211,14 @@ deposited by jets in the calorimeters. This cut is designed to remove events
 with a tracking failure, which would otherwise pass the calorimeter only event 
 quality requirements.
 \item\textbf{Masked ECAL channel filter:} Approximately 1$\%$ of the ECAL 
-crystals are masked, or have read out failure. To avoid selecting events with 
-large energy mismeasurement, a topological cut was devised. The first step is 
+crystals are masked, or have readout failures. To avoid selecting events with 
+large energy missmeasurement, a topological cut was devised. The first step is 
 to calculate $\Delta\phi^{*}$ for each jet ($\vec{j}$) in the event, where:
 \begin{equation}
   \Delta\phi^{*} = \Delta\phi\left(\vec{\slashed{E}}_{T}+\vec{j},\vec{j} \right).
   \label{eq:biasedDphi}
 \end{equation}
-Which gives a measure of the mismeasurement of a jet, if $\Delta\phi^{*}$ is 
+Which gives a measure of the missmeasurement of a jet, if $\Delta\phi^{*}$ is 
 small, the missing energy points along the jet in the $\phi$ direction. By 
 selecting the miss measured jet, full position information is preserved. If any 
 jet has $\Delta\phi^{*} <$ 0.5, the number of masked ECAL crystals within 
@@ -265,7 +227,7 @@ to the jet, the event is vetoed.
 \item \textbf{\Rmiss$ <$ 1.25:} The total hadronic energy in an event is 
 required to be greater than \unit{275}{\GeV} which is well above the transverse 
 energy threshold of \unit{50}{\GeV} for each jet. However several jets falling 
-below this threshold can sum to a significant quantity of ignored energy. This 
+below this threshold can sum to a significant quantity of energy which is not considered by the event level variables. This 
 is shown in Figure~\ref{fig:figures_Analysis_BabyMHT50-10}, here the missing 
 energy calculated from jets in the range \unit{10}{\GeV} $<$ \ET $<$ 
 \unit{50}{\GeV} is shown, whilst requiring that \MET $<$ \unit{20}{\GeV}. This 
@@ -273,16 +235,14 @@ shows that for a well balanced event the jets below threshold can carry greater
 than \unit{100}{\GeV} of ignored energy. R$_{miss}$ is defined as $\HTm \slash 
 \MET$ and can be used to single out events where the inclusion of lower 
 momentum jets does significantly improve the balance of the event. 
-Figure~\ref{fig:MHTovMET_lowHT_highHT} shows for two \HT regions the R$_{miss}$ 
-distribution after the application of the full cut flow, including \alt, QCD 
-contamination is visible in the signal sample for R$_{miss} >$ 1.25. 
+Figure~\ref{fig:MHTovMET_lowHT_highHT} shows, for two \HT regions, the R$_{miss}$ distribution after the application of the full cut flow, including \alt. QCD contamination is visible in the signal sample for R$_{miss} >$ 1.25. 
 \end{itemize}
 
 
 \begin{figure}[htbp]
   \centering
     \includegraphics[width=0.75\textwidth]{figures/Analysis/BabyMHT50-10.pdf}
-  \caption{\HTm from jets with \unit{10}{\GeV} $<$ \ET $<$ \unit{50}{\GeV} in events with \HT $>$ \unit{350}{\GeV} and \MET $<$ \unit{20}{\GeV} in \unit{35}{\invpicobarn} of data.}
+  \caption{\HTm from jets with \unit{10}{\GeV} $<$ \ET $<$ \unit{50}{\GeV} in events with \HT $>$ \unit{350}{\GeV} and \MET $<$ \unit{20}{\GeV} in \unit{35}{\invpicobarn} of data. LM0 and LM1 are two low mass \ac{susy} benchmark points which are included to show that the \HTm in these events is highly correlated with the \ETm in the event.}
   \label{fig:figures_Analysis_BabyMHT50-10}
 \end{figure}
 
@@ -295,9 +255,9 @@ contamination is visible in the signal sample for R$_{miss} >$ 1.25.
 \label{fig:figures_Analysis_350Gev_afterDeadEcalcombinedMHTovMET_afterAlphaT_all}
 }
 \caption{(a) R$_{miss}$ distribution for events in the \unit{250}{\GeV} 
-$<$\HT$<$\unit{350}{\GeV} region, where due to the low \HT requirement QCD 
+$<$ \HT $<$ \unit{350}{\GeV} region, where due to the low \HT requirement QCD 
 contamination is enriched. \\ (b) R$_{miss}$ distribution for events in the 
-\HT$>$\unit{350}{\GeV} region, QCD contamination occurs at R$_{miss} >$ 1.25.}
+\HT $>$ \unit{350}{\GeV} region, QCD contamination occurs at R$_{miss} >$ 1.25.}
 \label{fig:MHTovMET_lowHT_highHT}
 \end{figure}
 
@@ -307,8 +267,8 @@ top of this an \alt cut is applied, the events satisfying these requirements
 are then binned in 8 \HT bins, these are \unit{275}{\GeV} - \unit{325}{\GeV}, 
 \unit{325}{\GeV} - \unit{375}{\GeV}, \unit{375}{\GeV} - \unit{475}{\GeV}, 
 \unit{475}{\GeV} - \unit{575}{\GeV}, \unit{575}{\GeV} - \unit{675}{\GeV}, 
-\unit{675}{\GeV} - \unit{775}{\GeV}, \unit{875}{\GeV} - \unit{7}{\TeV}.
-% However the raw number of events in the signal region is meaningless with out 
+\unit{675}{\GeV} - \unit{775}{\GeV}, \unit{875}{\GeV} - \unit{7}{\TeV}. This binning was chosen with regard to the \HT trigger thresholds, with a gap of \unit{25}{\GeV} given to account for the turn on of the \HT of the trigger.
+% However the raw number of events in the signal region is meaningless without 
 % an accurate background prediction, as discussed earlier taking the background 
 % estimation from simulation is not viable due to the requirement of high order 
 % theory calculations on the cross sections of \ac{sm} processes involving 
@@ -318,26 +278,26 @@ are then binned in 8 \HT bins, these are \unit{275}{\GeV} - \unit{325}{\GeV},
 % producing missing energy, but has a visible muon or photon in the final state. 
 % The background estimation methods are described and the background predictions 
 % stated in Section~\ref{sec:electro_weak_background_prediciton}.
-The next section describes the triggers used to collect the data samples
+The next section describes the triggers used to collect the data samples.
 % section event_selection (end)
 
 \section{High Level Triggers for the \alt analysis} % (fold)
 \label{sec:high_level_triggers_for_the_alt_analysis}
-The CMS trigger system has been discussed in detail in 
+The CMS trigger system has been discussed in 
 Section~\ref{sec:the_high_level_trigger_system} and 
 Chapter~\ref{cha:level_one_trigger}, however details of analysis specific 
 trigger paths were not discussed. During 2011 the first \alt specific trigger 
 was designed and deployed online. The trigger was then upgraded for the higher 
-luminosity and energy conditions of the 2012 data taking period.
+luminosity and energy of the 2012 data taking period.
 
 
 The trigger takes advantage of two variables, \HT and \alt. At low 
-\HT a high \alt value cuts the trigger rate, where as at high \HT where the
+\HT a high \alt value cuts the trigger rate, whereas at high \HT where the
 trigger rate is lower the \alt requirement can be loosened.
 
 Due to the scaling of jet thresholds in the lowest offline \HT bins as detailed 
 in Section~\ref{sec:event_selection} using a fixed jet threshold would cause 
-inefficiency in the lowest offline \HT bins. To over come this the trigger 
+inefficiency in the lowest offline \HT bins. To overcome this the trigger 
 level \alt calculation is performed iteratively for all jets above a predefined 
 threshold. This raises the total number of accepted events whilst adding the 
 benefit of being efficient for any offline jet threshold above the minimum 
@@ -345,8 +305,8 @@ trigger jet threshold.
 
 Due to concerns on the time taken to perform the \dHT minimisation at the 
 trigger and time constraints enforced on trigger menu development, the first 
-implementation calculates \alt for the first 3 jets. For higher jet 
-multiplicities the variable \bt is calculated.
+implementation calculated \alt for the first 3 jets. For higher jet 
+multiplicities the variable \bt is calculated, where the jet minimisation stage is omitted, this causes a higher acceptance due to the balance of the event not being considered by the trigger algorithm. The trade off between purity and rate along with the time constraints is acceptable. 
 
 \begin{equation}
   \beta_{T} = \frac{\HT}{2\sqrt{\HT^{2} - \MHT^{2}}}
@@ -368,27 +328,11 @@ explained in detail below.
 \end{figure}
 
 
-When a level one accept is issued the trigger bits that fired are checked, if 
-the event fires a L1 muon trigger it is passed to the HLT muon triggers where 
-only muon reconstruction is performed, reducing the reconstruction time. The 
-\alt triggers are seeded on the lowest threshold unprescaled L1 \HT trigger, 
-during 2011 this was \texttt{L1\_HTT100}, which requires \unit{100}{\GeV} of 
-uncorrected \HT in the event. Any events issuing a L1 accept and passing 
-\texttt{L1\_HTT100} undergo calorimeter jet reconstruction, the reconstruction 
-algorithm is detailed in Section~\ref{sub:Preselection_of_hadronic_objects}.
+When a \Lone accept is issued the trigger bits that fired are checked, if the event fires a \Lone muon trigger it is passed to the HLT muon triggers where only muon reconstruction is performed, reducing the reconstruction time. The \alt triggers are seeded on the lowest threshold unprescaled L1 \HT trigger, during 2011 this was \texttt{L1\_HTT100}, which requires \unit{100}{\GeV} of uncorrected \HT in the event. Any events issuing a L1 accept and passing \texttt{L1\_HTT100} undergo calorimeter jet reconstruction, the reconstruction algorithm is detailed in Section~\ref{sub:Preselection_of_hadronic_objects}.
 
-Once the jets have been formed the trigger filter is entered. Initially the 
-first two jets ranked by \ET, are considered, \HT and \alt are calculated, if 
-both pass the trigger thresholds the event is accepted and the full detector 
-read out is performed. If either \HT or \alt is below threshold, the next jet 
-in \ET order is added, if the jet list contains more than 3 jets then the 
-\bt approximation is used. All jets in the event are added until either the 
-event is accepted, or there are no more jets to be added above \unit{40}{\GeV}.
+Once the jets have been formed the trigger filter is entered. Initially the first two jets ranked by \ET, are considered, \HT and \alt are calculated, if both pass the trigger thresholds the event is accepted and the full detector readout is performed. If either \HT or \alt is below threshold, the next jet in \ET order is added, if the jet list contains more than 3 jets then the \bt approximation is used. All jets in the event are added until either the event is accepted, or there are no more jets to be added above \unit{40}{\GeV}.
 
-The effect of switching to the \bt approximation is to accept events that have 
-missing energy due to mismeasurement, when calculating \alt offline these 
-events have values of \alt $< 0.5$. This introduces an impurity to the trigger 
-and costs rate for events that will not be considered in the offline analysis.
+The effect of switching to the \bt approximation is to accept events that have missing energy due to missmeasurement, when calculating \alt offline these events have values of \alt $< 0.5$. This introduces an impurity to the trigger and costs rate for events that will not be considered in the offline analysis.
 
 
 % section common_analysis_cuts (end)
@@ -401,19 +345,19 @@ of efficiency of both the \Lone seed trigger and the higher level trigger at
 the same time, as different sub-systems are used to collect the reference and 
 the signal triggers. This is due to the exclusive use of calorimeter jets in 
 the \alt trigger, if more complicated reconstruction methods which produce an 
-event hypothesis were used, muons would at HLT level be considered as 
-jets. Where as during calorimeter only reconstruction, muons are not considered 
+event hypothesis were used then muons would at HLT level be considered as 
+jets. Whereas during calorimeter only reconstruction, muons are not considered 
 and the \pt of any muons in an event is viewed as missing energy.
 
 The selection for the trigger efficiency measurement is the same as listed in 
 Section~\ref{sec:event_selection} with the requirement of exactly one well 
 identified muon with \PT $>$ \unit{45}{\GeV}, the sum of the \MET in the event 
-and the muon must add to the \PW mass. Finally the muon must be separated by 
+and the muon must add to the transverse \PW mass as defined in Equation~\eqref{eq:transverseMass}. Finally the muon must be separated by 
 at least 0.5 in $\Delta R$ to the closest jet. This avoids the muon energy 
 changing the energy of the jet offline when the cross cleaning is applied.
 
 Due to the increase in luminosity over the running period the trigger 
-thresholds were increased, to ensure constant rate though out the year and the 
+thresholds were increased, to ensure constant rate throughout the year and the 
 trigger version numbers were increased each time the trigger menu was updated.
 The list of triggers considered and the triggers used to collect the respective 
 reference sample are listed in Tables~\ref{tab:triggers1} and 
@@ -428,126 +372,7 @@ that the trigger suite takes constant rate. The higher trigger versions and
 thresholds generally represent more integrated luminosity due to the evolution 
 of running conditions with time.
 
-The efficiency is measured as a function of the cumulative number of events, ie 
-the efficiency at each point on the x axis is the measured efficiency if a cut 
-were applied offline at that cut value.
-
-\begin{table}
-    \centering
-\footnotesize
-\begin{tabular}{|c|c|c|}
-  
-\hline
-Offline \HT bin & Signal Trigger & Reference Trigger\\
-\hline
-\unit{275}{\GeV} $<$ \HT $<$ \unit{325}{\GeV} & \verb|HLT_HT250_AlphaT0p53_v2| & \verb|HLT_Mu15_HT200_v2|\\
-\hline
-\unit{275}{\GeV} $<$ \HT $<$ \unit{325}{\GeV} & \verb|HLT_HT250_AlphaT0p53_v3| & \verb|HLT_Mu15_HT200_v3|\\
-\hline
-\unit{275}{\GeV} $<$ \HT $<$ \unit{325}{\GeV} & \verb|HLT_HT250_AlphaT0p53_v4| & \verb|HLT_Mu15_HT200_v4|\\
-\hline
-\unit{275}{\GeV} $<$ \HT $<$ \unit{325}{\GeV} & \verb|HLT_HT250_AlphaT0p53_v5| & \verb|HLT_Mu30_HT200_v1|\\
-\hline
-\unit{275}{\GeV} $<$ \HT $<$ \unit{325}{\GeV} & \verb|HLT_HT250_AlphaT0p55_v1| & \verb|HLT_Mu5_HT200_v4|\\
-\hline
-\unit{275}{\GeV} $<$ \HT $<$ \unit{325}{\GeV} & \verb|HLT_HT250_AlphaT0p55_v2| & \verb|HLT_Mu40_HT200_v4|\\
-\hline
-\unit{275}{\GeV} $<$ \HT $<$ \unit{325}{\GeV} & \verb|HLT_HT250_AlphaT0p58_v3| & \verb|HLT_DoubleMu8_Mass8_HT200_v4|\\
-\hline
-\unit{275}{\GeV} $<$ \HT $<$ \unit{325}{\GeV} & \verb|HLT_HT250_AlphaT0p58_v3| & \verb|HLT_DoubleMu8_Mass8_HT200_v5| \\
-\hline
-\unit{275}{\GeV} $<$ \HT $<$ \unit{325}{\GeV} & \verb|HLT_HT250_AlphaT0p60_v3| & \verb|HLT_DoubleMu8_Mass8_HT200_v4|\\
-\hline
-\unit{275}{\GeV} $<$ \HT $<$ \unit{325}{\GeV} & \verb|HLT_HT250_AlphaT0p60_v3| & \verb|HLT_DoubleMu8_Mass8_HT200_v5|\\
-\hline
-\unit{325}{\GeV} $<$ \HT $<$ \unit{375}{\GeV} & \verb|HLT_HT300_AlphaT0p52_v1| & \verb|HLT_Mu5_HT200_v4|\\
-\hline
-\unit{325}{\GeV} $<$ \HT $<$ \unit{375}{\GeV} & \verb|HLT_HT300_AlphaT0p52_v2| & \verb|HLT_Mu8_HT200_v4|\\
-\hline
-\unit{325}{\GeV} $<$ \HT $<$ \unit{375}{\GeV} & \verb|HLT_HT300_AlphaT0p52_v3| & \verb|HLT_Mu15_HT200_v2|\\
-\hline
-\unit{325}{\GeV} $<$ \HT $<$ \unit{375}{\GeV} & \verb|HLT_HT300_AlphaT0p53_v3| & \verb|HLT_Mu15_HT200_v3|\\
-\hline
-\unit{325}{\GeV} $<$ \HT $<$ \unit{375}{\GeV} & \verb|HLT_HT300_AlphaT0p53_v4| & \verb|HLT_Mu15_HT200_v4| \\
-\hline
-\unit{325}{\GeV} $<$ \HT $<$ \unit{375}{\GeV} & \verb|HLT_HT300_AlphaT0p53_v5| & \verb|HLT_Mu30_HT200_v1| \\
-\hline
-\unit{325}{\GeV} $<$ \HT $<$ \unit{375}{\GeV} & \verb|HLT_HT300_AlphaT0p53_v6| & \verb|HLT_Mu40_HT200_v3| \\
-\hline
-\unit{325}{\GeV} $<$ \HT $<$ \unit{375}{\GeV} & \verb|HLT_HT300_AlphaT0p53_v6| & \verb|HLT_Mu40_HT200_v4| \\
-\hline
-\unit{325}{\GeV} $<$ \HT $<$ \unit{375}{\GeV} & \verb|HLT_HT300_AlphaT0p54_v5| & \verb|HLT_Mu40_HT300_v4| \\
-\hline
-\unit{325}{\GeV} $<$ \HT $<$ \unit{375}{\GeV} & \verb|HLT_HT300_AlphaT0p54_v5| & \verb|HLT_Mu40_HT300_v5| \\
-\hline
-\unit{325}{\GeV} $<$ \HT $<$ \unit{375}{\GeV} & \verb|HLT_HT300_AlphaT0p55_v3| & \verb|HLT_DoubleMu8_Mass8_HT200_v4| \\
-\hline
-\unit{325}{\GeV} $<$ \HT $<$ \unit{375}{\GeV} & \verb|HLT_HT300_AlphaT0p55_v3| & \verb|HLT_DoubleMu8_Mass8_HT200_v5| \\
-\hline
-
-\end{tabular}
-\caption{List of \alt triggers used in the lowest two offline \HT bins and the triggers used to collect the reference sample.}
-\label{tab:triggers1}
-
-\end{table}
-
-\begin{table}
-    \centering
-  \footnotesize
-\begin{tabular}{|c|c|c|}
-    \hline
-Offline \HT bin &Signal Trigger & Reference Trigger\\
-\hline
-\unit{375}{\GeV} $<$ \HT $<$ \unit{475}{\GeV} & \verb|HLT_HT350_AlphaT0p51_v1| & \verb|HLT_Mu5_HT200_v4| \\
-\hline
-\unit{375}{\GeV} $<$ \HT $<$ \unit{475}{\GeV} & \verb|HLT_HT350_AlphaT0p51_v2| & \verb|HLT_Mu8_HT200_v4| \\
-\hline
-\unit{375}{\GeV} $<$ \HT $<$ \unit{475}{\GeV} & \verb|HLT_HT350_AlphaT0p51_v3| & \verb|HLT_Mu15_HT200_v2| \\
-\hline
-\unit{375}{\GeV} $<$ \HT $<$ \unit{475}{\GeV} & \verb|HLT_HT350_AlphaT0p51_v4| & \verb|HLT_Mu15_HT200_v3| \\
-\hline
-\unit{375}{\GeV} $<$ \HT $<$ \unit{475}{\GeV} & \verb|HLT_HT350_AlphaT0p51_v5| & \verb|HLT_Mu15_HT200_v4| \\
-\hline
-\unit{375}{\GeV} $<$ \HT $<$ \unit{475}{\GeV} & \verb|HLT_HT350_AlphaT0p52_v1| & \verb|HLT_Mu30_HT200_v1| \\
-\hline
-\unit{375}{\GeV} $<$ \HT $<$ \unit{475}{\GeV} & \verb|HLT_HT350_AlphaT0p52_v2| & \verb|HLT_Mu40_HT200_v3| \\
-\hline
-\unit{375}{\GeV} $<$ \HT $<$ \unit{475}{\GeV} & \verb|HLT_HT350_AlphaT0p52_v2| & \verb|HLT_Mu40_HT200_v4| \\
-\hline
-\unit{375}{\GeV} $<$ \HT $<$ \unit{475}{\GeV} & \verb|HLT_HT350_AlphaT0p53_v10| & \verb|HLT_Mu40_HT300_v4| \\
-\hline
-\unit{375}{\GeV} $<$ \HT $<$ \unit{475}{\GeV} & \verb|HLT_HT350_AlphaT0p53_v10| & \verb|HLT_Mu40_HT300_v5| \\
-\hline
-\unit{475}{\GeV} $<$ \HT $<$ \unit{7}{\TeV} & \verb|HLT_HT400_AlphaT0p51_v1| & \verb|HLT_Mu5_HT200_v4| \\
-\hline
-\unit{475}{\GeV} $<$ \HT $<$ \unit{7}{\TeV} & \verb|HLT_HT400_AlphaT0p51_v2| & \verb|HLT_Mu8_HT200_v4| \\
-\hline
-\unit{475}{\GeV} $<$ \HT $<$ \unit{7}{\TeV} & \verb|HLT_HT400_AlphaT0p51_v3| & \verb|HLT_Mu15_HT200_v2| \\
-\hline
-\unit{475}{\GeV} $<$ \HT $<$ \unit{7}{\TeV} & \verb|HLT_HT400_AlphaT0p51_v4| & \verb|HLT_Mu15_HT200_v3| \\
-\hline
-\unit{475}{\GeV} $<$ \HT $<$ \unit{7}{\TeV} & \verb|HLT_HT400_AlphaT0p51_v5| & \verb|HLT_Mu15_HT200_v4| \\
-\hline
-\unit{475}{\GeV} $<$ \HT $<$ \unit{7}{\TeV} & \verb|HLT_HT400_AlphaT0p51_v6| & \verb|HLT_Mu30_HT200_v1| \\
-\hline
-\unit{475}{\GeV} $<$ \HT $<$ \unit{7}{\TeV} & \verb|HLT_HT400_AlphaT0p51_v7| & \verb|HLT_Mu40_HT200_v3| \\
-\hline
-\unit{475}{\GeV} $<$ \HT $<$ \unit{7}{\TeV} & \verb|HLT_HT400_AlphaT0p51_v7| & \verb|HLT_Mu40_HT200_v4| \\
-\hline
-\unit{475}{\GeV} $<$ \HT $<$ \unit{7}{\TeV} & \verb|HLT_HT400_AlphaT0p51_v10| & \verb|HLT_Mu40_HT300_v4| \\
-\hline
-\unit{475}{\GeV} $<$ \HT $<$ \unit{7}{\TeV} & \verb|HLT_HT400_AlphaT0p51_v10| & \verb|HLT_Mu40_HT300_v5| \\
-\hline
-\unit{475}{\GeV} $<$ \HT $<$ \unit{7}{\TeV} & \verb|HLT_HT400_AlphaT0p52_v5| & \verb|HLT_Mu40_HT300_v4| \\
-\hline
-\unit{475}{\GeV} $<$ \HT $<$ \unit{7}{\TeV} & \verb|HLT_HT400_AlphaT0p52_v5| & \verb|HLT_Mu40_HT300_v5| \\
-\hline
-
-\end{tabular}
-\caption{List of \alt triggers used in the \HT $>$ \unit{375}{\GeV} bins and the triggers used to collect the reference sample.}
-\label{tab:triggers2}
-
-\end{table}
+The efficiency is measured as a function of the cumulative number of events, \ie the efficiency at each point on the $x$ axis is the measured efficiency if a cut were applied offline at that cut value.
 
 As an example, the efficiency of each trigger used in the \unit{275}{\GeV} $<$ 
 \HT $<$ \unit{325}{\GeV} bin is measured and then combined to give the total 
@@ -555,6 +380,8 @@ efficiency. The cumulative efficiency curves for each trigger seeding the
 lowest bin is show in Figures~\ref{fig:HT275BinTriggers1} and 
 \ref{fig:HT275BinTriggers2}. Note that some of the triggers are repeated, due 
 to the reference trigger version incrementing and the signal trigger not.
+
+
 
 
 
@@ -601,11 +428,11 @@ to the reference trigger version incrementing and the signal trigger not.
 \end{figure}
 
 These are then combined to give 
-Figure~\ref{fig:figures_Analysis_TotalCumulativeTurnonforHT275AlphaT} the 
+Figure~\ref{fig:figures_Analysis_TotalCumulativeTurnonforHT275AlphaT}. The 
 efficiency at a cut of \altg is $83.3^{+ 0.5}_{- 0.6}\%$. The loss 
 in efficiency comes from the disparity between the minimum thresholds for jets 
 to enter the \HT and \alt calculations at the HLT and those used in the 
-analysis. The trigger jet \ET threshold is \unit{40}{\GeV} where as 
+analysis. The trigger jet \ET threshold is \unit{40}{\GeV} whereas 
 the analysis jet \ET threshold in this bin is 
 \unit{36.$\dot{6}$}{\GeV}. The triggers used to take data at the end of this 
 running period also have an \alt threshold above the analysis cut of \altg, 
@@ -656,16 +483,16 @@ change keeps the trigger cross section linear as a function of instantaneous
 luminosity.
 
 The third choice was to design a trigger suite that could run for the entire 
-2012 data taking period, with out changing the trigger thresholds, this was 
+2012 data taking period, without changing the trigger thresholds, this was 
 done to make the measurement of the efficiency simpler.
 
 The trigger thresholds used are presented in 
 Table~\ref{tab:2012triggerThresholds}, due to the constant thresholds in 
-\HT and \alt though out the run, the versioning of the triggers is excluded 
+\HT and \alt thoughout the run, the versioning of the triggers is excluded 
 from this table.
 The efficiency of the triggers is measured for \unit{11.7}{\invfb} of \ac{lhc} 
 data taken at a centre-of-mass energy of \unit{8}{\TeV} the efficiencies were 
-measured for the analysis documented in \cite{CMS-PAS-SUS-12-028}. A 
+measured for the analysis documented in \mcite{CMS-PAS-SUS-12-028}. A 
 single-muon trigger is used to collect the reference sample, the threshold of 
 this trigger was unchanged during the data taking period, the path selected 
 requires at least one muon with \PT $>$ \unit{24}{\GeV} that is not overlapping 
@@ -679,29 +506,6 @@ individual triggers that seed the \unit{275}{\GeV}--\unit{325}{\GeV} \HT region
 for \unit{11.7}{\invfb} of \unit{8}{\TeV} \ac{lhc} data, 
 Figure~\ref{fig:figures_Analysis_8TeVTriggers_HT275AlphaT} shows the combined 
 cumulative efficiency of the 2012 trigger suite.
-
-\begin{table}
-
-\begin{tabular}{|l|c|}
-\hline
-\HT range & Trigger \\
-\hline
-\unit{275}{\GeV} -- \unit{325}{\GeV} & \verb|HLT_HT250_AlphaT0p55_v*| \\
-\hline
-\unit{325}{\GeV} -- \unit{375}{\GeV} & \verb|HLT_HT300_AlphaT0p53_v*| \\
-\hline
-\unit{375}{\GeV} -- \unit{475}{\GeV} & \verb|HLT_HT350_AlphaT0p52_v*| \\
-\hline
-\unit{475}{\GeV} -- \unit{8}{\TeV}   & \verb|HLT_HT400_AlphaT0p51_v*| \\
-\hline
-\end{tabular}
-\caption{Triggers used to seed the analysis \HT bins during 2012 data taking.}
-\label{tab:2012triggerThresholds}
-\end{table}
-
-
-
-
 
 \begin{figure}[|h]
   \centering
@@ -760,33 +564,19 @@ multiplicities of less than four has a purity of 48$\%$, which means a quarter
 of all rate taken by the trigger is used in the offline analysis.
 The 2012 trigger which performs the full \alt calculation for all jet 
 multiplicities has a purity of 75$\%$. This 25$\%$ increase in purity 
-translates in to a 25$\%$ rate reduction for the same trigger threshold when
+translates into a 25$\%$ rate reduction for the same trigger threshold when
 changing to the full \alt calculation for all jet multiplicities, thus enabling 
 the trigger thresholds to be kept at the same or lower thresholds in the 2012 
 run as in the 2011 run.
 
 % section high_level_triggers_for_the_alt_analysis (end)
 
-\section{Extension to higher analysis dimensions. B-tagging} % (fold)
+\section{Including B-tagging in the \alt analysis.} % (fold)
 \label{sec:extension_to_higher_analysis_dimensions_}
 
-Jets are tagged as originating from a \Pbottom-quark decay via the 
-identification of a displaced vertex as it takes the \Pbottom-quark a finite 
-amount of time to decay, during this time the quark which is not produced at 
-rest travels away from the initial interaction point, where upon decaying a 
-secondary decay vertex is created. The algorithm used to classify these jets as 
-containing a \Pbottom-quark is the \ac{csv} tagger. The ``Medium'' working 
-point is used in the analysis, which requires at cut of $>0.679$ on the 
-\ac{csv} value. This results in a gluon/light quark mis-tag rate of $1\%$ (
-where ``light'' quarks are \Pup, \Pdown and \Pstrange types), efficiency for 
-tagging \Pbottom-quark jets in the range $60-70\%$\cite{ref-b-tag-eff} is 
-achieved, this efficiency depends on the jet \PT. The discriminator is 
-supported by the \ac{cms} \Pbottom physics object group\cite{ref-b-pog-algo} 
-and its performance is well understood. The Monte Carlo miss tag and 
-identification rates are re-weighted to agree with data observations, thus 
-provide an accurate background prediction for the high multiplicity 
-\Pbottom-tagged bins which are dominated by the miss tag of light quarks as 
-\Pbottom-quarks.
+
+As discussed in Chapter~\label{cha:theory} a multitude of \ac{susy} final states exist, following the naturalness argument that the super partner to the top quark should be the lightest \ac{susy} particle, and that these stops decay in a similar way to the \ac{sm} top quark. I.e. to topologies involving bottom quarks. The extra discrimination power of counting the number of bottom quarks in the final state should not be ignored. This is also due to the relatively low production of bottom quarks along with missing energy from \ac{sm} processes. From the experimental side, due to the decay lifetime of the bottom quark, tagging these objects using the \ac{cms} tracking system by virtue of the displaced secondary decay vertex is achievable at high reconstruction efficiency. 
+Jets are tagged as originating from a \Pbottom-quark decay via the identification of a displaced vertex as it takes the \Pbottom-quark a finite amount of time to decay, during this time the quark which is not produced at rest travels away from the initial interaction point, where upon decaying a secondary decay vertex is created. The algorithm used to classify these jets as containing a \Pbottom-quark is the \ac{csv} tagger. The ``Medium'' working point is used in the analysis, which requires at cut of $>0.679$ on the \ac{csv} value. This results in a gluon/light quark mis-tag rate of $1\%$ ( where ``light'' quarks are \Pup, \Pdown and \Pstrange-types), and an efficiency for tagging \Pbottom-quark jets in the range $60-70\%$\mcite{ref-b-tag-eff} is achieved, this efficiency depends on the jet \PT. The discriminator is supported by the \ac{cms} \Pbottom physics object group\mcite{ref-b-pog-algo} and its performance is well understood. The Monte Carlo miss tag and identification rates are re-weighted to agree with data observations, thus provide an accurate background prediction for the high multiplicity \Pbottom-tagged bins which are dominated by the mistag of light quarks as \Pbottom-quarks.
 
 
 
